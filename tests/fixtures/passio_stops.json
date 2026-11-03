@@ -1,0 +1,9 @@
+{
+  "stops": {
+    "ID100": {"id": "100", "name": "Union Square East", "latitude": "40.735900", "longitude": "-73.989900", "userId": "1007", "radius": 50},
+    "ID200": {"id": "200", "name": "Washington Square", "latitude": "40.730800", "longitude": "-73.997300", "userId": "1007"}
+  },
+  "routes": {
+    "61001": ["Route A", "#57068c", [0, "100"], [1, "200"], 0]
+  }
+}

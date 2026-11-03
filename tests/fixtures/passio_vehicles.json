@@ -1,0 +1,21 @@
+{
+  "buses": {
+    "-1": [{"busId": -1}],
+    "4521": [{
+      "busId": 4521, "busName": "NYU 21", "busType": "Bus",
+      "routeId": "61001", "route": "Route A", "tripId": "",
+      "latitude": "40.735700", "longitude": "-73.990500",
+      "speed": "12.5", "calculatedCourse": "180", "paxLoad100": 35,
+      "outOfService": 0, "created": "2026-11-03 09:15:02", "color": "#57068c",
+      "deviceId": 998877
+    }],
+    "4522": [{
+      "busId": 4522, "busName": "NYU 22",
+      "routeId": "61003", "route": "Route E",
+      "latitude": 40.7295, "longitude": -73.9965,
+      "speed": null, "outOfService": "1"
+    }]
+  },
+  "microtime": 0.01,
+  "error": ""
+}
