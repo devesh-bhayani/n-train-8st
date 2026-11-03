@@ -25,6 +25,14 @@ From `make week1` ([full output](docs/findings/week1_gtfs_checks.md)):
 - **Running the N local from 34 St to Canal costs about 150–180 s per trip** in today's
   schedule (weekend local minus weekday express). That's the price every N
   through-rider would pay.
+- **Stop the Stop reproduces exactly.** An independent re-implementation matches all 356
+  published stops ([details](docs/findings/phase0_wolk_replication.md)). Closing 8 St–NYU
+  to the R/W costs riders time in all 80 cells of the stop-cost × walk-weight grid when
+  riders walk to the next R/W or same-type station.
+- **One NYU shuttle leg links Union Square to campus.** Routes E and W (weekends) pick up at
+  14th St & Irving Pl, ~220 m from the subway, and stop next at 715 Broadway by 8 St–NYU.
+  But it's the final leg of a loop through NYU Langone
+  ([details](docs/findings/shuttle_first_look.md)).
 
 ## Scenarios
 
@@ -58,7 +66,7 @@ Open fact checks are in [docs/verification.md](docs/verification.md).
 
 ## Quickstart
 
-Requires [uv](https://docs.astral.sh/uv/).
+Full Mac setup: [docs/local-setup.md](docs/local-setup.md). Requires [uv](https://docs.astral.sh/uv/).
 
 ```bash
 make setup     # Python 3.13 and packages

@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import duckdb
 import polars as pl
 
 from n8st.shuttle.passio import parse_stops
@@ -28,7 +29,11 @@ def haversine_m(lat1: pl.Expr, lon1: pl.Expr, lat2: pl.Expr, lon2: pl.Expr) -> p
 
 
 def load_vehicles(shuttle_dir: Path) -> pl.DataFrame:
-    return pl.read_parquet(shuttle_dir / "vehicles" / "**" / "*.parquet", hive_partitioning=True)
+    """All logged positions. union_by_name tolerates columns added after logging began."""
+    glob = shuttle_dir / "vehicles" / "**" / "*.parquet"
+    return duckdb.sql(
+        f"SELECT * FROM read_parquet('{glob}', hive_partitioning = true, union_by_name = true)"
+    ).pl()
 
 
 def load_stops(shuttle_dir: Path) -> pl.DataFrame:

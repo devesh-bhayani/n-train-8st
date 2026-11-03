@@ -18,6 +18,7 @@ def test_parse_vehicles_skips_placeholder_and_types_fields():
     assert a["longitude"] == pytest.approx(-73.9905)
     assert a["route_name"] == "Route A"
     assert a["out_of_service"] is False
+    assert a["pax_load"] == 12 and a["capacity"] == 45
     assert json.loads(a["extra"]) == {"deviceId": 998877}
     assert e["speed"] is None and e["bus_type"] is None
     assert e["out_of_service"] is True

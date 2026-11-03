@@ -51,6 +51,8 @@ VEHICLE_SCHEMA = {
     "speed": pl.Float64,
     "course": pl.Float64,
     "pax_load": pl.Float64,
+    "capacity": pl.Float64,
+    "route_block_id": pl.String,
     "out_of_service": pl.Boolean,
     "passio_created": pl.String,
     "color": pl.String,

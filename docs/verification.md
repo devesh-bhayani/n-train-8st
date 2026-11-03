@@ -13,6 +13,8 @@ Status: ✅ verified, ⚠️ partly, ❓ open. Update the evidence column as ite
 | Crossover between 14 St and 8 St (decides whether V2 exists) | ❓ | Track maps (nycsubway.org, Vanshnookenraggen); reroute notices |
 | MTA complex IDs for the focus stations | ❓ | Resolved automatically by `make stations` from dataset 39hk-dx4f |
 | OD and hourly-ridership column names | ❓ | Checked at run time by `n8st.data.socrata.require_columns` |
-| Passio system ID 1007 and response shape | ❓ | First live `make shuttle-once`; then replace the synthetic test fixtures |
+| Passio system ID 1007 and response shape | ✅ | First GitHub Actions run, 2026-11-03: 4/4 polls ok, 9 buses on 8 routes. NYU's feed sends `paxLoad` and `totalCap` (not `paxLoad100`); parser updated |
+| Which shuttle routes connect Union Square and campus | ✅ | `docs/findings/shuttle_first_look.md`: Routes E and W (weekends) board at 14th St & Irving Pl WB, ~220 m from the subway, next stop 715 Broadway; it's the last leg of a loop via NYU Langone |
+| Stop the Stop reproduces | ✅ | `docs/findings/phase0_wolk_replication.md`: independent re-implementation matches all 356 published stops, 0 rank differences |
 | Legacy turnstile coverage start (is June 2010 covered?) | ❓ | First dates in the turnstile files |
 | 14 St platform layout for northbound N → downtown R/W | ❓ | Station diagram; field check |

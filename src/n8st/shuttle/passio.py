@@ -31,11 +31,14 @@ VEHICLE_FIELDS = {
     "speed": "speed",
     "calculatedCourse": "course",
     "paxLoad100": "pax_load",
+    "paxLoad": "pax_load",  # the field NYU's feed actually sends (seen 2026-11-03)
+    "totalCap": "capacity",
+    "routeBlockId": "route_block_id",
     "outOfService": "out_of_service",
     "created": "passio_created",
     "color": "color",
 }
-FLOAT_COLS = {"latitude", "longitude", "speed", "course", "pax_load"}
+FLOAT_COLS = {"latitude", "longitude", "speed", "course", "pax_load", "capacity"}
 
 
 class PassioError(RuntimeError):
@@ -108,6 +111,8 @@ def parse_vehicles(raw: dict[str, Any] | list, polled_at: datetime) -> list[dict
         }
         for api_name, col in VEHICLE_FIELDS.items():
             v = record.get(api_name)
+            if row.get(col) is not None:  # two API names map to pax_load; keep the first set
+                continue
             if col in FLOAT_COLS:
                 row[col] = _to_float(v)
             elif col == "out_of_service":

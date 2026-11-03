@@ -1,5 +1,5 @@
 .PHONY: setup test lint gtfs week1 stations ridership od data shuttle-once shuttle-log \
-        shuttle-pull shuttle-summary wolk
+        shuttle-pull shuttle-summary shuttle-first-look wolk phase0
 
 setup:            ## install the environment (Python and packages, via uv)
 	uv sync
@@ -41,5 +41,11 @@ shuttle-pull:     ## copy the GitHub Action's shuttle data into data/raw/shuttle
 shuttle-summary:  ## coverage, gaps and buses per route
 	uv run n8st-shuttle-summary --dir $(or $(DIR),data/raw/shuttle_remote)
 
+shuttle-first-look:  ## stops, routes and headways near Union Square -> docs/findings/
+	uv run python -m n8st.analysis.shuttle_first_look --dir $(or $(DIR),data/raw/shuttle_remote)
+
 wolk:             ## clone Josh Wolk's Stop the Stop pipeline (MIT) for Phase 0
 	git clone https://github.com/WoshuaJolk/stopthestop-data external/stopthestop-data
+
+phase0:           ## independent replication of Stop the Stop + 8 St-NYU sensitivity
+	uv run python -m n8st.analysis.wolk_replication
