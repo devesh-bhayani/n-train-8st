@@ -64,6 +64,27 @@ ledger:           ## scenario ledger for one OD month -> docs/findings/ledger_*.
 	uv run python -m n8st.ledger.run --od $(OD)
 	uv run python -m n8st.ledger.report data/processed/ledger_$(subst od_,,$(basename $(notdir $(OD))))
 
+validate-flex:    ## calibrate station switching against the weekend N -> docs/findings/flex_validation.md
+	uv run python -m n8st.ledger.validate_flex --od $(OD)
+
+phase-check:      ## placebo: pure shifts of the N should average to ~0 -> docs/findings/ledger_phase_check.md
+	uv run python -m n8st.ledger.phase_avg --check --step 300
+
+ledger-phase:     ## the headline ledger, averaged over N timetable alignments (~40 min per month)
+	uv run python -m n8st.ledger.phase_avg --od $(OD)
+
+screen:           ## system-wide: every express stretch made local (~1 h) -> docs/findings/screen_*.md
+	uv run python -m n8st.ledger.screen --od $(OD)
+
+sensitivity:      ## Latin hypercube + GP surrogate + Sobol indices for the simulator (~1 h)
+	uv run python -m n8st.sim.sensitivity --samples 160 --days 6
+
+forecast:         ## week-ahead ridership forecasts -> docs/findings/forecasting.md
+	uv run python -m n8st.ml.forecast
+
+weekend:          ## does the weekend N pull riders to 8 St? -> docs/findings/weekend_experiment.md
+	uv run python -m n8st.analysis.weekend_experiment
+
 calibrate:        ## fit the simulation's free parameters to observed trains
 	uv run python -m n8st.sim.calibrate --days 8
 

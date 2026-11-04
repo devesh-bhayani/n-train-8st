@@ -1,6 +1,6 @@
 # NYU shuttle: first look from Union Square
 
-From the latest Passio GO metadata snapshot in `/home/user/n-train-8st/data/raw/shuttle_remote`.
+From the latest Passio GO metadata snapshot in `data/raw/shuttle_remote`.
 
 ## Shuttle stops within 600 m of the 14 St-Union Sq subway (Broadway line)
 
@@ -20,20 +20,20 @@ From the latest Passio GO metadata snapshot in `/home/user/n-train-8st/data/raw/
 
 | route | board_at | alight_at | stops_in_between |
 |---|---|---|---|
-| Route E | 14th St At Irving Place WB | 715 Broadway | 0 |
 | Route F | Third Avenue At 11th Street (SB) | 715 Broadway | 0 |
+| Route E | 14th St At Irving Place WB | 715 Broadway | 0 |
 | Route W | 14th St At Irving Place WB | 715 Broadway | 0 |
 | Route C | Third Avenue At 13th Street | 715 Broadway | 0 |
-| Route E | Third Avenue At 17th Street S | 715 Broadway | 1 |
 | Route F | Third Avenue At 13th Street | 715 Broadway | 1 |
+| Route E | Third Avenue At 17th Street S | 715 Broadway | 1 |
 | Route W | Third Avenue At 17th Street N | 715 Broadway | 1 |
 | Route F | Third Avenue At 17th Street S | 715 Broadway | 2 |
 | Route F | Third Avenue At 17th Street N | 715 Broadway | 7 |
-| Route E | 14th Street At Third Avenue | 715 Broadway | 8 |
 | Route F | Third Avenue At 14th Street | 715 Broadway | 8 |
+| Route E | 14th Street At Third Avenue | 715 Broadway | 8 |
 | Route W | 14th Street At Third Avenue | 715 Broadway | 8 |
-| Route E | 14th St At Irving Place EB | 715 Broadway | 9 |
 | Route F | Third Avenue At 11th Street (NB) | 715 Broadway | 9 |
+| Route E | 14th St At Irving Place EB | 715 Broadway | 9 |
 | Route W | 14th St At Irving Place EB | 715 Broadway | 9 |
 
 ## Stop order on each campus route
@@ -58,16 +58,16 @@ From the latest Passio GO metadata snapshot in `/home/user/n-train-8st/data/raw/
 
 | route_name | buses_seen | capacity | position_rows |
 |---|---|---|---|
-| Brooklyn NYU Langone Shuttle | 2 | 45.0 | 209 |
-| Ferry Route 1 | 1 | 10.0 | 234 |
-| Manhattan Commuter Shuttle Westbound Bus#1 | 1 | 64.0 | 230 |
+| Brooklyn NYU Langone Shuttle | 2 | 45.0 | 329 |
+| Ferry Route 1 | 1 | 10.0 | 313 |
+| Manhattan Commuter Shuttle Westbound Bus#1 | 1 | 64.0 | 350 |
 | Manhattan Commuter Shuttle Westbound Bus#2 | 1 | 64.0 | 113 |
 | Manhattan Park Ave | 1 |  | 4 |
 | Route A | 2 | 64.0 | 114 |
-| Route B | 3 | 64.0 | 406 |
-| Route E | 2 | 64.0 | 449 |
+| Route B | 3 | 64.0 | 555 |
+| Route E | 2 | 64.0 | 689 |
 | Route F | 1 |  | 4 |
-| Route G | 1 |  | 4 |
+| Route G | 2 | 64.0 | 78 |
 
 ## Headways at Union Square-area stops (needs a few days of data)
 
@@ -75,15 +75,22 @@ From the latest Passio GO metadata snapshot in `/home/user/n-train-8st/data/raw/
 |---|---|---|---|---|---|---|---|
 | 74768 | 13118 | Third Avenue At 17th Street S | 18 | 1 | 28.5 | 28.5 | 14.2 |
 | 74768 | 13118 | Third Avenue At 17th Street S | 20 | 1 | 21.0 | 21.0 | 10.5 |
-| 74768 | 6563 | Third Avenue At 13th Street | 20 | 3 | 11.5 | 21.0 | 8.0 |
+| 74768 | 13118 | Third Avenue At 17th Street S | 21 | 3 | 28.5 | 40.5 | 16.1 |
+| 74768 | 6563 | Third Avenue At 13th Street | 20 | 4 | 16.2 | 21.5 | 9.0 |
+| 74768 | 6563 | Third Avenue At 13th Street | 21 | 3 | 22.5 | 27.5 | 12.4 |
 | 74768 | 6564 | 14th St At Irving Place EB | 17 | 1 | 2.0 | 2.0 | 1.0 |
 | 74768 | 6564 | 14th St At Irving Place EB | 18 | 2 | 16.8 | 28.5 | 12.5 |
 | 74768 | 6564 | 14th St At Irving Place EB | 20 | 4 | 15.0 | 21.0 | 8.7 |
+| 74768 | 6564 | 14th St At Irving Place EB | 21 | 5 | 9.0 | 20.5 | 8.0 |
 | 74768 | 6572 | Third Avenue At 17th Street N | 18 | 1 | 29.0 | 29.0 | 14.5 |
 | 74768 | 6572 | Third Avenue At 17th Street N | 20 | 1 | 21.0 | 21.0 | 10.5 |
+| 74768 | 6572 | Third Avenue At 17th Street N | 21 | 2 | 30.5 | 40.0 | 16.7 |
 | 74768 | 6573 | 14th St At Irving Place WB | 17 | 1 | 1.5 | 1.5 | 0.8 |
 | 74768 | 6573 | 14th St At Irving Place WB | 18 | 2 | 17.0 | 28.5 | 12.4 |
 | 74768 | 6573 | 14th St At Irving Place WB | 20 | 4 | 15.5 | 21.0 | 8.8 |
+| 74768 | 6573 | 14th St At Irving Place WB | 21 | 5 | 8.0 | 20.5 | 8.3 |
 | 74768 | 6574 | Third Avenue At 14th Street | 18 | 1 | 28.5 | 28.5 | 14.2 |
-| 74768 | 6574 | Third Avenue At 14th Street | 20 | 3 | 12.5 | 21.0 | 8.2 |
-| 74768 | 6580 | 14th Street At Third Avenue | 20 | 3 | 12.0 | 21.0 | 8.1 |
+| 74768 | 6574 | Third Avenue At 14th Street | 20 | 4 | 16.8 | 21.0 | 9.0 |
+| 74768 | 6574 | Third Avenue At 14th Street | 21 | 3 | 22.5 | 27.5 | 12.4 |
+| 74768 | 6580 | 14th Street At Third Avenue | 20 | 4 | 16.5 | 21.0 | 8.9 |
+| 74768 | 6580 | 14th Street At Third Avenue | 21 | 3 | 23.0 | 27.5 | 12.4 |

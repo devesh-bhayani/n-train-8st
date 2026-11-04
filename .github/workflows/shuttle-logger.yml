@@ -1,10 +1,16 @@
 # Logs NYU shuttle positions from Passio GO and commits them to the `shuttle-data` branch.
 #
-# GitHub's scheduler often skips hourly runs, so each run logs for ~5.5 hours and
-# commits every hour. The schedule fires hourly; with the concurrency group below,
-# one run is always queued behind the running one, so coverage is continuous even if
-# most scheduled triggers are dropped. Overnight polls simply record no buses, which
+# GitHub's scheduler often skips hourly runs (on Nov 3-4 it fired once in six hours),
+# so each run logs for ~5.5 hours, commits every hour, and queues its own successor
+# before it ends. With the concurrency group below, that successor waits for the
+# running job, so coverage is continuous; the hourly schedule is only a backup that
+# restarts the chain if it ever breaks. Overnight polls simply record no buses, which
 # also tells us when service starts and ends.
+#
+# To stop logging: cancel the running job (a cancelled run doesn't queue a successor)
+# or disable the workflow under Actions. A run that fails or lasts under 30 minutes
+# doesn't queue one either, so a broken feed can't start a loop of failing runs. The
+# chain also stops by itself after STOP_AFTER, the end of NYU's fall-term shuttle service.
 #
 # Cost: ~24 runner-hours a day. Free and unlimited on a PUBLIC repo only.
 name: shuttle-logger
@@ -19,6 +25,7 @@ on:
 
 permissions:
   contents: write
+  actions: write  # to queue the next run
 
 concurrency:
   group: shuttle-logger
@@ -32,6 +39,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --frozen --no-dev
+
+      - run: echo "STARTED=$(date +%s)" >> "$GITHUB_ENV"
 
       - name: Log shuttle positions, committing every hour
         id: log
@@ -61,6 +70,25 @@ jobs:
         run: |
           if [ -d _out/polls ]; then
             { echo '```'; uv run n8st-shuttle-summary --dir _out; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # The successor waits in the concurrency group and starts when this job ends.
+      # (workflow_dispatch is one of the few events GITHUB_TOKEN may trigger.)
+      - name: Queue the next run
+        if: ${{ !cancelled() && steps.log.outcome == 'success' && github.ref == 'refs/heads/main' }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STOP_AFTER: "2026-12-23"
+        run: |
+          ran=$(( $(date +%s) - STARTED ))
+          if [[ "$(date -u +%F)" > "$STOP_AFTER" ]]; then
+            echo "past $STOP_AFTER: not queueing another run"
+          elif (( ran < 1800 )); then
+            echo "this run lasted only ${ran}s: not queueing another (the schedule will retry)"
+          else
+            gh workflow run shuttle-logger.yml --repo "$GITHUB_REPOSITORY" --ref main \
+              -f minutes=330
           fi
 
       - name: Fail if no poll succeeded
