@@ -10,21 +10,32 @@ The method builds on Josh Wolk's
 the time a stop costs through-riders against the time it saves the people who use it.
 This project asks the opposite question: what would *adding* a stop gain?
 
-## First findings (scheduled times, MTA GTFS valid Nov 2026)
+**Interactive summary:** `make app` (Streamlit; deployable from this repo as-is).
+**Draft post:** [docs/posts/01-why-the-n-skips-nyu.md](docs/posts/01-why-the-n-skips-nyu.md).
+**Methods, in plain language:** [docs/how-it-works.md](docs/how-it-works.md).
 
-From `make week1` ([full output](docs/findings/week1_gtfs_checks.md)):
+## Findings so far
 
-- **Weekday daytime N and Q trains never stop at 8 St–NYU.** The N stops there only
-  after about 9 pm and overnight, and all day on weekends.
-- **A one-seat ride from 18 Av to 8 St already exists, twice a day.** Weekday W trips
-  leave 18 Av at 07:12 and 16:41 and run via the Montague tunnel. They take 45.5 min,
-  against 34.4 min on the N to 14 St plus the backtrack.
-- **The 14 St backtrack is short on paper.** Downtown R/W trains leave 14 St every
-  3.5–5 min in the daytime (expected wait 2.2–2.8 min) and every 5–6 min after 10 pm.
-  Observed waits will be longer; measuring them is Phase 1.
-- **Running the N local from 34 St to Canal costs about 150–180 s per trip** in today's
-  schedule (weekend local minus weekday express). That's the price every N
-  through-rider would pay.
+- **When the N left in 2016, people stopped getting off there.** After November 7, 2016,
+  exits at 28 St, 23 St, 8 St–NYU and Prince St fell **9.7%** (95% CI 6.8–12.5%)
+  relative to nearby stations on other lines, with the same weeks of 2015 differenced
+  out. Entries barely moved. ([natural experiment](docs/findings/natural_experiment_2016.md))
+- **A local N costs its riders about 3 minutes downtown and 2 uptown**, and the R/W
+  7–10 seconds, in a SimPy simulation of the Broadway line that reproduces observed
+  running times within about 2%. The Q gets 26–38 seconds faster.
+  ([simulation](docs/findings/simulation.md), [calibration](docs/findings/sim_calibration.md))
+- **The real 14 St backtrack is worse than the timetable**: about 3 minutes' average
+  wait for a downtown R/W in the daytime (2.2–2.8 scheduled), with 1 gap in 10 longer
+  than 7–9 minutes. ([observed service](docs/findings/observed_service.md))
+- **For a commute from 18 Av & 72 St**, replayed on 43 real weekdays: D 51.8 min median,
+  N + Canal transfer 54.8, N + 14 St backtrack 57.2, a one-seat N to 8 St 50.1.
+  Changing at Canal beats the backtrack by 2.5 minutes. ([commute](docs/findings/commute.md))
+- **The scheduled timetable**, from `make week1` ([full output](docs/findings/week1_gtfs_checks.md)):
+  weekday daytime N and Q trains never stop at 8 St–NYU; two weekday W trips run from 18
+  Av to 8 St via the Montague tunnel (07:12 and 16:41, 45.5 min); running the N local
+  from 34 St to Canal adds 150–180 s in today's schedule (about 210 s observed).
+- **The scenario ledger** (net rider-hours per weekday, with and without letting riders
+  switch to 8 St) is running on September 2026 origin–destination data.
 - **Stop the Stop reproduces exactly.** An independent re-implementation matches all 356
   published stops ([details](docs/findings/phase0_wolk_replication.md)). Closing 8 St–NYU
   to the R/W costs riders time in all 80 cells of the stop-cost × walk-weight grid when
@@ -48,17 +59,18 @@ From `make week1` ([full output](docs/findings/week1_gtfs_checks.md)):
 Assumptions and decision rules are fixed in advance in
 [docs/preregistration.md](docs/preregistration.md).
 
-## Roadmap (about 10 hours a week)
+## Roadmap
 
-| Weeks | Work | Skills |
-|---|---|---|
-| 1–2 | Reproduce Wolk's numbers; check facts; start the shuttle logger | GTFS, routing |
-| 3–4 | Data pipeline; Monte Carlo of the 14 St transfer wait | DuckDB, Monte Carlo |
-| 5–7 | Scenario ledger: add N stops to the timetable and re-route every trip | Counterfactual routing |
-| 8–12 | SimPy model of the Broadway line, with a LightGBM dwell-time model | Discrete-event simulation, LightGBM + SHAP |
-| 13–15 | ML surrogate of the simulator; global sensitivity analysis | Surrogate models, Sobol indices |
-| 16–17 | 2016 natural experiment, with forecasts as the counterfactual | Forecasting, causal inference |
-| 18–20 | Public brief and dashboard | Streamlit, writing |
+| Phase | Work | Skills | Status |
+|---|---|---|---|
+| 0 | Reproduce Wolk's numbers; check facts; start the shuttle logger | GTFS, routing | done |
+| 1 | Data pipeline through GitHub Actions; observed waits and commute replay | DuckDB, Actions, Monte Carlo | done |
+| 2 | Scenario ledger: own RAPTOR router, edited timetables, destination flexibility | Counterfactual routing | running on real OD |
+| 3 | SimPy model of the Broadway line, calibrated to observed trains | Discrete-event simulation | done (v1) |
+| 4 | ML: week-ahead ridership forecasting, commute recommender | LightGBM, SHAP, conformal | recommender done; forecasting needs hourly data |
+| 5 | 2016 natural experiment | Triple difference, event study | done |
+| 6 | Dashboard and public post | Streamlit, writing | draft |
+| next | Surrogate model + global sensitivity of the simulator; dwell model from observed data; shuttle headways; system-wide screen | Sobol indices, MILP | open |
 
 The research behind this plan is in
 [docs/research/2026-11-03-research-report.md](docs/research/2026-11-03-research-report.md).
