@@ -117,24 +117,39 @@ def ddd(p: pl.DataFrame, group: str, outcome: str) -> dict:
 
 
 def event_study(p: pl.DataFrame, outcome: str = "log_total") -> pl.DataFrame:
-    """Week-by-week treated-vs-control gap in 2016 minus the same gap in 2015 (ref: week -1)."""
+    """Week-by-week effects from one pooled regression (reference week: -1).
+
+        y ~ sum_w beta_w [treated x 2016 x week w] | unit x year + unit x week + date
+
+    beta_w is the treated-vs-control gap in week w of 2016, minus the same gap in the
+    same week of 2015, relative to the week before the change.
+    """
     d = p.filter(pl.col("group").is_in(["treated", "control"])).with_columns(
-        tr=(pl.col("group") == "treated").cast(pl.Int8))
-    out = []
-    for w in sorted(d["week"].unique().to_list()):
-        if w == -1:
-            out.append({"week": w, "effect_pct": 0.0, "ci_low_pct": 0.0, "ci_high_pct": 0.0})
-            continue
-        sub = d.filter(pl.col("week").is_in([w, -1])).with_columns(
-            x=((pl.col("tr") == 1) & (pl.col("week") == w) & (pl.col("year") == 2016))
-            .cast(pl.Int8)).to_pandas()
-        fit = pf.feols(f"{outcome} ~ x | unit_year + unit^week + day", data=sub,
-                       vcov={"CRV1": "unit"})
-        c, s = fit.coef()["x"], fit.se()["x"]
-        out.append({"week": w, "effect_pct": 100 * (np.exp(c) - 1),
-                    "ci_low_pct": 100 * (np.exp(c - 1.96 * s) - 1),
-                    "ci_high_pct": 100 * (np.exp(c + 1.96 * s) - 1)})
-    return pl.DataFrame(out)
+        tr=(pl.col("group") == "treated").cast(pl.Int8),
+        unit_week=pl.col("unit") + "_" + pl.col("week").cast(pl.String),
+        day_s=pl.col("day").cast(pl.String))
+    # Keep weeks with at least 3 full days of treated data in both years (drops
+    # Thanksgiving week 2015 and partial weeks at the window edges).
+    cover = (d.filter(pl.col("tr") == 1).group_by("week", "year").agg(n=pl.len())
+             .group_by("week").agg(min_rows=pl.col("n").min(), years=pl.len()))
+    good = cover.filter((pl.col("years") == 2) & (pl.col("min_rows") >= 12))["week"].to_list()
+    d = d.filter(pl.col("week").is_in(good))
+    weeks = [w for w in sorted(good) if w != -1]
+    names = {w: f"w_m{-w}" if w < 0 else f"w_p{w}" for w in weeks}
+    d = d.with_columns(*[((pl.col("tr") == 1) & (pl.col("year") == 2016)
+                          & (pl.col("week") == w)).cast(pl.Float64).alias(n)
+                         for w, n in names.items()])
+    fit = pf.feols(f"{outcome} ~ {' + '.join(names.values())} | unit_year + unit_week + day_s",
+                   data=d.to_pandas(), vcov={"CRV1": "unit"})
+    coef, se = fit.coef(), fit.se()
+    out = [{"week": -1, "effect_pct": 0.0, "ci_low_pct": 0.0, "ci_high_pct": 0.0}]
+    for w, n in names.items():
+        if n in coef:
+            c, s = coef[n], se[n]
+            out.append({"week": w, "effect_pct": 100 * (np.exp(c) - 1),
+                        "ci_low_pct": 100 * (np.exp(c - 1.96 * s) - 1),
+                        "ci_high_pct": 100 * (np.exp(c + 1.96 * s) - 1)})
+    return pl.DataFrame(out).sort("week")
 
 
 def md(df: pl.DataFrame, digits: int = 1) -> str:
