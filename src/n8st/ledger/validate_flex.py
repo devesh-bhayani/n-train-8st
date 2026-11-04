@@ -16,11 +16,12 @@ the flexibility adjustment in the ledger is believable.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 import polars as pl
 
-from n8st.config import FINDINGS_DIR, SEA_BEACH_STOPS
+from n8st.config import FINDINGS_DIR, PROCESSED_DIR, SEA_BEACH_STOPS
 from n8st.data import gtfs
 from n8st.ledger import engine, flex
 from n8st.ledger.run import STATIONS, VARIANTS, complexes_from_stations, load_od
@@ -54,20 +55,65 @@ def main() -> None:
         rows.append({"weights": w.label, "today_pct": b, "with_V1_pct": s, "shift_pts": s - b})
     res = pl.DataFrame(rows)
     observed_raw, observed_did = 4.09, 2.54
-    lines = ["| " + " | ".join(res.columns) + " |", "|" + "---|" * len(res.columns)]
-    lines += ["| " + " | ".join(f"{v:.2f}" if isinstance(v, float) else str(v) for v in r)
-              + " |" for r in res.iter_rows()]
+
+    # Calibrate the logit scale theta (1/seconds) at base weights so the predicted shift
+    # toward 8 St matches what riders do when the N actually stops there (weekends).
+    bw = next(i for i, w in enumerate(weights) if w == engine.BASE)
+    scan = []
+    for theta in (1 / 60, 1 / 120, 1 / 180, 1 / 300, 1 / 450, 1 / 600, 1 / 900, 1 / 1200,
+                  1 / 1800, 1 / 2700, 1 / 3600):
+        shift = flex.logit_shift(od, out["flex"], area, sea, args.variant, bw,
+                                 engine.BASE.walk, theta, 16)
+        scan.append({"theta_per_s": theta, "one_over_theta_s": round(1 / theta),
+                     "predicted_shift_pts": shift})
+    scan_df = pl.DataFrame(scan)
+
+    def pick(target):
+        # interpolate one_over_theta where predicted shift crosses target (shift falls
+        # as 1/theta grows, i.e. as choices get noisier)
+        xs = scan_df["one_over_theta_s"].to_list()
+        ys = scan_df["predicted_shift_pts"].to_list()
+        for (x0, y0), (x1, y1) in zip(zip(xs, ys, strict=True), zip(xs[1:], ys[1:],
+                                                                    strict=True), strict=False):
+            if (y0 - target) * (y1 - target) <= 0 and y0 != y1:
+                return x0 + (target - y0) * (x1 - x0) / (y1 - y0)
+        return None
+
+    cal = {"did_target_pts": observed_did, "raw_target_pts": observed_raw,
+           "one_over_theta_did_s": pick(observed_did), "one_over_theta_raw_s": pick(observed_raw)}
+    (PROCESSED_DIR / "flex_theta.json").write_text(json.dumps(cal, indent=1))
+
+    def md(df):
+        lines = ["| " + " | ".join(df.columns) + " |", "|" + "---|" * len(df.columns)]
+        lines += ["| " + " | ".join(f"{v:.4g}" if isinstance(v, float) else str(v) for v in r)
+                  + " |" for r in df.iter_rows()]
+        return "\n".join(lines)
+
     text = "\n".join([
         "# Validating destination flexibility against the weekend N",
         "",
         "Predicted share of Sea Beach (N) riders bound for campus-area stations who use "
         "8 St–NYU, weekday OD, 6 am–10 pm, today and with the weekday N running local.",
         "",
-        *lines,
+        "## Deterministic choice (everyone takes the cheapest station)",
+        "",
+        md(res),
         "",
         f"Observed (weekends, when the N runs local): **+{observed_raw:.2f} points** raw, "
-        f"**+{observed_did:.2f}** net of the West End comparison. Today's weekday share "
-        "observed: 2.91%.",
+        f"**+{observed_did:.2f}** net of the West End comparison. Deterministic choice "
+        "overpredicts switching roughly tenfold, so it is only an upper bound.",
+        "",
+        "## Logit choice, calibrated",
+        "",
+        "P(station) ∝ exp(−θ × cost). Smaller θ (larger 1/θ) = noisier, stickier choices. "
+        "Predicted shift at base weights:",
+        "",
+        md(scan_df),
+        "",
+        f"Calibrated 1/θ: **{cal['one_over_theta_did_s'] or float('nan'):.0f} s** to match "
+        f"the difference-in-differences (+{observed_did}), "
+        f"**{cal['one_over_theta_raw_s'] or float('nan'):.0f} s** to match the raw weekend "
+        f"shift (+{observed_raw}).",
         "",
     ])
     (FINDINGS_DIR / "flex_validation.md").write_text(text)

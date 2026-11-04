@@ -33,8 +33,26 @@ from n8st.ledger.run import STATIONS, VARIANTS, complexes_from_stations, load_od
 from n8st.routing import network
 from n8st.scenarios import timetable as tt
 
-DEFAULT_OFFSETS = [0, 120, 240, 360, 480]  # the N runs every ~8-10 min at midday
+DEFAULT_OFFSETS = [0, 60, 120, 180, 240, 300, 360, 420, 480, 540]  # N runs every ~8-10 min
 DEFAULT_VARIANTS = ["V1_sim", "V1_sched", "V2_sched", "V2_obs", "V1_obs"]
+
+
+def _thetas() -> list[tuple[str, float]]:
+    """Logit scales calibrated against the weekend N (written by validate_flex)."""
+    p = PROCESSED_DIR / "flex_theta.json"
+    if not p.exists():
+        return []
+    cal = json.loads(p.read_text())
+    out = []
+    if cal.get("one_over_theta_did_s"):
+        out.append(("net_hours_flex_logit", 1 / cal["one_over_theta_did_s"]))
+    if cal.get("one_over_theta_raw_s"):
+        out.append(("net_hours_flex_logit_raw", 1 / cal["one_over_theta_raw_s"]))
+    return out
+
+
+THETAS = _thetas()
+FLEX_COLS = ["net_hours_flex_upper", "net_hours_flex_logit", "net_hours_flex_logit_raw"]
 
 
 def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
@@ -62,18 +80,22 @@ def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
                          flex_origins=None if check else area_ids)
         tot = out["totals"].with_columns(offset_s=pl.lit(d))
         if not check:
-            adj = flex.adjustments(od, out["flex"], out["flex_out"], area,
-                                   [w.walk for w in weights], list(nets))
             labels = pl.DataFrame({"weight_index": list(range(len(weights))),
                                    "weights": [w.label for w in weights]})
-            adj = adj.join(labels, on="weight_index").select("scenario", "weights",
-                                                            "adjustment_hours")
-            tot = tot.join(adj, on=["scenario", "weights"], how="left").with_columns(
-                net_hours_flexible=pl.col("net_hours") + pl.col("adjustment_hours"))
+            # deterministic choice = upper bound; logit with theta calibrated to the
+            # weekend N (n8st.ledger.validate_flex) = central estimate
+            for col, theta in (("net_hours_flex_upper", None), *THETAS):
+                adj = flex.adjustments(od, out["flex"], out["flex_out"], area,
+                                       [w.walk for w in weights], list(nets), theta=theta)
+                adj = adj.join(labels, on="weight_index").select(
+                    "scenario", "weights", pl.col("adjustment_hours").alias(f"_adj_{col}"))
+                tot = tot.join(adj, on=["scenario", "weights"], how="left").with_columns(
+                    (pl.col("net_hours") + pl.col(f"_adj_{col}")).alias(col)).drop(
+                    f"_adj_{col}")
         per_offset.append(tot)
         print(f"  offset {d:>3} s done in {time.monotonic() - t:.0f} s", flush=True)
     allt = pl.concat(per_offset, how="diagonal_relaxed")
-    value_cols = [c for c in ("net_hours", "hours_saved", "hours_lost", "net_hours_flexible")
+    value_cols = [c for c in ("net_hours", "hours_saved", "hours_lost", *FLEX_COLS)
                   if c in allt.columns]
     avg = allt.group_by("scenario", "weights", "wait_w", "walk_w", "transfer_min").agg(
         *[pl.col(c).mean() for c in value_cols],
@@ -114,23 +136,32 @@ def main() -> None:
         "variants": list(avg["scenario"].unique()), "runtime_s": round(time.monotonic() - t0)},
         indent=1))
     base = avg.filter(pl.col("weights") == engine.BASE.label).drop("weights")
+    flex_present = [c for c in FLEX_COLS if c in avg.columns]
     cols = [c for c in ("scenario", "net_hours", "net_hours_sd_across_offsets", "hours_saved",
-                        "hours_lost", "net_hours_flexible") if c in base.columns]
+                        "hours_lost", *flex_present) if c in base.columns]
+    n_off = len(args.offsets)
+    base = base.with_columns(
+        se=pl.col("net_hours_sd_across_offsets") / n_off ** 0.5)
     grid = avg.group_by("scenario").agg(
         cells=pl.len(), cells_saving=(pl.col("net_hours") < 0).sum(),
-        **({"cells_saving_flexible": (pl.col("net_hours_flexible") < 0).sum()}
-           if "net_hours_flexible" in avg.columns else {}),
+        **{f"cells_saving_{c.removeprefix('net_hours_')}": (pl.col(c) < 0).sum()
+           for c in flex_present},
         best=pl.col("net_hours").min(), worst=pl.col("net_hours").max()).sort("scenario")
     text = "\n".join([
         "# Phase-averaged ledger" + (" (check: pure shifts)" if args.check else ""),
         "",
         f"OD `{args.od.name}`; N trips shifted by {args.offsets} s in both baseline and "
         f"scenario, results averaged; riders sampled every {args.step} s with jitter, "
-        "5 am–midnight.",
+        "5 am–midnight. `se` = standard error of the phase average.",
+        "",
+        "Columns: `net_hours` keeps today's stations; `flex_upper` lets every rider around "
+        "campus take the cheapest station (upper bound on switching); `flex_logit` uses a "
+        "logit choice calibrated so switching matches the weekend N (central estimate); "
+        "`flex_logit_raw` is calibrated to the raw weekend shift.",
         "",
         "## Base weights",
         "",
-        md(base.select(cols)),
+        md(base.select(*cols, "se")),
         "",
         "## Across the 13-cell weight grid",
         "",

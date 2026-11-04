@@ -109,6 +109,47 @@ def station_changes(c_base: np.ndarray, c_scn: np.ndarray, walk: np.ndarray,
     return out
 
 
+def _logsumexp(u: np.ndarray) -> np.ndarray:
+    m = np.max(u, axis=1, keepdims=True)
+    m = np.where(np.isfinite(m), m, 0.0)
+    return (m + np.log(np.exp(u - m).sum(axis=1, keepdims=True)))[:, 0]
+
+
+def logit_station_changes(c_base: np.ndarray, c_scn: np.ndarray, walk: np.ndarray,
+                          walk_w: float, theta: float) -> tuple[np.ndarray, np.ndarray,
+                                                                 np.ndarray]:
+    """Logit version of station_changes.
+
+    Riders at destination point x pick station k with probability
+        P(k | x) ∝ exp(-theta * (cost_k + walk_w * walk_xk)).
+    Riders observed at station s are spread over points by Bayes: P(x | s) ∝ P(s | x).
+    Returns, per station s:
+      dcost   mean change in expected cost (logsum / theta) for riders observed at s
+      share_b, share_s  (stations x stations) matrices: probability that a rider observed
+              at s uses station k today / in the scenario (rows s, columns k)
+    """
+    cb = np.where(np.isfinite(c_base), c_base, np.inf)
+    cs = np.where(np.isfinite(c_scn), c_scn, np.inf)
+    reach = np.isfinite(walk)
+    u_b = np.where(reach, -theta * (cb[None, :] + walk_w * np.where(reach, walk, 0.0)), -np.inf)
+    u_s = np.where(reach, -theta * (cs[None, :] + walk_w * np.where(reach, walk, 0.0)), -np.inf)
+    lse_b, lse_s = _logsumexp(u_b), _logsumexp(u_s)
+    with np.errstate(invalid="ignore"):
+        p_b = np.exp(u_b - lse_b[:, None])  # (points, stations)
+        p_s = np.exp(u_s - lse_s[:, None])
+    p_b = np.nan_to_num(p_b)
+    p_s = np.nan_to_num(p_s)
+    dcs = -(lse_s - lse_b) / theta  # change in expected cost per point (seconds)
+    dcs = np.where(np.isfinite(dcs), dcs, 0.0)
+    weight = p_b / np.maximum(p_b.sum(axis=0, keepdims=True), 1e-300)  # P(x | s), columns s
+    dcost = (weight * dcs[:, None]).sum(axis=0)
+    share_b = weight.T @ p_b  # rows s, columns k
+    share_s = weight.T @ p_s
+    none = p_b.sum(axis=0) < 1e-12
+    dcost[none] = np.nan
+    return dcost, share_b, share_s
+
+
 def choice_shares(od: pl.DataFrame, flex: dict, area: pl.DataFrame, origins: list[int],
                   scenario: str, weight_index: int, walk_w: float,
                   station: int) -> tuple[float, float]:
@@ -141,12 +182,42 @@ def choice_shares(od: pl.DataFrame, flex: dict, area: pl.DataFrame, origins: lis
     return (100 * base_n / total, 100 * scn_n / total) if total else (float("nan"),) * 2
 
 
+def logit_shift(od: pl.DataFrame, flex: dict, area: pl.DataFrame, origins: list[int],
+                scenario: str, weight_index: int, walk_w: float, theta: float,
+                station: int) -> float:
+    """Predicted change (percentage points) in the share of area-bound riders from
+    `origins` who use `station`, under the logit model with scale theta (1/seconds)."""
+    lats, lons = grid_points()
+    walk = walk_seconds(area, lats, lons)
+    area_ids = area["complex_id"].to_list()
+    order = [flex["destinations"].index(c) for c in area_ids]
+    o_idx = {o: i for i, o in enumerate(flex["origins"])}
+    h_idx = {h: i for i, h in enumerate(flex["hours"])}
+    k = area_ids.index(station)
+    into = od.filter(pl.col("destination").is_in(area_ids) & pl.col("origin").is_in(origins)
+                     & pl.col("origin").is_in(list(o_idx)) & pl.col("hour").is_in(list(h_idx)))
+    num = den = 0.0
+    for (o, h), grp in into.group_by("origin", "hour"):
+        cb = flex["base"][o_idx[o], h_idx[h], order, weight_index].astype(float)
+        cs = flex[scenario][o_idx[o], h_idx[h], order, weight_index].astype(float)
+        _, sb, ss = logit_station_changes(cb, cs, walk, walk_w, theta)
+        for d, r in grp.select("destination", "riders").iter_rows():
+            s = area_ids.index(d)
+            num += r * (ss[s, k] - sb[s, k])
+            den += r
+    return 100 * num / den if den else float("nan")
+
+
 def adjustments(od: pl.DataFrame, flex: dict, flex_out: dict, area: pl.DataFrame,
-                weights_walk: list[float], scenarios: list[str]) -> pl.DataFrame:
+                weights_walk: list[float], scenarios: list[str],
+                theta: float | None = None) -> pl.DataFrame:
     """Change in passenger-hours when area riders may switch stations, vs fixed OD.
 
     Returns one row per (scenario, weight index): fixed and flexible hours for the
     affected flows, and the adjustment (flexible minus fixed; negative = extra benefit).
+    theta=None uses deterministic choice (an upper bound: everyone takes the cheapest
+    station); a number uses logit choice with that scale (1/seconds), calibrated in
+    n8st.ledger.validate_flex against the weekend N.
     """
     lats, lons = grid_points()
     walk = walk_seconds(area, lats, lons)
@@ -177,7 +248,8 @@ def adjustments(od: pl.DataFrame, flex: dict, flex_out: dict, area: pl.DataFrame
             for o, h, dests, riders in into_groups.iter_rows():
                 cb = flex["base"][o_idx[o], h_idx[h], order, wi].astype(float)
                 cs = flex[s][o_idx[o], h_idx[h], order, wi].astype(float)
-                g = station_changes(cb, cs, walk, ww)
+                g = (station_changes(cb, cs, walk, ww) if theta is None
+                     else logit_station_changes(cb, cs, walk, ww, theta)[0])
                 for d, r in zip(dests, riders, strict=True):
                     k = k_of[d]
                     f = cs[k] - cb[k]
@@ -189,7 +261,8 @@ def adjustments(od: pl.DataFrame, flex: dict, flex_out: dict, area: pl.DataFrame
                 for d, h, origs, riders in out_groups.iter_rows():
                     cb = flex_out["base"][out_order, h_idx[h], cpos[d], wi].astype(float)
                     cs = flex_out[s][out_order, h_idx[h], cpos[d], wi].astype(float)
-                    g = station_changes(cb, cs, walk, ww)
+                    g = (station_changes(cb, cs, walk, ww) if theta is None
+                     else logit_station_changes(cb, cs, walk, ww, theta)[0])
                     for o, r in zip(origs, riders, strict=True):
                         k = k_of[o]
                         f = cs[k] - cb[k]
