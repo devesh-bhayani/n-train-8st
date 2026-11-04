@@ -41,7 +41,10 @@ def _get(session: requests.Session, url: str, params: dict | None = None) -> req
     for attempt in range(6):
         try:
             resp = session.get(url, params=params, timeout=600)
-        except (requests.Timeout, requests.ConnectionError) as e:
+            _ = resp.content  # read the whole body inside the retry (resets happen mid-stream)
+        except (requests.Timeout, requests.ConnectionError,
+                requests.exceptions.ChunkedEncodingError,
+                requests.exceptions.ContentDecodingError) as e:
             last_error = e
             time.sleep(min(2 ** (attempt + 2), 120))
             continue
