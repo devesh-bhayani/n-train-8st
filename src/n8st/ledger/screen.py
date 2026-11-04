@@ -9,9 +9,9 @@ The ledger then scores each one on the same OD data.
 Phase averaging (see n8st.ledger.phase_avg): a run that slows route r also moves r's
 trains relative to every route they share track or transfers with, and on one timetable
 that alignment luck is worth +-1,000-2,600 rider-hours, as big as many real effects.
-So for each offset in SCREEN_OFFSETS, route r is shifted by the same offset in the
-baseline and in every scenario on r, and the results are averaged. Scenarios are grouped
-by route so each group shares its shifted baseline.
+So for each offset in SCREEN_OFFSETS (centred on today's timetable), route r is
+shifted by the same offset in the baseline and in every scenario on r, and the results
+are averaged. Scenarios are grouped by route so each group shares its shifted baseline.
 
 To keep ~80 scenarios x 4 offsets affordable, departures are sampled every 10 minutes
 (6 am-11 pm, with jitter) and only three weight settings are used; the 8 St-NYU study
@@ -41,7 +41,8 @@ from n8st.scenarios import express_segments as es
 from n8st.scenarios import make_local as ml
 
 SCREEN_WEIGHTS = [engine.Weights(2.0, 2.0, 0.0), engine.BASE, engine.Weights(2.0, 2.0, 900.0)]
-SCREEN_OFFSETS = [0, 360, 720, 1080]  # 0-24 min window in 6-min steps
+# Centred on today's timetable (see phase_avg): midpoints of [-12, +12) min, 6-min steps.
+SCREEN_OFFSETS = [-540, -180, 180, 540]
 BASE_COL = f"net_hours_{engine.BASE.label}"
 
 

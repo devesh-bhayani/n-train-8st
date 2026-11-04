@@ -12,12 +12,16 @@ delta in both the baseline and the scenario, run the ledger, and average. Whatev
 coordination quality the N has is then the same, on average, with and without the
 change, and the difference is the effect of the stopping pattern itself.
 
-The window matters. A scenario that delays the N by D seconds downstream averages its
-downstream phases over [D, W + D) while the baseline averages over [0, W). If W were
-exactly one headway the two sets would be the same mod the headway and the bias would
-vanish; the N's headway varies through the day, so instead the window is made wide
-(0-18 min, about two midday headways), which shrinks the leftover end effect to roughly
-D / W of the spread in coordination quality. The pure-shift check measures what is left.
+The window matters, and so does where it sits. Today's timetable (offset 0) is a
+designed optimum: shifting it by 180 s costs ~4,400 rider-hours, against ~1,500 at a
+typical offset, and the advantage does not repeat one headway later. A window that
+starts at 0, [0, W), lets the baseline visit that optimum while a scenario that delays
+the N by D downstream averages over [D, W + D) and never does, so placebo shifts came
+out positive (+350 h for 180 s with W = 20 min). The window is therefore centred on
+today's timetable: offsets -540 ... +540 s in 2-minute steps (the midpoint rule on
+[-10, +10) min), so baseline and scenario both pass through the designed alignment
+and the leftover end effects sit at ordinary offsets. The pure-shift check measures
+what is left.
 
     python -m n8st.ledger.phase_avg --od data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet
     python -m n8st.ledger.phase_avg --check   # pure shifts should average to ~0
@@ -40,8 +44,9 @@ from n8st.ledger.run import STATIONS, VARIANTS, complexes_from_stations, load_od
 from n8st.routing import network
 from n8st.scenarios import timetable as tt
 
-# 0-18 min in 2-min steps. The N runs every ~8-10 min by day and 12-20 min late evening.
-DEFAULT_OFFSETS = list(range(0, 1200, 120))
+# Centred on today's timetable, 2-min steps over [-10, +10) min. The N runs every
+# ~8-10 min by day and 12-20 min late evening.
+DEFAULT_OFFSETS = list(range(-540, 541, 120))
 DEFAULT_VARIANTS = ["V1_sim", "V1_sched", "V2_sched", "V2_obs", "V1_obs"]
 
 

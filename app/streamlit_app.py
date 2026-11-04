@@ -72,32 +72,101 @@ st.markdown(
 )
 
 meta_path = DATA / "ledger_meta.json"
+meta = json.loads(meta_path.read_text()) if meta_path.exists() else {}
 totals = load("ledger_totals")
+BASE_W = "w2_k2_x5"
+LABELS = {
+    "V1_sim": "V1 · local 34 St–Canal, simulation timing",
+    "V1_sched": "V1 · local, weekend-schedule timing",
+    "V1_obs": "V1 · local, observed local timing",
+    "V2_sched": "V2 · express to 14 St, then 8 St + Prince (schedule timing)",
+    "V2_obs": "V2 · express to 14 St, then local (observed timing)",
+}
+ESTIMATES = {
+    "net_hours": "Riders keep today's stations",
+    "net_hours_flex_calibrated": "Switching, calibrated to the weekend N",
+    "net_hours_flex_upper": "Everyone switches to their best station (upper bound)",
+}
+
+
+def rnd(v) -> int | None:
+    return None if v is None or pd.isna(v) else int(round(v))
+
+
+def hours(v: float) -> str:
+    return f"{abs(v):,.0f} h {'saved' if v < 0 else 'lost'}"
+
 
 # --------------------------------------------------------------------------- headline
-st.header("The verdict, so far")
+st.header("The verdict")
 if totals is not None:
-    base = totals[totals["weights"] == "w2_k2_x5"].set_index("scenario")
+    month = meta.get("headline_month", totals["month"].iloc[0])
+    tm = totals[totals["month"] == month]
+    base = tm[tm["weights"] == BASE_W].set_index("scenario")
     head = "V1_sim" if "V1_sim" in base.index else base.index[0]
-    net = base.loc[head, "net_hours"]
+    r = base.loc[head]
+    net, se = r["net_hours"], r["se"]
     verb = "saves" if net < 0 else "costs"
     st.markdown(
         f"<div style='font-family:{FONT};font-size:56px;font-weight:600;color:{INK};"
         f"line-height:1.1'>{abs(net):,.0f} rider-hours</div>"
         f"<div style='color:{INK2};font-size:16px;margin-bottom:16px'>"
-        f"per weekday that a local N via 8 St–NYU <b>{verb}</b> riders overall "
-        "(simulation-timed V1, base weights; riders keep today's stations)</div>",
+        f"per weekday that a local N via 8 St–NYU <b>{verb}</b> riders overall, "
+        f"± {2 * se:,.0f} (two standard errors). {month} origin–destination data, "
+        "simulation-timed V1, base weights, riders keep today's stations, averaged over "
+        "ten timetable alignments of the N.</div>",
         unsafe_allow_html=True)
     c = st.columns(4)
-    c[0].metric("Hours saved by those who gain", f"{base.loc[head, 'hours_saved']:,.0f}")
-    c[1].metric("Hours lost by those slowed", f"{base.loc[head, 'hours_lost']:,.0f}")
-    grid = totals[totals["scenario"] == head]
-    c[2].metric("Weight settings where it saves time",
-                f"{(grid['net_hours'] < 0).sum()} of {len(grid)}")
-    c[3].metric("Riders whose trip changes", f"{base.loc[head, 'riders_affected']:,.0f}")
+    c[0].metric("Hours saved by those who gain", f"{r['hours_saved']:,.0f}")
+    c[1].metric("Hours lost by those slowed", f"{r['hours_lost']:,.0f}")
+    if "net_hours_flex_calibrated" in r:
+        c[2].metric("With switching, calibrated", hours(r["net_hours_flex_calibrated"]))
+        c[3].metric("Switching upper bound", hours(r["net_hours_flex_upper"]))
+    st.caption(
+        "Switching: riders bound for (or leaving) the 13 stations around Washington Square "
+        "may change station. The upper bound lets everyone take their cheapest station; "
+        "the calibrated estimate scales that benefit to the switching actually seen on "
+        "weekends, when the N already stops at 8 St.")
+
+    st.subheader("Against the pre-registered rule")
+    st.markdown(
+        "The draft pre-registration (committed before any scenario was scored) says a "
+        "scenario supports the change only if **(1)** it saves time at base weights, "
+        "**(2)** it saves time in at least 75% of the weight grid, and **(3)** the R/W "
+        "knock-on stays under 60 s per train. The simulation puts (3) at about 10 s, so it "
+        "passes; (1) and (2) are below, using today's stations as pre-registered.")
+    rows = []
+    for s in [k for k in LABELS if k in base.index]:
+        g = tm[tm["scenario"] == s]
+        b = base.loc[s]
+        cells = int((g["net_hours"] < 0).sum())
+        rows.append({
+            "Scenario": LABELS[s],
+            "Net, today's stations (h)": rnd(b["net_hours"]),
+            "± 2 se": rnd(2 * b["se"]),
+            "Grid cells saving": f"{cells} of {len(g)}",
+            "Rule 1": "pass" if b["net_hours"] < 0 else "fail",
+            "Rule 2": "pass" if cells >= 0.75 * len(g) else "fail",
+            "Net, calibrated switching (h)": rnd(b.get("net_hours_flex_calibrated")),
+            "Net, switching upper bound (h)": rnd(b.get("net_hours_flex_upper")),
+        })
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+    st.caption("Negative = riders save time. A net within ± 2 se of zero is not "
+               "distinguishable from no effect at this resolution.")
+
+    months = totals[(totals["weights"] == BASE_W)
+                    & (totals["scenario"].isin(["V1_sim", "V2_sched"]))]
+    if months["month"].nunique() > 1:
+        st.subheader("Does it hold in other months?")
+        m = months.assign(Scenario=months["scenario"].map(LABELS))[
+            ["Scenario", "month", "net_hours", "se", *[c for c in ESTIMATES if c != "net_hours"
+                                                        and c in months]]].round(0)
+        st.dataframe(m.rename(columns={"month": "OD month", "net_hours": "Net, today's stations",
+                                       "net_hours_flex_calibrated": "Calibrated switching",
+                                       "net_hours_flex_upper": "Upper bound"}),
+                     hide_index=True, use_container_width=True)
 else:
-    st.info("The scenario ledger is still running on the September 2026 origin–destination "
-            "data. The sections below are complete.")
+    st.info("The scenario ledger is still running. The sections below are complete.")
 
 # --------------------------------------------------------------------------- commute
 st.header("One commute: 18 Av & 72 St to campus")
@@ -178,24 +247,29 @@ if sd is not None:
 # --------------------------------------------------------------------------- ledger
 if totals is not None:
     st.header("Robustness: does the answer depend on the assumptions?")
-    head_grid = totals[totals["scenario"] == head]
-    piv = head_grid.pivot_table(index="wait_w", columns="transfer_min", values="net_hours")
+    est = st.radio("Estimate", [k for k in ESTIMATES if k in tm], horizontal=True,
+                   format_func=ESTIMATES.get)
+    head_grid = tm[tm["scenario"] == head]
+    piv = head_grid[head_grid["transfer_min"] <= 15].pivot_table(
+        index="wait_w", columns="transfer_min", values=est)
     lim = float(abs(piv.values).max())
     fig = go.Figure(go.Heatmap(
         z=piv.values, x=[f"{c:g} min" for c in piv.columns], y=[f"{r:g}×" for r in piv.index],
         colorscale=[[0, DIV_NEG], [0.5, DIV_MID], [1, DIV_POS]], zmin=-lim, zmax=lim,
-        texttemplate="%{z:,.0f}", textfont=dict(color=INK),
+        texttemplate="%{z:,.0f}", textfont=dict(color=INK), xgap=2, ygap=2,
         hovertemplate="waiting/walking %{y}, transfer %{x}<br>%{z:,.0f} rider-hours"
                       "<extra></extra>", colorbar=dict(title="hours")))
     fig.update_xaxes(title="Penalty per transfer")
     fig.update_yaxes(title="Weight on waiting and walking")
     st.plotly_chart(style(fig, 300), use_container_width=True, theme=None)
-    st.caption("Blue = riders save time overall; red = riders lose time overall.")
-    table(totals)
+    st.caption(f"{LABELS.get(head, head)}, {month}. Blue = riders save time overall; red = "
+               "riders lose time overall. The 13th cell (30-minute transfer penalty) is in "
+               "the table.")
+    table(tm)
 
     bh = load("ledger_by_hour")
     if bh is not None:
-        b = bh[(bh["scenario"] == head) & (bh["weights"] == "w2_k2_x5")]
+        b = bh[(bh["scenario"] == head) & (bh["weights"] == BASE_W)]
         fig = go.Figure(go.Bar(
             x=b["hour"], y=b["net_hours"], width=0.6,
             marker=dict(color=[DIV_POS if v > 0 else DIV_NEG for v in b["net_hours"]]),
@@ -204,17 +278,55 @@ if totals is not None:
         fig.update_yaxes(title="Net rider-hours (negative = saved)")
         st.subheader("By hour of the day")
         st.plotly_chart(style(fig, 300), use_container_width=True, theme=None)
+        st.caption("Riders keep today's stations; base weights; averaged over the ten "
+                   "timetable alignments.")
+        table(b)
 
     tf = load("ledger_top_flows")
     if tf is not None:
-        t = tf[tf["scenario"] == head]
+        t = tf[tf["scenario"] == head].rename(columns={
+            "origin_name": "From", "destination_name": "To", "riders": "Riders affected",
+            "hours": "Net hours"}).round(0)
+        st.subheader("Who wins and who loses")
         c1, c2 = st.columns(2)
         c1.markdown("**Biggest winners**")
-        c1.dataframe(t.sort_values("hours").head(10)[
-            ["origin_name", "destination_name", "riders", "hours"]], hide_index=True)
+        c1.dataframe(t.sort_values("Net hours").head(10)[
+            ["From", "To", "Riders affected", "Net hours"]], hide_index=True)
         c2.markdown("**Biggest losers**")
-        c2.dataframe(t.sort_values("hours", ascending=False).head(10)[
-            ["origin_name", "destination_name", "riders", "hours"]], hide_index=True)
+        c2.dataframe(t.sort_values("Net hours", ascending=False).head(10)[
+            ["From", "To", "Riders affected", "Net hours"]], hide_index=True)
+
+# --------------------------------------------------------------------------- screen
+sc = load("screen_express_runs")
+if sc is not None:
+    st.header("System-wide: which express runs would be worth running local?")
+    st.markdown(
+        f"Every weekday express stretch in the subway ({len(sc)} of them) turned local in "
+        "turn, timed with the local route's own schedule and scored with the same ledger "
+        "(today's stations, base weights, each route averaged over four timetable "
+        "alignments). This is a screen: track feasibility is not checked.")
+    sc = sc.assign(
+        label=sc["route"] + " " + sc["direction"].map({"S": "south", "N": "north"}).fillna("")
+        + " · " + sc["from"] + " → " + sc["to"])
+    best = sc.sort_values("net_hours_w2_k2_x5").head(12)
+    ref = sc[(sc["route"] == "N") & ~sc.index.isin(best.index)]
+    show = pd.concat([best, ref]).sort_values("net_hours_w2_k2_x5", ascending=False)
+    vals = show["net_hours_w2_k2_x5"]
+    fig = go.Figure(go.Scatter(
+        x=vals, y=show["label"], mode="markers",
+        marker=dict(size=10, color=[DIV_NEG if v < 0 else DIV_POS for v in vals],
+                    line=dict(width=2, color="rgba(0,0,0,0)")),
+        error_x=dict(type="data", array=2 * show["se"], color=MUTED, thickness=1.5, width=0),
+        customdata=show[["stops_added", "se", "added_stations"]],
+        hovertemplate="%{y}<br>%{x:,.0f} rider-hours ± %{customdata[1]:,.0f} (1 se)"
+                      "<br>%{customdata[0]} stops: %{customdata[2]}<extra></extra>"))
+    fig.add_vline(x=0, line=dict(color=AXIS, width=1))
+    fig.update_xaxes(title="Net rider-hours per weekday (negative = saved), ± 2 se")
+    fig.update_yaxes(showgrid=False, tickfont=dict(color=INK2))
+    st.plotly_chart(style(fig, 80 + 28 * len(show)), use_container_width=True, theme=None)
+    st.caption("The 12 most promising stretches, plus the N's own (34 St–Canal) for "
+               "reference.")
+    table(sc.drop(columns=["label"]), "All stretches")
 
 # --------------------------------------------------------------------------- 2016
 es = load("event_study")
@@ -270,16 +382,25 @@ if fc is not None:
 # --------------------------------------------------------------------------- footer
 st.header("Caveats")
 st.markdown(
-    "- **Fixed stations.** The ledger keeps every rider's origin and destination station, "
-    "so people who would switch from W 4 St or Union Square to 8 St are not counted. That "
-    "understates the benefit.\n"
+    "- **Stations.** The pre-registered ledger keeps every rider's origin and destination "
+    "station, so people who would switch from W 4 St or Union Square to 8 St are not "
+    "counted, which understates the benefit. The switching estimates relax that around "
+    "campus only; the calibrated one leans on a single natural experiment (the weekend N).\n"
+    "- **Timetable luck.** Shifting the N by a few minutes with nothing else changed moves "
+    "the ledger by ±1,000–2,600 rider-hours, because it changes how N trains interleave "
+    "with the W, Q and R. Every result here is averaged over ten alignments of the N "
+    "(−9 to +9 min around today's timetable) in both worlds; ± 2 se is the remaining "
+    "uncertainty from that.\n"
     "- **Timing.** The extra time for N riders comes from the calibrated simulation "
     "(185 s downtown, 110 s uptown), cross-checked against observed weekday local running "
     "(about 210 s).\n"
     "- **Track layout.** Only the full local pattern (V1) is known to be possible. A "
-    "shorter version needs a crossover between 14 St and 8 St that no source confirms.\n"
+    "shorter version (V2) needs a crossover between 14 St and 8 St that no source "
+    "confirms.\n"
     f"- Full method notes: [docs/how-it-works.md]({REPO}/blob/main/docs/how-it-works.md).")
-if meta_path.exists():
-    meta = json.loads(meta_path.read_text())
-    st.caption(f"Ledger input: {Path(meta['od']).name}, "
-               f"{meta['od_riders_per_day']:,.0f} weekday trips.")
+for label, m in meta.get("months", {}).items():
+    if m.get("od_riders_per_day"):
+        st.caption(f"Ledger input ({label}): {Path(m['od']).name}, "
+                   f"{m['od_riders_per_day']:,.0f} weekday trips, riders sampled every "
+                   f"{m['step_s'] // 60} min, N offsets {m['offsets_s'][0]}–"
+                   f"{m['offsets_s'][-1]} s.")

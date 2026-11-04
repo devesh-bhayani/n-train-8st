@@ -40,10 +40,11 @@ This project asks the opposite question: what would *adding* a stop gain?
   published stops ([details](docs/findings/phase0_wolk_replication.md)). Closing 8 St–NYU
   to the R/W costs riders time in all 80 cells of the stop-cost × walk-weight grid when
   riders walk to the next R/W or same-type station.
-- **One NYU shuttle leg links Union Square to campus.** Routes E and W (weekends) pick up at
-  14th St & Irving Pl, ~220 m from the subway, and stop next at 715 Broadway by 8 St–NYU.
-  But it's the final leg of a loop through NYU Langone
-  ([details](docs/findings/shuttle_first_look.md)).
+- **One NYU shuttle leg links Union Square to campus.** Routes E and W pick up at 14th St
+  & Irving Pl, ~220 m from the subway, and stop next at 715 Broadway by 8 St–NYU, as the
+  final leg of a loop through NYU Langone. On the first evening logged (Tuesday, Nov 3)
+  Route E came every 15–30 minutes, an 8–16 minute expected wait, against about 3 minutes
+  for a downtown R/W at 14 St ([details](docs/findings/shuttle_first_look.md)).
 
 ## Scenarios
 

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import shutil
+from pathlib import Path
 
 import polars as pl
 
@@ -88,32 +89,64 @@ def natural_experiment() -> None:
             _export(name, pl.read_csv(p))
 
 
+LEDGER_MONTHS = {"weekday_2026_04": "April 2026", "weekday_2026_09": "September 2026",
+                 "weekday_2025_10": "October 2025"}
+HEADLINE_MONTH = "weekday_2026_04"
+
+
+def _station_names() -> dict[int, str]:
+    p = PROJECT_ROOT / "data" / "raw" / "mta_data" / "bulk" / "stations" / "stations.parquet"
+    if not p.exists():
+        return {}
+    st = pl.read_parquet(p).select(pl.col("complex_id").cast(pl.Float64).cast(pl.Int64),
+                                   "stop_name")
+    return dict(st.group_by("complex_id").agg(pl.col("stop_name").first()).iter_rows())
+
+
 def ledger() -> None:
-    folders = sorted(PROCESSED_DIR.glob("ledger_weekday_*"))
-    if not folders:
+    """Phase-averaged ledger (n8st.ledger.phase_avg) for each month that has been run."""
+    from n8st.ledger.run import load_od
+
+    rows, meta = [], {"months": {}}
+    for tag, label in LEDGER_MONTHS.items():
+        f = PROCESSED_DIR / f"ledger_phase_{tag}"
+        if not (f / "totals.csv").exists():
+            continue
+        m = json.loads((f / "meta.json").read_text())
+        n = len(m["offsets_s"])
+        rows.append(pl.read_csv(f / "totals.csv").with_columns(
+            month=pl.lit(label), month_tag=pl.lit(tag),
+            se=pl.col("net_hours_sd_across_offsets") / n ** 0.5))
+        od = Path(m["od"])
+        m["od_riders_per_day"] = (float(load_od(od)["riders"].sum()) if od.exists()
+                                  else None)
+        meta["months"][label] = m
+    if not rows:
         return
-    f = folders[-1]
-    _export("ledger_totals", pl.read_csv(f / "totals.csv"))
-    _export("ledger_by_hour", pl.read_csv(f / "by_hour.csv"))
-    meta = json.loads((f / "meta.json").read_text())
+    _export("ledger_totals", pl.concat(rows, how="diagonal_relaxed"))
+    head = HEADLINE_MONTH if (PROCESSED_DIR / f"ledger_phase_{HEADLINE_MONTH}" / "totals.csv"
+                              ).exists() else rows[0]["month_tag"][0]
+    meta["headline_month"] = LEDGER_MONTHS[head]
     APP_DATA.mkdir(parents=True, exist_ok=True)
     (APP_DATA / "ledger_meta.json").write_text(json.dumps(meta, indent=1, default=str))
-    pairs = pl.read_parquet(f / "pairs.parquet")
-    names = PROJECT_ROOT / "data" / "raw" / "mta_data" / "bulk" / "stations" / "stations.parquet"
-    if names.exists():
-        st = pl.read_parquet(names).select(
-            pl.col("complex_id").cast(pl.Float64).cast(pl.Int64), "stop_name")
-        nm = dict(st.group_by("complex_id").agg(pl.col("stop_name").first()).iter_rows())
-    else:
-        nm = {}
-    top = (pairs.with_columns(hours=pl.col("riders") * pl.col("d_cost_s") / 3600)
-           .group_by("scenario", "origin", "destination")
-           .agg(riders=pl.col("riders").sum(), hours=pl.col("hours").sum())
-           .with_columns(origin_name=pl.col("origin").replace_strict(nm, default="?"),
-                         destination_name=pl.col("destination").replace_strict(nm, default="?")))
-    winners = top.sort("hours").group_by("scenario", maintain_order=True).head(15)
-    losers = top.sort("hours", descending=True).group_by("scenario", maintain_order=True).head(15)
-    _export("ledger_top_flows", pl.concat([winners, losers]))
+    f = PROCESSED_DIR / f"ledger_phase_{head}"
+    if (f / "by_hour.csv").exists():
+        _export("ledger_by_hour", pl.read_csv(f / "by_hour.csv"))
+    if (f / "flows.parquet").exists():
+        nm = _station_names()
+        top = pl.read_parquet(f / "flows.parquet").with_columns(
+            origin_name=pl.col("origin").replace_strict(nm, default="?"),
+            destination_name=pl.col("destination").replace_strict(nm, default="?"))
+        winners = top.sort("hours").group_by("scenario", maintain_order=True).head(15)
+        losers = top.sort("hours", descending=True).group_by("scenario",
+                                                             maintain_order=True).head(15)
+        _export("ledger_top_flows", pl.concat([winners, losers]))
+
+
+def screen() -> None:
+    p = PROCESSED_DIR / f"screen_express_runs_{HEADLINE_MONTH}.csv"
+    if p.exists():
+        _export("screen_express_runs", pl.read_csv(p))
 
 
 def forecasting() -> None:
@@ -145,7 +178,7 @@ def wolk() -> None:
 def main() -> None:
     print(f"exporting to {APP_DATA}")
     for fn in (commute, backtrack_wait, simulation, sensitivity, natural_experiment, ledger,
-               forecasting, wolk):
+               screen, forecasting, wolk):
         fn()
 
 
