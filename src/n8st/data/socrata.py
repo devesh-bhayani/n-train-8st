@@ -6,8 +6,10 @@ throttling. Downloads land as CSV pages, then DuckDB merges them into one Parque
 
 from __future__ import annotations
 
+import csv
 import os
 import shutil
+import tempfile
 import time
 from collections.abc import Iterable
 from pathlib import Path
@@ -89,44 +91,65 @@ def download(
 ) -> Path:
     """Page through a dataset (optionally filtered or aggregated) into one Parquet file.
 
-    For aggregated queries pass `group` (and usually `order` = the group columns, so
-    paging is stable). Plain queries are ordered by Socrata's row id.
+    Plain (non-aggregated) queries use keyset paging on Socrata's row id: each page asks
+    for rows with `:id` greater than the last one seen, so every page costs the same.
+    ($offset paging re-scans all earlier rows on every page, which is quadratic.)
+    Aggregated queries (`group`) page with $offset, ordered by `order` or the group keys.
     """
     session = _session()
-    pages_dir = out_parquet.with_suffix(".pages")
-    if pages_dir.exists():
-        shutil.rmtree(pages_dir)
-    pages_dir.mkdir(parents=True)
+    pages_dir = Path(tempfile.mkdtemp(prefix="socrata_"))  # never inside the output folder
+    keyset = group is None
+    sel = (":id, " + select) if (keyset and select) else select
 
-    offset, page = 0, 0
+    offset, page, total, last_id = 0, 0, 0, None
     while True:
-        params = {"$limit": page_size, "$offset": offset,
-                  "$order": order or (group if group else ":id")}
-        for key, value in (("$where", where), ("$select", select), ("$group", group),
-                           ("$having", having)):
+        params: dict = {"$limit": page_size}
+        if keyset:
+            params["$order"] = ":id"
+            clause = where or ""
+            if last_id is not None:
+                clause = f"({clause}) AND :id > '{last_id}'" if clause else f":id > '{last_id}'"
+            if clause:
+                params["$where"] = clause
+            if not select:
+                params["$select"] = ":id, *"
+        else:
+            params["$offset"] = offset
+            params["$order"] = order or group
+            if where:
+                params["$where"] = where
+        for key, value in (("$select", sel), ("$group", group), ("$having", having)):
             if value:
                 params[key] = value
         t = time.monotonic()
         resp = _get(session, f"https://{domain}/resource/{dataset_id}.csv", params)
         body = resp.content
-        n_rows = len(body.splitlines()) - 1  # minus header
+        lines = body.splitlines()
+        n_rows = len(lines) - 1  # minus header
         if n_rows <= 0:
             break
         (pages_dir / f"part-{page:05d}.csv").write_bytes(body)
-        print(f"  {dataset_id}: page {page} ({offset + n_rows:,} rows so far, "
+        total += n_rows
+        print(f"  {dataset_id}: page {page} ({total:,} rows so far, "
               f"{time.monotonic() - t:.1f}s)", flush=True)
         if n_rows < page_size:
             break
+        if keyset:
+            header = next(csv.reader([lines[0].decode()]))
+            last = next(csv.reader([lines[-1].decode()]))
+            last_id = last[header.index(":id")]
         offset += page_size
         page += 1
 
     out_parquet.parent.mkdir(parents=True, exist_ok=True)
     if not any(pages_dir.iterdir()):
         raise RuntimeError(f"{dataset_id}: no rows returned for where={where!r}")
+    exclude = ' EXCLUDE (":id")' if keyset else ""
     duckdb.sql(
         f"""
         COPY (
-            SELECT * FROM read_csv('{pages_dir}/part-*.csv', header = true, union_by_name = true)
+            SELECT *{exclude}
+            FROM read_csv('{pages_dir}/part-*.csv', header = true, union_by_name = true)
         ) TO '{out_parquet}' (FORMAT parquet)
         """
     )
