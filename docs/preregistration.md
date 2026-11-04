@@ -59,3 +59,20 @@ the public argument is about V6.
 ## Changelog
 
 - 2026-11-03: draft created.
+- 2026-11-04: scenarios scored. This draft was committed (Nov 3, 15:15 UTC) before any
+  scenario was scored, but it was never finalized, so read it as a draft. Changes to
+  *method*, all made before final results and documented in `docs/how-it-works.md` §4.
+  The decision rule was not changed.
+  - **Timing.** The V1 penalty comes from the calibrated simulation (185 s downtown,
+    110 s uptown, plus knock-on for the R/W and Q) instead of one fixed 165 s.
+    Schedule-timed and observed-timed variants are reported too.
+  - **Rule 3.** The 60 s threshold stands; the simulation puts the R/W knock-on at
+    7–10 s per train.
+  - **Rider sampling.** Arrivals are jittered within each window. Grid-aligned
+    sampling produced fake costs on MTA's 30-second schedule grid.
+  - **Phase averaging.** Every result is averaged over ten alignments of the N
+    (−540 … +540 s) in both baseline and scenario. On one timetable, alignment luck
+    alone is worth ±1,000–2,600 rider-hours.
+  - **Station switching.** Reported alongside the pre-registered fixed-station metric,
+    never instead of it: an upper bound (everyone takes their cheapest station) and a
+    central estimate calibrated to the weekend N (`docs/findings/flex_validation.md`).

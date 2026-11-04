@@ -103,6 +103,18 @@ def _station_names() -> dict[int, str]:
     return dict(st.group_by("complex_id").agg(pl.col("stop_name").first()).iter_rows())
 
 
+ESTIMATE_COLS = ["net_hours", "net_hours_flex_calibrated", "net_hours_flex_calibrated_raw",
+                 "net_hours_flex_upper"]
+
+
+def phase_se(per_offset: pl.DataFrame) -> pl.DataFrame:
+    """Standard error of the phase average, per scenario, weights and estimate:
+    sd across N offsets / sqrt(number of offsets)."""
+    cols = [c for c in ESTIMATE_COLS if c in per_offset.columns]
+    return per_offset.group_by("scenario", "weights").agg(
+        *[(pl.col(c).std() / pl.len().sqrt()).alias(f"se_{c}") for c in cols])
+
+
 def ledger() -> None:
     """Phase-averaged ledger (n8st.ledger.phase_avg) for each month that has been run."""
     from n8st.ledger.run import load_od
@@ -113,10 +125,10 @@ def ledger() -> None:
         if not (f / "totals.csv").exists():
             continue
         m = json.loads((f / "meta.json").read_text())
-        n = len(m["offsets_s"])
-        rows.append(pl.read_csv(f / "totals.csv").with_columns(
-            month=pl.lit(label), month_tag=pl.lit(tag),
-            se=pl.col("net_hours_sd_across_offsets") / n ** 0.5))
+        rows.append(pl.read_csv(f / "totals.csv").join(
+            phase_se(pl.read_csv(f / "per_offset.csv")), on=["scenario", "weights"],
+            how="left").with_columns(month=pl.lit(label), month_tag=pl.lit(tag),
+                                     se=pl.col("se_net_hours")))
         od = Path(m["od"])
         m["od_riders_per_day"] = (float(load_od(od)["riders"].sum()) if od.exists()
                                   else None)

@@ -95,3 +95,38 @@ def test_flex_station_changes_lets_riders_switch():
     # point 2 stays (1300 -> 700).
     assert g[0] == pytest.approx((0 + -300) / 2)
     assert g[1] == pytest.approx(-600)
+
+
+def two_routes(x_offset: int = 0) -> network.Network:
+    """Route X runs A -> B and route Y runs B -> D, both every 5 minutes. Y leaves B at
+    :02:30 past each 5 minutes; X is shifted by x_offset, which sets the wait at B."""
+    rows = []
+    for i, t in enumerate(range(0, 7800, 300)):
+        a = t + x_offset
+        rows += [(f"x{i}", "AN", 1, a, a), (f"x{i}", "BN", 2, a + 120, a + 120)]
+        b = t + 150
+        rows += [(f"y{i}", "BN", 1, b, b), (f"y{i}", "DN", 2, b + 120, b + 120)]
+    st = pl.DataFrame(rows, schema=["trip_id", "stop_id", "stop_sequence", "arr_s", "dep_s"],
+                      orient="row")
+    trips = st.select("trip_id").unique().with_columns(
+        route_id=pl.col("trip_id").str.slice(0, 1).str.to_uppercase(),
+        service_id=pl.lit("Weekday"))
+    return network.build(st, trips, None, "Weekday")
+
+
+def test_phase_averaging_cancels_a_pure_shift():
+    """What n8st.ledger.phase_avg relies on. Shifting route X by 60 s with nothing else
+    changed moves the A -> D transfer wait a lot on any one timetable, but averaged over
+    offsets covering a whole headway (applied to baseline and scenario alike) the
+    'effect' is exactly zero: the scenario's phases are the baseline's, relabelled."""
+    complexes = pl.DataFrame({"complex_id": [1, 2, 4], "gtfs_stop_ids": ["A", "B", "D"]})
+    od = pl.DataFrame({"origin": [1], "destination": [4], "hour": [1], "riders": [100.0]})
+    cidx = engine.complex_index(two_routes(), complexes)
+    nets = []
+    for phi in range(0, 300, 60):
+        out = engine.run(two_routes(phi), {"shift": two_routes(phi + 60)}, cidx, od,
+                         weights=[engine.BASE], hours=range(1, 2), step_s=10,
+                         progress=False)
+        nets.append(out["totals"]["net_hours"].item())
+    assert max(abs(n) for n in nets) > 1.0  # any single alignment is far from zero
+    assert abs(sum(nets) / len(nets)) < 1e-6

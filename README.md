@@ -122,12 +122,20 @@ don't go lower. Fall-term service ends December 22.
 
 ```
 src/n8st/config.py           station IDs, dataset IDs, paths
-src/n8st/data/               GTFS and data.ny.gov download recipes
+src/n8st/data/               GTFS, data.ny.gov recipes (keyset paging), recon, subwaydata.nyc
+src/n8st/routing/            RAPTOR on platforms (numba), generalized cost
+src/n8st/scenarios/          timetable edits: V1/V2/V4/V5, any express stretch made local
+src/n8st/ledger/             net rider-hours, destination flexibility, phase averaging,
+                             the weekend calibration, the system-wide screen
+src/n8st/sim/                SimPy Broadway model, calibration, Sobol sensitivity
+src/n8st/analysis/           observed service, commute replay, 2016 and weekend experiments,
+                             Stop the Stop replication, shuttle first look
+src/n8st/ml/                 week-ahead ridership forecasting
 src/n8st/shuttle/            Passio client, logger, headways, summary
-src/n8st/analysis/           analyses (week1_checks.py so far)
-docs/                        research report, pre-registration, fact checks, findings
-tests/                       pytest suite (fixtures are synthetic; see tests/fixtures)
-.github/workflows/           CI and the hourly shuttle logger
+app/                         Streamlit dashboard (reads app/data/, refreshed by make dashboard-data)
+docs/                        method guide, findings, pre-registration, fact checks, post draft
+tests/                       pytest suite (fixtures are synthetic)
+.github/workflows/           CI, data fetches, the shuttle logger, the daily subwaydata sync
 ```
 
 ## Data and credits
