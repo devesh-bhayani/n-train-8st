@@ -41,3 +41,5 @@ P(station) ∝ exp(−θ × cost). Smaller θ (larger 1/θ) = noisier, stickier 
 | 0.0002778 | 3600 | 2.413 |
 
 Calibrated 1/θ: **3469 s** to match the difference-in-differences (+2.54), **2294 s** to match the raw weekend shift (+4.09).
+
+A logit this noisy gives every rider a few percent chance of every station near campus, so its logsum benefit credits the 8 St improvement to almost everyone (in tests it exceeded even the deterministic upper bound). The ledger therefore uses a simpler, transparent calibration: the deterministic switching benefit scaled by observed ÷ predicted switching, **0.086** (difference-in-differences) to **0.138** (raw).

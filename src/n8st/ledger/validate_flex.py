@@ -79,7 +79,12 @@ def main() -> None:
                 return x0 + (target - y0) * (x1 - x0) / (y1 - y0)
         return None
 
+    det_shift = res.filter(pl.col("weights") == engine.BASE.label)["shift_pts"].item()
     cal = {"did_target_pts": observed_did, "raw_target_pts": observed_raw,
+           "deterministic_predicted_shift_pts": det_shift,
+           # Scale factors for the deterministic switching benefit: observed / predicted.
+           "switch_scale_did": observed_did / det_shift,
+           "switch_scale_raw": observed_raw / det_shift,
            "one_over_theta_did_s": pick(observed_did), "one_over_theta_raw_s": pick(observed_raw)}
     (PROCESSED_DIR / "flex_theta.json").write_text(json.dumps(cal, indent=1))
 
@@ -114,6 +119,14 @@ def main() -> None:
         f"the difference-in-differences (+{observed_did}), "
         f"**{cal['one_over_theta_raw_s'] or float('nan'):.0f} s** to match the raw weekend "
         f"shift (+{observed_raw}).",
+        "",
+        "A logit this noisy gives every rider a few percent chance of every station near "
+        "campus, so its logsum benefit credits the 8 St improvement to almost everyone "
+        "(in tests it exceeded even the deterministic upper bound). The ledger therefore "
+        "uses a simpler, transparent calibration: the deterministic switching benefit "
+        "scaled by observed ÷ predicted switching, "
+        f"**{cal['switch_scale_did']:.3f}** (difference-in-differences) to "
+        f"**{cal['switch_scale_raw']:.3f}** (raw).",
         "",
     ])
     (FINDINGS_DIR / "flex_validation.md").write_text(text)

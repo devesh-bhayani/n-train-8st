@@ -7,10 +7,17 @@ riders waiting time even though a real timetable would be re-planned to avoid it
 (docs/findings/phase_sensitivity.md: shifting every N trip by 20-240 s, with nothing
 else changed, "costs" 1,000-5,500 rider-hours.)
 
-So: for each offset delta in a cycle covering the N's headway, shift *all* N trips by
+So: for each offset delta in a window covering the N's headway, shift *all* N trips by
 delta in both the baseline and the scenario, run the ledger, and average. Whatever
 coordination quality the N has is then the same, on average, with and without the
 change, and the difference is the effect of the stopping pattern itself.
+
+The window matters. A scenario that delays the N by D seconds downstream averages its
+downstream phases over [D, W + D) while the baseline averages over [0, W). If W were
+exactly one headway the two sets would be the same mod the headway and the bias would
+vanish; the N's headway varies through the day, so instead the window is made wide
+(0-18 min, about two midday headways), which shrinks the leftover end effect to roughly
+D / W of the spread in coordination quality. The pure-shift check measures what is left.
 
     python -m n8st.ledger.phase_avg --od data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet
     python -m n8st.ledger.phase_avg --check   # pure shifts should average to ~0
@@ -33,26 +40,23 @@ from n8st.ledger.run import STATIONS, VARIANTS, complexes_from_stations, load_od
 from n8st.routing import network
 from n8st.scenarios import timetable as tt
 
-DEFAULT_OFFSETS = [0, 60, 120, 180, 240, 300, 360, 420, 480, 540]  # N runs every ~8-10 min
+# 0-18 min in 2-min steps. The N runs every ~8-10 min by day and 12-20 min late evening.
+DEFAULT_OFFSETS = list(range(0, 1200, 120))
 DEFAULT_VARIANTS = ["V1_sim", "V1_sched", "V2_sched", "V2_obs", "V1_obs"]
 
 
-def _thetas() -> list[tuple[str, float]]:
-    """Logit scales calibrated against the weekend N (written by validate_flex)."""
+def _switch_scales() -> dict[str, float]:
+    """observed / predicted switching, from n8st.ledger.validate_flex (weekend N)."""
     p = PROCESSED_DIR / "flex_theta.json"
     if not p.exists():
-        return []
+        return {}
     cal = json.loads(p.read_text())
-    out = []
-    if cal.get("one_over_theta_did_s"):
-        out.append(("net_hours_flex_logit", 1 / cal["one_over_theta_did_s"]))
-    if cal.get("one_over_theta_raw_s"):
-        out.append(("net_hours_flex_logit_raw", 1 / cal["one_over_theta_raw_s"]))
-    return out
+    return {"net_hours_flex_calibrated": cal.get("switch_scale_did"),
+            "net_hours_flex_calibrated_raw": cal.get("switch_scale_raw")}
 
 
-THETAS = _thetas()
-FLEX_COLS = ["net_hours_flex_upper", "net_hours_flex_logit", "net_hours_flex_logit_raw"]
+SCALES = {k: v for k, v in _switch_scales().items() if v}
+FLEX_COLS = ["net_hours_flex_upper", "net_hours_flex_calibrated", "net_hours_flex_calibrated_raw"]
 
 
 def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
@@ -82,16 +86,16 @@ def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
         if not check:
             labels = pl.DataFrame({"weight_index": list(range(len(weights))),
                                    "weights": [w.label for w in weights]})
-            # deterministic choice = upper bound; logit with theta calibrated to the
-            # weekend N (n8st.ledger.validate_flex) = central estimate
-            for col, theta in (("net_hours_flex_upper", None), *THETAS):
-                adj = flex.adjustments(od, out["flex"], out["flex_out"], area,
-                                       [w.walk for w in weights], list(nets), theta=theta)
-                adj = adj.join(labels, on="weight_index").select(
-                    "scenario", "weights", pl.col("adjustment_hours").alias(f"_adj_{col}"))
-                tot = tot.join(adj, on=["scenario", "weights"], how="left").with_columns(
-                    (pl.col("net_hours") + pl.col(f"_adj_{col}")).alias(col)).drop(
-                    f"_adj_{col}")
+            # deterministic choice = upper bound on switching; scaled by observed/predicted
+            # switching (calibrated on the weekend N) = central estimate
+            adj = flex.adjustments(od, out["flex"], out["flex_out"], area,
+                                   [w.walk for w in weights], list(nets))
+            adj = adj.join(labels, on="weight_index").select(
+                "scenario", "weights", pl.col("adjustment_hours").alias("_adj"))
+            tot = tot.join(adj, on=["scenario", "weights"], how="left").with_columns(
+                net_hours_flex_upper=pl.col("net_hours") + pl.col("_adj"),
+                **{col: pl.col("net_hours") + scale * pl.col("_adj")
+                   for col, scale in SCALES.items()}).drop("_adj")
         per_offset.append(tot)
         print(f"  offset {d:>3} s done in {time.monotonic() - t:.0f} s", flush=True)
     allt = pl.concat(per_offset, how="diagonal_relaxed")
@@ -155,9 +159,10 @@ def main() -> None:
         "5 am–midnight. `se` = standard error of the phase average.",
         "",
         "Columns: `net_hours` keeps today's stations; `flex_upper` lets every rider around "
-        "campus take the cheapest station (upper bound on switching); `flex_logit` uses a "
-        "logit choice calibrated so switching matches the weekend N (central estimate); "
-        "`flex_logit_raw` is calibrated to the raw weekend shift.",
+        "campus take the cheapest station (upper bound on switching, which overpredicts the "
+        "weekend switch about tenfold); `flex_calibrated` scales that switching benefit by "
+        "observed ÷ predicted switching on weekends (difference-in-differences, central "
+        "estimate); `flex_calibrated_raw` uses the raw weekend shift.",
         "",
         "## Base weights",
         "",

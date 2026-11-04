@@ -100,7 +100,8 @@ def station_changes(c_base: np.ndarray, c_scn: np.ndarray, walk: np.ndarray,
     best_b = tot_b.min(axis=1)
     ok = np.isfinite(best_b)
     choice = np.where(ok, tot_b.argmin(axis=1), -1)
-    delta = tot_s.min(axis=1) - best_b
+    with np.errstate(invalid="ignore"):  # inf - inf for points nothing reaches
+        delta = tot_s.min(axis=1) - best_b
     out = np.full(len(c_base), np.nan)
     for k in range(len(c_base)):
         m = (choice == k) & np.isfinite(delta)
