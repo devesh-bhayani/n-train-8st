@@ -98,8 +98,10 @@ def download(
     """
     session = _session()
     pages_dir = Path(tempfile.mkdtemp(prefix="socrata_"))  # never inside the output folder
-    keyset = group is None
-    sel = (":id, " + select) if (keyset and select) else select
+    # Keyset paging needs an explicit column list (SoQL rejects ":id, *"); small full-table
+    # pulls without `select` fall back to $offset, which is fine at that size.
+    keyset = group is None and select is not None
+    sel = (":id, " + select) if keyset else select
 
     offset, page, total, last_id = 0, 0, 0, None
     while True:
@@ -111,11 +113,9 @@ def download(
                 clause = f"({clause}) AND :id > '{last_id}'" if clause else f":id > '{last_id}'"
             if clause:
                 params["$where"] = clause
-            if not select:
-                params["$select"] = ":id, *"
         else:
             params["$offset"] = offset
-            params["$order"] = order or group
+            params["$order"] = order or group or ":id"
             if where:
                 params["$where"] = where
         for key, value in (("$select", sel), ("$group", group), ("$having", having)):
