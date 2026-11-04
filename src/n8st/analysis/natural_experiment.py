@@ -52,7 +52,8 @@ def daily_counts(folder: Path = TURNSTILE) -> pl.DataFrame:
     """Daily entries and exits per turnstile unit (sum of per-turnstile counter deltas)."""
     files = [folder / f"turnstile_{y}.parquet" for y in (2015, 2016, 2017)]
     t = pl.concat([pl.read_parquet(f) for f in files if f.exists()], how="diagonal_relaxed")
-    t = t.with_columns(ts=pl.col("date").dt.date().cast(pl.Datetime) + pl.col("time").cast(pl.Duration))
+    t = t.with_columns(
+        ts=pl.col("date").dt.date().cast(pl.Datetime) + pl.col("time").cast(pl.Duration))
     t = t.unique(["c_a", "unit", "scp", "ts"]).sort("c_a", "unit", "scp", "ts")
     key = ["c_a", "unit", "scp"]
     t = t.with_columns(

@@ -47,6 +47,12 @@ VARIANTS: dict[str, tt.Scenario] = {
     "V4_obs": tt.Scenario("V4_obs", route="Q", timing="penalty", penalty_s=OBS_V1_PER_STOP),
     "V5_obs": tt.Scenario("V5_obs", timing="penalty", penalty_s=OBS_V1_PER_STOP,
                           hours=tuple(range(10, 16)) + tuple(range(19, 24))),
+    # From the calibrated SimPy simulation (docs/findings/simulation.md): extra time for
+    # the N by direction, plus knock-on delay to the R/W and relief for the Q.
+    "V1_sim": tt.Scenario(
+        "V1_sim", timing="penalty", added_by_direction={"S": 185, "N": 110},
+        knock_on=(("R", "S", 9), ("W", "S", 7), ("Q", "S", -26),
+                  ("R", "N", 10), ("W", "N", 9), ("Q", "N", -38))),
 }
 
 

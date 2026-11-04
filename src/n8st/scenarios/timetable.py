@@ -40,6 +40,33 @@ class Scenario:
     penalty_s: float = 45.0
     hours: tuple[int, ...] | None = None  # departure hour at the segment entry; None = all
     service_id: str = "Weekday"
+    # Optional total added seconds per direction (overrides penalty_s per stop), e.g. from
+    # the simulation: {"S": 185, "N": 110}.
+    added_by_direction: dict | None = None
+    # Knock-on effects on other routes: (route, direction, seconds), applied from the
+    # corridor exit onward (S: Canal; N: 57 St-7 Av).
+    knock_on: tuple[tuple[str, str, float], ...] = ()
+
+
+CORRIDOR_EXIT = {"S": ("R23", "Q01"), "N": ("R14",)}
+
+
+def shift_after_corridor(st: pl.DataFrame, trips: pl.DataFrame, route: str, direction: str,
+                         seconds: float, service_id: str = "Weekday") -> pl.DataFrame:
+    """Delay (or advance) every stop of a route's trips from the corridor exit onward."""
+    ids = trips.filter((pl.col("route_id") == route) & (pl.col("service_id") == service_id))[
+        "trip_id"].to_list()
+    exits = CORRIDOR_EXIT[direction]
+    mask = pl.col("trip_id").is_in(ids) & (pl.col("direction") == direction)
+    first_exit = (pl.when(pl.col("parent_stop").is_in(list(exits)))
+                  .then(pl.col("stop_sequence")).min().over("trip_id"))
+    shift = mask & (pl.col("stop_sequence") >= first_exit)
+    return st.with_columns(
+        arr_s=pl.when(shift).then((pl.col("arr_s") + seconds).round().cast(pl.Int32))
+        .otherwise(pl.col("arr_s")),
+        dep_s=pl.when(shift).then((pl.col("dep_s") + seconds).round().cast(pl.Int32))
+        .otherwise(pl.col("dep_s")),
+    )
 
 
 SCENARIOS = {
@@ -144,6 +171,9 @@ def apply(feed: dict[str, pl.DataFrame], scenario: Scenario,
                         "stops_added": len(seg_stops) - 2 - len(old_mid)})
 
     new_st = pl.concat([untouched, *new_rows], how="diagonal_relaxed").select(st.columns)
+    for route, direction, seconds in scenario.knock_on:
+        new_st = shift_after_corridor(new_st, feed["trips"], route, direction, seconds,
+                                      scenario.service_id)
     feed2 = dict(feed)
     feed2["stop_times"] = new_st
     return feed2, pl.DataFrame(summary)
@@ -164,7 +194,9 @@ def _segment_times(direction, seg_stops, t_entry, rows, parents, template, scena
 
     if scenario.timing == "penalty":
         n_added = sum(1 for s in seg_stops[1:-1] if s in scenario.insert)
-        total = (t_exit_old - t_entry) + n_added * scenario.penalty_s
+        added = (scenario.added_by_direction[direction] if scenario.added_by_direction
+                 else n_added * scenario.penalty_s)
+        total = (t_exit_old - t_entry) + added
         shares = [tmpl(a, b) for a, b in zip(seg_stops[:-1], seg_stops[1:], strict=True)]
         times = [t_entry]
         for s in shares:
