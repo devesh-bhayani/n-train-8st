@@ -1,0 +1,10 @@
+{
+ "dataset": "28vm-gjqr",
+ "year": "2026",
+ "month": 4,
+ "daytype": "weekday",
+ "raw_rows": 7907186,
+ "rows": 2359088,
+ "riders_per_day": 4214111.764524963,
+ "min_sum_filter": 0.25
+}
