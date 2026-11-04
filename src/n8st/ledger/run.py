@@ -56,6 +56,13 @@ VARIANTS: dict[str, tt.Scenario] = {
         "V1_sim", timing="penalty", added_by_direction={"S": 185, "N": 110},
         knock_on=(("R", "S", 9), ("W", "S", 7), ("Q", "S", -26),
                   ("R", "N", 10), ("W", "N", 9), ("Q", "N", -38))),
+    # Decomposing V1_sim: the N's own extra time only, then plus the R/W knock-on
+    # (V1_sim minus V1_sim_no_q is the Q relief).
+    "V1_sim_n_only": tt.Scenario(
+        "V1_sim_n_only", timing="penalty", added_by_direction={"S": 185, "N": 110}),
+    "V1_sim_no_q": tt.Scenario(
+        "V1_sim_no_q", timing="penalty", added_by_direction={"S": 185, "N": 110},
+        knock_on=(("R", "S", 9), ("W", "S", 7), ("R", "N", 10), ("W", "N", 9))),
 }
 
 
