@@ -95,12 +95,18 @@ HEADLINE_MONTH = "weekday_2026_04"
 
 
 def _station_names() -> dict[int, str]:
+    """complex id -> name, with its daytime routes when the name alone is ambiguous
+    ("72 St (Q)", "72 St (1 2 3)")."""
     p = PROJECT_ROOT / "data" / "raw" / "mta_data" / "bulk" / "stations" / "stations.parquet"
     if not p.exists():
         return {}
-    st = pl.read_parquet(p).select(pl.col("complex_id").cast(pl.Float64).cast(pl.Int64),
-                                   "stop_name")
-    return dict(st.group_by("complex_id").agg(pl.col("stop_name").first()).iter_rows())
+    st = (pl.read_parquet(p)
+          .with_columns(pl.col("complex_id").cast(pl.Float64).cast(pl.Int64))
+          .group_by("complex_id").agg(pl.col("stop_name").first(),
+                                      pl.col("daytime_routes").str.join(" ")))
+    dup = st.filter(pl.col("stop_name").is_duplicated())["complex_id"].to_list()
+    return {c: (f"{n} ({' '.join(dict.fromkeys(r.split()))})" if c in dup else n)
+            for c, n, r in st.select("complex_id", "stop_name", "daytime_routes").iter_rows()}
 
 
 ESTIMATE_COLS = ["net_hours", "net_hours_flex_calibrated", "net_hours_flex_calibrated_raw",

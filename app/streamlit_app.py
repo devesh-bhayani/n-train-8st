@@ -143,16 +143,17 @@ if totals is not None:
         cells = int((g["net_hours"] < 0).sum())
         rows.append({
             "Scenario": LABELS[s],
-            "Net, today's stations (h)": rnd(b["net_hours"]),
+            "Net (h)": rnd(b["net_hours"]),
             "± 2 se": rnd(2 * b["se"]),
-            "Grid cells saving": f"{cells} of {len(g)}",
+            "Cells saving": f"{cells} of {len(g)}",
             "Rule 1": "pass" if b["net_hours"] < 0 else "fail",
             "Rule 2": "pass" if cells >= 0.75 * len(g) else "fail",
-            "Net, calibrated switching (h)": rnd(b.get("net_hours_flex_calibrated")),
-            "Net, switching upper bound (h)": rnd(b.get("net_hours_flex_upper")),
+            "Calibrated switching (h)": rnd(b.get("net_hours_flex_calibrated")),
+            "Upper bound (h)": rnd(b.get("net_hours_flex_upper")),
         })
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
-    st.caption("Negative = riders save time. A net within ± 2 se of zero is not "
+    st.caption("Net (h): riders keep today's stations, as pre-registered. "
+               "Negative = riders save time. A net within ± 2 se of zero is not "
                "distinguishable from no effect at this resolution. Rule 3 was simulated for "
                "V1 only. V6 adds eight train trips, an operating cost the ledger can't see.")
 
