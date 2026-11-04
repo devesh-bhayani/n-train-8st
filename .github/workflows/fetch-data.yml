@@ -1,0 +1,81 @@
+# Pulls source data that the cloud dev environment can't reach (data.ny.gov, MTA feeds,
+# subwaydata.nyc, Wikipedia, NYU pages, Open-Meteo) and commits it to the `mta-data`
+# branch. Trigger it from the Actions tab, or by changing a file in data-requests/.
+#
+#   task=recon   small discovery files: dataset columns, sample rows, catalog, pages
+#   task=bulk    the large downloads defined in src/n8st/data/bulk.py
+name: fetch-data
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "recon or bulk"
+        default: "recon"
+      args:
+        description: "extra arguments for the task"
+        default: ""
+  push:
+    branches: [main]
+    paths: ["data-requests/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --no-dev
+
+      - name: Decide what to run
+        id: plan
+        env:
+          INPUT_TASK: ${{ inputs.task }}
+          INPUT_ARGS: ${{ inputs.args }}
+        run: |
+          task="$INPUT_TASK"
+          args="$INPUT_ARGS"
+          if [ -z "$task" ] && [ -f data-requests/request.txt ]; then
+            task="$(sed -n 1p data-requests/request.txt)"
+            args="$(sed -n 2p data-requests/request.txt)"
+          fi
+          echo "task=${task:-recon}" >> "$GITHUB_OUTPUT"
+          echo "args=$args" >> "$GITHUB_OUTPUT"
+          echo "Running ${task:-recon} $args"
+
+      - name: Fetch
+        id: fetch
+        continue-on-error: true
+        env:
+          TASK: ${{ steps.plan.outputs.task }}
+          ARGS: ${{ steps.plan.outputs.args }}
+        run: |
+          stamp="$(date -u +%Y%m%dT%H%MZ)"
+          echo "stamp=$stamp" >> "$GITHUB_OUTPUT"
+          if [ "$TASK" = "recon" ]; then
+            # shellcheck disable=SC2086  # ARGS is intentionally word-split
+            uv run python -m n8st.data.recon --out "_out/recon/$stamp" $ARGS
+          else
+            uv run python -m n8st.data.bulk --out _out/bulk $ARGS
+          fi
+
+      - name: Commit to the mta-data branch
+        if: always()
+        env:
+          MSG: "${{ steps.plan.outputs.task }} ${{ steps.fetch.outputs.stamp }}"
+        run: |
+          chmod +x scripts/commit-to-branch.sh
+          scripts/commit-to-branch.sh mta-data _out . "$MSG"
+
+      - name: Fail if the fetch failed
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1

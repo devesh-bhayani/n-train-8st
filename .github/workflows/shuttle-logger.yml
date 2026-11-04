@@ -1,21 +1,21 @@
-# Logs NYU shuttle positions from Passio GO and commits them to the `shuttle-data`
-# branch. Each run polls every 30 s for ~55 min; the schedule starts one run per hour.
+# Logs NYU shuttle positions from Passio GO and commits them to the `shuttle-data` branch.
 #
-# Cost: ~1 runner-hour per scheduled hour. Free and unlimited on a PUBLIC repo; a
-# private repo's free quota (2,000 min/month) would run out in under two days.
+# GitHub's scheduler often skips hourly runs, so each run logs for ~5.5 hours and
+# commits every hour. The schedule fires hourly; with the concurrency group below,
+# one run is always queued behind the running one, so coverage is continuous even if
+# most scheduled triggers are dropped. Overnight polls simply record no buses, which
+# also tells us when service starts and ends.
 #
-# Hours are UTC. 11-23 and 0-5 UTC = 6 am to 1 am New York time while on EST
-# (Nov 1, 2026 - Mar 14, 2027). After Mar 14, shift both ranges one hour earlier
-# (10-23,0-4). NYU shuttles run about 7 am to midnight in term time.
+# Cost: ~24 runner-hours a day. Free and unlimited on a PUBLIC repo only.
 name: shuttle-logger
 on:
   schedule:
-    - cron: "17 0-5,11-23 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       minutes:
-        description: "How long to log, in minutes"
-        default: "55"
+        description: "How long to log, in minutes (max ~330)"
+        default: "330"
 
 permissions:
   contents: write
@@ -27,16 +27,34 @@ concurrency:
 jobs:
   log:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --frozen --no-dev
 
-      - name: Log shuttle positions
+      - name: Log shuttle positions, committing every hour
         id: log
         continue-on-error: true
-        run: uv run n8st-shuttle-log --out _out --interval 30 --duration-min "${{ inputs.minutes || '55' }}"
+        env:
+          MINUTES: ${{ inputs.minutes || '330' }}
+        run: |
+          chmod +x scripts/commit-to-branch.sh
+          uv run n8st-shuttle-log --out _out --interval 30 --duration-min "$MINUTES" &
+          pid=$!
+          while kill -0 "$pid" 2>/dev/null; do
+            for _ in $(seq 360); do kill -0 "$pid" 2>/dev/null || break; sleep 10; done
+            scripts/commit-to-branch.sh shuttle-data _out shuttle \
+              "shuttle data $(date -u +%Y-%m-%dT%H:%MZ)" || echo "commit failed; will retry"
+          done
+          wait "$pid"
+
+      - name: Final commit
+        if: always()
+        run: |
+          chmod +x scripts/commit-to-branch.sh
+          scripts/commit-to-branch.sh shuttle-data _out shuttle \
+            "shuttle data $(date -u +%Y-%m-%dT%H:%MZ)"
 
       - name: Summarize this run
         if: always()
@@ -45,35 +63,8 @@ jobs:
             { echo '```'; uv run n8st-shuttle-summary --dir _out; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Commit to the shuttle-data branch
-        if: always()
-        run: |
-          set -euo pipefail
-          [ -d _out ] || { echo "no output"; exit 0; }
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git ls-remote --exit-code --heads origin shuttle-data > /dev/null; then
-            git fetch --depth=1 origin shuttle-data:refs/remotes/origin/shuttle-data
-            git worktree add -B shuttle-data ../data-branch refs/remotes/origin/shuttle-data
-          else
-            git worktree add --orphan -b shuttle-data ../data-branch
-          fi
-          mkdir -p ../data-branch/shuttle
-          cp -r _out/. ../data-branch/shuttle/
-          cd ../data-branch
-          git add shuttle
-          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
-          git commit -q -m "shuttle data $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3 4; do
-            git push -q origin HEAD:shuttle-data && exit 0
-            sleep $((2 ** i))
-            git fetch --depth=20 origin shuttle-data:refs/remotes/origin/shuttle-data
-            git rebase refs/remotes/origin/shuttle-data
-          done
-          exit 1
-
       - name: Fail if no poll succeeded
         if: steps.log.outcome == 'failure'
         run: |
-          echo "::error::Every Passio poll failed this hour. Check the 'Log shuttle positions' step."
+          echo "::error::Every Passio poll failed in this run. Check the logging step."
           exit 1

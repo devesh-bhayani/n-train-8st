@@ -105,7 +105,10 @@ class Buffer:
                 filename = f"part-{self.run_id}-{self.part:04d}.parquet"
                 path = self.out_dir / name / f"date={day}" / filename
                 path.parent.mkdir(parents=True, exist_ok=True)
-                part.drop("_date").write_parquet(path)
+                # Write then rename, so a commit taken mid-write never sees half a file.
+                tmp = path.with_suffix(".parquet.tmp")
+                part.drop("_date").write_parquet(tmp)
+                tmp.replace(path)
                 written.append(path)
         self.vehicles, self.polls = [], []
         self.part += 1
