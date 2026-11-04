@@ -60,6 +60,8 @@ TURNSTILE_WINDOWS = {"turnstile_2015": ("2015-09-01", "2015-12-31"),
 PERF_LINES = ["N", "Q", "R", "W", "B", "D", "F", "M"]
 SUBWAYDATA_BASE = "https://data.subwaydata.nyc"
 SUBWAYDATA_ROUTES = {"N", "Q", "R", "W", "B", "D", "F", "M"}
+# Raw intermediate downloads live outside the output folder so they're never committed.
+RAW_TMP = Path(tempfile.gettempdir()) / "n8st_raw"
 
 
 # ---------------------------------------------------------------------------- helpers
@@ -99,38 +101,43 @@ def task_stations(out: Path, _args) -> None:
         manifest(out, f"stations_{name}", {"dataset": DATASETS[name], "rows": rows_of(p)})
 
 
+OD_COLUMNS = ("origin_station_complex_id, destination_station_complex_id, hour_of_day, "
+              "day_of_week, estimated_average_ridership")
+
+
 def task_od_matrix(out: Path, args) -> None:
-    """Average-day hourly OD flows for one month, all station-complex pairs."""
+    """Average-day hourly OD flows for one month, all station-complex pairs.
+
+    Downloads the raw rows (five columns) and aggregates locally: server-side $group
+    re-aggregates the whole month on every page (~6 min/page), raw pages take ~5 s.
+    """
     year, month, daytype = args.year, args.month, args.daytype
     ds = DATASETS[f"od_{year}"]
     dows = DAYTYPES[daytype]
-    keys = "origin_station_complex_id, destination_station_complex_id, hour_of_day"
+    raw = RAW_TMP / f"od_{year}_{month:02d}_{daytype}.parquet"
+    socrata.download(ds, raw, select=OD_COLUMNS,
+                     where=f"month = {month} AND {socrata.sql_in('day_of_week', dows)}",
+                     page_size=args.page_size)
     path = out / "od" / f"od_{daytype}_{year}_{month:02d}.parquet"
-    socrata.download(
-        ds, path,
-        select=f"{keys}, sum(estimated_average_ridership) AS riders_sum",
-        where=f"month = {month} AND {socrata.sql_in('day_of_week', dows)}",
-        group=keys,
-        having=f"sum(estimated_average_ridership) >= {args.min_sum}",
-        order=keys,
-        page_size=args.page_size,
-    )
-    # riders_sum adds the per-day-of-week averages; divide by the number of days of week.
-    tmp = path.with_suffix(".tmp.parquet")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    # Sum the per-day-of-week averages, then divide by the number of days of week:
+    # the average weekday (or Saturday, Sunday).
     duckdb.sql(f"""
         COPY (
             SELECT CAST(origin_station_complex_id AS SMALLINT) AS origin,
                    CAST(destination_station_complex_id AS SMALLINT) AS destination,
                    CAST(hour_of_day AS TINYINT) AS hour,
-                   CAST(riders_sum / {len(dows)} AS FLOAT) AS riders
-            FROM '{path}'
-        ) TO '{tmp}' (FORMAT parquet, COMPRESSION zstd)
+                   CAST(sum(estimated_average_ridership) / {len(dows)} AS FLOAT) AS riders
+            FROM '{raw}'
+            GROUP BY ALL
+            HAVING sum(estimated_average_ridership) >= {args.min_sum}
+            ORDER BY origin, destination, hour
+        ) TO '{path}' (FORMAT parquet, COMPRESSION zstd)
     """)
-    tmp.replace(path)
     total = duckdb.sql(f"SELECT sum(riders) FROM '{path}'").fetchall()[0][0]
     manifest(out, path.stem, {"dataset": ds, "year": year, "month": month, "daytype": daytype,
-                              "rows": rows_of(path), "riders_per_day": total,
-                              "min_sum_filter": args.min_sum})
+                              "raw_rows": rows_of(raw), "rows": rows_of(path),
+                              "riders_per_day": total, "min_sum_filter": args.min_sum})
 
 
 def task_od_campus(out: Path, args) -> None:
@@ -138,17 +145,23 @@ def task_od_campus(out: Path, args) -> None:
     year = args.year
     ds = DATASETS[f"od_{year}"]
     campus = complexes_for(out, CAMPUS_GTFS)
-    keys = ("month, day_of_week, hour_of_day, origin_station_complex_id, "
-            "destination_station_complex_id")
+    raw = RAW_TMP / f"od_campus_{year}.parquet"
+    socrata.download(ds, raw, select="month, " + OD_COLUMNS,
+                     where=(f"{socrata.sql_in('destination_station_complex_id', campus)} OR "
+                            f"{socrata.sql_in('origin_station_complex_id', campus)}"),
+                     page_size=args.page_size)
     path = out / "od" / f"od_campus_{year}.parquet"
-    socrata.download(
-        ds, path,
-        select=f"{keys}, sum(estimated_average_ridership) AS riders",
-        where=(f"{socrata.sql_in('destination_station_complex_id', campus)} OR "
-               f"{socrata.sql_in('origin_station_complex_id', campus)}"),
-        group=keys, having="sum(estimated_average_ridership) >= 0.05", order=keys,
-        page_size=args.page_size,
-    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    duckdb.sql(f"""
+        COPY (
+            SELECT CAST(month AS TINYINT) AS month, day_of_week,
+                   CAST(hour_of_day AS TINYINT) AS hour,
+                   CAST(origin_station_complex_id AS SMALLINT) AS origin,
+                   CAST(destination_station_complex_id AS SMALLINT) AS destination,
+                   CAST(sum(estimated_average_ridership) AS FLOAT) AS riders
+            FROM '{raw}' GROUP BY ALL
+        ) TO '{path}' (FORMAT parquet, COMPRESSION zstd)
+    """)
     manifest(out, path.stem, {"dataset": ds, "campus_complexes": campus, "rows": rows_of(path)})
 
 
@@ -164,36 +177,57 @@ def _ridership_editions(start: str, end: str) -> list[tuple[str, str, str]]:
     return out
 
 
-def task_ridership_hourly(out: Path, args) -> None:
-    ids = complexes_for(out, FOCUS_GTFS)
-    for name, lo, hi in _ridership_editions(args.start, args.end):
-        path = out / "ridership" / f"hourly_focus_{lo[:7]}_{hi[:7]}.parquet"
-        socrata.download(
-            DATASETS[name], path,
-            select="transit_timestamp, station_complex_id, sum(ridership) AS entries, "
-                   "sum(transfers) AS transfers",
-            where=(f"transit_timestamp >= '{lo}T00:00:00' AND transit_timestamp < '{hi}T00:00:00'"
-                   f" AND {socrata.sql_in('station_complex_id', ids)}"),
-            group="transit_timestamp, station_complex_id",
-            order="transit_timestamp, station_complex_id", page_size=args.page_size,
-        )
-        manifest(out, path.stem, {"dataset": DATASETS[name], "complexes": ids,
+def _months(start: str, end: str) -> list[tuple[str, str]]:
+    """[(first day, first day of next month)] covering start..end."""
+    d = date.fromisoformat(start).replace(day=1)
+    stop = date.fromisoformat(end)
+    out = []
+    while d < stop:
+        nxt = (d.replace(day=28) + timedelta(days=4)).replace(day=1)
+        out.append((d.isoformat(), min(nxt, stop).isoformat()))
+        d = nxt
+    return out
+
+
+def _ridership_by_month(out: Path, args, name: str, select: str, group: str,
+                        where_extra: str = "") -> None:
+    """Aggregated ridership pulls, one month per query (the server aggregates fast when the
+    filter is narrow), concatenated into one Parquet per edition."""
+    for edition, lo, hi in _ridership_editions(args.start, args.end):
+        parts = []
+        for a, b in _months(lo, hi):
+            p = RAW_TMP / f"{name}_{a[:7]}.parquet"
+            socrata.download(
+                DATASETS[edition], p, select=select, group=group, order=group,
+                where=(f"transit_timestamp >= '{a}T00:00:00' AND "
+                       f"transit_timestamp < '{b}T00:00:00'{where_extra}"),
+                page_size=args.page_size)
+            parts.append(p)
+        path = out / "ridership" / f"{name}_{lo[:7]}_{hi[:7]}.parquet"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        files = ", ".join(f"'{p}'" for p in parts)
+        duckdb.sql(f"COPY (SELECT * FROM read_parquet([{files}], union_by_name = true)) "
+                   f"TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
+        manifest(out, path.stem, {"dataset": DATASETS[edition], "months": len(parts),
                                   "rows": rows_of(path)})
 
 
+def task_ridership_hourly(out: Path, args) -> None:
+    ids = complexes_for(out, FOCUS_GTFS)
+    _ridership_by_month(
+        out, args, "hourly_focus",
+        select="transit_timestamp, station_complex_id, sum(ridership) AS entries, "
+               "sum(transfers) AS transfers",
+        group="transit_timestamp, station_complex_id",
+        where_extra=f" AND {socrata.sql_in('station_complex_id', ids)}")
+
+
 def task_ridership_daily(out: Path, args) -> None:
-    for name, lo, hi in _ridership_editions(args.start, args.end):
-        path = out / "ridership" / f"daily_all_{lo[:7]}_{hi[:7]}.parquet"
-        socrata.download(
-            DATASETS[name], path,
-            select="date_trunc_ymd(transit_timestamp) AS day, station_complex_id, "
-                   "sum(ridership) AS entries",
-            where=f"transit_timestamp >= '{lo}T00:00:00' AND transit_timestamp < '{hi}T00:00:00'",
-            group="date_trunc_ymd(transit_timestamp), station_complex_id",
-            order="date_trunc_ymd(transit_timestamp), station_complex_id",
-            page_size=args.page_size,
-        )
-        manifest(out, path.stem, {"dataset": DATASETS[name], "rows": rows_of(path)})
+    _ridership_by_month(
+        out, args, "daily_all",
+        select="date_trunc_ymd(transit_timestamp) AS day, station_complex_id, "
+               "sum(ridership) AS entries",
+        group="date_trunc_ymd(transit_timestamp), station_complex_id")
 
 
 def task_monthly(out: Path, args) -> None:
