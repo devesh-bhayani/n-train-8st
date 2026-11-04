@@ -71,12 +71,21 @@ DATASETS = {
     "od_2024": "jsu2-fbtj",
     "od_2025": "y2qv-fytt",
     "od_2026": "28vm-gjqr",  # Jan-Aug 2026, used by Stop the Stop. VERIFY edition.
-    "turnstile_2016": "ekwu-khcy",  # legacy MetroCard turnstile counts
-    "cjm_2015_2019": "r7qk-6tcy",  # Customer Journey Metrics
-    "cjm_2020_2024": "4apg-4kt9",
-    "cjm_2025": "s4u6-t435",
-    "wait_assessment_2025": "62c4-mvcx",
+    "turnstile_2015": "ug6q-shqc",  # legacy MetroCard turnstile counts (cumulative)
+    "turnstile_2016": "ekwu-khcy",
+    "turnstile_2017": "v5y5-mwpb",
+    "hourly_ridership_2017_2019": "t69i-h2me",
+    "monthly_station_ridership": "ak4z-sape",  # by complex, Feb 2017 onward
+    "cjm_2015_2019": "r7qk-6tcy",  # Customer Journey Metrics, Beginning 2015 (title)
+    "wait_assessment": "s666-h6b7",  # Beginning 2015
+    "service_delivered": "32ch-sei3",  # Beginning 2015
+    "end_to_end_runtimes": "sp9g-mzjh",  # actual vs scheduled, Beginning 2019
+    "subway_paths": "tdmq-asac",  # stop sequence of every service path, Beginning 2019
 }
+# Verified against data.ny.gov metadata by the recon run of 2026-11-04 (mta-data branch).
+# cjm 2020-2024 (4apg-4kt9) and cjm 2025 (s4u6-t435) returned 403 and were dropped.
+
+WEEKDAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 # --- NYU shuttle (Passio GO) -----------------------------------------------
 PASSIO_BASE_URL = "https://passiogo.com"

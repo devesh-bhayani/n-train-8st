@@ -21,8 +21,9 @@ on:
 permissions:
   contents: write
 
+# One queue per distinct request, so different downloads run in parallel.
 concurrency:
-  group: fetch-data
+  group: fetch-data-${{ inputs.task }}-${{ inputs.args }}
   cancel-in-progress: false
 
 jobs:

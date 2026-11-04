@@ -34,15 +34,23 @@ def _session() -> requests.Session:
 
 
 def _get(session: requests.Session, url: str, params: dict | None = None) -> requests.Response:
-    for attempt in range(5):
-        resp = session.get(url, params=params, timeout=120)
-        if resp.status_code in (429, 500, 502, 503, 504):
-            time.sleep(2 ** (attempt + 1))
+    """GET with retries on throttling, server errors and timeouts (aggregations can be slow)."""
+    last_error: Exception | None = None
+    for attempt in range(6):
+        try:
+            resp = session.get(url, params=params, timeout=600)
+        except (requests.Timeout, requests.ConnectionError) as e:
+            last_error = e
+            time.sleep(min(2 ** (attempt + 2), 120))
             continue
-        resp.raise_for_status()
+        if resp.status_code in (429, 500, 502, 503, 504):
+            last_error = requests.HTTPError(f"{resp.status_code}: {resp.text[:300]}")
+            time.sleep(min(2 ** (attempt + 2), 120))
+            continue
+        if not resp.ok:
+            raise requests.HTTPError(f"{resp.status_code} for {resp.url}: {resp.text[:500]}")
         return resp
-    resp.raise_for_status()
-    return resp
+    raise RuntimeError(f"gave up after retries: {last_error}")
 
 
 def columns(dataset_id: str, domain: str = SOCRATA_DOMAIN) -> list[str]:
@@ -75,8 +83,15 @@ def download(
     select: str | None = None,
     page_size: int = PAGE_SIZE,
     domain: str = SOCRATA_DOMAIN,
+    group: str | None = None,
+    having: str | None = None,
+    order: str | None = None,
 ) -> Path:
-    """Page through a dataset (optionally filtered) and write a single Parquet file."""
+    """Page through a dataset (optionally filtered or aggregated) into one Parquet file.
+
+    For aggregated queries pass `group` (and usually `order` = the group columns, so
+    paging is stable). Plain queries are ordered by Socrata's row id.
+    """
     session = _session()
     pages_dir = out_parquet.with_suffix(".pages")
     if pages_dir.exists():
@@ -85,18 +100,21 @@ def download(
 
     offset, page = 0, 0
     while True:
-        params = {"$limit": page_size, "$offset": offset, "$order": ":id"}
-        if where:
-            params["$where"] = where
-        if select:
-            params["$select"] = select
+        params = {"$limit": page_size, "$offset": offset,
+                  "$order": order or (group if group else ":id")}
+        for key, value in (("$where", where), ("$select", select), ("$group", group),
+                           ("$having", having)):
+            if value:
+                params[key] = value
+        t = time.monotonic()
         resp = _get(session, f"https://{domain}/resource/{dataset_id}.csv", params)
         body = resp.content
-        n_rows = body.count(b"\n") - 1  # minus header; approximate if fields contain newlines
+        n_rows = len(body.splitlines()) - 1  # minus header
         if n_rows <= 0:
             break
         (pages_dir / f"part-{page:05d}.csv").write_bytes(body)
-        print(f"  {dataset_id}: page {page} ({offset + n_rows:,} rows so far)")
+        print(f"  {dataset_id}: page {page} ({offset + n_rows:,} rows so far, "
+              f"{time.monotonic() - t:.1f}s)", flush=True)
         if n_rows < page_size:
             break
         offset += page_size
