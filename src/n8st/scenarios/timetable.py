@@ -193,14 +193,22 @@ def _segment_times(direction, seg_stops, t_entry, rows, parents, template, scena
         return float(rows["arr_s"][parents.index(b)] - rows["dep_s"][parents.index(a)])
 
     if scenario.timing == "penalty":
+        # Work leg by leg between the trip's original stops: a leg with no inserted
+        # stops keeps its own scheduled time (so V2 still reaches 14 St on time); a leg
+        # with k inserted stops gets its old time plus its share of the added time,
+        # spread over its new hops in proportion to the local template.
+        originals = [s for s in seg_stops if s in parents]
         n_added = sum(1 for s in seg_stops[1:-1] if s in scenario.insert)
         added = (scenario.added_by_direction[direction] if scenario.added_by_direction
                  else n_added * scenario.penalty_s)
-        total = (t_exit_old - t_entry) + added
-        shares = [tmpl(a, b) for a, b in zip(seg_stops[:-1], seg_stops[1:], strict=True)]
         times = [t_entry]
-        for s in shares:
-            times.append(times[-1] + s * total / sum(shares))
+        for a, b in zip(originals[:-1], originals[1:], strict=True):
+            leg = seg_stops[seg_stops.index(a):seg_stops.index(b) + 1]
+            k = len(leg) - 2
+            leg_total = old(a, b) + (added * k / n_added if n_added else 0.0)
+            shares = [tmpl(x, y) for x, y in zip(leg[:-1], leg[1:], strict=True)]
+            for s in shares:
+                times.append(times[-1] + s * leg_total / sum(shares))
         return times
 
     # template timing
