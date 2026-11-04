@@ -161,6 +161,8 @@ def main() -> None:
                             for o in ("log_exits", "log_entries", "log_total")])
     es = event_study(p)
     es.write_csv(PROCESSED_DIR / "event_study.csv")
+    results.write_csv(PROCESSED_DIR / "ddd_results.csv")
+    at8.write_csv(PROCESSED_DIR / "ddd_8st_means.csv")
 
     text = "\n".join([
         "# Natural experiment: the N leaves the Broadway local (Nov 7, 2016)",

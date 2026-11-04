@@ -24,6 +24,12 @@ dependencies = [
 n8st-shuttle-log = "n8st.shuttle.logger:main"
 n8st-shuttle-summary = "n8st.shuttle.summarize:main"
 
+[project.optional-dependencies]
+app = [
+    "plotly>=7.1.0",
+    "streamlit>=1.60.0",
+]
+
 [dependency-groups]
 dev = [
     "pytest>=8",

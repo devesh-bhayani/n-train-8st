@@ -1,0 +1,133 @@
+"""Export the small tables the dashboard needs into app/data/ (committed to git).
+
+    python -m n8st.dashboard_data
+
+Each export is optional: if an analysis hasn't been run yet, its file is skipped and
+the app shows that section as pending.
+"""
+
+from __future__ import annotations
+
+import json
+import shutil
+
+import polars as pl
+
+from n8st.config import PROCESSED_DIR, PROJECT_ROOT
+
+APP_DATA = PROJECT_ROOT / "app" / "data"
+
+
+def _export(name: str, df: pl.DataFrame) -> None:
+    APP_DATA.mkdir(parents=True, exist_ok=True)
+    df.write_csv(APP_DATA / f"{name}.csv")
+    print(f"  {name}.csv  {df.height} rows")
+
+
+def commute() -> None:
+    p = PROCESSED_DIR / "commute_replay.parquet"
+    if not p.exists():
+        return
+    r = pl.read_parquet(p)
+    opts = {"D": "D to W 4 St", "N_canal": "N, change at Canal", "N_backtrack":
+            "N, backtrack from 14 St", "N_walk": "N, walk from Union Sq",
+            "N_V1": "N one-seat to 8 St (V1, hypothetical)"}
+    rows = [{"option": label, "key": k, "median_min": r[k].median(),
+             "p10_min": r[k].quantile(0.1), "p90_min": r[k].quantile(0.9)}
+            for k, label in opts.items()]
+    _export("commute_options", pl.DataFrame(rows))
+    hourly = (r.with_columns(slot=(pl.col("depart_s") // 900 * 900).cast(pl.Int32))
+              .group_by("slot").agg(*[pl.col(k).median().alias(k) for k in opts])
+              .sort("slot").with_columns(
+                  clock=(pl.col("slot") // 3600).cast(pl.String) + ":"
+                  + ((pl.col("slot") % 3600) // 60).cast(pl.String).str.zfill(2)))
+    _export("commute_by_time", hourly)
+
+
+def backtrack_wait() -> None:
+    p = PROCESSED_DIR / "observed_rw_14st_downtown.parquet"
+    if not p.exists():
+        return
+    obs = pl.read_parquet(p).filter(pl.col("daytype") == "weekday").select(
+        "hour", observed_wait_min="expected_wait", p90_gap_min="p90_gap",
+        trains_per_hour="trains_per_hour")
+    gtfs_zip = PROJECT_ROOT / "data" / "raw" / "gtfs" / "subway_latest.zip"
+    if gtfs_zip.exists():
+        from n8st.analysis.week1_checks import headways
+        from n8st.data import gtfs
+
+        events = gtfs.stop_events(gtfs.load(gtfs_zip))
+        sched = (headways(events, "R20", ["R", "W"], "Weekday").filter(pl.col("direction") == "S")
+                 .select(pl.col("hour").cast(pl.Int8),
+                         scheduled_wait_min=pl.col("expected_wait_min")))
+        obs = obs.with_columns(pl.col("hour").cast(pl.Int8)).join(sched, on="hour", how="left")
+    _export("backtrack_wait", obs)
+
+
+def simulation() -> None:
+    p = PROCESSED_DIR / "sim_trains.parquet"
+    if not p.exists():
+        return
+    s = pl.read_parquet(p).filter(pl.col("hour").is_between(7, 19))
+    piv = s.pivot(on="scenario", index=["day", "direction", "seed", "trip_uid", "route"],
+                  values="seconds")
+    rows = []
+    for scn in [c for c in piv.columns if c in ("V1", "V2")]:
+        d = (piv.with_columns(delta=pl.col(scn) - pl.col("base"))
+             .group_by("direction", "route").agg(mean_delta_s=pl.col("delta").mean(),
+                                                 trains=pl.len())
+             .with_columns(scenario=pl.lit(scn)))
+        rows.append(d)
+    _export("sim_deltas", pl.concat(rows).sort("scenario", "direction", "route"))
+
+
+def natural_experiment() -> None:
+    for name in ("event_study", "ddd_results", "ddd_8st_means"):
+        p = PROCESSED_DIR / f"{name}.csv"
+        if p.exists():
+            _export(name, pl.read_csv(p))
+
+
+def ledger() -> None:
+    folders = sorted(PROCESSED_DIR.glob("ledger_weekday_*"))
+    if not folders:
+        return
+    f = folders[-1]
+    _export("ledger_totals", pl.read_csv(f / "totals.csv"))
+    _export("ledger_by_hour", pl.read_csv(f / "by_hour.csv"))
+    meta = json.loads((f / "meta.json").read_text())
+    APP_DATA.mkdir(parents=True, exist_ok=True)
+    (APP_DATA / "ledger_meta.json").write_text(json.dumps(meta, indent=1, default=str))
+    pairs = pl.read_parquet(f / "pairs.parquet")
+    names = PROJECT_ROOT / "data" / "raw" / "mta_data" / "bulk" / "stations" / "stations.parquet"
+    if names.exists():
+        st = pl.read_parquet(names).select(
+            pl.col("complex_id").cast(pl.Float64).cast(pl.Int64), "stop_name")
+        nm = dict(st.group_by("complex_id").agg(pl.col("stop_name").first()).iter_rows())
+    else:
+        nm = {}
+    top = (pairs.with_columns(hours=pl.col("riders") * pl.col("d_cost_s") / 3600)
+           .group_by("scenario", "origin", "destination")
+           .agg(riders=pl.col("riders").sum(), hours=pl.col("hours").sum())
+           .with_columns(origin_name=pl.col("origin").replace_strict(nm, default="?"),
+                         destination_name=pl.col("destination").replace_strict(nm, default="?")))
+    winners = top.sort("hours").group_by("scenario", maintain_order=True).head(15)
+    losers = top.sort("hours", descending=True).group_by("scenario", maintain_order=True).head(15)
+    _export("ledger_top_flows", pl.concat([winners, losers]))
+
+
+def wolk() -> None:
+    src = PROJECT_ROOT / "docs" / "findings" / "phase0_wolk_replication.md"
+    if src.exists():
+        APP_DATA.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, APP_DATA / "phase0_wolk_replication.md")
+
+
+def main() -> None:
+    print(f"exporting to {APP_DATA}")
+    for fn in (commute, backtrack_wait, simulation, natural_experiment, ledger, wolk):
+        fn()
+
+
+if __name__ == "__main__":
+    main()

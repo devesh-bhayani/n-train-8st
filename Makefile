@@ -1,5 +1,6 @@
 .PHONY: setup test lint gtfs week1 stations ridership od data shuttle-once shuttle-log \
-        shuttle-pull shuttle-summary shuttle-first-look wolk phase0 mta-pull observed ledger
+        shuttle-pull shuttle-summary shuttle-first-look wolk phase0 mta-pull observed ledger \
+        sim calibrate commute experiment2016 dashboard-data app
 
 setup:            ## install the environment (Python and packages, via uv)
 	uv sync
@@ -62,3 +63,21 @@ OD ?= data/raw/mta_data/bulk/od/od_weekday_2026_09.parquet
 ledger:           ## scenario ledger for one OD month -> docs/findings/ledger_*.md
 	uv run python -m n8st.ledger.run --od $(OD)
 	uv run python -m n8st.ledger.report data/processed/ledger_$(subst od_,,$(basename $(notdir $(OD))))
+
+calibrate:        ## fit the simulation's free parameters to observed trains
+	uv run python -m n8st.sim.calibrate --days 8
+
+sim:              ## run the Broadway simulation (base, V1, V2) -> docs/findings/simulation.md
+	uv run python -m n8st.sim.experiment --seeds 3
+
+commute:          ## replay the 18 Av commute on real trains + recommender -> docs/findings/commute.md
+	uv run python -m n8st.analysis.commute
+
+experiment2016:   ## natural experiment on Nov 7, 2016 -> docs/findings/natural_experiment_2016.md
+	uv run python -m n8st.analysis.natural_experiment
+
+dashboard-data:   ## export the small tables the dashboard reads (app/data/)
+	uv run python -m n8st.dashboard_data
+
+app:              ## run the Streamlit dashboard locally
+	uv run --extra app streamlit run app/streamlit_app.py
