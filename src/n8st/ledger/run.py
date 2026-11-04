@@ -26,7 +26,7 @@ import polars as pl
 
 from n8st.config import PROCESSED_DIR, RAW_DIR
 from n8st.data import gtfs
-from n8st.ledger import engine
+from n8st.ledger import engine, flex
 from n8st.routing import network
 from n8st.scenarios import timetable as tt
 
@@ -103,14 +103,30 @@ def main(argv: list[str] | None = None) -> None:
     print(f"OD rows {od.height:,}, riders/day {od['riders'].sum():,.0f}; "
           f"{len(cidx.ids)} complexes; variants {list(nets)}", flush=True)
 
-    out = engine.run(base, nets, cidx, od, hours=hours, step_s=args.step)
+    area = flex.area_complexes(pl.read_parquet(STATIONS))
+    area = area.filter(pl.col("complex_id").is_in([int(c) for c in cidx.ids]))
+    area_ids = area["complex_id"].to_list()
+    out = engine.run(base, nets, cidx, od, hours=hours, step_s=args.step,
+                     flex_destinations=area_ids, flex_origins=area_ids)
+
+    # Destination flexibility around campus (n8st.ledger.flex).
+    adj = flex.adjustments(od, out["flex"], out["flex_out"], area,
+                           [w.walk for w in engine.GRID], list(nets))
+    labels = pl.DataFrame({"weight_index": list(range(len(engine.GRID))),
+                           "weights": [w.label for w in engine.GRID]})
+    adj = adj.join(labels, on="weight_index").drop("weight_index")
+    totals = out["totals"].join(adj.select("scenario", "weights", "adjustment_hours"),
+                                on=["scenario", "weights"], how="left").with_columns(
+        net_hours_flexible=pl.col("net_hours") + pl.col("adjustment_hours").fill_null(0))
 
     tag = args.od.stem.replace("od_", "")
     folder = PROCESSED_DIR / f"ledger_{tag}"
     folder.mkdir(parents=True, exist_ok=True)
     out["pairs"].write_parquet(folder / "pairs.parquet")
-    out["totals"].write_csv(folder / "totals.csv")
+    totals.write_csv(folder / "totals.csv")
+    adj.write_csv(folder / "flex_adjustments.csv")
     out["by_hour"].write_csv(folder / "by_hour.csv")
+    out["totals"] = totals
     meta = {"od": str(args.od), "od_riders_per_day": od["riders"].sum(), "hours": list(hours),
             "step_s": args.step, "variants": trip_changes,
             "runtime_s": round(time.monotonic() - t_start)}

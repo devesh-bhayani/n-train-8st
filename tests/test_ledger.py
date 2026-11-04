@@ -46,3 +46,21 @@ def test_departure_times_cover_each_hour_evenly():
     times, idx = engine.departure_times(range(7, 9), step_s=600)
     assert list(times) == [25200 + 600 * i for i in range(12)]
     assert list(idx) == [0] * 6 + [1] * 6
+
+
+def test_flex_station_changes_lets_riders_switch():
+    import numpy as np
+
+    from n8st.ledger.flex import station_changes
+
+    # Two stations, three points: point 0 next to station 0, point 2 next to station 1,
+    # point 1 halfway. Walking seconds:
+    walk = np.array([[0.0, 600.0], [300.0, 300.0], [600.0, 0.0]])
+    base = np.array([1000.0, 1300.0])  # station 0 is cheaper to reach today
+    scn = np.array([1000.0, 700.0])  # the scenario makes station 1 much cheaper
+    g = station_changes(base, scn, walk, walk_w=1.0)
+    # Today points 0 and 1 use station 0 (cost 1000, 1300); point 2 uses station 1 (1300).
+    # In the scenario: point 0 stays (1000 -> 1000), point 1 switches (1300 -> 1000),
+    # point 2 stays (1300 -> 700).
+    assert g[0] == pytest.approx((0 + -300) / 2)
+    assert g[1] == pytest.approx(-600)

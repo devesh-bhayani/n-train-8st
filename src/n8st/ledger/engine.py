@@ -167,15 +167,23 @@ def origin_costs(net: Network, cidx: ComplexIndex, origin_pos: int, times: np.nd
 
 def run(baseline: Network, scenarios: dict[str, Network], cidx: ComplexIndex,
         od: pl.DataFrame, weights: list[Weights] = GRID, hours: range = range(0, 24),
-        step_s: int = 120, progress: bool = True) -> dict[str, pl.DataFrame]:
+        step_s: int = 120, progress: bool = True,
+        flex_destinations: list[int] | None = None,
+        flex_origins: list[int] | None = None) -> dict:
     """Compute the ledger.
 
     od: columns origin, destination, hour, riders (weekday average riders per hour).
+    flex_destinations: complex ids whose costs from every origin are kept (for the
+      destination-flexibility model in n8st.ledger.flex).
     Returns:
       pairs   one row per (scenario, origin, destination, hour) with riders > 0 and a
               change: base-weight cost delta (s/rider) and travel-time delta
       totals  one row per (scenario, weights): net, gained and lost passenger-hours
       by_hour one row per (scenario, weights, hour)
+      flex    (if requested) {"destinations", "origins", "hours", "base", <scenario>...}
+              cost arrays of shape (origins, hours, destinations, weights), seconds
+      flex_out (if flex_origins) {"origins", "base", <scenario>...} arrays of shape
+              (flex origins, hours, all complexes, weights): costs *from* area stations
     """
     pos = cidx.position()
     od = od.filter(pl.col("origin").is_in(list(pos)) & pl.col("destination").is_in(list(pos))
@@ -189,15 +197,43 @@ def run(baseline: Network, scenarios: dict[str, Network], cidx: ComplexIndex,
     tot = {(s, wi): [0.0, 0.0, 0.0, 0.0] for s in scenarios for wi in range(len(weights))}
     hourly = {(s, wi): np.zeros(n_hours) for s in scenarios for wi in range(len(weights))}
     origins = od["origin"].unique().sort().to_list()
-    for n, o in enumerate(origins):
+    flex_pos = [pos[d] for d in (flex_destinations or []) if d in pos]
+    flex: dict = {}
+    if flex_pos:
+        shape = (len(origins), n_hours, len(flex_pos), len(weights))
+        flex = {"destinations": [int(cidx.ids[p]) for p in flex_pos], "origins": origins,
+                "hours": list(hours), "weights": [w.label for w in weights],
+                "base": np.full(shape, np.nan, dtype=np.float32),
+                **{s: np.full(shape, np.nan, dtype=np.float32) for s in scenarios}}
+    fo_list = [o for o in (flex_origins or []) if o in pos]
+    flex_out: dict = {}
+    if fo_list:
+        shape = (len(fo_list), n_hours, len(cidx.ids), len(weights))
+        flex_out = {"origins": fo_list, "complexes": [int(c) for c in cidx.ids],
+                    "base": np.full(shape, np.nan, dtype=np.float32),
+                    **{s: np.full(shape, np.nan, dtype=np.float32) for s in scenarios}}
+    # Area origins must be routed even if they had no OD rows of their own.
+    all_origins = sorted(set(origins) | set(fo_list))
+    for n_all, o in enumerate(all_origins):
         rows = od.filter(pl.col("origin") == o)
-        d_pos = np.array([pos[d] for d in rows["destination"]])
-        h_pos = np.array([h_index[h] for h in rows["hour"]])
+        d_pos = np.array([pos[d] for d in rows["destination"]], dtype=np.int64)
+        h_pos = np.array([h_index[h] for h in rows["hour"]], dtype=np.int64)
         riders = rows["riders"].to_numpy().astype(float)
+        n = origins.index(o) if o in origins else -1
         base_cost, base_tt = origin_costs(baseline, cidx, pos[o], times, hour_idx, n_hours,
                                           weights)
+        if flex_pos and n >= 0:
+            flex["base"][n] = base_cost[:, flex_pos, :]
+        if o in fo_list:
+            flex_out["base"][fo_list.index(o)] = base_cost
         for name, net in scenarios.items():
             cost, tt = origin_costs(net, cidx, pos[o], times, hour_idx, n_hours, weights)
+            if flex_pos and n >= 0:
+                flex[name][n] = cost[:, flex_pos, :]
+            if o in fo_list:
+                flex_out[name][fo_list.index(o)] = cost
+            if rows.height == 0:
+                continue
             delta = cost[h_pos, d_pos, :] - base_cost[h_pos, d_pos, :]  # (rows, weights)
             ok = np.isfinite(delta).all(axis=1)
             for wi in range(len(weights)):
@@ -220,8 +256,8 @@ def run(baseline: Network, scenarios: dict[str, Network], cidx: ComplexIndex,
                     "d_tt_s": dtt[changed],
                     "base_cost_s": base_cost[h_pos, d_pos, base_w][changed],
                 }))
-        if progress and (n % 50 == 0 or n == len(origins) - 1):
-            print(f"  origin {n + 1}/{len(origins)}", flush=True)
+        if progress and (n_all % 50 == 0 or n_all == len(all_origins) - 1):
+            print(f"  origin {n_all + 1}/{len(all_origins)}", flush=True)
 
     totals = pl.DataFrame([
         {"scenario": s, "weights": weights[wi].label, "wait_w": weights[wi].wait,
@@ -234,4 +270,5 @@ def run(baseline: Network, scenarios: dict[str, Network], cidx: ComplexIndex,
         for (s, wi), arr in hourly.items() for i, x in enumerate(arr)
     ])
     pairs = pl.concat(pair_rows) if pair_rows else pl.DataFrame()
-    return {"pairs": pairs, "totals": totals, "by_hour": by_hour}
+    return {"pairs": pairs, "totals": totals, "by_hour": by_hour, "flex": flex,
+            "flex_out": flex_out}
