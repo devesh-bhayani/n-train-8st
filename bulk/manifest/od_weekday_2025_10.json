@@ -1,0 +1,10 @@
+{
+ "dataset": "y2qv-fytt",
+ "year": "2025",
+ "month": 10,
+ "daytype": "weekday",
+ "raw_rows": 7864311,
+ "rows": 2296901,
+ "riders_per_day": 4221751.962896336,
+ "min_sum_filter": 0.25
+}
