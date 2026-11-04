@@ -73,7 +73,7 @@ def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
         scen_feeds = {f"pure_shift_{s}s": shift_route(feed, "N", s) for s in (60, 180)}
     else:
         scen_feeds = {v: tt.apply(feed, VARIANTS[v], template)[0] for v in variants}
-    per_offset = []
+    per_offset, by_hour, flows = [], [], []
     for d in offsets:
         t = time.monotonic()
         base = network.from_feed(shift_route(feed, "N", d), "Weekday")
@@ -97,15 +97,35 @@ def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
                 **{col: pl.col("net_hours") + scale * pl.col("_adj")
                    for col, scale in SCALES.items()}).drop("_adj")
         per_offset.append(tot)
+        try:  # extras (by hour, by flow) must never sink the main result
+            by_hour.append(out["by_hour"].with_columns(offset_s=pl.lit(d)))
+            if out["pairs"].height:
+                flows.append(out["pairs"].group_by("scenario", "origin", "destination").agg(
+                    riders=pl.col("riders").sum(),
+                    hours=(pl.col("riders") * pl.col("d_cost_s")).sum() / 3600))
+        except Exception as e:  # noqa: BLE001
+            print(f"  extras failed at offset {d}: {e}", flush=True)
         print(f"  offset {d:>3} s done in {time.monotonic() - t:.0f} s", flush=True)
+    extras = {}
+    try:
+        n = len(offsets)
+        extras["by_hour"] = pl.concat(by_hour).group_by("scenario", "weights", "hour").agg(
+            pl.col("net_hours").mean()).sort("scenario", "weights", "hour")
+        if flows:
+            # pairs only list (origin, destination, hour) cells that changed, so divide the
+            # sum by the number of offsets rather than taking a mean
+            extras["flows"] = pl.concat(flows).group_by("scenario", "origin", "destination").agg(
+                riders=pl.col("riders").sum() / n, hours=pl.col("hours").sum() / n)
+    except Exception as e:  # noqa: BLE001
+        print(f"  extras aggregation failed: {e}", flush=True)
     allt = pl.concat(per_offset, how="diagonal_relaxed")
-    value_cols = [c for c in ("net_hours", "hours_saved", "hours_lost", *FLEX_COLS)
-                  if c in allt.columns]
+    value_cols = [c for c in ("net_hours", "hours_saved", "hours_lost", *FLEX_COLS,
+                              "riders_affected") if c in allt.columns]
     avg = allt.group_by("scenario", "weights", "wait_w", "walk_w", "transfer_min").agg(
         *[pl.col(c).mean() for c in value_cols],
         *[pl.col(c).std().alias(f"{c}_sd_across_offsets") for c in value_cols[:1]],
     ).sort("scenario", "weights")
-    return {"per_offset": allt, "average": avg}
+    return {"per_offset": allt, "average": avg, **extras}
 
 
 def md(df: pl.DataFrame, digits: int = 0) -> str:
@@ -135,6 +155,13 @@ def main() -> None:
     folder.mkdir(parents=True, exist_ok=True)
     res["per_offset"].write_csv(folder / "per_offset.csv")
     avg.write_csv(folder / "totals.csv")
+    try:
+        if "by_hour" in res:
+            res["by_hour"].write_csv(folder / "by_hour.csv")
+        if "flows" in res:
+            res["flows"].write_parquet(folder / "flows.parquet")
+    except Exception as e:  # noqa: BLE001
+        print(f"  writing extras failed: {e}", flush=True)
     (folder / "meta.json").write_text(json.dumps({
         "od": str(args.od), "offsets_s": args.offsets, "step_s": args.step,
         "variants": list(avg["scenario"].unique()), "runtime_s": round(time.monotonic() - t0)},
