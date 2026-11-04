@@ -12,6 +12,11 @@ import polars as pl
 
 from n8st.scenarios.express_segments import ExpressRun
 
+# Floor on the time an added stop costs: the pre-registered base stop penalty
+# (docs/preregistration.md). Without it, a local whose schedule has less padding than the
+# express made some stretches *faster* with more stops (e.g. the N at DeKalb Av, -30 s).
+MIN_STOP_PENALTY_S = 45.0
+
 
 def segment_medians(feed: dict[str, pl.DataFrame], service_id: str = "Weekday"
                     ) -> dict[tuple[str, str, str, str], float]:
@@ -91,15 +96,19 @@ def apply_run(feed: dict[str, pl.DataFrame], run: ExpressRun, patterns: dict,
             continue
         i1 = i0 + len(run.stops) - 1
         t0 = float(rows["dep_s"][i0])
-        delta = t0 + times_rel[-1] - float(rows["arr_s"][i1])
+        express_s = float(rows["arr_s"][i1]) - t0
+        # the local's timing, stretched if needed so each added stop costs at least the floor
+        total = max(times_rel[-1], express_s + MIN_STOP_PENALTY_S * len(run.inserted))
+        scale = total / times_rel[-1]
+        delta = t0 + total - float(rows["arr_s"][i1])
         before = rows.slice(0, i0 + 1)
         after = rows.slice(i1).with_columns(arr_s=(pl.col("arr_s") + delta).round().cast(pl.Int32),
                                             dep_s=(pl.col("dep_s") + delta).round().cast(pl.Int32))
         middle = pl.DataFrame({
             "trip_id": [trip_id] * len(interior),
             "parent_stop": interior,
-            "arr_s": [round(t0 + x) for x in times_rel[:-1]],
-            "dep_s": [round(t0 + x) for x in times_rel[:-1]],
+            "arr_s": [round(t0 + x * scale) for x in times_rel[:-1]],
+            "dep_s": [round(t0 + x * scale) for x in times_rel[:-1]],
         }).with_columns(stop_id=pl.col("parent_stop") + run.direction,
                         direction=pl.lit(run.direction),
                         arr_s=pl.col("arr_s").cast(pl.Int32), dep_s=pl.col("dep_s").cast(pl.Int32))

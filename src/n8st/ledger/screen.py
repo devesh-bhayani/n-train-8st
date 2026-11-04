@@ -3,8 +3,10 @@
     python -m n8st.ledger.screen --od data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet
 
 Every express run found by n8st.scenarios.express_segments becomes a scenario: that
-route makes the local stops on that stretch, timed with the local route's schedule.
-The ledger then scores each one on the same OD data.
+route makes the local stops on that stretch, timed with the local route's schedule but
+never less than 45 s per added stop (the pre-registered stop penalty; a local with less
+schedule padding than the express would otherwise make some stretches faster). The
+ledger then scores each one on the same OD data.
 
 Phase averaging (see n8st.ledger.phase_avg): a run that slows route r also moves r's
 trains relative to every route they share track or transfers with, and on one timetable
