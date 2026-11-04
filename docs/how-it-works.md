@@ -103,6 +103,33 @@ adjustment never overstates the benefit.
 uniformly. Add the home end: the user lives between the N and the D, so origin-side
 flexibility matters for people like them.
 
+### Two traps this ledger fell into (and how they were found)
+
+1. **Sampling on the timetable's grid.** Riders were first sampled every 2 minutes on
+   the dot. MTA departures sit on a 30-second grid, so many simulated riders arrived
+   the exact second their train left and waited zero. A scenario that delayed trains by
+   90 s (a multiple of 30) kept those lucky coincidences; one that delayed them by
+   110 s lost them, and looked thousands of hours worse. The tell was a 20-second gap
+   in timing producing a 2,300-hour gap in results. Fix: one random arrival inside
+   each 2-minute window, with the same draws for every network compared.
+
+2. **Timetable coordination.** Even with jitter, shifting every N train later by 20–240
+   seconds, with nothing else changed, "cost" 1,000–5,500 rider-hours. The MTA
+   timetables the N to interleave with the W in Astoria and the Q on Broadway and in
+   Brooklyn; shifting it puts N trains right behind W or Q trains and doubles some
+   waits. A scenario that delays N trains after the new stops pays that penalty, but a
+   real timetable would be re-planned to avoid it. Fix (`n8st.ledger.phase_avg`): shift
+   all N trips by the same set of offsets (0–540 s) in both the baseline and the
+   scenario and average, so coordination quality is the same on average with and
+   without the change. The check: pure shifts then average to within noise of zero.
+   The spread across offsets (±1,000–2,600 h) is also the honest error bar on any
+   single-timetable result.
+
+The general lesson: when a model compares two worlds, every difference between them
+that isn't the policy (sampling luck, schedule alignment) must be held equal or averaged
+out, and the way to find such differences is to run a "placebo" scenario that should
+change nothing and see whether it does.
+
 ---
 
 ## 5. Simulation: SimPy on signal blocks
