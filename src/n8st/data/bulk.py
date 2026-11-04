@@ -270,7 +270,42 @@ def task_subwaydata(out: Path, args) -> None:
     manifest(out, f"subwaydata_{args.start}_{args.end}", {"days": done, "missing": missing})
 
 
+def task_probe_od(out: Path, args) -> None:
+    """Time one page of the aggregated OD query (to size the full download)."""
+    import time
+
+    ds = DATASETS["od_2026"]
+    keys = "origin_station_complex_id, destination_station_complex_id, hour_of_day"
+    s = socrata._session()
+    timings = {}
+    for label, params in {
+        "agg_month_weekday": {"$select": f"{keys}, sum(estimated_average_ridership) AS r",
+                              "$where": f"month = 9 AND {socrata.sql_in('day_of_week', WEEKDAYS)}",
+                              "$group": keys, "$order": keys, "$limit": 50000},
+        "agg_month_weekday_hour8": {
+            "$select": f"{keys}, sum(estimated_average_ridership) AS r",
+            "$where": f"month = 9 AND hour_of_day = 8 AND "
+                      f"{socrata.sql_in('day_of_week', WEEKDAYS)}",
+            "$group": keys, "$order": keys, "$limit": 50000},
+        "count_month_weekday": {"$select": "count(*) AS n",
+                                "$where": f"month = 9 AND "
+                                          f"{socrata.sql_in('day_of_week', WEEKDAYS)}"},
+        "raw_page": {"$where": "month = 9", "$limit": 50000},
+    }.items():
+        t = time.monotonic()
+        try:
+            r = socrata._get(s, f"https://{socrata.SOCRATA_DOMAIN}/resource/{ds}.csv", params)
+            timings[label] = {"seconds": round(time.monotonic() - t, 1),
+                              "rows": len(r.content.splitlines()) - 1,
+                              "head": r.text[:300]}
+        except Exception as e:
+            timings[label] = {"seconds": round(time.monotonic() - t, 1), "error": repr(e)[:300]}
+        print(label, timings[label], flush=True)
+    manifest(out, "probe_od", timings)
+
+
 TASKS = {
+    "probe-od": task_probe_od,
     "stations": task_stations,
     "od-matrix": task_od_matrix,
     "od-campus": task_od_campus,
@@ -302,7 +337,7 @@ def main(argv: list[str] | None = None) -> None:
         r = sub.add_parser(name)
         r.add_argument("start")
         r.add_argument("end")
-    for name in ("monthly", "turnstile", "perf"):
+    for name in ("monthly", "turnstile", "perf", "probe-od"):
         sub.add_parser(name)
     args = p.parse_args(argv)
     args.out.mkdir(parents=True, exist_ok=True)
