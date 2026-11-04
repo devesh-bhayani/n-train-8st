@@ -109,6 +109,38 @@ def station_changes(c_base: np.ndarray, c_scn: np.ndarray, walk: np.ndarray,
     return out
 
 
+def choice_shares(od: pl.DataFrame, flex: dict, area: pl.DataFrame, origins: list[int],
+                  scenario: str, weight_index: int, walk_w: float,
+                  station: int) -> tuple[float, float]:
+    """Predicted share of area-bound riders from `origins` who use `station`, today and in
+    the scenario. Riders are spread over destination points as in `adjustments`."""
+    lats, lons = grid_points()
+    walk = walk_seconds(area, lats, lons)
+    area_ids = area["complex_id"].to_list()
+    dest = flex["destinations"]
+    order = [dest.index(c) for c in area_ids]
+    o_idx = {o: i for i, o in enumerate(flex["origins"])}
+    h_idx = {h: i for i, h in enumerate(flex["hours"])}
+    k_target = area_ids.index(station)
+    into = od.filter(pl.col("destination").is_in(area_ids) & pl.col("origin").is_in(origins)
+                     & pl.col("origin").is_in(list(o_idx)) & pl.col("hour").is_in(list(h_idx)))
+    base_n = scn_n = total = 0.0
+    for (o, h), grp in into.group_by("origin", "hour"):
+        cb = flex["base"][o_idx[o], h_idx[h], order, weight_index].astype(float)
+        cs = flex[scenario][o_idx[o], h_idx[h], order, weight_index].astype(float)
+        tot_b = np.where(np.isfinite(cb), cb, np.inf)[None, :] + walk_w * walk
+        tot_s = np.where(np.isfinite(cs), cs, np.inf)[None, :] + walk_w * walk
+        choice_b, choice_s = tot_b.argmin(axis=1), tot_s.argmin(axis=1)
+        for d, r in grp.select("destination", "riders").iter_rows():
+            pts = choice_b == area_ids.index(d)
+            if not pts.any():
+                continue
+            total += r
+            base_n += r * float((choice_b[pts] == k_target).mean())
+            scn_n += r * float((choice_s[pts] == k_target).mean())
+    return (100 * base_n / total, 100 * scn_n / total) if total else (float("nan"),) * 2
+
+
 def adjustments(od: pl.DataFrame, flex: dict, flex_out: dict, area: pl.DataFrame,
                 weights_walk: list[float], scenarios: list[str]) -> pl.DataFrame:
     """Change in passenger-hours when area riders may switch stations, vs fixed OD.

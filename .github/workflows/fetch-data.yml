@@ -70,7 +70,8 @@ jobs:
           fi
 
       - name: Commit to the mta-data branch
-        if: always()
+        # Not on cancel: a cancelled download leaves partial files behind.
+        if: ${{ !cancelled() }}
         env:
           MSG: "${{ steps.plan.outputs.task }} ${{ steps.fetch.outputs.stamp }}"
         run: |
