@@ -116,6 +116,25 @@ def ledger() -> None:
     _export("ledger_top_flows", pl.concat([winners, losers]))
 
 
+def forecasting() -> None:
+    p = PROCESSED_DIR / "forecast_8st.csv"
+    if p.exists():
+        _export("forecast_8st", pl.read_csv(p))
+
+
+def sensitivity() -> None:
+    p = PROCESSED_DIR / "sim_sensitivity.parquet"
+    if not p.exists():
+        return
+    r = pl.read_parquet(p).filter(pl.col("baseline_error_pct") <= 5)
+    labels = {"n_down_s": "N downtown", "n_up_s": "N uptown",
+              "rw_knock_on_s": "R/W knock-on", "q_relief_s": "Q relief"}
+    _export("sim_sensitivity", pl.DataFrame([
+        {"effect": lab, "p10_s": r[k].quantile(0.1), "median_s": r[k].median(),
+         "p90_s": r[k].quantile(0.9), "parameter_sets": r.height}
+        for k, lab in labels.items()]))
+
+
 def wolk() -> None:
     src = PROJECT_ROOT / "docs" / "findings" / "phase0_wolk_replication.md"
     if src.exists():
@@ -125,7 +144,8 @@ def wolk() -> None:
 
 def main() -> None:
     print(f"exporting to {APP_DATA}")
-    for fn in (commute, backtrack_wait, simulation, natural_experiment, ledger, wolk):
+    for fn in (commute, backtrack_wait, simulation, sensitivity, natural_experiment, ledger,
+               forecasting, wolk):
         fn()
 
 

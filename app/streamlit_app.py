@@ -166,6 +166,14 @@ if sd is not None:
     fig.update_yaxes(showgrid=False)
     st.plotly_chart(style(fig, 360), use_container_width=True, theme=None)
     table(sd)
+    ss = load("sim_sensitivity")
+    if ss is not None:
+        n = int(ss["parameter_sets"].iloc[0])
+        st.markdown(
+            f"**How sure is this?** Across {n} parameter sets that still reproduce real trains "
+            "within 5% (a Gaussian-process surrogate and Sobol indices pick out which "
+            "assumptions matter), the effects stay in these ranges:")
+        st.dataframe(ss.drop(columns="parameter_sets").round(0), hide_index=True)
 
 # --------------------------------------------------------------------------- ledger
 if totals is not None:
@@ -232,6 +240,32 @@ if es is not None:
     dd = load("ddd_results")
     if dd is not None:
         table(dd, "Triple-difference estimates")
+
+# --------------------------------------------------------------------------- forecast
+fc = load("forecast_8st")
+if fc is not None:
+    st.header("Forecasting 8 St–NYU a week ahead")
+    st.markdown(
+        "One LightGBM model for 47 stations, using only what is known a week earlier "
+        "(lags, calendar, an approximate NYU-semester flag, weather). On September–October "
+        "2026 it misses total ridership by 7.0% (WAPE), against 9.2% for same-day-last-week. "
+        "The band is a split-conformal 90% interval; it covered 82% of days, because it was "
+        "calibrated on summer data.")
+    fc = fc.sort_values("day")
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=list(fc["day"]) + list(fc["day"])[::-1],
+                             y=list(fc["hi"]) + list(fc["lo"])[::-1], fill="toself",
+                             fillcolor="rgba(42,120,214,0.10)", line=dict(width=0),
+                             hoverinfo="skip", name="90% interval"))
+    fig.add_trace(go.Scatter(x=fc["day"], y=fc["pred"], name="Forecast", mode="lines",
+                             line=dict(color=S1, width=2),
+                             hovertemplate="%{x}<br>forecast %{y:,.0f}<extra></extra>"))
+    fig.add_trace(go.Scatter(x=fc["day"], y=fc["entries"], name="Actual", mode="lines",
+                             line=dict(color=S2, width=2),
+                             hovertemplate="%{x}<br>actual %{y:,.0f}<extra></extra>"))
+    fig.update_yaxes(title="Daily entries", rangemode="tozero")
+    st.plotly_chart(style(fig, 320, legend=True), use_container_width=True, theme=None)
+    table(fc)
 
 # --------------------------------------------------------------------------- footer
 st.header("Caveats")
