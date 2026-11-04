@@ -182,8 +182,6 @@ def apply(feed: dict[str, pl.DataFrame], scenario: Scenario,
 def _segment_times(direction, seg_stops, t_entry, rows, parents, template, scenario):
     """Times at each stop of the rebuilt segment."""
     full = SOUTH_SEGMENT if direction == "S" else SOUTH_SEGMENT[::-1]
-    exit_ = seg_stops[-1]
-    t_exit_old = float(rows["arr_s"][parents.index(exit_)])
 
     def tmpl(a, b):
         ia, ib = full.index(a), full.index(b)
