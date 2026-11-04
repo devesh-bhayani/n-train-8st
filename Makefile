@@ -1,5 +1,5 @@
 .PHONY: setup test lint gtfs week1 stations ridership od data shuttle-once shuttle-log \
-        shuttle-pull shuttle-summary shuttle-first-look wolk phase0
+        shuttle-pull shuttle-summary shuttle-first-look wolk phase0 mta-pull observed ledger
 
 setup:            ## install the environment (Python and packages, via uv)
 	uv sync
@@ -49,3 +49,16 @@ wolk:             ## clone Josh Wolk's Stop the Stop pipeline (MIT) for Phase 0
 
 phase0:           ## independent replication of Stop the Stop + 8 St-NYU sensitivity
 	uv run python -m n8st.analysis.wolk_replication
+
+mta-pull:         ## copy the fetch-data workflow's downloads into data/raw/mta_data
+	git fetch origin mta-data:refs/remotes/origin/mta-data
+	rm -rf data/raw/mta_data && mkdir -p data/raw/mta_data
+	git archive refs/remotes/origin/mta-data | tar -x -C data/raw/mta_data
+
+observed:         ## observed headways, waits and running times -> docs/findings/observed_service.md
+	uv run python -m n8st.analysis.observed
+
+OD ?= data/raw/mta_data/bulk/od/od_weekday_2026_09.parquet
+ledger:           ## scenario ledger for one OD month -> docs/findings/ledger_*.md
+	uv run python -m n8st.ledger.run --od $(OD)
+	uv run python -m n8st.ledger.report data/processed/ledger_$(subst od_,,$(basename $(notdir $(OD))))

@@ -1,0 +1,33 @@
+# Daily: pull the last few days of observed trips (N/Q/R/W, B/D/F/M) from subwaydata.nyc
+# into the mta-data branch. subwaydata.nyc publishes each day the morning after.
+name: subwaydata-sync
+on:
+  schedule:
+    - cron: "41 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: subwaydata-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --no-dev
+      - name: Fetch the last 4 days
+        run: |
+          start="$(date -u -d '4 days ago' +%F)"
+          end="$(date -u -d '1 day ago' +%F)"
+          uv run python -m n8st.data.bulk --out _out/bulk subwaydata "$start" "$end"
+      - name: Commit
+        if: always()
+        run: |
+          chmod +x scripts/commit-to-branch.sh
+          scripts/commit-to-branch.sh mta-data _out . "subwaydata sync $(date -u +%F)"
