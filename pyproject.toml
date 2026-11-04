@@ -16,6 +16,7 @@ dependencies = [
     "pyarrow>=17",
     "pyfixest>=0.60.0",
     "requests>=2.32",
+    "salib>=1.6.0",
     "scikit-learn>=1.9.1",
     "shap>=0.50.0",
     "simpy>=4.1.2",
