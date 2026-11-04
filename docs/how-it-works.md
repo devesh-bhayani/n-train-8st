@@ -99,9 +99,34 @@ The same works in reverse for trips that start near campus. If the model can't e
 today's choice (no point prefers *s*), the flow keeps its fixed-station change, so the
 adjustment never overstates the benefit.
 
+**Checking the flexibility model against a natural experiment.** The weekend N already
+stops at 8 St, so weekends show what Sea Beach riders do when the one-seat ride exists.
+Among Sea Beach riders bound for campus-area stations, the share using 8 St rises from
+2.9% on weekdays to 7.0% on weekends: +2.5 points net of the same comparison for West
+End (D) riders, a difference-in-differences (`n8st.analysis.weekend_experiment`).
+`n8st.ledger.validate_flex` asks the deterministic model to predict the same quantity
+for a weekday N running local. It says +29.6 points, about twelve times too many.
+People don't re-optimise their station for a minute's saving: they have habits and a
+favourite exit, and many don't know the alternative is faster.
+
+So the deterministic adjustment is an *upper bound*. The central estimate scales the
+switching benefit by observed ÷ predicted switching: 0.086 using the
+difference-in-differences, 0.138 using the raw weekend shift. If the riders who do
+switch are the ones with the most to gain, which is likely, this understates the benefit.
+
+Why not a logit? A multinomial logit, P(station) ∝ exp(−θ × cost), is the textbook way
+to make choices noisy, and θ can be tuned until the predicted shift is +2.5 points
+(1/θ ≈ 58 minutes). But a logit that noisy gives every rider a few percent chance of
+every station within a kilometre. Its welfare measure (the logsum) then credits the
+8 St improvement to almost everyone, and in tests it came out *larger* than the
+deterministic upper bound. The lesson: matching one observed moment (the share shift)
+doesn't make a model right about the quantity you care about (time saved). The scaled
+upper bound is cruder, but it can't overshoot.
+
 *Exercises.* Weight the grid points by NYU building floor area or LODES jobs instead of
 uniformly. Add the home end: the user lives between the N and the D, so origin-side
-flexibility matters for people like them.
+flexibility matters for people like them. Fit a nested logit (station within line) and
+check whether its logsum stays below the upper bound.
 
 ### Two traps this ledger fell into (and how they were found)
 
@@ -119,16 +144,51 @@ flexibility matters for people like them.
    Brooklyn; shifting it puts N trains right behind W or Q trains and doubles some
    waits. A scenario that delays N trains after the new stops pays that penalty, but a
    real timetable would be re-planned to avoid it. Fix (`n8st.ledger.phase_avg`): shift
-   all N trips by the same set of offsets (0–540 s) in both the baseline and the
-   scenario and average, so coordination quality is the same on average with and
-   without the change. The check: pure shifts then average to within noise of zero.
-   The spread across offsets (±1,000–2,600 h) is also the honest error bar on any
-   single-timetable result.
+   all N trips by the same set of offsets in both the baseline and the scenario and
+   average, so coordination quality is the same on average with and without the
+   change. The spread across offsets (±1,000–2,600 h) is also the honest error bar on
+   any single-timetable result. `tests/test_ledger.py` shows the principle on a toy
+   two-route network: over offsets covering a whole headway, a pure shift averages to
+   exactly zero.
+
+3. **Where the averaging window sits.** The first windows started at today's timetable:
+   offsets 0–540 s, then 0–1,080 s. The placebo, a pure shift that should average to
+   zero, still came out positive in every cell of the weight grid: +258 and +444 h for
+   60 s and 180 s shifts, then +143 and +351 h. Looking offset by offset showed why.
+   Shifting *today's* timetable by 180 s costs 4,442 rider-hours; at a typical offset
+   the same shift costs or saves about 1,500. Today's alignment is a designed optimum,
+   and it doesn't repeat one headway later, because headways vary through the day. A
+   window that starts at 0 lets the baseline visit that optimum, while a scenario that
+   delays the N averages over a window shifted by the delay and never does, so every
+   delay looks a few hundred hours worse than it is. Centring the window on today's
+   timetable (−540 … +540 s) lets both pass through the optimum. The placebo then
+   averages to **+24 ± 337 h** (60 s) and **+88 ± 830 h** (180 s), about a tenth
+   of a standard error from zero. (`docs/findings/ledger_phase_check*.md` keeps all
+   three versions.)
 
 The general lesson: when a model compares two worlds, every difference between them
 that isn't the policy (sampling luck, schedule alignment) must be held equal or averaged
 out, and the way to find such differences is to run a "placebo" scenario that should
 change nothing and see whether it does.
+
+### The system-wide screen
+
+`n8st.scenarios.express_segments` finds every stretch of the weekday timetable where an
+express route skips stations that a local route serves between two shared stops: 78
+stretches. A stretch must be a plausible detour (the local path at most 25% longer than
+the express path) and ends where express and local stop together again. `make_local`
+turns each into a scenario: the express route makes the local's stops on that stretch,
+timed with the local's own median segment times, and everything downstream shifts by
+the extra time. `n8st.ledger.screen` scores all of them with the same ledger, with the
+scenario's route phase-averaged at four offsets.
+
+It's a screen, not a verdict. It doesn't know whether the crossovers exist, whether the
+platforms are long enough, or whether the local tracks have room for more trains. What
+it can do is say where to look, and whether 8 St–NYU is unusual.
+
+*Exercises.* Add a feasibility column from a track map: does a crossover exist at both
+ends of each stretch? Re-rank with only the feasible ones. Then try the opposite screen,
+Wolk's original question: which *local* stops would be worth skipping?
 
 ---
 

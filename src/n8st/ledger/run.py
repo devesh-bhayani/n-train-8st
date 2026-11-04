@@ -4,12 +4,14 @@
     python -m n8st.ledger.run --od data/raw/mta_data/bulk/od/od_weekday_2026_09.parquet
 
 Scenario variants (timing of the inserted local stops, per through-rider):
+    V1_sim     calibrated simulation: 185 s downtown, 110 s uptown, R/W/Q knock-on  <- headline
     V1_sched   MTA's own weekend local schedule (~150 s)
-    V1_obs     observed weekday local-track running + crossover (~210 s)  <- headline
+    V1_obs     observed weekday local-track running + crossover (~210 s)
     V1_wkend   observed weekend local N (~260 s)
     V2_sched / V2_obs   express to 14 St, then local 8 St + Prince (~90 s / ~110 s)
     V4_obs     the Q runs local instead of the N
     V5_obs     V1_obs only 10 am-4 pm and 7 pm-midnight
+    V6_W       no pattern change: 8 more Sea Beach W trips (n8st.scenarios.extra_trips)
 
 Observed values come from docs/findings/observed_service.md (subwaydata.nyc, Sep-Oct 2026).
 """
@@ -28,6 +30,7 @@ from n8st.config import PROCESSED_DIR, RAW_DIR
 from n8st.data import gtfs
 from n8st.ledger import engine, flex
 from n8st.routing import network
+from n8st.scenarios import extra_trips
 from n8st.scenarios import timetable as tt
 
 STATIONS = RAW_DIR / "mta_data" / "bulk" / "stations" / "stations.parquet"
@@ -54,6 +57,18 @@ VARIANTS: dict[str, tt.Scenario] = {
         knock_on=(("R", "S", 9), ("W", "S", 7), ("Q", "S", -26),
                   ("R", "N", 10), ("W", "N", 9), ("Q", "N", -38))),
 }
+
+
+# Variants that add trips instead of stops.
+EXTRA_TRIP_VARIANTS = {"V6_W": extra_trips.apply_v6}
+
+
+def variant_feed(feed: dict[str, pl.DataFrame], name: str,
+                 template: dict | None = None) -> dict[str, pl.DataFrame]:
+    """The scenario timetable for any named variant."""
+    if name in EXTRA_TRIP_VARIANTS:
+        return EXTRA_TRIP_VARIANTS[name](feed)[0]
+    return tt.apply(feed, VARIANTS[name], template)[0]
 
 
 def complexes_from_stations(path: Path = STATIONS) -> pl.DataFrame:

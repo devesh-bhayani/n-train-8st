@@ -40,7 +40,7 @@ from n8st.config import FINDINGS_DIR, PROCESSED_DIR
 from n8st.data import gtfs
 from n8st.ledger import engine, flex
 from n8st.ledger.phase_check import shift_route
-from n8st.ledger.run import STATIONS, VARIANTS, complexes_from_stations, load_od
+from n8st.ledger.run import STATIONS, complexes_from_stations, load_od, variant_feed
 from n8st.routing import network
 from n8st.scenarios import timetable as tt
 
@@ -77,7 +77,7 @@ def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
     if check:
         scen_feeds = {f"pure_shift_{s}s": shift_route(feed, "N", s) for s in (60, 180)}
     else:
-        scen_feeds = {v: tt.apply(feed, VARIANTS[v], template)[0] for v in variants}
+        scen_feeds = {v: variant_feed(feed, v, template) for v in variants}
     per_offset, by_hour, flows = [], [], []
     for d in offsets:
         t = time.monotonic()
@@ -151,11 +151,13 @@ def main() -> None:
     p.add_argument("--offsets", type=int, nargs="*", default=DEFAULT_OFFSETS)
     p.add_argument("--step", type=int, default=180)
     p.add_argument("--check", action="store_true")
+    p.add_argument("--tag", help="name for the output folder and report "
+                   "(default: from the OD file name)")
     args = p.parse_args()
     t0 = time.monotonic()
     res = run(args.od, args.variants, args.offsets, args.step, range(5, 24), args.check)
     avg = res["average"]
-    tag = "check" if args.check else args.od.stem.replace("od_", "")
+    tag = args.tag or ("check" if args.check else args.od.stem.replace("od_", ""))
     folder = PROCESSED_DIR / f"ledger_phase_{tag}"
     folder.mkdir(parents=True, exist_ok=True)
     res["per_offset"].write_csv(folder / "per_offset.csv")
