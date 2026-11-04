@@ -1,0 +1,640 @@
+{{short description|Rapid transit service}}
+{{About|the New York City Subway service||R Train (disambiguation){{!}}R Train}}
+{{good article}}
+{{Use mdy dates|date=January 2024}}
+{{Infobox NYCS service
+| service = R
+| name = Broadway Local
+| image1 = File:R Train at 53rd.jpg
+| caption1 = A [[Manhattan]]-bound R train of [[R160 (New York City Subway car)|R160s]] enters [[53rd Street station (BMT Fourth Avenue Line)|53rd Street]].
+| north term = {{bulleted list|[[Forest Hills–71st Avenue (IND Queens Boulevard Line)|Forest Hills–71st Avenue]] (all times except late nights)|[[Queens Plaza station|Queens Plaza]] (evenings after 9:30 PM)|[[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street–South Ferry]] (late nights)|[[96th Street (Second Avenue Subway)|96th Street]] (one northbound AM trip)}}
+| south term = {{bulleted list|[[Bay Ridge–95th Street (BMT Fourth Avenue Line)|Bay Ridge–95th Street]] (all times)|[[Bay Parkway (BMT West End Line)|Bay Parkway]] (one southbound AM trip)}}
+| note = Dashed pink line shows limited ''rush hour service'' to [[96th Street (Second Avenue Subway)|96th Street]].
+| stations = 45<br />34 (limited service to 96th Street)<br />41 (limited service to Bay Parkway)<br />17 (late night service)
+| depot = [[Jamaica Yard]]
+| started = {{start date and age|1916|01|15}}
+| map = {{R (New York City Subway service)}}
+| map_state = collapsed
+}}
+
+The '''R Broadway Local'''<ref name="timetable" />{{Efn|The [[Metropolitan Transportation Authority]]'s official text map gives the route's name as the "R Queens Boulevard/Broadway/4th Avenue Local".<ref>{{cite web | title=R Train (Queens Boulevard/Broadway/4 Avenue local) Line Map | website=MTA | date=December 7, 2025 | url=https://www.mta.info/maps/subway-line-maps/r-line | access-date=January 17, 2026}}</ref>}} is a [[rapid transit]] service in the [[B Division (New York City Subway)|B Division]] of the [[New York City Subway]]. Its route emblem, or "bullet", is colored {{NYCS const|color|yellow}} since it uses the [[BMT Broadway Line]] in [[Manhattan]].<ref name="color">{{Cite news|url=http://cityroom.blogs.nytimes.com/2010/05/10/take-the-tomato-to-the-sunflower/|title=Take the Tomato 2 Stops to the Sunflower|last=Grynbaum|first=Michael M.|date=May 10, 2010|newspaper=The New York Times|access-date=October 30, 2016}}</ref>
+
+The R operates 24 hours daily, although service patterns vary based on the time of day. Daytime service operates between [[Forest Hills-71st Avenue station|71st Avenue]] in [[Forest Hills, Queens]], and [[Bay Ridge-95th Street station|95th Street]] in [[Bay Ridge, Brooklyn]], making all stops along the full route; one northbound AM rush hour trip terminates at [[96th Street (Second Avenue Subway)|96th Street]] on the [[Upper East Side]] of Manhattan instead of 71st Avenue in Queens; one southbound AM rush hour trip terminates at [[Bay Parkway (BMT West End Line)|Bay Parkway]] instead of 95th Street in Brooklyn. Overnight service [[short turn]]s at [[Whitehall Street-South Ferry (BMT Broadway Line)|Whitehall Street-South Ferry]] in [[Lower Manhattan]] to and from [[Brooklyn]] and does not operate to or from 71st Avenue.
+
+The R was originally the [[Brooklyn–Manhattan Transit Corporation]]'s '''2''' service, running along the [[BMT Fourth Avenue Line]] in Brooklyn then traveling through the [[Montague Street Tunnel]] to Manhattan, then running local on the BMT Broadway Line. The 2 became the '''RR''' in 1961. The RR ran local along the [[BMT Astoria Line]] in Queens, terminating at [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Boulevard]] until it switched terminals with the N in 1987. The RR became the R in 1985. After 1987, the R ran via the [[IND Queens Boulevard Line]] to Forest Hills, Queens. A variant of the RR/R, from Bay Ridge to [[Chambers Street (BMT Nassau Street Line)|Chambers Street]] in [[Lower Manhattan]] via the [[BMT Nassau Street Line]], ran from 1967 until 1987.
+
+== History ==
+=== Early history ===
+The current R service is the successor to the original route 2 of the Brooklyn–Manhattan Transit Corporation.<ref>{{Cite web|url=http://www.heyridge.com/2016/01/crappy-100th-birthday-bay-ridge-subway/|title=Crappy 100th Birthday, R Train! Love, Bay Ridge|date=January 14, 2016|website=www.heyridge.com|access-date=May 4, 2017}}</ref><ref>{{cite web |title=BMT 1924 Map |url=https://www.nycsubway.org/perl/caption.pl?/img/maps/bmt_1924.gif |website=www.nycsubway.org |access-date=January 25, 2019}}</ref> When 2 service began on January 15, 1916, it ran between [[Chambers Street (BMT Nassau Street Line)|Chambers Street]] on the BMT Nassau Street Line and [[86th Street (BMT Fourth Avenue Line)|86th Street]] on the BMT Fourth Avenue Line, using the [[Manhattan Bridge]] to cross the [[East River]], and running via Fourth Avenue local.<ref name="erictb.info" /> Service on the BMT Broadway Line, which at the time ran only between Whitehall Street–South Ferry and [[Times Square–42nd Street (BMT Broadway Line)|Times Square–42nd Street]], began exactly two years later on January 15, 1918.<ref>{{Cite news|url=https://timesmachine.nytimes.com/timesmachine/1918/01/06/102652686.pdf|title=Open New Subway to Times Square – Brooklyn Directly Connected with Wholesale and Shopping Districts of New York – Nickel Zone Is Extended – First Train in Broadway Tube Makes Run from Rector Street in 17 Minutes – Cost About $20,000,000 – Rapid Transit from Downtown to Hotel and Theatre Sections Expected to Affect Surface Lines |date=January 6, 1918|newspaper=The New York Times|access-date=November 5, 2016}}</ref> On July 10, 1919, service was extended to [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]] with the opening of that station.<ref name="erictb.info">{{cite web|url=http://www.erictb.info/linehistory.html#r|title=NYCT Line by Line History|last=Bolden|first=Eric|access-date=August 31, 2016|work=erictb.info}}</ref><ref>{{Cite book|url=https://books.google.com/books?id=AINOAQAAMAAJ&q=18th+avenue+culver+line&pg=PA130|title=Legislative Documents|date=January 1, 1920|publisher=J.B. Lyon Company|language=en}}</ref>
+
+The Montague Street Tunnel and the [[60th Street Tunnel]] both opened on August 1, 1920.<ref>{{cite news |title=New Subway Link Opens; Service Started Through Queens and Montague Street Tubes |url=https://www.nytimes.com/1920/08/01/archives/new-subway-link-opens-service-started-through-queens-and-montague.html |newspaper=The New York Times |date=August 1, 1920 |access-date=February 13, 2010}}</ref> At that time, the 2 service was rerouted from the Manhattan Bridge to the Montague Street Tunnel, running local from [[Queensboro Plaza (BMT Astoria Line)|Queensboro Plaza]] in Queens to 86th Street–Fourth Avenue in Brooklyn.<ref name="rr" /> The Bay Ridge–95th Street station opened on October 31, 1925, and became the service's new southern terminus.<ref>{{Cite news|url=https://www.nytimes.com/1925/11/01/archives/open-subway-line-to-fort-hamilton-fourth-avenue-extension-put-in.html|title=Open Subway Line to Fort Hamilton – Fourth Avenue Extension Put in Service After Wait of Four Years – Half-Mile Cost $2,000,000 – Completion Gives Residents Through Trip Without Recourse to Trolley Cars|date=November 1, 1925|work=The New York Times|access-date=May 4, 2017|issn=0362-4331}}</ref> During this time, rush-hour specials to Chambers Street were sporadically added and removed, eventually becoming an addition to the line.<ref name="rr">{{cite web|url=http://subwaynut.com/ct/chambers_jz/index.php|title=Rush Hour|publisher=subwaynut.com|access-date=June 21, 2018}}</ref> At one time, including during 1931, additional midday service operated local between 57th Street and Whitehall Street–South Ferry. The 2 also used the [[Nassau Street Loop]] during rush hours, entering Manhattan via the Manhattan Bridge or Montague Street Tunnel and leaving via the other.<ref name="rr" />
+
+On October 17, 1949, the platform edges on the BMT Astoria Line had been shaved back to accommodate the larger BMT trains, and the BMT's Astoria Shuttle was replaced with service from the 2 Fourth Avenue Line operating from Astoria–Ditmars Boulevard in Astoria, Queens to Bay Ridge–95th Street in Brooklyn at all times. On June 29, 1950, special rush hour trains began running between Bay Ridge–95th Street and Chambers Street via the south side of the Manhattan Bridge and/or the Montague Street Tunnel. The special rush hour trains were discontinued two years later.<ref name=":1" /> On June 28, 1952, special service from 95th Street to the Nassau Street Line was discontinued on Saturdays.<ref>{{Cite web|date=1952|title=Notice To Passengers|url=https://www.flickr.com/photos/127872292@N06/50065955493/in/dateposted/|access-date=July 6, 2020|website=Flickr|publisher=New York City Board of Transportation}}</ref>
+
+=== 1960s–1970s changes ===
+In the winter of 1960–61, letter designations started to appear on the route with the introduction of the [[R27 (New York City Subway car)|R27s]], which featured it on roll signs. The route was labeled the RR "Fourth Avenue Local via Tunnel".<ref name="rr" /><ref>{{cite web |title=Cities 101: Double Lettered Trains In The NYC Subway System |url=https://untappedcities.com/2013/09/27/cities-101-double-lettered-trains-nyc-subway-system/ |website=Untapped Cities |access-date=January 29, 2019 |date=September 27, 2013}}</ref> This was in accordance with the [[Independent Subway System]]'s lettering system, which gave double letters to local trains and single letters to express trains.<ref name="ni" /> On January 1, 1961, the RR's northern terminus was relocated to its current location at Forest Hills–71st Avenue, via the BMT [[60th Street Tunnel Connection]], also known as the "11th Street Cut", and the IND Queens Boulevard Line. Night and weekend RR trains still terminated at 57th Street in Manhattan. Evening rush hour Fourth Avenue–Nassau trains went back to the routing that was used prior to 1959, in which trains ran from Broad Street to 95th Street via the Manhattan Bridge, and the Fourth Avenue express tracks.<ref name=":1">{{Cite journal|date=September 2010|title=A History Of The R Train|url=https://erausa.org/pdf/bulletin/2010s/2010/2010-09-bulletin.pdf|journal=New York Division Bulletin|volume=53|issue=9|access-date=August 31, 2016}}</ref><ref name=":2">{{cite web|url=https://www.flickr.com/photos/127872292@N06/25029684135/|title=BMT Riders: Change In Routes! January 1 To Further Improve Routes|date=January 1961|website=Flickr|publisher=New York City Transit Authority|access-date=May 17, 2016}}</ref>
+
+On November 27, 1967, the day after the [[Chrystie Street Connection]] opened, the RR was moved back to Astoria–Ditmars Boulevard on the BMT Astoria Line. Replacing it on the Queens Boulevard Line was the new [[EE (Queens–Broadway Local)|EE]] service, running weekdays only between Forest Hills–71st Avenue and Whitehall Street (with additional trains terminating at Canal Street). The Nassau Street specials, which could no longer run as a loop via the [[Manhattan Bridge]], were through-routed from Bay Ridge–95th Street to [[168th Street (BMT Jamaica Line)|168th Street]] in [[Jamaica, Queens|Jamaica]] as RJ, along the route used today by the [[J/Z (New York City Subway service)|J and Z]] services. Under the first color scheme, RR was colored green and RJ was red. In the original Chrystie Street routing plans, the TA planned to totally eliminate the RR service, and maintain the RJ route as the main Bay Ridge service.<ref name="ni">{{cite book |last1=Sparberg |first1=Andrew J. |title=From a Nickel to a Token: The Journey from Board of Transportation to MTA |date=2015 |publisher=Fordham University Press |isbn=978-0-8232-6190-1 |url=https://books.google.com/books?id=oktGCgAAQBAJ&q=RR+Fourth+Avenue+local+via+tunnel&pg=PA156 |access-date=January 29, 2019 |language=en}}</ref><ref name=":2" />
+
+The RJ designation was only used from November 1967 until July 1, 1968, when it was cut back to Chambers Street and renamed as additional RR rush-hour peak-direction service. Because track connections between the Nassau Street Loop and the south tracks of the Manhattan Bridge were severed as part of the construction of the Chrystie Street Connection, these trains could not run in a loop anymore.<ref name=":1" /> On August 30, 1976, the EE was discontinued, with the [[N (New York City Subway service)|N]] being extended to Forest Hills on weekdays to replace it.<ref>{{Cite web|url=https://www.flickr.com/photos/127872292@N06/30393951262/|title=Service Adjustment on BMT and IND Lines Effective 1 A.M. Monday, Aug. 30|date=August 1976|website=Flickr|publisher=New York City Transit Authority|access-date=October 23, 2016}}</ref>
+
+On January 24, 1977, as part of a series of NYCTA service cuts to save $13 million, many subway lines began running shorter trains during middays. As part of the change, RR trains began running with six cars between 10:45&nbsp;a.m. and 2:05&nbsp;p.m.<ref>{{Cite news|last=Cosgrove|first=Vincent|date=January 28, 1977|title=Straphangers: Mini-Train Idea Comes Up Short|work=New York Daily News|url=https://www.newspapers.com/clip/91232714/|access-date=December 27, 2021}}</ref>
+
+In 1979, the MTA released a revised coloring scheme; RR service was assigned the color yellow (because it used the BMT Broadway Line). Although BMT Nassau Street Line services were colored brown, the rush hour RR service that used the Nassau Street Line was colored yellow, using a diamond bullet.<ref name="Hertz-Gothamist">{{cite web | first=Dave | last=Hogarty | url=http://gothamist.com/2007/08/03/michael_hertz_d.php | title=Michael Hertz, Designer of the NYC Subway Map | work=[[Gothamist]] | date=August 3, 2007 | access-date=July 4, 2009 | url-status=dead | archive-url=https://web.archive.org/web/20090818012400/http://gothamist.com/2007/08/03/michael_hertz_d.php | archive-date=August 18, 2009 }}</ref><ref name="color" /> The RR service via Nassau Street was referred to as the "Chambers Street Special".<ref>{{cite news |last1=Otey |first1=Charles F. |title=Is This The End For 'Chambers St. Special? |url=http://fultonhistory.com/highlighter/highlight-for-xml?altUrl=http%3A%2F%2Ffultonhistory.com%2FNewspaper%252024%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%252001680_2.pdf%23xml%3Dhttp%3A%2F%2Ffultonhistory.com%2FdtSearch%2Fdtisapi6.dll%3Fcmd%3Dgetpdfhits%26u%3D2d06e070%26DocId%3D8531021%26Index%3DZ%253a%255cDISK%2520X%26HitCount%3D6%26hits%3Ddb%2Bdc%2B1f4%2B1f5%2B1fb%2B1fc%2B%26SearchForm%3D%252fFulton%255fform%252ehtml%26.pdf&uri=http%3A%2F%2Ffultonhistory.com%2FNewspaper%252024%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%252001680_2.pdf&xml=http%3A%2F%2Ffultonhistory.com%2FdtSearch%2Fdtisapi6.dll%3Fcmd%3Dgetpdfhits%26u%3D2d06e070%26DocId%3D8531021%26Index%3DZ%253a%255cDISK%2520X%26HitCount%3D6%26hits%3Ddb%2Bdc%2B1f4%2B1f5%2B1fb%2B1fc%2B%26SearchForm%3D%252fFulton%255fform%252ehtml%26.pdf&openFirstHlPage=false |access-date=August 21, 2018 |work=Home Reporter and Sunset News |agency=[[Fultonhistory.com]] |date=June 5, 1981 |page=21}}</ref><ref>{{cite news |last1=Richards |first1=Dan |title=Bring Back Chambers St. Special: Arculeo |url=http://fultonhistory.com/highlighter/highlight-for-xml?altUrl=http%3A%2F%2Ffultonhistory.com%2FNewspaper%252024%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%252001899_2.pdf%23xml%3Dhttp%3A%2F%2Ffultonhistory.com%2FdtSearch%2Fdtisapi6.dll%3Fcmd%3Dgetpdfhits%26u%3D2e119b4c%26DocId%3D8531382%26Index%3DZ%253a%255cDISK%2520X%26HitCount%3D6%26hits%3D60%2B61%2B159%2B15a%2B305%2B306%2B%26SearchForm%3D%252fFulton%255fform%252ehtml%26.pdf&uri=http%3A%2F%2Ffultonhistory.com%2FNewspaper%252024%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%2FBrooklyn%2520NY%2520Home%2520Reporter%2520and%2520Sunset%2520News%2520%25201981%252001899_2.pdf&xml=http%3A%2F%2Ffultonhistory.com%2FdtSearch%2Fdtisapi6.dll%3Fcmd%3Dgetpdfhits%26u%3D2e119b4c%26DocId%3D8531382%26Index%3DZ%253a%255cDISK%2520X%26HitCount%3D6%26hits%3D60%2B61%2B159%2B15a%2B305%2B306%2B%26SearchForm%3D%252fFulton%255fform%252ehtml%26.pdf&openFirstHlPage=false |access-date=August 21, 2018 |work=Home Reporter and Sunset News |agency=[[Fultonhistory.com]] |date=July 17, 1981 |page=11}}</ref>
+
+=== 1980s–2000s changes ===
+[[File:Hey, What's a "K" train? brochure 2.gif|thumb|A brochure published in 1985 explaining the relabeling of double-letter subway services, including the RR's change to the R]]
+On May 6, 1985, the MTA eliminated double letters for local service; the RR became the R. R service on the Broadway Line continued to use a yellow bullet, while the special Chambers Street–Bay Ridge rush-hour service was signed with a brown diamond with a white R inside, matching the J and [[M (New York City Subway service)|M]] services using the BMT Nassau Street Line.<ref>*{{cite web|url=http://www.thejoekorner.com/brochures/index-whats-the-k.html|title=Hey, What's a "K" train? 1985 Brochure|date=1985|website=thejoekorner.com|access-date=November 2, 2017}}
+* {{cite web|url=https://www.flickr.com/photos/127872292@N06/27733842265/|title=Hey, What's a "K" train? 1985 Brochure|date=1985|website=Flickr|publisher=New York City Transit Authority|access-date=June 17, 2016}}</ref>
+
+Starting on April 28, 1986, R service on the Nassau Street Line was extended to [[Metropolitan Avenue (BMT Myrtle Avenue Line)|Metropolitan Avenue]] for layups and put-ins from [[Fresh Pond Yard]]. After the N/R swap, the Nassau R used [[East New York Yard]] equipment. This rush hour service was discontinued on November 20, 1987.<ref name=":4">{{Cite journal|last=Chiasson|first=George|date=October 2010|title=A History Of The R Train|url=https://issuu.com/erausa/docs/the_era_bulletin_2010-10|journal=New York Division Bulletin|volume=53|issue=10|access-date=August 31, 2016|via=Issu}}</ref>
+
+<!--Proposed on October 15, 1986, but put in effect -->
+On May 24, 1987, the northern terminals of the N and R were swapped. The swap placed the R along the IND Queens Boulevard Line to Forest Hills–71st Avenue once again, with the N replacing it in Astoria.<ref name="NYTimes-N-R-Shifts-Oct1986">{{cite news|title=Shifts on N and R Lines Are Planned in Queens|url=https://www.nytimes.com/1986/10/16/nyregion/shifts-on-n-and-r-lines-are-planned-in-queens.html|access-date=July 29, 2016|work=[[The New York Times]]|date=October 16, 1986|page=B10}}</ref> The change was made to give the R direct access to the [[Jamaica Yard]] (where the train is assigned to this day),<ref name=NYTimes-N-R-Shifts-Oct1986 /> and previously, R trains had to make non-passenger runs, or "deadheads", to/from the [[Coney Island Yard]].<ref>{{cite web|url=http://www.subwaynut.com/brochures/nrswitch/index.html|title=Announcing Service Changes On The N and R Routes Beginning May 24, 1987 New Routes Mean Better Service|date=May 1987|publisher=New York City Transit Authority|access-date=August 31, 2016|work=subwaynut.com|archive-date=August 19, 2016|archive-url=https://web.archive.org/web/20160819105802/http://www.subwaynut.com/brochures/nrswitch/index.html|url-status=dead}}</ref> As part of the reroute plan, F service along Queens Boulevard was discontinued during late nights (1&nbsp;a.m. to 5&nbsp;a.m.). Late night local service was replaced by the R, which ran as a Queens Boulevard Local at all times.<ref name=":0">{{Cite book|url=https://www.flickr.com/photos/127872292@N06/46886247024/in/album-72157706539432321/|title=Annual Report on 1989 Rapid Routes Schedules and Service Planning|date=June 1, 1990|publisher=New York City Transit Authority, Operations Planning Department|pages=54–55}}</ref> F trains were cut back to [[57th Street (IND Sixth Avenue Line)|57th Street]] on the Sixth Avenue Line during late nights.<ref name="Sparberg2014">{{cite book|url=https://books.google.com/books?id=oktGCgAAQBAJ&pg=PA111|title=From a Nickel to a Token: The Journey from Board of Transportation to MTA|last=Sparberg|first=Andrew J.|date=October 1, 2014|publisher=Fordham University Press|isbn=978-0-8232-6190-1}}</ref><ref name="QnsOptionsStudyEIS-19902">{{cite book|url=https://books.google.com/books?id=ed43AQAAMAAJ&pg=SA3-PA6|title=Alternatives Analysis/Supplemental Draft Environmental Impact Statement for the Queens Subway Options Study|date=May 1990|publisher=[[United States Department of Transportation]], [[Metropolitan Transportation Authority]], [[Urban Mass Transit Administration]]|access-date=August 13, 2016}}</ref><ref name="NYTimes-N-R-Shifts-Oct19862">*{{cite news|url=https://www.nytimes.com/1986/10/16/nyregion/shifts-on-n-and-r-lines-are-planned-in-queens.html|title=Shifts on N and R Lines Are Planned in Queens|date=October 16, 1986|work=[[The New York Times]]|access-date=July 29, 2016|page=B10}}
+* {{cite web|url=http://www.subwaynut.com/brochures/nrswitch/index.html|title=N and R Service changes|work=subwaynut.com|access-date=March 21, 2007|archive-date=August 19, 2016|archive-url=https://web.archive.org/web/20160819105802/http://www.subwaynut.com/brochures/nrswitch/index.html|url-status=dead}}</ref> In 1986, the TA studied which two services should serve the line during late nights as ridership at this time did not justify three services. A public hearing was held in December 1986, and it was determined that having the E and R run during late nights provided the best service.<ref name=":125">{{Cite report|title=Archer Avenue Corridor Transit Service Proposal|date=August 1988|publisher=New York City Transit Authority, Operations Planning Department}}</ref>{{Rp|51}}
+
+On December 11, 1988, the [[Archer Avenue Lines]] opened, and the E was rerouted to its current terminus at [[Jamaica Center–Parsons/Archer (Archer Avenue Lines)|Jamaica Center]] via the Queens Boulevard Line's express tracks. E trains began running express east of Continental Avenue, skipping [[75th Avenue (IND Queens Boulevard Line)|75th Avenue]] and [[Briarwood (IND Queens Boulevard Line)|Van Wyck Boulevard]] at all times.<ref name=":02">{{Cite news|url=https://www.nytimes.com/1988/12/09/nyregion/big-changes-for-subways-are-to-begin.html|title=Big Changes For Subways Are to Begin|last=Johnson|first=Kirk|date=December 9, 1988|newspaper=The New York Times|access-date=June 6, 2016|issn=0362-4331}}</ref><ref name="QnsOptionsStudyEIS-19902"/> The R was extended from Continental Avenue to 179th Street to provide local service; this allowed F trains to continue running express to 179th Street, and F trains skipped 169th Street between 10&nbsp;a.m. and 3:30&nbsp;p.m.<ref>{{Cite web|url=https://www.flickr.com/photos/127872292@N06/26731922366/|title=Archer Avenue Extension Subway Service December 11, 1988 New York City Transit Authority|website=Flickr – Photo Sharing!|access-date=May 1, 2016|date=May 2016}}</ref><ref>{{Cite web|url=https://www.flickr.com/photos/127872292@N06/27699872706/|title=System-Wide Changes In Subway Service Effective Sunday, December 11, 1988|website=Flickr – Photo Sharing!|access-date=June 17, 2016|date=June 17, 2016}}</ref><ref>{{Cite news|title=New Subway Line Finally Rolling Through Queens|last=Polsky|first=Carol|date=December 11, 1988|work=Newsday}}</ref><ref name=":15">{{Cite journal|date=1988|title=Archer Avenue Extension Opens December 11|journal=Welcome Aboard: Newsletter of the New York City Transit Authority|volume=1|issue=4|pages=1}}</ref> During the morning rush hour, four R trains went into service at Continental Avenue, because local ridership from 179th Street during rush hours did not warrant it.<ref name=":0" /> All R trains went to 179th Street during the afternoon rush to avoid taking loaded R trains out of service at Continental Avenue.<ref name=":125" />{{Rp|9–10}}
+
+Two service plans were identified prior to a public hearing on February 25, 1988, concerning the service plan for the new extension. The first would have split rush-hour E service between the two branches, with late night service to 179th Street provided by the R, while the second would have had all E trains run via Archer Avenue and would have extended R locals to 179th Street.<ref name=":125"/>{{Rp|9–10}}<ref name=":17">{{Cite journal|date=January 30, 1988|title=Archer Opens Dec. 11 Excerpts From TA Plan|journal=Notes from Underground|volume=18|issue=11, 12}}</ref> A modified version of the second plan was decided upon: some E trains would run from 179th Street instead of Archer Avenue during morning rush hours, though all E trains would run to Archer Avenue during the afternoon rush hour to reduce confusion for Queens-bound riders.<ref name=":125" />{{Rp|9–10}} The 1988 changes angered some riders because they resulted in the loss of direct Queens Boulevard Express service at local stations east of 71st Avenue—namely the 169th Street, Sutphin Boulevard, Van Wyck Boulevard and 75th Avenue stations. Local elected officials pressured the MTA to eliminate all-local service at these stations.<ref name=":53">{{Cite web|url=http://www.laguardiawagnerarchive.lagcc.cuny.edu/pages/FileBrowser.aspx?LinkToFile=FILES_DOC/QUEENS_FILES/03.012.0231.030137.6.PDF|title=Service Change Monitoring Report Six Month Evaluation of F/R Queens Boulevard Line Route Restructure|date=April 1993|website=www.laguardiawagnerarchive.lagcc.cuny.edu|publisher=Metropolitan Transportation Authority|access-date=December 28, 2018}}</ref>
+
+<!--From August to September 1989, overnight R service was rerouted via Sixth Avenue in both directions due to construction work. During this time, all trains operated via the {{NYCS|F}} line between [[Queens Plaza (IND Queens Boulevard Line)|Queens Plaza]] in Queens and [[West Fourth Street (IND Sixth Avenue Line)|West Fourth Street]] in Manhattan, then via the {{NYCS|D}} line between West Fourth Street and [[DeKalb Avenue (BMT Brighton Line)|DeKalb Avenue]] in Brooklyn; these trains made all stops along the reroute. -->On June 10, 1990, overnight service was split instead of operating along the full route. The northern section operated between 179th Street in Queens and [[34th Street–Herald Square (BMT Broadway Line)|34th Street–Herald Square]] in Manhattan; the southern section operated as a shuttle between [[36th Street (BMT Fourth Avenue Line)|36th Street–Fourth Avenue]] and 95th Street in Brooklyn.<ref>{{cite journal |title=60th Street Tunnel Service |first=Bernard |last=Linder |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2010s/2011/2011-04-bulletin.pdf |date=April 2011 |publisher=Electric Railroaders' Association |volume=54 |number=4 |pages=2 |access-date=March 10, 2025}}</ref> As part of service cuts that went into effect on September 30, 1990, the R was cut back to 71st Avenue outside of rush hours, and overnight service no longer served Manhattan and Queens; overnight service operated as a shuttle in Brooklyn between 36th and 95th Streets. Local service between 179th Street and 71st Avenue outside of weekday rush hours was replaced by F trains during weekday midday and evening hours and weekend daytime hours; overnight local service between 179th Street and Queens Plaza was provided by {{NYCS|G}} trains.<ref>{{cite web|url=http://www.subwaynut.com/brochures/1990servicechanges.pdf|title=Service Changes September 30, 1990|date=September 30, 1990|website=subwaynut.com|publisher=New York City Transit Authority|access-date=May 1, 2016|archive-date=October 26, 2014|archive-url=https://web.archive.org/web/20141026015324/http://www.subwaynut.com/brochures/1990servicechanges.pdf|url-status=dead}}</ref>
+
+In 1992, the MTA considered three options to improve service at these local stops, including leaving service as is, having E trains run local east of 71st Avenue along with R service, and having F trains run local east of 71st Avenue replacing R service, which would be cut back to 71st Avenue at all times. The third option was chosen to be tested for six months starting in October or November 1992.<ref>{{Cite web|url=http://www.laguardiawagnerarchive.lagcc.cuny.edu/pages/FileBrowser.aspx?LinkToFile=FILES_DOC/QUEENS_FILES/03.012.0231.030147.3.PDF|title=Van Wyck Blvd Station|date=May 1992|website=www.laguardiawagnerarchive.lagcc.cuny.edu|publisher=Metropolitan Transportation Authority|access-date=December 28, 2018}}</ref> On October 26, 1992, R trains were cut back to 71st Avenue at all times, and in its place, the F ran local east of 71st Avenue at all times, thus eliminating express service along Hillside Avenue.<ref name=":4" /><ref>{{cite web|url=https://www.flickr.com/photos/127872292@N06/30660280045/|title=October 1992 New York City Subway Map|date=October 1992|website=Flickr|publisher=New York City Transit Authority|access-date=October 30, 2016}}</ref><ref name=":53"/> After the six months, the change was kept because there was minimal negative passenger reaction and because of the intensity of the request, even though 77% of passengers had benefited from the pre-October 1992 service plan. The change increased travel time along the F by {{frac|3|1|2}} minutes, and reduced travel time for passengers at local stations by one to two minutes.<ref name=":53" />
+
+In October 2000, late-night shuttle trains in Brooklyn began skipping [[53rd Street station (BMT Fourth Avenue Line)|53rd Street]] and [[45th Street station (BMT Fourth Avenue Line)|45th Street]] in the northbound direction. This was so shuttle trains could terminate more quickly at 36th Street on the Fourth Avenue Line, their northern terminal. Previously, all northbound B, N and R trains had stopped at the same track at 36th Street, which resulted in delays because it took several minutes for the R trains to be cleared.<ref name=":4" />
+
+After the [[September 11 attacks|September 11, 2001]] attacks, R service was initially cut back from 71st Avenue to Court Street; service in Manhattan was provided by {{NYCS|N}}, {{NYCS|Q}} and {{NYCS|W}} trains, and service in Queens was provided by {{NYCS|E}}, {{NYCS|F}} and {{NYCS|G}} trains. On September 17, R service was completely suspended and was replaced by Q trains in Queens, by Q and W trains in Manhattan, and by {{NYCS|J}} trains in Brooklyn.<ref>{{cite journal |title=World Trade Center Destroyed |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-10-bulletin.pdf |date=October 2001 |publisher=Electric Railroaders' Association |volume=44 |number=10 |pages=2–3 |access-date=March 27, 2025}}</ref><ref>{{cite journal |title=New IRT and BMT Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-12-bulletin.pdf |date=December 2001 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=15 |access-date=March 27, 2025}}</ref> Normal R service was restored on October 28.<ref>{{cite journal |title=New IRT and BMT Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-12-bulletin.pdf |date=December 2001 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=16 |access-date=March 27, 2025}}</ref> Effective December 16, 2001, to accommodate new V service, the frequency of R service during the morning rush hour was decreased, with trains running every six minutes instead of every five minutes.<ref>{{Cite journal |date=January 2002 |title=63rd Street Connector In Service – New Schedules in Effect |url=https://erausa.org/pdf/bulletin/2000s/2002/2002-01-bulletin.pdf |journal=New York Division Bulletin |publisher=Electric Railroaders' Association |volume=45 |issue=1 |pages=13}}</ref>
+
+On September 8, 2002, [[Coney Island–Stillwell Avenue (New York City Subway)|Coney Island–Stillwell Avenue]] was closed for reconstruction. As a result, late night R service was extended to [[Atlantic Avenue–Barclays Center station|Pacific Street]], running express between that station and 36th Street on the Fourth Avenue Line.<ref>{{cite web|url=http://www.subwaynut.com/brochures/coneyfbpg.htm|title=F N W Q Q Changes Sun, Sept 8, 2002 to Spring 2004 Reconstruction of Stillwell Avenue Terminal Changes Service in Brooklyn, Manhattan and Queens|date=July 2002|website=The Subway Nut|publisher=New York City Transit Authority|access-date=August 5, 2010|archive-date=September 29, 2018|archive-url=https://web.archive.org/web/20180929052655/http://www.subwaynut.com/brochures/coneyfbpg.htm|url-status=dead}}</ref> On April 27, 2003, the frequency of Saturday morning and afternoon service was decreased, with trains running every 12 minutes instead of every 8 minutes. Trains also ran every 12 minutes on Sunday mornings and afternoons, instead of every 15 and 12 minutes on Sunday mornings, and every 10 and 8 minutes on Sunday afternoons.<ref name=":12">{{Cite journal |date=July 2003 |title=New BMT-IND Schedules |url=https://erausa.org/pdf/bulletin/2000s/2003/2003-07-bulletin.pdf |journal=The New York Division Bulletin |publisher=Electric Railroaders' Association |volume=46 |issue=7 |pages=20}}</ref> Late night service was cut back to 36th Street when the north side of the Manhattan Bridge reopened on February 22, 2004.<ref name=":4" /><ref>{{cite web|url=http://www.mta.info/nyct/man_bridge/bridge_lines.htm |title=MTA NYC Transit Manhattan Bridge Information |date=February 5, 2004 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=September 18, 2016 |url-status=bot: unknown |archive-url=https://web.archive.org/web/20040205055553/http://www.mta.info/nyct/man_bridge/bridge_lines.htm |archive-date=February 5, 2004 }}</ref>
+
+In December 2007, the MTA approved a service increase to allow R service to operate along the full route 24 hours daily. This service change would have gone into effect in December 2008;<ref>{{cite journal |title=Around New York's Transit System - Increased Subway Service |journal=The Bulletin |publisher=Electric Railroaders' Association, Incorporated |volume=51 |issue=2 |page=20 |date=February 2008 |url=https://erausa.org/pdf/bulletin/2000s/2008/2008-02-bulletin.pdf |access-date=March 3, 2025}}</ref><ref>{{Cite web|url=http://web.mta.info/mta/budget/feb2008/0208_5.pdf|title=MTA 2008 Adopted Budget February Financial Plan 2008–2011 Appendix|date=February 2018|website=mta.info|publisher=Metropolitan Transportation Authority|page=11|access-date=October 15, 2018|archive-url=https://web.archive.org/web/20150131162934/http://web.mta.info/mta/budget/feb2008/0208_5.pdf|archive-date=January 31, 2015|url-status=live}}</ref> however, the [[2008 financial crisis]] placed a hold on this service increase indefinitely.<ref>{{Cite news|url=https://www.nytimes.com/2008/06/19/nyregion/19service.html|title=Subway Service Increase to Be Less Than Hoped|last=Neuman|first=William|date=June 19, 2008|url-access=subscription|work=The New York Times|access-date=October 15, 2018|language=en|issn=0362-4331}}</ref><ref>{{Cite news|url=https://cityroom.blogs.nytimes.com/2008/03/24/mta-postpones-subway-and-bus-service-upgrades/|title=M.T.A. Postpones Subway and Bus Service Upgrades|last=Neuman|first=William|date=March 24, 2008|url-access=subscription|work=The New York Times|access-date=October 15, 2018|language=en|issn=0362-4331}}</ref>
+
+=== 2010s and 2020s changes ===
+After [[Hurricane Sandy]] flooded the subway system, the [[Montague Street Tunnel]] was completely flooded. When service was restored, the R train was split into two sections (between Forest Hills and [[34th Street–Herald Square (BMT Broadway Line)|34th Street–Herald Square]] at all times except late nights, and between [[Jay Street–MetroTech (New York City Subway)|Jay Street–MetroTech]] and Bay Ridge–95th Street at all times). On December 4, the Queens–Manhattan section was extended to Whitehall Street–South Ferry. On December 21, full service was restored between Manhattan and Brooklyn after the Montague Street Tubes were drained.<ref>{{cite web|url=http://web.mta.info/nyct/service/RestoringRServiceMontagueStTube.htm|title=Restoring R Service in the Montague St. Tube|website=web.mta.info|publisher=Metropolitan Transportation Authority|access-date=October 20, 2016}}</ref><ref>{{cite web|url=http://subwaynut.com/sandy/|title=Hurricane Sandy: Effects on Subway & Rail Service|last=Cox|first=Jeremiah|date=September 7, 2012|website=subwaynut.com|access-date=October 20, 2016|archive-date=March 9, 2016|archive-url=https://web.archive.org/web/20160309082154/http://subwaynut.com/sandy/|url-status=dead}}</ref>
+
+However, from August 2, 2013, to fall 2014, the tunnel was closed again so that extra repairs could be completed, bringing back similar storm changes to the R train. On weekdays, the divided R ran in two sections: one section between Forest Hills and Whitehall Street–South Ferry, and the other between [[Court Street (BMT Fourth Avenue Line)|Court Street]] and Bay Ridge–95th Street. On weekends, the R train ran its full route via the Manhattan Bridge, skipping all stations between [[Canal Street (BMT Broadway Line)|Canal Street]] and [[DeKalb Avenue (BMT Fourth Avenue Line)|DeKalb Avenue]].<ref>{{cite web|url=http://web.mta.info/nyct/service/R_MontagueUnderRiverTube.pdf |title=R Montague Tunnel Closure Map |date=June 2013 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=October 30, 2016 |url-status=bot: unknown |archive-url=https://web.archive.org/web/20130616025823/http://web.mta.info/nyct/service/R_MontagueUnderRiverTube.pdf |archive-date=June 16, 2013 }}</ref><ref>{{cite web|url=http://web.mta.info/nyct/service/R_ServiceChanges.htm|title=R Service Affected by 14 Month Closure of Montague Under River Tube|date=July 2013|work=mta.info|publisher=Metropolitan Transportation Authority|archive-url=https://web.archive.org/web/20130609140146/http://web.mta.info/nyct/service/R_ServiceChanges.htm|archive-date=June 9, 2013|url-status=bot: unknown|access-date=October 30, 2016}}</ref><ref>{{Cite news|url=https://www.nytimes.com/2013/08/05/nyregion/subway-riders-grudgingly-accept-more-storm-repairs.html|title=On R Train, Unwelcome Reminder of Storm's Impact|last=Flegenheimer|first=Matt|date=August 4, 2013|work=The New York Times|access-date=July 26, 2017|language=en-US|issn=0362-4331}}</ref> The weekday service between Forest Hills and Whitehall Street essentially recreated the former EE route from 1967 to 1976. Originally slated to open by October 2014, the tunnel reopened a few weeks early, on September 15, 2014, and several million dollars under budget.<ref>{{cite web | url=https://www.nytimes.com/2014/09/13/nyregion/east-river-subway-tunnel-is-to-reopen-with-storm-repairs-done.html?_r=0 | title=Subway Tunnel to Open, Storm Repairs Finished | work=[[The New York Times]] | date=September 12, 2014 | access-date=September 13, 2014 | author=McGeehan, Patrick}}</ref><ref>{{cite news|url=http://cityroom.blogs.nytimes.com/2014/09/15/new-york-today-the-r-roars-back/|title=The R Roars Back|last1=Newman|first1=Andy|date=September 15, 2014|access-date=October 30, 2016|newspaper=The New York Times|last2=Goodman|first2=J. David}}</ref><ref>{{cite web|url=http://www.brooklyndaily.com/stories/2014/37/br-montague-tube-opens-early-2014-09-12-bk_2014_37.html|title=Exclusive: R Train's East River Tunnel May Reopen Early|date=September 8, 2014|access-date=October 30, 2016|work=Brooklyn Daily|archive-date=December 11, 2018|archive-url=https://web.archive.org/web/20181211210130/https://www.brooklyndaily.com/stories/2014/37/br-montague-tube-opens-early-2014-09-12-bk_2014_37.html|url-status=dead}}</ref><ref>{{cite web|url=http://newyork.cbslocal.com/2014/09/14/r-train-to-resume-service-between-brooklyn-and-manhattan-monday/|title=R Train To Resume Service Between Brooklyn And Manhattan Monday|date=September 14, 2014|publisher=CBS Local|access-date=October 30, 2016|work=cbslocal.com}}</ref>
+
+Beginning on November 5, 2016, overnight R service was extended north to [[Whitehall Street (BMT Broadway Line station)|Whitehall Street-South Ferry]] in order to provide a one-seat ride into Manhattan. This eliminated the need for northbound trains to skip 45th Street and 53rd Street in order to reverse on the express tracks at 36th Street–Fourth Avenue.<ref>{{cite web|url=http://www.mta.info/news-r-r-train-r-shuttle-subway-new-york-city-transit/2016/06/16/change-allows-more-transfers-faster|title=Change Allows More Transfers, Faster Commutes for Brooklyn Customers|date=June 16, 2016|website=www.mta.info|publisher=Metropolitan Transportation Authority|access-date=June 16, 2016|archive-date=June 19, 2016|archive-url=https://web.archive.org/web/20160619065818/http://www.mta.info/news-r-r-train-r-shuttle-subway-new-york-city-transit/2016/06/16/change-allows-more-transfers-faster|url-status=dead}}</ref> The change took place on November 5, 2016.<ref>{{cite web|url=https://progressiveaction.files.wordpress.com/2016/08/sub-division-b-general-distribution-fall-2016-wp-book.pdf|title=Sub-Division B Train Operator/Conductor Road & Non-Road Work Programs in Effect: November 6, 2016|date=July 29, 2016|website=progressiveaction.info|publisher=New York City Transit|access-date=August 19, 2016}}</ref><ref>{{cite web |url=http://web.mta.info/mta/news/books/pdf/160620_1000_Transit&BUS.pdf |title=Transit & Bus Committee Meeting June 2016 |date=June 17, 2016 |website=www.mta.info |publisher=Metropolitan Transportation Authority |access-date=June 17, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20160807195510/http://web.mta.info/mta/news/books/pdf/160620_1000_Transit%26BUS.pdf |archive-date=August 7, 2016 }}</ref><ref>{{cite web|url=http://pix11.com/2016/10/23/mta-flyers-spotted-for-w-trains-return-in-november/|title=MTA Flyers Spotted for W Train's Return in November|last=Lam|first=Katherine|date=October 23, 2016|publisher=PIX11|access-date=October 24, 2016}}</ref><ref>{{cite web|url=http://web.mta.info/nyct/service/nqrw/|title=New NQRW Service|date=October 2016|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=October 26, 2016}}</ref> During late weekend evenings, every other R train [[short turn]]ed at Whitehall Street, resulting in waiting time doubling along the entire Brooklyn portion of the route. As part of the changes, these short-turns were extended to 95th Street.<ref name="timetable" />
+
+Starting November 6, 2017, one northbound R trip was diverted to serve the then-new [[Second Avenue Subway]] in order to increase service on that line during the morning rush hour.<ref name="serviceincrease">{{Cite news|url=http://www.nydailynews.com/new-york/mta-add-q-trains-ave-subway-line-ridership-soars-article-1.3186366|title=MTA to Add Q Trains on Second Ave. Subway Line as Ridership Soars|last=Rivoli|first=Dan|date=May 22, 2017|work=New York Daily News|access-date=May 22, 2017}}</ref><ref name=":3">{{cite web|url=https://transitfeeds.com/p/mta/79/latest/trip/B20171105WKD_042100_R..N76R|title=7:01 AM – 8:05 AM 96 ST – TransitFeeds|date=November 6, 2017|website=transitfeeds.com|access-date=November 6, 2017|archive-url=https://web.archive.org/web/20171107061149/https://transitfeeds.com/p/mta/79/latest/trip/B20171105WKD_042100_R..N76R|archive-date=November 7, 2017|url-status=dead}}</ref> In February 2019, in the midst of a [[2017 New York City transit crisis|transit crisis]], several Bay Ridge politicians proposed splitting the R route in half, similar to the pattern enacted during the Montague Street Tunnel closures in 2013 and 2014, citing the route's length and unreliability.<ref>{{cite web | last1=Guse | first1=Clayton | last2=Rivoli | first2=Dan | title=Brooklyn officials' idea: Speed up Bay Ridge commutes by cutting the R train route in two | website=nydailynews.com | date=February 20, 2019 | url=https://www.nydailynews.com/new-york/ny-metro-r-train-bay-ridge-brooklyn-20190220-story.html | access-date=February 22, 2019}}</ref><ref>{{cite web | title=Split decision: MTA must again separate R-train service between Bklyn and Manhattan, local pols demand | website=Brooklyn Paper | date=February 20, 2019 | url=https://www.brooklynpaper.com/stories/42/8/all-southern-pols-bifurcation-letter-2019-03-01-bk.html | access-date=February 22, 2019}}</ref> This proposal has been met with criticism from local riders, mostly because it would eliminate a one-seat ride into Manhattan.<ref>{{Cite web|url=https://www.brooklynpaper.com/stories/42/9/all-r-train-bifurcation-backlash-2019-03-01-bk.html|title=R They Serious? Straphangers Blast Pols' Proposal to Again Split Bklyn, Manhattan R-Train Service|last=McShane|first=Julianne|website=Brooklyn Paper|date=February 26, 2019|language=en|access-date=February 27, 2019}}</ref>
+
+On March 17, 2023, New York City Transit made adjustments to evening and late night {{NYCS|E}}, {{NYCS|F}} and R service to accommodate long-term CBTC installation on the Queens Boulevard Line between [[Kew Gardens–Union Turnpike (IND Queens Boulevard Line)|Union Turnpike]] and [[Jamaica–179th Street (IND Queens Boulevard Line)|179th Street]]. Evening R service originating from 95th Street after 8:30 pm on weekdays and after 9 pm on weekends was cut back from 71st Avenue to [[Queens Plaza (IND Queens Boulevard Line)|Queens Plaza]].<ref>{{cite web|url=https://new.mta.info/press-release/mta-perform-cbtc-signal-installation-work-e-f-and-r-lines-queens-starting-march-17|title=MTA to Perform CBTC Signal Installation Work on E, F and R Lines in Queens Starting March 17|date=February 24, 2023|website=MTA.info|publisher=New York City Transit|access-date=March 19, 2023}}</ref> In August 2023, it was announced that midday headways on the R would be reduced to eight minutes<ref name="Simko-Bednarski 2023 u268">{{cite web |last=Simko-Bednarski |first=Evan |date=August 22, 2023 |title=MTA Adding More N, R Trains on NYC Subway Starting Monday |url=https://www.nydailynews.com/new-york/ny-mta-n-and-r-train-frequent-service-more-trains-20230822-vxj3gwsj6naa7gptu7bgfrbv64-story.html |access-date=August 31, 2023 |website=New York Daily News}}</ref><ref name="ABC7 New York 2023 z657">{{cite web |date=August 22, 2023 |title=MTA Expanding Service on N and R Trains; No More 'Rarely' or 'Never' Trains, Officials Say |url=https://abc7ny.com/mta-n-train-r-subway-service/13684919/ |access-date=August 31, 2023 |website=ABC7 New York}}</ref> although the MTA delayed the service increase until early 2024.<ref>{{Cite web |date=September 7, 2023 |title=Subway Track Work Slows Plan to Boost R Train Service to 2024 |url=https://www.nydailynews.com/2023/09/07/subway-track-work-slows-plan-to-boost-r-train-service-to-2024-mta-bungled-it-says-senator/ |access-date=January 21, 2024 |website=New York Daily News |language=en-US}}</ref><ref>{{Cite web |last=Nessen |first=Stephen |date=September 7, 2023 |title=MTA Fails on Promise to Boost R Train Service, Lawmaker Says |url=https://gothamist.com/news/mta-fails-on-promise-to-boost-r-train-service-lawmaker-says |access-date=January 21, 2024 |website=Gothamist}}</ref>
+
+Effective July 7, 2025, one southbound R trip was rerouted after [[36th Street (BMT Fourth Avenue Line)|36th Street]] to terminate at [[Bay Parkway (BMT West End Line)|Bay Parkway]] on the West End Line.<ref>{{Cite web | title=R Subway Timetable - New York City Transit | publisher=[[Metropolitan Transportation Authority]] | url=https://www.mta.info/document/9521 | archive-url=https://web.archive.org/web/20250706002201/https://www.mta.info/document/9521 | access-date=July 7, 2025 | archive-date=July 6, 2025 | url-status=dead }}</ref> This change was implemented to avoid delays in N service due to merging conflicts, and was briefly tested for evaluation in February 2025. This trip makes express stops along the West End Line, stopping at Ninth Avenue and 62nd Street.<ref>{{cite journal |title=BMT Sea Beach Line Service Improvement Pilot |journal=ERA Bulletin |url=https://erausa.org/pdf/bulletin/2020s/2025/2025-03-bulletin.pdf |date=March 2025 |publisher=Electric Railroaders' Association |volume=68 |number=3 |pages=5 |access-date=March 30, 2025}}</ref>
+
+== Route ==
+===Signage history===
+<gallery caption="Before 1985">
+File: Bmt triplex no 2.png|The BMT 2 bullet used on the [[D-type Triplex (New York City Subway car)|D Triplex]]
+File:R1 BMT 2.gif|Pre-1967 BMT 2 bullet used on the [[R1 (New York City Subway car)|R1s]] to [[R38 (New York City Subway car)|R38s]] 
+File:RJ Train (1967-1968).svg|1967-1968 RJ bullet
+File:RR Train (1967-1979).svg|1967-1979 RR bullet
+File:RR Train (1979-1985).svg|1979-1985 RR bullet
+File:RR Train - Yellow diamond.svg|1979-1985 [[BMT Jamaica Line]] bullet
+</gallery>
+
+<gallery caption="Post-1985">
+File:NYCS-bull-trans-Rd-brown.svg|1986-1987 [[BMT Jamaica Line]] bullet
+File:NYCS-bull-trans-R.svg|The current bullet used since 1985
+</gallery>
+
+=== Service pattern ===
+The following table shows the lines used by the R, with shaded boxes indicating the route at the specified times:<ref name=":3" /><ref>{{NYCS const|serviceguide}}</ref>
+{| class="wikitable collapsible" style="width:auto; font-size:95%"
+|-
+! rowspan=2 | Line
+! rowspan=2 | From
+! rowspan=2 | To
+! rowspan=2 | Tracks
+! colspan = 3 | Times
+|-
+! width=40 | rush hours
+! width=40 | all<br />ex.<br />nights<!--middays,<br />eves &<br />weekends-->
+! width=40 | late<br />nights
+|-
+| [[Second Avenue Subway|IND Second Avenue Line]]
+| [[96th Street (Second Avenue Subway)|96th Street]]
+| [[72nd Street (Second Avenue Subway)|72nd Street]]
+| all
+| rowspan=2 style="background:yellow" | One rush hour trip
+| rowspan=2 | 
+| rowspan=8 | 
+|-
+| [[63rd Street Lines#BMT line|BMT 63rd Street Line]] (full line)
+| colspan="2" style="text-align:center;"| [[Lexington Avenue–63rd Street (63rd Street Lines)|Lexington Avenue–63rd Street]]
+| all
+|-
+| [[IND Queens Boulevard Line]]
+| [[Forest Hills–71st Avenue (IND Queens Boulevard Line)|Forest Hills–71st Avenue]]
+| [[Queens Plaza (IND Queens Boulevard Line)|Queens Plaza]]
+| local
+| rowspan="3" style="background:#dfd;"| Most trains
+| rowspan=3 style="background:gray"| 
+|-
+| colspan="3" style="text-align:center;"| [[60th Street Tunnel Connection]] and [[60th Street Tunnel]]
+| all
+|-
+| rowspan=5 | [[BMT Broadway Line]] (full line)
+| [[Lexington Avenue/59th Street (BMT Broadway Line)|Lexington Avenue/59th Street]]
+| rowspan=2 | [[49th Street (BMT Broadway Line)|49th Street]]
+| local
+|-
+| [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]]
+|| express
+| style="background:yellow" | One rush hour trip
+|
+|-
+| [[49th Street (BMT Broadway Line)|49th Street]]
+| [[Canal Street (BMT Broadway Line)|Canal Street]]
+| local
+| rowspan=5 style="background:gray"| 
+| rowspan=5 style="background:gray"| 
+|-
+|[[City Hall (BMT Broadway Line)|City Hall]]
+| [[Rector Street (BMT Broadway Line)|Rector Street]]
+| all
+|-
+| colspan="2" style="text-align:center;"| [[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street–South Ferry]]
+| all
+| rowspan=3 style="background:gray" | 
+|-
+| colspan="3" style="text-align:center;"| [[Montague Street Tunnel]]
+| all
+|-
+| [[BMT Fourth Avenue Line]] (full line)
+| [[Court Street (BMT Fourth Avenue Line)|Court Street]]
+| [[Bay Ridge–95th Street (BMT Fourth Avenue Line)|Bay Ridge–95th Street]]
+| local
+|-
+| [[BMT West End Line]]
+| [[Ninth Avenue (BMT West End Line)|Ninth Avenue]]
+| [[Bay Parkway (BMT West End Line)|Bay Parkway]]
+| express
+| rowspan=1 style="background:yellow" | One rush hour trip
+| rowspan=1 | 
+| rowspan=1 | 
+|}
+
+=== Stations ===
+[[File:Linea R metropolitana di New York.png|thumb|right|To scale line map]]
+For a more detailed station listing, see the articles on the lines listed above.<ref name="timetable"/>
+{{NYCS service legend
+| alltimes = show
+| allexceptnights = show
+| nightsonly = show
+| nightsweekends = show
+| weekdaysonly = show
+| allexceptrush = show
+| rushonly = show
+| rushpeak = 
+| closed = show
+| custom_icon_1 = rushpeak
+| custom_text_1 = Stops rush hours/weekdays in the peak direction only (including limited service)
+}}
+{| class="wikitable collapsible" style="font-size:90%" summary="Service information for the R train and its stations, including service times, ADA-accessibility, subway transfers, and non-subway connections."
+! style="width:3%;"| [[File:NYCS-bull-trans-R-Std.svg|20px|R service between Bay Ridge–95th Street and Forest Hills–71st Avenue]]<br />{{abbr|Reg.|Regular service}}
+![[File:NYCS-bull-trans-R-Std.svg|20px|R service from Bay Ridge–95th Street to 96th Street]]<br />{{abbr|BP|Bay Parkway service}}
+! style="width:3%;" | [[File:NYCS-bull-trans-R-Std.svg|20px|R service from Bay Ridge–95th Street to 96th Street]]<br />{{abbr|96th|96th Street service}}
+! style="width:28%;"| Stations
+! style="width:3%;"| {{Access icon}}
+! style="width:36%;"| Subway transfers
+! style="width:30%;" | Connections and notes
+|-
+| colspan="7" style="font-weight:bold; text-align:center" " | [[Manhattan]]
+|-
+| colspan="7" style="text-align:center;" | '''[[IND Second Avenue Line|Second Avenue Line]]''' (one rush hour trip only)<ref name="timetable">{{NYCS const|timetable|r}}</ref><ref name="schedule-gtfs">{{cite web | url = http://mta.info/developers/data/nyct/subway/google_transit.zip | title = GTFS Schedule Data – New York City Transit Subway | date = May 13, 2011 | publisher = Metropolitan Transportation Authority | location = New York, NY | format = ZIP | access-date = June 1, 2011}}</ref>
+|-
+| align=center rowspan = 3 {{N/A}}
+| align=center rowspan = 3 {{N/A}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|96th Street|Second}}
+| align=center | {{Access icon}}
+|{{NYCS Second weekday|time=show|exclude=R}}
+| [[M15 (New York City bus)|M15 Select Bus Service]]
+|-
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|86th Street|Second}}
+| align=center | {{Access icon}}
+|{{NYCS Second weekday|time=show|exclude=R}}
+| [[M15 (New York City bus)|M15 Select Bus Service]]<br />[[M86 (New York City bus)|M86 Select Bus Service]]
+|-
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|72nd Street|Second}}
+| align=center | {{Access icon}}
+|{{NYCS Second weekday|time=show|exclude=R}}
+| [[M15 (New York City bus)|M15 Select Bus Service]]
+|-
+| colspan="7" style="text-align:center;" | '''[[63rd Street Lines|63rd Street Line]]''' (one rush hour trip only)<ref name="schedule-gtfs" />
+|-
+| align=center {{N/A}}
+| align=center {{N/A}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Lexington Avenue–63rd Street}}
+| align=center | {{Access icon}}
+| {{NYCS 63rd Lexington|time=show|exclude=R}}<br />Out-of-system transfers with [[MetroCard]]/[[OMNY]]:<br />{{NYCS Lexington|time=show}} ([[IRT Lexington Avenue Line]] at {{stl|NYCS|59th Street|Lexington}})<br />{{NYCS Broadway 60th|time=show}} ([[BMT Broadway Line]] at {{stl|NYCS|Lexington Avenue–59th Street}})
+|
+|-
+| colspan="7" style="background:grey;" |
+|-
+| colspan="7" style="font-weight:bold; text-align:center" | [[Queens]]
+|-
+| colspan="7" style="font-weight:bold; text-align:center" | [[IND Queens Boulevard Line|Queens Boulevard Line]]
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align=center rowspan = 13 {{N/A}}
+| {{stl|NYCS|Forest Hills–71st Avenue}}
+| align=center | {{Access icon}}
+| {{NYCS Queens|time=show|exclude=R}}
+| [[Long Island Rail Road|LIRR]] [[Main Line (Long Island Rail Road)|Main Line]] at {{stl|LIRR|Forest Hills}}
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|67th Avenue}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+|
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|63rd Drive–Rego Park}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+| [[Q72 (New York City bus)|Q72]] bus to [[LaGuardia Airport]]
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Woodhaven Boulevard|Queens}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+| [[Woodhaven and Cross Bay Boulevards buses|Q52/Q53 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Grand Avenue–Newtown}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+| [[Woodhaven and Cross Bay Boulevards buses|Q53 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Elmhurst Avenue}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+| [[Woodhaven and Cross Bay Boulevards buses|Q53 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Jackson Heights–Roosevelt Avenue}}
+| align=center | {{Access icon}}
+| {{NYCS Flushing local|time=show}} ([[IRT Flushing Line]])<br />{{NYCS Queens|time=show|exclude=R}}
+| [[Q33 (New York City bus)|Q33]] bus to LaGuardia Airport [[Marine Air Terminal]]<br />[[Woodhaven and Cross Bay Boulevards buses|Q53 Select Bus Service]]<br />[[Q70 (New York City bus)|Q70 Select Bus Service]] to [[LaGuardia Airport]]
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|65th Street}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+|
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Northern Boulevard}}
+| align=center | {{Access icon}}
+| {{NYCS Queens local day|time=show|exclude=R}}
+|
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|46th Street}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+|
+|-
+| align=center | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Steinway Street}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|36th Street|Queens}}
+|
+| {{NYCS Queens local day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Queens Plaza}}
+| style="text-align:center;" | {{Access icon}}
+| {{NYCS Queens Plaza|time=show|exclude=R}}
+| Northern terminal for evening trains in the northbound direction only
+|-
+| colspan="7" style="text-align:center;" |'''[[Manhattan]]'''
+|-
+| colspan="7" style="text-align:center;" | '''[[BMT Broadway Line|Broadway Line]]'''
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align=center rowspan = 2 {{N/A}}
+| {{stl|NYCS|Lexington Avenue–59th Street}}
+|
+| {{NYCS Broadway 60th|time=show|exclude=R}}<br />{{NYCS Lexington|time=show}} ([[IRT Lexington Avenue Line]] at {{stl|NYCS|59th Street|Lexington}})<br />Out-of-system transfer with [[MetroCard]]/[[OMNY]]:<br />{{NYCS 63rd Lexington|time=show}} ([[63rd Street Lines]] at {{stl|NYCS|Lexington Avenue–63rd Street}})
+| [[Roosevelt Island Tramway]]
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Fifth Avenue–59th Street}}
+|
+| {{NYCS Broadway 60th|time=show|exclude=R}}
+|
+|-
+| colspan="7" align="center" style="font-weight:bold" | Services to 96th Street (Manhattan) and Forest Hills–71st Avenue (Queens) split
+|-
+| colspan="7" style="background:grey;" |
+|-
+| colspan="7" style="text-align:center;" | '''[[BMT Broadway Line|Broadway Line]]''' (Queens Boulevard and Second Avenue branches merge)
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|57th Street–Seventh Avenue}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|49th Street}}
+| align="center" | {{Access icon}}&nbsp;↑
+| {{NYCS Broadway 60th|time=show|exclude=R}}
+| Station is [[Americans with Disabilities Act of 1990|ADA-accessible]] in the northbound direction only.
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Times Square–42nd Street|Broadway}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=R}}<br />{{NYCS Broadway-Seventh|time=show}} ([[IRT Broadway–Seventh Avenue Line]])<br />{{NYCS Flushing south|time=show}} ([[IRT Flushing Line]])<br />{{NYCS Eighth south|time=show}} ([[IND Eighth Avenue Line]] at {{stl|NYCS|42nd Street–Port Authority Bus Terminal}})<br />{{NYCS 42nd|time=show}} ([[42nd Street Shuttle]])<br />{{NYCS Sixth|time=show}} ([[IND Sixth Avenue Line]] at {{stl|NYCS|42nd Street–Bryant Park}}, daytime only)
+| [[Port Authority Bus Terminal]]<br />[[M34A (New York City bus)|M34A Select Bus Service]]
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|34th Street–Herald Square|Broadway}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=R}}<br />{{NYCS Sixth|time=show}} ([[IND Sixth Avenue Line]])
+| [[M34 (New York City bus)|M34 / M34A Select Bus Service]]<br />[[Port Authority Trans-Hudson|PATH]] at {{stl|PATH|33rd Street}}<br />[[Amtrak]], [[Long Island Rail Road|LIRR]], [[New Jersey Transit|NJ Transit]] at [[Pennsylvania Station (New York City)|Pennsylvania Station]]
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|28th Street|Broadway}}
+|
+| {{NYCS Broadway center local day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|23rd Street|Broadway}}
+|
+| {{NYCS Broadway center local day|time=show|exclude=R}}
+| [[M23 SBS (New York City bus)|M23 Select Bus Service]]
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|14th Street–Union Square|Broadway}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=R}}<br />{{NYCS Canarsie|time=show}} ([[BMT Canarsie Line]])<br />{{NYCS Lexington|time=show}} ([[IRT Lexington Avenue Line]])
+| [[M14 SBS (New York City bus)|M14A/D Select Bus Service]]
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Eighth Street–New York University}}
+|
+| {{NYCS Broadway center local day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Prince Street}}
+|
+| {{NYCS Broadway center local day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Canal Street|Broadway main}}
+| align="center" | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+| {{NYCS Broadway|time=show|exclude=R}}<br />{{NYCS Lexington local day|time=show}} ([[IRT Lexington Avenue Line]])<br />{{NYCS Nassau north|time=show}} ([[BMT Nassau Street Line]])
+| Stops on the upper level
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|City Hall|Broadway}}
+|
+| {{NYCS Broadway south day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Cortlandt Street}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway south day|time=show|exclude=R}}<br />{{NYCS Broadway-Seventh Brooklyn|time=show}} ([[IRT Broadway–Seventh Avenue Line]] at {{stl|NYCS|Park Place|Broadway-Seventh}})<br />{{NYCS Eighth far south express|time=show}} ([[IND Eighth Avenue Line]] at {{stl|NYCS|Chambers Street|Eighth}})<br />{{NYCS Eighth far south local|time=show}} (IND Eighth Avenue Line at {{stl|NYCS|World Trade Center}})
+| [[Port Authority Trans-Hudson|PATH]] at {{stl|PATH|World Trade Center}}
+|-
+| align="center" | {{NYCS SSI|allexceptnights}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Rector Street|Broadway}}
+|
+| {{NYCS Broadway south day|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+|  {{stl|NYCS|Whitehall Street–South Ferry}}
+| align="center" | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+| {{NYCS Broadway Whitehall|time=show|exclude=R}}<br />{{NYCS Broadway-Seventh South Ferry|time=show}} ([[IRT Broadway–Seventh Avenue Line]] at {{stl|NYCS|South Ferry|Broadway-Seventh}})
+| [[M15 SBS (New York City bus)|M15 Select Bus Service]]<br />[[Staten Island Ferry]] at [[Staten Island Ferry Whitehall Terminal|Whitehall Terminal]]<br />Northern terminal for late night trains
+|-
+| colspan="7" style="font-weight:bold; text-align:center" | [[Brooklyn]]
+|-
+| colspan="7" style="font-weight:bold; text-align:center" | [[BMT Fourth Avenue Line|Fourth Avenue Line]]
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Court Street|Fourth}}
+| align="center" | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+|{{NYCS Fourth Montague|time=show|exclude=R}}<br />{{NYCS Broadway-Seventh Brooklyn|time=show}} ([[IRT Broadway–Seventh Avenue Line]] at {{stl|NYCS|Borough Hall|Broadway-Seventh}})<br />{{NYCS Lexington Brooklyn|time=show}} ([[IRT Eastern Parkway Line]] at {{stl|NYCS|Borough Hall|Eastern}})
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Jay Street–MetroTech|Fourth}}
+| align="center" | {{Access icon}}
+| {{NYCS Fourth Montague|time=show|exclude=R}}<br />{{NYCS Eighth Cranberry|time=show}} {{NYCS Sixth Rutgers|time=show}} (IND [[IND Fulton Street Line|Fulton Street]] and [[IND Culver Line|Culver]] Lines)
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|DeKalb Avenue|Fourth}}
+| align="center" | {{Access icon}}
+| {{NYCS DeKalb|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Atlantic Avenue–Barclays Center|Fourth}}
+| align="center" | {{Access icon}}
+| {{NYCS Fourth center|time=show|exclude=R}}<br />{{NYCS Brighton|time=show}} ([[BMT Brighton Line]])<br />{{NYCS Eastern west|time=show}} ([[IRT Eastern Parkway Line]])
+| [[Long Island Rail Road|LIRR]] [[Atlantic Branch]] at [[Atlantic Terminal]]
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Union Street}}
+|
+| {{NYCS Fourth local|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Ninth Street}}
+|
+| {{NYCS Fourth local|time=show|exclude=R}}<br />{{NYCS Culver IND north local|time=show}} ([[IND Culver Line]] at {{stl|NYCS|Fourth Avenue}})
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Prospect Avenue|Fourth}}
+|
+| {{NYCS Fourth local|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|25th Street}}
+|
+| {{NYCS Fourth local|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|36th Street|Fourth}}
+|
+| {{NYCS Fourth center|time=show|exclude=R}}
+| Some rush hour trips (southbound in the morning, northbound in the afternoon) begin their runs at this station
+|-
+| colspan="7" style="text-align:center" | '''[[BMT West End Line|West End Line]]''' (one rush hour trip only)<ref name="timetable" /><ref name="schedule-gtfs" />
+|-
+| align=center rowspan = 3 {{N/A}}
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| align=center rowspan = 3 {{N/A}}
+| {{stl|NYCS|Ninth Avenue}}
+|
+| {{NYCS West End|time=show|exclude=R}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|62nd Street}}
+| align="center" | {{Access icon}}
+| {{NYCS West End|time=show|exclude=R}}<br />{{NYCS Sea Beach local|time=show}} ([[BMT Sea Beach Line]] at {{stl|NYCS|New Utrecht Avenue}})
+|
+|-
+| align="center" |{{NYCS SSI|limitedrushpeak}} ↓
+| {{stl|NYCS|Bay Parkway|West End}}
+| align="center" | {{Access icon}}
+| {{NYCS West End|time=show|exclude=R}}
+| [[B82 (New York City bus)|B82 Select Bus Service]]
+|-
+| colspan="7" style="font-weight:bold; text-align:center" | [[BMT Fourth Avenue Line|Fourth Avenue Line]]
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align=center rowspan = 7 {{N/A}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|45th Street}}
+|
+| {{NYCS Fourth south local|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|53rd Street}}
+|
+| {{NYCS Fourth south local|time=show|exclude=R}}
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|59th Street|Fourth}}
+| align="center" | {{Access icon}}
+| {{NYCS Fourth south|time=show|exclude=R}}
+| Some southbound a.m. rush hour trips terminate at this station
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Bay Ridge Avenue}}
+|
+|
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|77th Street|Fourth}}
+|
+|
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|86th Street|Fourth}}
+| align="center" | {{Access icon}}
+|
+| [[S79 Select Bus Service (New York City bus)|S79 Select Bus Service]]
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| align="center" | {{NYCS SSI|limitedrushpeak}} ↑
+| {{stl|NYCS|Bay Ridge–95th Street}}
+| align="center" | {{Access icon}}
+|
+|
+|}
+
+==Notes==
+{{Notelist}}
+
+== References ==
+{{Reflist|30em}}
+
+== External links ==
+{{Commons category|R (New York City Subway service)}}
+* [http://web.mta.info/nyct/service/rline.htm MTA New York City Transit – R Broadway Local]
+* {{NYCS const|traintime|R}}
+* {{NYCS const|timetable|R}}
+
+{{NYCS navbox}}
+
+[[Category:Brooklyn–Manhattan Transit Corporation|#]]
+[[Category:Independent Subway System|#]]
+[[Category:New York City Subway services]]
+[[Category:Railway services introduced in 1916]]

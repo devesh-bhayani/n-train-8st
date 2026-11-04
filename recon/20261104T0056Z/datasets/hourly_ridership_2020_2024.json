@@ -1,0 +1,275 @@
+{
+ "attachments": [
+  {
+   "assetId": "5ec7b52b-b4a5-47c5-aa29-9ba43f6d1665",
+   "filename": "MTA_SubwayHourlyRidership_Overview.pdf",
+   "name": "MTA_SubwayHourlyRidership_Overview.pdf"
+  },
+  {
+   "assetId": "41d9b5bf-aeda-4a7e-b15c-a3c5f01ee345",
+   "filename": "MTA_SubwayHourlyRidership_DataDictionary.pdf",
+   "name": "MTA_SubwayHourlyRidership_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "Timestamp payment took place in local time. All transactions here are rounded down to the nearest hour. For example, a swipe that took place at 1:37pm will be reported as having taken place at 1pm.",
+   "field": "transit_timestamp",
+   "name": "transit_timestamp",
+   "type": "calendar_date"
+  },
+  {
+   "description": "Distinguishes between the subway, Staten Island Railway, and the Roosevelt Island Tram",
+   "field": "transit_mode",
+   "name": "transit_mode",
+   "type": "text"
+  },
+  {
+   "description": "A unique identifier for station complexes",
+   "field": "station_complex_id",
+   "name": "station_complex_id",
+   "type": "text"
+  },
+  {
+   "description": "The subway complex where an entry swipe or tap took place. Large subway complexes, such as Times Square and Fulton Center, may contain multiple subway lines. The subway complex name includes the routes that stop at the complex in parenthesis, such as Zerega Av (6).",
+   "field": "station_complex",
+   "name": "station_complex",
+   "type": "text"
+  },
+  {
+   "description": "Represents one of the boroughs of New York City serviced by the subway system (Bronx, Brooklyn, Manhattan, Queens).",
+   "field": "borough",
+   "name": "borough",
+   "type": "text"
+  },
+  {
+   "description": "Specifies whether the payment method used to enter was from OMNY or MetroCard.",
+   "field": "payment_method",
+   "name": "payment_method",
+   "type": "text"
+  },
+  {
+   "description": "The class of fare payment used for the trip. The consolidated categories are: \u2022 MetroCard \u2013 Fair Fare; \u2022 MetroCard \u2013 Full Fare; \u2022 MetroCard \u2013 Other; \u2022 MetroCard \u2013 Senior & Disability; \u2022 MetroCard \u2013 Students; \u2022 MetroCard \u2013 Unlimited 30-Day; \u2022 MetroCard \u2013 Unlimited 7-Day; \u2022 OMNY \u2013 Full Fare; \u2022 OMNY \u2013 ",
+   "field": "fare_class_category",
+   "name": "fare_class_category",
+   "type": "text"
+  },
+  {
+   "description": "Total number of riders that entered a subway complex via OMNY or MetroCard at the specific hour and for that specific fare type.",
+   "field": "ridership",
+   "name": "ridership",
+   "type": "number"
+  },
+  {
+   "description": "Number of individuals who entered a subway complex via a free bus-to-subway, or free out-of-network transfer. This represents a subset of total ridership, meaning that these transfers are already included in the preceding ridership column. Transfers that take place within a subway complex (e.g., ind",
+   "field": "transfers",
+   "name": "transfers",
+   "type": "number"
+  },
+  {
+   "description": "Latitude for the specified subway complex",
+   "field": "latitude",
+   "name": "latitude",
+   "type": "number"
+  },
+  {
+   "description": "Longitude for the specified subway complex",
+   "field": "longitude",
+   "name": "longitude",
+   "type": "number"
+  },
+  {
+   "description": "Open Data platform-generated geocoding information from supplied address components. Point-type location is the centroid of the address components provided and does not reflect a specific address if the street address component is not provided. Point-type location is supplied in \"POINT (<geocoded lo",
+   "field": "georeference",
+   "name": "Georeference",
+   "type": "point"
+  }
+ ],
+ "distinct": {
+  "fare_class_category": [
+   {
+    "fare_class_category": "Metrocard - Fair Fare",
+    "n": "14571179"
+   },
+   {
+    "fare_class_category": "Metrocard - Full Fare",
+    "n": "17235757"
+   },
+   {
+    "fare_class_category": "Metrocard - Other",
+    "n": "15715114"
+   },
+   {
+    "fare_class_category": "Metrocard - Seniors & Disability",
+    "n": "13550762"
+   },
+   {
+    "fare_class_category": "Metrocard - Students",
+    "n": "7136736"
+   },
+   {
+    "fare_class_category": "Metrocard - Unlimited 30-Day",
+    "n": "16316225"
+   },
+   {
+    "fare_class_category": "Metrocard - Unlimited 7-Day",
+    "n": "16873380"
+   },
+   {
+    "fare_class_category": "OMNY - Fair Fare",
+    "n": "2678"
+   },
+   {
+    "fare_class_category": "OMNY - Full Fare",
+    "n": "15515503"
+   },
+   {
+    "fare_class_category": "OMNY - Other",
+    "n": "834877"
+   },
+   {
+    "fare_class_category": "OMNY - Seniors & Disability",
+    "n": "2111518"
+   },
+   {
+    "fare_class_category": "OMNY - Students",
+    "n": "991838"
+   }
+  ],
+  "payment_method": [
+   {
+    "n": "101399153",
+    "payment_method": "metrocard"
+   },
+   {
+    "n": "19456414",
+    "payment_method": "omny"
+   }
+  ]
+ },
+ "id": "wujg-7c2s",
+ "rows": [
+  {
+   "n": "120855567"
+  }
+ ],
+ "rows_updated_at": 1760534363,
+ "sample": [
+  {
+   ":@computed_region_kjdx_g34t": "2137",
+   ":@computed_region_wbg7_3whc": "1028",
+   ":@computed_region_yamh_8v7k": "196",
+   "borough": "Queens",
+   "fare_class_category": "OMNY - Full Fare",
+   "georeference": {
+    "coordinates": [
+     -73.78852,
+     40.592373
+    ],
+    "type": "Point"
+   },
+   "latitude": "40.592373",
+   "longitude": "-73.78852",
+   "payment_method": "omny",
+   "ridership": "4.0",
+   "station_complex": "Beach 60 St (A)",
+   "station_complex_id": "205",
+   "transfers": "0.0",
+   "transit_mode": "subway",
+   "transit_timestamp": "2021-09-07T19:00:00.000"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2032",
+   ":@computed_region_wbg7_3whc": "655",
+   ":@computed_region_yamh_8v7k": "307",
+   "borough": "Bronx",
+   "fare_class_category": "Metrocard - Unlimited 30-Day",
+   "georeference": {
+    "coordinates": [
+     -73.89187,
+     40.829994
+    ],
+    "type": "Point"
+   },
+   "latitude": "40.829994",
+   "longitude": "-73.89187",
+   "payment_method": "metrocard",
+   "ridership": "2.0",
+   "station_complex": "Freeman St (2,5)",
+   "station_complex_id": "429",
+   "transfers": "0.0",
+   "transit_mode": "subway",
+   "transit_timestamp": "2021-09-07T23:00:00.000"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2090",
+   ":@computed_region_wbg7_3whc": "811",
+   ":@computed_region_yamh_8v7k": "894",
+   "borough": "Brooklyn",
+   "fare_class_category": "OMNY - Full Fare",
+   "georeference": {
+    "coordinates": [
+     -73.99886,
+     40.61959
+    ],
+    "type": "Point"
+   },
+   "latitude": "40.61959",
+   "longitude": "-73.99886",
+   "payment_method": "omny",
+   "ridership": "50.0",
+   "station_complex": "71 St (D)",
+   "station_complex_id": "64",
+   "transfers": "0.0",
+   "transit_mode": "subway",
+   "transit_timestamp": "2021-09-07T07:00:00.000"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2090",
+   ":@computed_region_wbg7_3whc": "896",
+   ":@computed_region_yamh_8v7k": "894",
+   "borough": "Brooklyn",
+   "fare_class_category": "Metrocard - Fair Fare",
+   "georeference": {
+    "coordinates": [
+     -73.97578,
+     40.650784
+    ],
+    "type": "Point"
+   },
+   "latitude": "40.650784",
+   "longitude": "-73.97578",
+   "payment_method": "metrocard",
+   "ridership": "2.0",
+   "station_complex": "Fort Hamilton Pkwy (F,G)",
+   "station_complex_id": "242",
+   "transfers": "0.0",
+   "transit_mode": "subway",
+   "transit_timestamp": "2021-09-07T12:00:00.000"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2090",
+   ":@computed_region_wbg7_3whc": "809",
+   ":@computed_region_yamh_8v7k": "894",
+   "borough": "Brooklyn",
+   "fare_class_category": "Metrocard - Fair Fare",
+   "georeference": {
+    "coordinates": [
+     -73.96225,
+     40.661613
+    ],
+    "type": "Point"
+   },
+   "latitude": "40.661613",
+   "longitude": "-73.96225",
+   "payment_method": "metrocard",
+   "ridership": "1.0",
+   "station_complex": "Prospect Park (B,Q,S)",
+   "station_complex_id": "42",
+   "transfers": "0.0",
+   "transit_mode": "subway",
+   "transit_timestamp": "2021-09-07T02:00:00.000"
+  }
+ ],
+ "title": "MTA Subway Hourly Ridership: 2020-2024"
+}

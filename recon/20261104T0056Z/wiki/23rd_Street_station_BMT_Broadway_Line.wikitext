@@ -1,0 +1,106 @@
+{{Short description|New York City Subway station in Manhattan}}
+{{Use American English|date=September 2025}}
+{{Use mdy dates|date=August 2018}}
+{{other uses|23rd Street (disambiguation){{!}}23rd Street}}
+{{Infobox NYCS
+| name = 23 Street
+| image = BMT Broadway 23rd Street.jpg
+| image_caption = Southbound platform with arriving R46 W train
+| address = 23rd Street, Fifth Avenue &amp; Broadway<br>New York, New York
+| borough = [[Manhattan]]
+| locale = [[Flatiron District, Manhattan|Flatiron District]], [[Madison Square]]
+| coordinates = {{coord|40.741339|N|73.989272|W|display=inline,title}}
+| division = BMT
+| line = [[BMT Broadway Line]]
+| service = Broadway local
+| service_header = Broadway center local header
+| other = {{Bus icon}} [[NYCT Bus]]: {{NYC bus link|M1|M2|M3|M23 SBS|M55|X27|X28|X37|X38|SIM1C|SIM3|SIM3C|SIM4C|SIM10|SIM31|SIM33C}}<br>{{Bus icon}} [[MTA Bus]]: {{NYC bus link|BxM6|BxM7|BxM8|BxM9|BxM10|BM1|BM2|BM3|BM4|QM21}}
+| platforms = 2 [[side platform]]s
+| tracks = 4
+| structure = Underground
+| opened = {{start date and age|1918|01|5|p=y}}<ref name=42nd />
+| services = {{Adjacent stations|system=New York City Subway
+|line=Broadway local|left=28th Street|right=14th Street–Union Square|note-left={{NYCS Broadway local|time=1}}|note-right={{NYCS Broadway local|time=1}}}}
+| footnotes = {{NYCS infobox legend|allexceptnights}}{{NYCS infobox legend|weekdaysonly}}{{NYCS infobox legend|nightsweekends}}{{NYCS infobox legend|nightsonly}}
+| route_map = {{NYCS 4-tracked local station|inline=y
+|1=28th Street
+|2=14th Street–Union Square
+|l2=14th St–Union Square
+|code=BMT Broadway Line
+|deg=345
+}}
+}}
+
+The '''23rd Street station''' is a local [[metro station|station]] on the [[BMT Broadway Line]] of the [[New York City Subway]]. Located at the intersection of [[23rd Street (Manhattan)|23rd Street]], [[Broadway (Manhattan)|Broadway]], and [[Fifth Avenue (Manhattan)|Fifth Avenue]] in the [[Flatiron District]] of [[Manhattan]], it is served by the [[R (New York City Subway service)|R]] train at all times except late nights, the [[W (New York City Subway service)|W]] train on weekdays, the [[N (New York City Subway service)|N]] train during late nights and weekends, and the [[Q (New York City Subway service)|Q]] train during late nights.
+
+== History ==
+
+===Construction and opening===
+{{stack|float=right|[[File:23rd Street BMT 002.JPG|thumb|150px|Mosaic name tablet]] [[File:23rd Street BMT 001.JPG|thumb|150px|Detail of mosaic frieze]]}}
+The [[New York Public Service Commission]] adopted plans for what was known as the Broadway–Lexington Avenue route on December 31, 1907. This route began at [[Battery Park|the Battery]] and ran under [[Greenwich Street]], Vesey Street, Broadway to [[Ninth Street (Manhattan)|Ninth Street]], private property to [[Irving Place]], and Irving Place and [[Lexington Avenue]] to the [[Harlem River]]. After crossing under the Harlem River into [[the Bronx]], the route split at Park Avenue and 138th Street, with one branch continuing north to and along [[Jerome Avenue]] to [[Woodlawn Cemetery, Bronx|Woodlawn Cemetery]], and the other heading east and northeast along 138th Street, [[Southern Boulevard (Bronx)|Southern Boulevard]], and [[Westchester Avenue]] to [[Pelham Bay Park]]. In early 1908, the Tri-borough plan was formed, combining this route, the under-construction [[Centre Street Loop Subway]] in Manhattan and [[Fourth Avenue Subway]] in Brooklyn, a [[Canal Street subway]] from the Fourth Avenue Subway via the Manhattan Bridge to the [[Hudson River]], and several other lines in Brooklyn.<ref>James Blaine Walker, [https://books.google.com/books?id=lpEgAAAAMAAJ Fifty Years of Rapid Transit, 1864–1917], published 1918, pp. 207-223</ref><ref>[[Engineering News-Record|Engineering News]], [http://www.nycsubway.org/articles/triboro.html A New Subway Line for New York City], Volume 63, No. 10, March 10, 1910</ref>
+
+The Brooklyn Rapid Transit Company submitted a proposal to the commission, dated March 2, 1911, to operate the Tri-borough system (but under Church Street instead of Greenwich Street), as well as a branch along Broadway, Seventh Avenue, and 59th Street from Ninth Street north and east to the [[Queensboro Bridge]]; the Canal Street subway was to merge with the Broadway Line instead of continuing to the Hudson River. The city, the BRT, and the [[Interborough Rapid Transit Company]] (which operated the first [[early history of the IRT subway|subway]] and four [[Manhattan Railway Company|elevated]] lines in Manhattan) came to an agreement, and sent a report to the [[New York City Board of Estimate]] on June 5, 1911. The line along Broadway to 59th Street was assigned to the BRT, while the IRT obtained the [[IRT Lexington Avenue Line|Lexington Avenue line]], connecting with its existing route at [[Grand Central–42nd Street (New York City Subway)|Grand Central–42nd Street]]. Construction began on Lexington Avenue on July 31, and on Broadway the next year. The [[Dual Contracts]], two operating contracts between the city and the BMT and IRT, were adopted on March 4, 1913.<ref>James Blaine Walker, [https://books.google.com/books?id=lpEgAAAAMAAJ Fifty Years of Rapid Transit, 1864–1917], published 1918, pp. 224-241</ref>
+
+A short portion of the line, coming off the north side of the Manhattan Bridge through Canal Street to [[14th Street–Union Square (New York City Subway)|14th Street–Union Square]], opened on September 4, 1917, at 2 P.M., with an eight car train carrying members of the Public Service Commission, representatives of the city government and officials of the BRT, leaving Union Square toward Coney Island. Service opened to the general public at 8 P.M., with trains leaving Union Square and Coney Island simultaneously.<ref>{{cite news|url=https://www.newspapers.com/clip/2708189/the_brooklyn_daily_eagle/|title=Broadway Subway Opened To Coney By Special Train. Brooklynites Try New Manhattan Link From Canal St. to Union Square. Go Via Fourth Ave. Tube|newspaper=The Brooklyn Daily Eagle|date=September 4, 1917|access-date=May 31, 2019}}</ref> The line was served by two services. One route ran via the Fourth Avenue Line and the Sea Beach Line to Coney Island, while the other line, the short line, ran to Ninth Avenue, where passengers could transfer for West End and Culver Line service. The initial headway on the line was three minutes during rush hours, three minutes and forty-five seconds at other times, except during late nights when service ran every fifteen minutes.<ref name=":2">{{Cite news|url=https://www.nytimes.com/1917/09/05/archives/open-first-section-of-broadway-line-train-carrying-1000-passengers.html|title=Open First Section Of Broadway Line; Train Carrying 1,000 Passengers Runs from Fourteenth Street to Coney Island. Regular Service Begins. New Road Is Expected to Relieve Old System of 15,000 PersonsDaily in Rush Hours. Service Commissioners Jubliant. Schedule Not Fully Arranged.|date=September 5, 1917|newspaper=The New York Times|access-date=November 5, 2016|issn=0362-4331}}</ref>
+
+23rd Street station opened on January 5, 1918, as the BMT Broadway Line was extended north from [[14th Street–Union Square (New York City Subway)|14th Street–Union Square]] to [[Times Square–42nd Street/Port Authority Bus Terminal (New York City Subway)|Times Square–42nd Street]] and south to [[Rector Street (BMT Broadway Line)|Rector Street]]. Service at this station was provided by local services running between Times Square and Rector Street.<ref name="42nd">{{Cite news|date=January 6, 1918|title=Open New Subway to Times Square|page=3|work=The New York Times|url=https://www.nytimes.com/1918/01/06/archives/open-new-subway-to-times-square-brooklyn-directly-connected-with.html|access-date=November 5, 2016}}</ref> Service was extended one station to [[Whitehall Street–South Ferry]] on September 20, 1918.<ref>{{Cite book|url=https://books.google.com/books?id=sXhCAQAAMAAJ|title=Report of the Public Service Commission for the First District of the State of New York For The Year Ending December 31, 1918 Vol. I|last=District|first=New York State Public Service Commission First|date= 1919|publisher=New York State Legislature|language=en}}</ref><ref name=":0">{{Cite book|url=https://books.google.com/books?id=AINOAQAAMAAJ&pg=PA130|title=Legislative Documents|date=January 1, 1920|publisher=J.B. Lyon Company|language=en}}</ref> On August 1, 1920, the [[Montague Street Tunnel]] opened, extending local service from Lower Manhattan to [[DeKalb Avenue (BMT Fourth Avenue Line)|DeKalb Avenue]] in [[Downtown Brooklyn]] by traveling under the [[East River]].<ref>{{Cite news|date=August 2, 1920|title=New B.R.T. lines open|page=17|work=The New York Times|url=https://www.nytimes.com/1920/08/02/archives/new-brt-lines-open-broadwaybrighton-trains-on-holiday-schedule-have.html|access-date=November 5, 2016}}</ref><ref>{{Cite news|date=August 1, 1920|title=Broadway - Fifty-Ninth Street Extension of B.R.T. Subway, Opened to Queensboro Plaza, L.I. City|page=R-92|work=The New York Times|url=https://www.nytimes.com/1920/08/01/archives/broadwayfiftyninth-street-extension-of-brt-subway-opened-to.html|access-date=August 31, 2020}}</ref>
+
+===Later years===
+[[File:New York 1999 14.jpg|thumb|250px|View of the station in 1999, before its 2001 renovation]]
+
+The station's platforms originally could only fit six {{convert|67|ft|m|adj=mid|-long}} cars. In 1926, the [[New York City Board of Transportation]] received bids for the lengthening of platforms at nine stations on the Broadway Line, including the 23rd Street station, to accommodate eight-car trains. Edwards & Flood submitted a low bid of $101,775 for the project.<ref name=nyt-1926-07-08>{{Cite news|date=1926-07-08|title=Bids for B.M.T. Stations; Platforms South of Fourteenth Street to Be Lengthened.|language=en-US|work=The New York Times|url=https://www.nytimes.com/1926/07/08/archives/bids-for-bmt-stations-platforms-south-of-fourteenth-street-to-be.html|access-date=2023-04-28|issn=0362-4331}}</ref> The platform-lengthening project was completed in 1927, bringing the length of the platforms to {{Convert|535|feet|meters|abbr=}}.<ref name="nyt-1927-08-02">{{Cite news |date=1927-08-02 |title=B.M.T. to Operate Eight-car Trains; Platforms in Forty Stations Are Lengthened, Increasing Capacity 33 1-3%. |language=en-US |work=The New York Times |url=https://www.nytimes.com/1927/08/02/archives/bmt-to-operate-eightcar-trains-platforms-in-forty-stations-are.html |access-date=2023-05-12 |issn=0362-4331}}</ref><ref name="p1113704092">{{cite news |date=2 Aug 1927 |title=B. M, T. Station Lengthening Is Nearly Finished: 76 Platforms Are Extended 3,186 Feet to Make Room for 126.000 Additional Passengers in Rush Hours City Carried Out Work I.R.T. Changes Planned, but That Company Refuses to Pay Its Share of Costs |page=32 |work=New-York Tribune |issn=1941-0646 |id={{ProQuest|1113704092}}}}</ref>
+
+The city government took over the BMT's operations on June 1, 1940.<ref>{{Cite news|date=1940-06-02|title=B.M.T. Lines Pass to City Ownership; $175,000,000 Deal Completed at City Hall Ceremony-- Mayor 'Motorman No. 1'|language=en-US|work=The New York Times|url=https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|access-date=2022-05-14|issn=0362-4331|archive-url=https://web.archive.org/web/20210719094900/https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|archive-date=July 19, 2021|url-status=live}}</ref><ref name="p1243059209">{{cite news |date=June 2, 1940 |title=City Takes Over B. M. T. System; Mayor Skippers Midnight Train |page=1 |work=New York Herald Tribune |id={{ProQuest|1243059209}}}}</ref> The station was renovated in the 1970s to accommodate ten-car trains. As part of the renovation, the original wall tiles, old signs, and [[incandescent light]]ing were covered by modern-look wall tile band and tablet mosaics, and new signs and [[fluorescent lamp|fluorescent lights]] were installed. Staircases and platform edges were also renovated.
+
+On January 3, 1999, a schizophrenic man, Andrew Goldstein, pushed 32-year-old journalist and photographer [[Kendra Webdale]] onto the tracks from the Brooklyn-bound platform of this station. Webdale was then struck and killed by an oncoming N train.<ref>{{Cite news|last=Waldman|first=Amy|date=January 4, 1999|title=Woman Killed in a Subway Station Attack|language=en-US|work=The New York Times|url=https://www.nytimes.com/1999/01/04/nyregion/woman-killed-in-a-subway-station-attack.html|access-date=August 31, 2020|issn=0362-4331}}</ref> After two mistrials due to his mental incapacity, Goldstein pleaded guilty of manslaughter in October 2006 and sentenced to 23 years in prison.<ref>{{Cite news|last=Hartocollis|first=Anemona|date=October 11, 2006|title=Nearly 8 Years Later, Guilty Plea in Subway Killing|language=en-US|work=The New York Times|url=https://www.nytimes.com/2006/10/11/nyregion/11kendra.html|access-date=August 31, 2020|issn=0362-4331}}</ref> The incident led to the passing of [[Kendra's Law]], which allows judges to order people suffering from certain psychological disorders to undergo regular treatment.<ref name="Schapiro 2012">{{cite web|url=http://www.nydailynews.com/new-york/horrifying-subway-homicide-parents-relive-daughter-death-article-1.1213653|title=Horrifying subway homicide causes parents to relive daughter's death|last=Schapiro|first=Rich|date=December 5, 2012|website=NY Daily News|access-date=October 27, 2015}}</ref><ref>{{Cite news|last=Watkins|first=Ali|date=September 11, 2018|title=A Horrific Crime on the Subway Led to Kendra's Law. Years Later, Has It Helped?|language=en-US|work=The New York Times|url=https://www.nytimes.com/2018/09/11/nyregion/kendras-law-andrew-goldstein-subway-murder.html|access-date=August 31, 2020|issn=0362-4331}}</ref>
+
+In 2001, the station received a major refurbishment, including installing [[Americans with Disabilities Act of 1990|ADA]] yellow safety treads along the platform edges, restoring the original tiling, repairing the staircases, installing new tiling on the floors, new signage and upgrading the station's lighting and installing a public address system.
+
+In 2026, as part of a pilot program to install vending machines across the New York City Subway system, a vending machine was installed within one of the station's unused retail spaces.<ref>{{cite web | last=Millman | first=Jennifer | title=Snacky? New MTA vending machines may be coming to a subway station near you | publisher=NBC New York | date=2026-07-30 | url=https://www.nbcnewyork.com/new-york-city/mta-subway-stations-vending-machines-list/6532013/ | access-date=2026-10-17}}</ref><ref>{{cite web | last1=Quinones | first1=Olivia | last2=Liebman | first2=Samantha | title=MTA rolling out vending machines at 26 subway stations | publisher=Spectrum News NY1 | date=2026-07-30 | url=https://ny1.com/nyc/all-boroughs/news/2026/07/30/mta-rolling-out-vending-machines-at-26-subway-stations | access-date=2026-10-17}}</ref>
+
+==Station layout==
+[[File:23rd Street entrance (BMT Broadway Line).jpg|thumb|250px|Downtown station entrance]]
+[[File:23 Street hat vc.jpg|thumb|250px|View of station artwork]]
+
+This underground station has four tracks and two [[side platform]]s. The two center tracks are used by the [[N (New York City Subway service)|N]] train on weekdays and [[Q (New York City Subway service)|Q]] train at all times except late nights. The platforms have their original trim line, which has "23" tablets on it at regular intervals, and name tablets, which read "23RD STREET" in serif font.
+
+The 2002 artwork here is called ''Memories of Twenty-Third Street'' by [[Keith Godard]]. The platform walls feature mosaics depicting hats that famous people of the [[Flatiron District]] wore, including [[Oscar Wilde]], [[Sarah Bernhardt]], and [[W. E. B. Du Bois]].<ref>{{Cite web|title=23rd Street - Keith Godard - Memories of Twenty-Third Street, 2002|url=http://web.mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=R&station=11&xdev=1101|url-status=live|archive-url=https://web.archive.org/web/20200831100712/http://web.mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=R&station=11&xdev=1101|archive-date=August 31, 2020|access-date=August 31, 2020|website=web.mta.info|publisher=Metropolitan Transportation Authority}}</ref>
+
+{{23rd St subway cross section}}
+
+===Exits===
+
+Each platform has two same-level [[fare control]] areas. The primary ones are at the north ends of the platforms. The Queens-bound platform has a bank of regular and high exit-only turnstiles, the station's full-time token booth, and four street stairs. Two go up to the northeastern corner of Broadway and 23rd Street (outside [[Madison Square Park]]) and the other two go to the southeast. The Brooklyn-bound platform has a bank of regular and high exit-only turnstiles, a now defunct customer assistance booth, and two street stairs. One is connected to fare control via a passageway and goes up to the southeastern corner of 23rd Street and Fifth Avenue outside the [[Flatiron Building]], while the other goes up to the northwestern corner of Broadway and Fifth Avenue, near a mid-block pedestrian crossing.<ref name=maps>{{cite web|title=MTA Neighborhood Maps: Union Square / Gramercy|url=http://web.mta.info/maps/neighborhoods/mn/M07_UnionSq-Gramercy_2015.pdf|publisher=[[Metropolitan Transportation Authority]]|access-date=August 6, 2015|date=2015|archive-url=https://web.archive.org/web/20221102055826/http://web.mta.info/maps/neighborhoods/mn/M07_UnionSq-Gramercy_2015.pdf|archive-date=November 2, 2022|url-status=dead}}</ref>
+
+The station's other two fare control areas are at the south end of the station. The one on the Queens-bound platform is unstaffed, containing [[HEET turnstile|High Entry-Exit Turnstiles]] and one staircase going up to the northeastern corner of 22nd Street and Broadway. The turnstile on the Brooklyn-bound platform is exit-only and has one staircase to the northwest corner of 22nd Street and Broadway.<ref name=maps/> There is a crossunder here that was closed in the 1990s and is now only used for station facilities.
+
+{{clear left}}
+
+== References ==
+{{Reflist}}
+
+== External links ==
+{{commons category}}
+* {{NYCS ref|http://www.nycsubway.org/perl/stations?202:1792|BMT Broadway Subway|23rd Street}}
+* Station Reporter — [https://web.archive.org/web/20120204051427/http://www.stationreporter.net/ntrain.htm N Train]
+* Station Reporter — [https://web.archive.org/web/20150113014240/http://www.stationreporter.net/rtrain.htm R Train]
+* MTA's Arts For Transit — [https://web.archive.org/web/20110606075903/http://mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=N&station=9&xdev=846 23rd Street (BMT Broadway Line)]
+* [https://www.google.com/maps/@40.7418083,-73.9894303,3a,75y,19.72h,86.36t/data=!3m6!1e1!3m4!1s35zvBtt-VMhzTqu-jjYoQg!2e0!7i16384!8i8192 Fifth Avenue and 23rd Street entrance (in front of Flatiron Building) from Google Maps Street View]
+* [https://www.google.com/maps/@40.7412931,-73.989777,3a,75y,103.69h,78.24t/data=!3m6!1e1!3m4!1sgzxQ97gA4J1VfVbTCuTIPw!2e0!7i16384!8i8192 Fifth Avenue and 23rd Street entrance from Google Maps Street View]
+* [https://www.google.com/maps/@40.7414108,-73.9892934,3a,75y,106.23h,96t/data=!3m6!1e1!3m4!1s45MHjiLBPPiqS_WAj0KCtw!2e0!7i16384!8i8192 Broadway and 23rd Street entrance from Google Maps Street View]
+* [https://maps.google.com/?ie=UTF8&ll=40.740583,-73.989401&spn=0,0.013314&z=17&layer=c&cbll=40.740544,-73.989306&panoid=IyAyhip1QXNsOiLyc3TKog&cbp=12,44.54,,0,4.13 Broadway and 22nd Street entrance from Google Maps Street View]
+* [http://www.google.com/maps/@40.7407615,-73.9892,3a,75y,220.77h,89.76t/data=!3m8!1e1!3m6!1s-FA94xKCvV_8%2FVh72x5GdA5I%2FAAAAAAAA5ls%2FFwqa78PYiNY!2e4!3e11!6s%2F%2Flh4.googleusercontent.com%2F-FA94xKCvV_8%2FVh72x5GdA5I%2FAAAAAAAA5ls%2FFwqa78PYiNY%2Fw203-h100-n-k-no%2F!7i8704!8i4352!6m1!1e1 Platforms from Google Maps Street View]
+
+{{NYCS stations navbox by service|ln=y|lr=y|lw=y}}
+{{NYCS stations navbox by line|broadway=yes}}
+{{East Side of Manhattan (14th-34th Streets)}}
+{{Broadway (Manhattan)|state=collapsed}}
+
+{{DEFAULTSORT:23rd Street (Bmt Broadway Line)}}
+[[Category:BMT Broadway Line stations]]
+[[Category:Broadway (Manhattan)]]
+[[Category:New York City Subway stations in Manhattan]]
+[[Category:Railway stations in the United States opened in 1918]]
+[[Category:1918 establishments in New York City]]
+[[Category:Flatiron District]]
+[[Category:23rd Street (Manhattan)]]

@@ -1,0 +1,232 @@
+{
+ "attachments": [
+  {
+   "assetId": "0ec286d8-636f-43a0-89b1-ffa0b1695047",
+   "filename": "MTA_SubwayEntrancesAndExits_Overview.pdf",
+   "name": "MTA_SubwayEntrancesAndExits_Overview.pdf"
+  },
+  {
+   "assetId": "aa69cf4f-41d5-47f0-b421-aade8737ae93",
+   "filename": "MTA_SubwayEntrancesAndExits_DataDictionary.pdf",
+   "name": "MTA_SubwayEntrancesAndExits_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "The division of the subway system (IRT, BMT, IND, SIR) that the station is a part of.  ",
+   "field": "division",
+   "name": "Division",
+   "type": "text"
+  },
+  {
+   "description": "The operational line of the subway system the station is located on, such as Queens Blvd, Lexington Av, or Sea Beach.  ",
+   "field": "line",
+   "name": "Line",
+   "type": "text"
+  },
+  {
+   "description": "Represents the five boroughs of New York City (Bronx, Brooklyn, Manhattan, Queens, Staten Island). ",
+   "field": "borough",
+   "name": "Borough",
+   "type": "text"
+  },
+  {
+   "description": "The name of the subway station/station complex.",
+   "field": "stop_name",
+   "name": "Stop Name",
+   "type": "text"
+  },
+  {
+   "description": "The Complex ID, or its Complex Master Reference Number.",
+   "field": "complex_id",
+   "name": "Complex ID",
+   "type": "text"
+  },
+  {
+   "description": "The name of the specific subway station (or specific station in a complex) the entrance is to.",
+   "field": "constituent_station_name",
+   "name": "Constituent Station Name",
+   "type": "text"
+  },
+  {
+   "description": "The ID, or Master Reference Number, for the station.",
+   "field": "station_id",
+   "name": "Station ID",
+   "type": "text"
+  },
+  {
+   "description": "The GTFS Stop ID or IDs for the station.",
+   "field": "gtfs_stop_id",
+   "name": "GTFS Stop ID",
+   "type": "text"
+  },
+  {
+   "description": "The subway routes that serve the station during weekdays.",
+   "field": "daytime_routes",
+   "name": "Daytime Routes",
+   "type": "text"
+  },
+  {
+   "description": "The type of entrance (Stair, Escalator, Elevator, Station House, Walkway, Ramp, Overpass, Underpass, Easement \u2013 Street, Easement \u2013 Passage, Stair/Escalator, Stair/Ramp, Stair/Ramp/Walkway).",
+   "field": "entrance_type",
+   "name": "Entrance Type",
+   "type": "text"
+  },
+  {
+   "description": "Whether or not entries are allowed at this entrance/exit.",
+   "field": "entry_allowed",
+   "name": "Entry Allowed",
+   "type": "text"
+  },
+  {
+   "description": "Whether or not exits are allowed at this entrance/exit.",
+   "field": "exit_allowed",
+   "name": "Exit Allowed",
+   "type": "text"
+  },
+  {
+   "description": "The latitude for the station entrance.",
+   "field": "entrance_latitude",
+   "name": "Entrance Latitude",
+   "type": "number"
+  },
+  {
+   "description": "The longitude for the station entrance.",
+   "field": "entrance_longitude",
+   "name": "Entrance Longitude",
+   "type": "number"
+  },
+  {
+   "description": "Open Data platform-generated geocoding information from supplied address components for stations. Point-type location is the centroid of the address components provided and does not reflect a specific address if the street address component is not provided. Point-type location is supplied in \"POINT ",
+   "field": "entrance_georeference",
+   "name": "entrance_georeference",
+   "type": "point"
+  }
+ ],
+ "distinct": {},
+ "id": "i9wp-a4ja",
+ "rows": [
+  {
+   "n": "2120"
+  }
+ ],
+ "rows_updated_at": 1764959778,
+ "sample": [
+  {
+   "borough": "B",
+   "complex_id": "617",
+   "constituent_station_name": "Atlantic Av-Barclays Ctr",
+   "daytime_routes": "2 3 4 5 B D N Q R",
+   "division": "BMT",
+   "entrance_georeference": {
+    "coordinates": [
+     -73.978879,
+     40.683905
+    ],
+    "type": "Point"
+   },
+   "entrance_latitude": "40.683905",
+   "entrance_longitude": "-73.978879",
+   "entrance_type": "Stair",
+   "entry_allowed": "YES",
+   "exit_allowed": "YES",
+   "gtfs_stop_id": "R31",
+   "line": "4th Av",
+   "station_id": "27",
+   "stop_name": "Atlantic Av-Barclays Ctr"
+  },
+  {
+   "borough": "B",
+   "complex_id": "617",
+   "constituent_station_name": "Atlantic Av-Barclays Ctr",
+   "daytime_routes": "2 3 4 5 B D N Q R",
+   "division": "BMT",
+   "entrance_georeference": {
+    "coordinates": [
+     -73.978487,
+     40.683805
+    ],
+    "type": "Point"
+   },
+   "entrance_latitude": "40.683805",
+   "entrance_longitude": "-73.978487",
+   "entrance_type": "Elevator",
+   "entry_allowed": "YES",
+   "exit_allowed": "YES",
+   "gtfs_stop_id": "R31",
+   "line": "4th Av",
+   "station_id": "27",
+   "stop_name": "Atlantic Av-Barclays Ctr"
+  },
+  {
+   "borough": "B",
+   "complex_id": "617",
+   "constituent_station_name": "Atlantic Av-Barclays Ctr",
+   "daytime_routes": "2 3 4 5 B D N Q R",
+   "division": "BMT",
+   "entrance_georeference": {
+    "coordinates": [
+     -73.978412,
+     40.683928
+    ],
+    "type": "Point"
+   },
+   "entrance_latitude": "40.683928",
+   "entrance_longitude": "-73.978412",
+   "entrance_type": "Stair",
+   "entry_allowed": "YES",
+   "exit_allowed": "YES",
+   "gtfs_stop_id": "R31",
+   "line": "4th Av",
+   "station_id": "27",
+   "stop_name": "Atlantic Av-Barclays Ctr"
+  },
+  {
+   "borough": "B",
+   "complex_id": "28",
+   "constituent_station_name": "Union St",
+   "daytime_routes": "R",
+   "division": "BMT",
+   "entrance_georeference": {
+    "coordinates": [
+     -73.9834296,
+     40.6771544
+    ],
+    "type": "Point"
+   },
+   "entrance_latitude": "40.6771544",
+   "entrance_longitude": "-73.9834296",
+   "entrance_type": "Stair",
+   "entry_allowed": "YES",
+   "exit_allowed": "YES",
+   "gtfs_stop_id": "R32",
+   "line": "4th Av",
+   "station_id": "28",
+   "stop_name": "Union St"
+  },
+  {
+   "borough": "B",
+   "complex_id": "28",
+   "constituent_station_name": "Union St",
+   "daytime_routes": "R",
+   "division": "BMT",
+   "entrance_georeference": {
+    "coordinates": [
+     -73.9833364,
+     40.6772958
+    ],
+    "type": "Point"
+   },
+   "entrance_latitude": "40.6772958",
+   "entrance_longitude": "-73.9833364",
+   "entrance_type": "Stair",
+   "entry_allowed": "YES",
+   "exit_allowed": "YES",
+   "gtfs_stop_id": "R32",
+   "line": "4th Av",
+   "station_id": "28",
+   "stop_name": "Union St"
+  }
+ ],
+ "title": "MTA Subway Entrances and Exits: 2024"
+}

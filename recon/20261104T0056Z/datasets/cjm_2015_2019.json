@@ -1,0 +1,736 @@
+{
+ "attachments": [
+  {
+   "assetId": "6df4aa7f-70eb-4e44-b1ce-bc4a1ad3379a",
+   "filename": "MTA_SubwayCustomerJourneyFocusedMetrics_Overview.pdf",
+   "name": "MTA_SubwayCustomerJourneyFocusedMetrics_Overview.pdf"
+  },
+  {
+   "assetId": "b916d86e-edb6-4c4c-90a2-d392ce54236b",
+   "filename": "MTA_SubwayCustomerJourneyFocusedMetrics_DataDictionary.pdf",
+   "name": "MTA_SubwayCustomerJourneyFocusedMetrics_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "The month in which the metrics are being calculated (yyyy-mm-dd).",
+   "field": "month",
+   "name": "month",
+   "type": "calendar_date"
+  },
+  {
+   "description": "The division of the subway line: A Division (numbered subway lines and S 42nd) and B Division (lettered subway lines).",
+   "field": "division",
+   "name": "division",
+   "type": "text"
+  },
+  {
+   "description": "Each subway line (1, 2, 3, 4, 5, 6, 7, A, C, E, B, D, F, M, G, JZ, L, N, Q, R, W, S 42nd, S Rock, S Fkln).",
+   "field": "line",
+   "name": "line",
+   "type": "text"
+  },
+  {
+   "description": "Represents both the peak and off-peak service periods.",
+   "field": "period",
+   "name": "period",
+   "type": "text"
+  },
+  {
+   "description": "Total number of estimated passengers reported each month and on each line.",
+   "field": "num_passengers",
+   "name": "num_passengers",
+   "type": "number"
+  },
+  {
+   "description": "The average estimated additional time in minutes (above scheduled time) customers wait for their train, reported each month and on each line.",
+   "field": "additional_platform_time",
+   "name": "additional platform time",
+   "type": "number"
+  },
+  {
+   "description": "The average estimated additional time in minutes (above scheduled time) customers spend onboard a train, reported each month and on each line.",
+   "field": "additional_train_time",
+   "name": "additional train time",
+   "type": "number"
+  },
+  {
+   "description": "The total number of estimated additional time in minutes (above scheduled time) customers wait for their train, reported each month and on each line.",
+   "field": "total_apt",
+   "name": "total_apt",
+   "type": "number"
+  },
+  {
+   "description": "The total number of average additional time in minutes (above scheduled time) customers spend onboard a train, reported each month and on each line.",
+   "field": "total_att",
+   "name": "total_att",
+   "type": "number"
+  },
+  {
+   "description": "The estimated total number of customers whose journeys are not completed within 5 minutes of the scheduled time, reported each month and on each line.",
+   "field": "over_five_mins",
+   "name": "over_five_mins",
+   "type": "number"
+  },
+  {
+   "description": "The estimated percentage of customers whose journeys are not completed within 5 minutes of the scheduled time, reported each month and on each line.",
+   "field": "over_five_mins_perc",
+   "name": "over_five_mins_perc",
+   "type": "number"
+  },
+  {
+   "description": "The estimated percentage of customers whose journeys are completed within 5 minutes of the scheduled time, reported each month and on each line.",
+   "field": "customer_journey_time",
+   "name": "customer journey time performance",
+   "type": "number"
+  }
+ ],
+ "distinct": {
+  "month": [
+   {
+    "month": "2015-01-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-02-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-03-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-04-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-05-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-06-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-07-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-08-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-09-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-10-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-11-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2015-12-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-01-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-02-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-03-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-04-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-05-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-06-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-07-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-08-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-09-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-10-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-11-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2016-12-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2017-01-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2017-02-01T00:00:00.000",
+    "n": "16"
+   },
+   {
+    "month": "2017-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2017-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2018-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2019-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-04-01T00:00:00.000",
+    "n": "40"
+   },
+   {
+    "month": "2020-05-01T00:00:00.000",
+    "n": "42"
+   },
+   {
+    "month": "2020-06-01T00:00:00.000",
+    "n": "46"
+   },
+   {
+    "month": "2020-07-01T00:00:00.000",
+    "n": "46"
+   },
+   {
+    "month": "2020-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2020-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-01-01T00:00:00.000",
+    "n": "46"
+   },
+   {
+    "month": "2021-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2021-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-01-01T00:00:00.000",
+    "n": "46"
+   },
+   {
+    "month": "2022-02-01T00:00:00.000",
+    "n": "46"
+   },
+   {
+    "month": "2022-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2022-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2023-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2024-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-09-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-10-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-11-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2025-12-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-01-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-02-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-03-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-04-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-05-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-06-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-07-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-08-01T00:00:00.000",
+    "n": "48"
+   },
+   {
+    "month": "2026-09-01T00:00:00.000",
+    "n": "48"
+   }
+  ]
+ },
+ "id": "r7qk-6tcy",
+ "rows": [
+  {
+   "n": "5912"
+  }
+ ],
+ "rows_updated_at": 1792769287,
+ "sample": [
+  {
+   "additional_platform_time": "0.9133036307723731",
+   "additional_train_time": "0.6673139257516879",
+   "customer_journey_time": "0.9102359385828194",
+   "division": "A DIVISION",
+   "line": "1",
+   "month": "2015-01-01T00:00:00.000",
+   "num_passengers": "5442987.8974609375",
+   "over_five_mins": "488584.6999206543",
+   "over_five_mins_perc": "0.0897640614171806",
+   "period": "offpeak",
+   "total_apt": "4971100.60900116",
+   "total_att": "3632181.621673584"
+  },
+  {
+   "additional_platform_time": "1.3714376256638259",
+   "additional_train_time": "0.8255619340939884",
+   "customer_journey_time": "0.8877464430944674",
+   "division": "A DIVISION",
+   "line": "1",
+   "month": "2015-01-01T00:00:00.000",
+   "num_passengers": "5170116.787109375",
+   "over_five_mins": "580363.9989700317",
+   "over_five_mins_perc": "0.11225355690553263",
+   "period": "peak",
+   "total_apt": "7090492.690917969",
+   "total_att": "4268251.6142578125"
+  },
+  {
+   "additional_platform_time": "1.0848527893593627",
+   "additional_train_time": "1.258279288855937",
+   "customer_journey_time": "0.8251029793684812",
+   "division": "A DIVISION",
+   "line": "2",
+   "month": "2015-01-01T00:00:00.000",
+   "num_passengers": "4647297.008300781",
+   "over_five_mins": "812798.4007415771",
+   "over_five_mins_perc": "0.17489702063151877",
+   "period": "offpeak",
+   "total_apt": "5041633.122436523",
+   "total_att": "5847597.574707031"
+  },
+  {
+   "additional_platform_time": "1.0996836543721806",
+   "additional_train_time": "1.4192046699357386",
+   "customer_journey_time": "0.8220679950973493",
+   "division": "A DIVISION",
+   "line": "2",
+   "month": "2015-01-01T00:00:00.000",
+   "num_passengers": "4719248.7880859375",
+   "over_five_mins": "839705.3984985352",
+   "over_five_mins_perc": "0.17793200490265065",
+   "period": "peak",
+   "total_apt": "5189680.753173828",
+   "total_att": "6697579.918640137"
+  },
+  {
+   "additional_platform_time": "0.6860067504595019",
+   "additional_train_time": "0.8563395137036603",
+   "customer_journey_time": "0.8977407810174971",
+   "division": "A DIVISION",
+   "line": "3",
+   "month": "2015-01-01T00:00:00.000",
+   "num_passengers": "3602657.0861816406",
+   "over_five_mins": "368404.89989471436",
+   "over_five_mins_perc": "0.10225921898250294",
+   "period": "offpeak",
+   "total_apt": "2471447.0807113647",
+   "total_att": "3085097.6172218323"
+  }
+ ],
+ "title": "MTA Subway Customer Journey-Focused Metrics: Beginning 2015"
+}

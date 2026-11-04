@@ -1,0 +1,18 @@
+{
+ "bdfm": {
+  "bytes": 161342,
+  "entities": 320,
+  "header_timestamp": 1793754141,
+  "status": 200,
+  "trip_updates": 160,
+  "vehicles": 160
+ },
+ "nqrw": {
+  "bytes": 120155,
+  "entities": 226,
+  "header_timestamp": 1793754140,
+  "status": 200,
+  "trip_updates": 113,
+  "vehicles": 113
+ }
+}

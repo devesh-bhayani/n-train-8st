@@ -1,0 +1,520 @@
+{{short description|Rapid transit service}}
+{{Redirect|W Train|the Norfolk Southern line|W Line (Norfolk Southern)|the carriage type|Victorian Railways W type carriage (disambiguation){{!}}Victorian Railways W type carriage}}
+{{Use mdy dates|date=June 2024}}
+{{Infobox NYCS service
+| service = W
+| name = Broadway Local
+| image1 = File:R46 W train at 30th Avenue.jpg
+| caption1 = A [[Whitehall Street (BMT Broadway Line)|Whitehall Street]]-bound W train of [[R46 (New York City Subway car)|R46]]s leaving [[30th Avenue station (BMT Astoria Line)|30th Avenue]]
+| north term = [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Boulevard]]
+| south term =
+* [[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street–South Ferry]]
+* [[86th Street (BMT Sea Beach Line)|86th Street]] <small>(limited rush hour service)</small>
+* [[Bay Parkway (BMT West End Line)|Bay Parkway]] <small>(limited AM rush hour service in the southbound direction only)</small>
+| stations = 23<br />44 (limited service to 86th Street)<br />32 (limited service to Bay Parkway)
+| note = Dashed pink line shows limited ''rush hour service'' to/from [[86th Street (BMT Sea Beach Line)|Gravesend–86th Street]].
+| depot = [[Coney Island Yard]]
+| started = {{start date and age|2001|07|22}}
+| discontinued = {{start date and age|2010|06|25}}
+| reinstated = {{start date and age|2016|11|07}}
+| map = {{W (New York City Subway service)}}
+| map_state = collapsed
+}}
+
+The '''W Broadway Local'''<ref name="timetable">{{NYCS const|timetable|W}}</ref> is a [[rapid transit]] service of the [[New York City Subway]]'s [[B Division (New York City Subway)|B Division]]. Its route emblem, or "bullet", is colored {{NYCS const|color|yellow}} since it uses the [[BMT Broadway Line]] in [[Manhattan]].<ref>{{Cite news|url=http://cityroom.blogs.nytimes.com/2010/05/10/take-the-tomato-to-the-sunflower/|title=Take the Tomato 2 Stops to the Sunflower|last=Grynbaum|first=Michael M.|date=May 10, 2010|newspaper=The New York Times|access-date=October 30, 2016}}</ref>
+
+The W operates weekdays during daytime hours only between [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Ditmars Boulevard]] in [[Astoria, Queens]] and [[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street]] in [[Lower Manhattan]], making all stops along the full route; limited rush hour service is extended beyond Whitehall Street to and from [[Bay Parkway (BMT West End Line)|Bay Parkway]] in [[Bensonhurst, Brooklyn]], or [[86th Street (BMT Sea Beach Line)|86th Street]] in [[Gravesend, Brooklyn]].{{efn|Limited rush hour service to Manhattan and Queens originates at 86th Street during AM and PM rush hours, but service from Queens and Manhattan terminates at Bay Parkway during AM rush hours and at 86th Street during PM rush hours.|name=Southern Brooklyn terminals}}<ref>{{cite news|url=http://www.brooklynpaper.com/stories/40/2/br-w-train-moonlights-in-brooklyn-2017-01-13-bk.html|newspaper=Brooklyn Paper|first=Caroline|last=Spivack|title=W-W-What!? W Trains Mysteriously Appearing in Brooklyn|date=January 10, 2017|access-date=April 18, 2017}}</ref><ref>{{cite journal |title=BMT Sea Beach Line Service Improvement Pilot |journal=ERA Bulletin |url=https://erausa.org/pdf/bulletin/2020s/2025/2025-03-bulletin.pdf |date=March 2025 |publisher=Electric Railroaders' Association |volume=68 |number=3 |pages=5 |access-date=March 30, 2025}}</ref> The W is internally staffed and scheduled as part of the {{NYCS|N}}.<ref>{{Cite web|url=http://www.thejoekorner.com/carassignments/bmt-ind-2016-11-06.html|title=BMT-IND Car Assignments – Nov 6, 2016|website=www.thejoekorner.com|access-date=November 6, 2016}}</ref><ref name="NYCTA 2016" />
+
+Introduced on July 22, 2001, the W originally ran at all times on the [[BMT West End Line]] and [[BMT Fourth Avenue Line]] in Brooklyn to [[Coney Island–Stillwell Avenue (New York City Subway)|Coney Island–Stillwell Avenue]] across the [[Manhattan Bridge]], running express on the Broadway Line. It was truncated in 2004 to its current service pattern, running local on the Broadway Line to [[Whitehall Street-South Ferry (BMT Broadway Line)|Whitehall Street]] until June 25, 2010, when it was eliminated due to the [[Metropolitan Transportation Authority]] (MTA)'s financial crisis. The route was later restored on November 7, 2016, using its original emblem and 2004–2010 routing, as part of the updated service pattern related to the [[Opening of the Second Avenue Subway|opening]] of the [[Second Avenue Subway]].<ref name="NYCTA 2016">{{Cite web|url=https://progressiveaction.files.wordpress.com/2016/08/sub-division-b-general-distribution-fall-2016-wp-book.pdf|title=General Distribution – Sub-Division B – Train Operator/Conductor – Road & Non-Road Work Programs|date=July 29, 2016|publisher=[[New York City Transit Authority]]|access-date=August 19, 2016}}</ref><ref name="MTA SAS">* {{Cite web|url=http://www.mta.info/press-release/nyc-transit/mta-advances-work-second-avenue-subway-service|title=MTA {{!}} Press Release {{!}} NYC Transit {{!}} MTA Advances Work On Second Avenue Subway Service|website=www.mta.info|publisher=Metropolitan Transportation Authority|access-date=February 19, 2016|archive-date=February 22, 2016|archive-url=https://web.archive.org/web/20160222005540/http://www.mta.info/press-release/nyc-transit/mta-advances-work-second-avenue-subway-service|url-status=dead}}
+* {{Cite web|url=http://web.mta.info/mta/news/books/pdf/160222_1000_Transit.pdf|title=Transit & Bus Committee Meeting February 2016|date=February 20, 2016|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=February 21, 2016|archive-date=March 2, 2016|archive-url=https://web.archive.org/web/20160302133838/http://web.mta.info/mta/news/books/pdf/160222_1000_Transit.pdf|url-status=dead}}</ref><ref name="Kabak 2016">{{Cite web|url=http://secondavenuesagas.com/2016/02/19/ahead-of-2nd-ave-subway-opening-mta-officially-set-to-restore-w-service-to-astoria/|title=Ahead of 2Nd Ave. Subway Opening, MTA Officially Set to Restore W Service to Astoria|last=Kabak|first=Benjamin|website=Second Ave. Sagas|date=February 19, 2016|access-date=February 19, 2016}}</ref><ref name="Martinez 2016">{{Cite web|url=http://www.ny1.com/nyc/all-boroughs/news/2016/02/19/w-train-is-coming-back-.html|title=MTA Confirms W Train Is Coming Back|last=Martinez|first=Jose|date=February 19, 2016|website=TWC News NY1|access-date=February 19, 2016}}</ref><ref>{{Cite web|url=http://pix11.com/2016/10/23/mta-flyers-spotted-for-w-trains-return-in-november/|title=MTA Flyers Spotted for W Train's Return in November|last=Lam|first=Katherine|date=October 23, 2016|publisher=PIX11|access-date=October 24, 2016}}</ref>
+
+== Service history ==
+===Context===
+The W was originally devised as an extra Broadway service designation. This service was essentially a variant of the {{NYCS|N}} route, which in the 1970s and 1980s made express stops on the Broadway Line between [[Forest Hills–71st Avenue (IND Queens Boulevard Line)|Forest Hills–71st Avenue]] in [[Queens]] and [[Coney Island–Stillwell Avenue (New York City Subway)|Coney Island–Stillwell Avenue]] in [[Brooklyn]]. At the time, some N trains (until 1976 designated as [[EE (Queens-Broadway Local)|EE]]) were designated with a diamond N bullet as early as 1982 on trains, but beginning in 1979 on maps; these trains made all stops on the Broadway Line, and traveled only between 71st Avenue and Whitehall Street. It appeared as a diamond bullet on [[rollsign|rollsign blinds]] ordered for the then-new [[R68 (New York City Subway car)|R68]], [[R68A (New York City Subway car)|R68A]] and [[R110B (New York City Subway car)|R110B]] subway cars which entered service between 1986 and 1993, as well as on replacement rollsign curtains ordered for the [[R30 (New York City Subway car)|R30]] through [[R46 (New York City Subway car)|R46]] [[B Division (New York City Subway)|B Division]] subway cars overhauled between 1985 and 1992.
+
+The [[Manhattan Bridge]], between Manhattan and Brooklyn, contains four subway tracks: a northern pair for the [[IND Sixth Avenue Line]] and a southern pair for the [[BMT Broadway Line]].<ref name=nyt-2000-12-07/> Repairs to the bridge forced the N, which normally ran express on the Broadway Line and via the bridge, to run local via the [[Montague Street Tunnel]] starting in 1986.<ref name="nyt-1986-04-26">{{Cite news |date=April 26, 1986 |title=Subway Track Work To Divert BMT Lines |language=en-US |work=The New York Times |url=https://www.nytimes.com/1986/04/26/nyregion/subway-track-work-to-divert-bmt-lines.html |access-date=October 18, 2022 |issn=0362-4331}}</ref> The south tracks were closed completely for repairs from 1988 to 2001.<ref name=nyt-2000-12-07>{{Cite news|last=Saulny|first=Susan|date=December 7, 2000|title=Familiar Culprit for Subway Disruptions: A Creaky Manhattan Bridge|language=en-US|work=The New York Times|url=https://www.nytimes.com/2000/12/07/nyregion/familiar-culprit-for-subway-disruptions-a-creaky-manhattan-bridge.html|access-date=October 20, 2022|issn=0362-4331}}</ref>  This service change precluded W local service from running as envisioned.
+
+The W label was first used in 2001, when the two tracks on the Manhattan Bridge's northern side, which connected to the [[IND Sixth Avenue Line]], were closed for repairs; new rollsign curtains were ordered in 2001 to reflect the service changes being implemented at the time, with the W appearing on rollsigns as a circle bullet. This required the suspension of Sixth Avenue {{NYCS|B}} service south of [[34th Street–Herald Square (IND Sixth Avenue Line)|34th Street–Herald Square]] as it used those tracks to travel to and from Brooklyn.<ref>{{Cite news|url = https://www.nytimes.com/2001/07/22/nyregion/new-subway-routes-take-effect-today.html|title = New Subway Routes Take Effect Today|date = July 22, 2001|access-date = February 21, 2016|newspaper = New York Times}}</ref> The W service replaced the B on the [[BMT West End Line]] and [[BMT Fourth Avenue Line]] in Brooklyn, ran on the BMT Broadway Line in Manhattan and BMT Astoria Line in Queens. It replicated the route of the [[Brooklyn-Manhattan Transit Corporation]] (BMT)'s old [[T (New York City Subway service)|3]] route (later named the T) that operated from 1916 until 1967, when the B [[Chrystie Street Connection|replaced]] it. The W also replicated the route of the Broadway B service from April 1986 to December 1988 when the bridge's north tracks were first closed.<ref>{{Cite web|url=http://www.thejoekorner.com/brochures/index-BMT-IND%20Const-changes-1986.html|title=If You Ride These Subway Lines, You Know Something Drastic Has To Be Done.|date=1986|website=TheJoeKorNer.com|publisher=New York City Transit Authority|access-date=October 30, 2016}}</ref><ref>{{Cite web|url=https://www.flickr.com/photos/127872292@N06/27699872706/|title=System-Wide Changes In Subway Service Effective Sunday, December 11, 1988|date=1988|website=Flickr|publisher=New York City Transit Authority|access-date=October 30, 2016}}</ref><ref>{{Cite news|url=https://www.nytimes.com/1988/12/09/nyregion/big-changes-for-subways-are-to-begin.html|title=Big Changes For Subways Are to Begin|last=Johnson|first=Kirk|date=December 9, 1988|newspaper=The New York Times|issn=0362-4331|access-date=October 30, 2016}}</ref>
+
+=== 2001–2004 ===
+[[File:MTA NYC Subway W train leaving 39th Ave.jpg|thumb|left|A W train of [[R68 (New York City Subway car)|R68]]s leaving [[39th Avenue (BMT Astoria Line)|39th Avenue]]]]
+[[File:R68A W train (Car No. 5078).jpg|thumb|left|A W train of [[R68A (New York City Subway car)|R68A]]s leaving [[Broadway (BMT Astoria Line)|Broadway]]]]Plans for the W train were announced in late 2000, when the [[Metropolitan Transportation Authority]] announced that the Manhattan Bridge's south tracks would reopen and that the north tracks would be closed.<ref>{{Cite news|last=Saulny|first=Susan|date=December 5, 2000|title=In Subway Changes, W Follows V, But for Riders It's Not So Simple|language=en-US|work=The New York Times|url=https://www.nytimes.com/2000/12/05/nyregion/in-subway-changes-w-follows-v-but-for-riders-it-s-not-so-simple.html|access-date=October 20, 2022|issn=0362-4331}}</ref> W service began on July 22, 2001.<ref>{{Cite news|date=July 22, 2001|title=New Subway Routes Take Effect Today|language=en-US|work=The New York Times|url=https://www.nytimes.com/2001/07/22/nyregion/new-subway-routes-take-effect-today.html|access-date=October 20, 2022|issn=0362-4331}}</ref> The route initially operated 24 hours daily. Weekday rush hour and midday service operated between Astoria–Ditmars Boulevard in Queens and Coney Island–Stillwell Avenue in Brooklyn; service bypassed all stations between Astoria Boulevard and Queensboro Plaza between 6{{nbsp}}a.m. and 9{{nbsp}}p.m. (in the southbound direction between 6{{nbsp}}a.m. and 1{{nbsp}}p.m., and in the northbound direction from 1{{nbsp}}p.m. to 9{{nbsp}}p.m.),<ref>{{Cite web|url=http://web.mta.info/nyct/service/wline.htm|title=NYC Transit Subway Schedules|date=November 11, 2001|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=February 21, 2016|url-status=dead|archive-url=https://web.archive.org/web/20011111151609/http://www.mta.nyc.ny.us/nyct/service/wline.htm|archive-date=November 11, 2001}}</ref> operated via the [[60th Street Tunnel]], made express stops in Manhattan via the Broadway Line (stopping at [[49th Street (BMT Broadway Line)|49th Street]] in both directions), operated via the [[Manhattan Bridge]] south tracks, made express stops in Brooklyn via Fourth Avenue (bypassing DeKalb Avenue in both directions), and made all stops via the [[BMT West End Line|West End Line]]. Weekday evening service [[short-turn]]ed at [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]] in Manhattan and did not operate to or from Ditmars Boulevard; evening service in Manhattan and Brooklyn was the same as weekday rush hour and midday service, except trains bypassed 49th Street in both directions. Weekend daytime and daily overnight service operated as a shuttle within Brooklyn only; weekend service operated between [[Atlantic Avenue–Barclays Center (BMT Fourth Avenue Line)|Atlantic Avenue–Pacific Street]] and Stillwell Avenue, making express stops via Fourth Avenue; daily overnight service operated between [[36th Street (BMT Fourth Avenue Line)|36th Street]] and Stillwell Avenue.<ref>{{cite journal |title=The Repeal of Chrystie Street |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-09-bulletin.pdf |date=September 2001 |publisher=New York Division, Electric Railroaders' Association |volume=44 |number=9 |pages=2 |access-date=March 31, 2025}}</ref>
+
+After the [[September 11 attacks|September 11, 2001]] attacks, W service initially operated as a shuttle between DeKalb and Stillwell Avenues before being restored to its normal route by the evening of September 12. On September 17, daytime W service operated between Ditmars Boulevard and Stillwell Avenue to replace the N, which got suspended; trains made all stops in Queens and Manhattan and express stops in Brooklyn and operated via the [[Manhattan Bridge]]. Overnight service was split into two sections, with the northern section operating between Ditmars Boulevard and [[34th Street–Herald Square (BMT Broadway Line)|34th Street–Herald Square]], and the southern section operating between 36th Street and Stillwell Avenue.<ref>{{cite journal |title=World Trade Center Destroyed |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-10-bulletin.pdf |date=October 2001 |publisher=Electric Railroaders' Association |volume=44 |number=10 |pages=2–3 |access-date=March 19, 2025}}</ref><ref>{{cite journal |title=New IRT and BMT Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-12-bulletin.pdf |date=December 2001 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=15 |access-date=March 19, 2025}}</ref> Normal W service was restored on October 28.<ref>{{cite journal |title=New IRT and BMT Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-12-bulletin.pdf |date=December 2001 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=16 |access-date=March 19, 2025}}</ref> When the December 16, 2001 schedule went into effect, two weekday morning rush hour northbound trains terminated at 57th Street, and one evening rush hour southbound train originated at 57th Street.<ref>{{Cite journal |date=January 2002 |title=63rd Street Connector In Service – New Schedules in Effect |url=https://erausa.org/pdf/bulletin/2000s/2002/2002-01-bulletin.pdf |journal=New York Division Bulletin |publisher=Electric Railroaders' Association |volume=45 |issue=1 |pages=13}}</ref>
+
+Weekday peak direction express service in Queens was discontinued on January 7, 2002<ref>{{cite journal |last=Linder |first=Bernard |title=West End Line Schedule Changes |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2002/2002-03-bulletin.pdf |date=March 2002 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=15 |access-date=March 19, 2025}}</ref> due to unpopularity among residents along the Astoria Line. This change was approved by the MTA Board in December 2001. Express service was implemented on the Astoria Line in order to improve operations at the Ditmars Boulevard terminal, and because 43% of the line's riders boarded at express stations. Instead, the change yielded no operational benefits, and made local N trains overcrowded, and express W trains underutilized. N trains carried 1.9 times as many passengers as W trains in the morning, and 2.6 times as many in the evening. W express service had been suspended after the September 11 attacks to replace N service. Even after normal service resumed in October 2001, local W service was kept until November 19 on a trial basis. Analysis of the operating pattern found that the terminal could handle the all-local service pattern and that the ridership split between the N and W was more balanced.<ref>
+* {{cite web |title=New York City Transit Committee Agenda December 2001 |url=https://www.flickr.com/photos/127872292@N06/48482083211/in/album-72157710162039771/ |website=Flickr |publisher=New York City Transit |access-date=August 9, 2019 |page=78 |date=December 17, 2001}}
+* {{cite web |title=New York City Transit Committee Agenda December 2001  |url=https://www.flickr.com/photos/127872292@N06/48482082356/in/album-72157710162039771/ |website=Flickr |publisher=New York City Transit |access-date=August 9, 2019 |page=79 |date=December 17, 2001}}
+* {{cite web |title=New York City Transit Committee Agenda December 2001  |url=https://www.flickr.com/photos/127872292@N06/48482236262/in/album-72157710162039771/ |website=Flickr |publisher=New York City Transit |access-date=August 9, 2019 |page=80 |date=December 17, 2001}}
+* {{cite web |title=New York City Transit Committee Agenda December 2001  |url=https://www.flickr.com/photos/127872292@N06/48482235472/in/album-72157710162039771/ |website=Flickr |publisher=New York City Transit |access-date=August 9, 2019 |page=81 |date=December 17, 2001}}</ref> Evening service was extended beyond 57th Street and originated and terminated at Ditmars Boulevard starting in July, matching the weekday rush hour and midday service pattern.<ref>{{Cite web|url=http://www.mta.info/nyct/service/wline.htm |title=W Line Service Information |date=July 28, 2002 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=October 29, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20020728090822/http://www.mta.info/nyct/service/wline.htm |archive-date=July 28, 2002 }}</ref>
+
+On September 8, 2002, as a result of ongoing reconstruction taking place at the [[Coney Island–Stillwell Avenue (New York City Subway)|Stillwell Avenue Terminal]], W service was revised to operate between Ditmars Boulevard and Stillwell Avenue 24 hours. Weekday daytime service prior this date remained the same, but weekend daytime and daily overnight service was rerouted to operate via the [[Montague Street Tunnel]] to replace the {{NYCS|N}}; in addition, service during this time made all stops along the reroute.<ref>{{cite journal |title=New Train Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2002/2002-10-bulletin.pdf |date=October 2002 |publisher=New York Division, Electric Railroaders' Association |volume=45 |number=10 |pages=2–3 |access-date=April 2, 2025}}</ref><ref>{{cite web|url=http://www.subwaynut.com/brochures/coneyfbpg.htm|title=F N W Q (Q) Changes Sun, Sept 8, 2002 to Spring 2004 Reconstruction of Stillwell Avenue Terminal Changes Service in Brooklyn, Manhattan and Queens|date=July 2002|website=The Subway Nut|publisher=New York City Transit|access-date=August 5, 2010|archive-date=September 29, 2018|archive-url=https://web.archive.org/web/20180929052655/http://www.subwaynut.com/brochures/coneyfbpg.htm|url-status=dead}}</ref><ref>{{Cite web|url=http://www.mta.info/nyct/service/pdf/twcur.pdf |title=W Train Timetable |date=Fall 2003 |website=mta.info |publisher=New York City Transit |access-date=October 29, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20031204032030/http://www.mta.info/nyct/service/pdf/twcur.pdf |archive-date=December 4, 2003 }}</ref> This change also gave the West End Line overnight service to Manhattan for the first time since 1977.
+
+On April 27, 2003, early evening weekend service was increased from running every 12 minutes to every 8 minutes, and Sunday morning and early evening service were increased to run every 8 minutes instead of every 10 minutes.<ref>{{Cite journal |date=July 2003 |title=New BMT-IND Schedules |url=https://erausa.org/pdf/bulletin/2000s/2003/2003-07-bulletin.pdf |journal=The New York Division Bulletin |publisher=Electric Railroaders' Association |volume=46 |issue=7 |pages=20}}</ref>
+
+===2004–2010===
+When the Manhattan Bridge's north tracks were restored to service on February 22, 2004, the W was curtailed to its current service pattern, running weekdays only from 7:00&nbsp;a.m. to 9:30&nbsp;p.m. as an entirely local service between Astoria–Ditmars Boulevard and [[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street–South Ferry]], [[Lower Manhattan]]. The Brooklyn portion was replaced by the {{NYCS|D}}, which was extended over the north side of the bridge and down the West End Line.<ref>{{Cite web|url=http://www.nydailynews.com/archives/boroughs/abc-subway-swap-manhattan-bridge-fix-7-lines-article-1.599336|title=ABC's of Subway Swap Manhattan Bridge Fix Changes 7 Lines|last=Son|first=Hugh|date=February 15, 2004|work=New York Daily News|access-date=February 25, 2018}}<br />{{Cite news|last=Luo|first=Michael|date=February 20, 2004|title=A Subway Map Remade, in Hopes of Matching Routes and Riders|language=en-US|work=The New York Times|url=https://www.nytimes.com/2004/02/20/nyregion/a-subway-map-remade-in-hopes-of-matching-routes-and-riders.html|access-date=October 18, 2022|issn=0362-4331}}<br />{{Cite web|url=http://www.mta.info/nyct/maps/subwaymap.pdf |title=February 2004 Subway Map |date=February 2004 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=November 8, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20040326024754/http://www.mta.info/nyct/maps/subwaymap.pdf |archive-date=March 26, 2004 }}<br />{{cite web|url=http://www.thejoekorner.com/brochures/index-manny-bridge-04.html|title=More Service on the Manhattan Bridge B D M N Q R W New Subway Service! February 22, 2004|date=2003|website=The JoeKorNer|publisher=New York City Transit|access-date=August 5, 2010}}<br />{{Cite web|url=http://www.mta.info/nyct/man_bridge/manhbr_map.pdf |title=B D M N Q R W Weekday Service Manhattan Bridge Map |date=February 2004 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=September 18, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20040205124437/http://www.mta.info/nyct/man_bridge/manhbr_map.pdf |archive-date=February 5, 2004 }}<br />{{Cite web|url=http://www.mta.info/nyct/man_bridge/bridge_lines.htm |title=MTA NYC Transit Manhattan Bridge Information |date=February 5, 2004 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=September 18, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20040205055553/http://www.mta.info/nyct/man_bridge/bridge_lines.htm#w |archive-date=February 5, 2004 }}<br />{{Cite web|url=http://www.mta.info/mta/news/currentyear/040220.htm |title=Expanded Subway Service Starts Sunday Four-Track Manhattan Bridge Service Returns Bringing Route Changes, Increased Service |date=February 20, 2004 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=November 8, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20040414073650/http://www.mta.info/mta/news/currentyear/040220.htm |archive-date=April 14, 2004 }}</ref> W service between Manhattan and Queens remained, because of increasing ridership on the [[BMT Astoria Line]].<ref>{{cite web|url=https://www.nytimes.com/2004/02/20/nyregion/20subway.html|title=A Subway Map Remade, In Hopes of Matching Routes and Riders|date=February 20, 2004|work=The New York Times|access-date=June 9, 2014}}</ref> The first three W trains of the day entered service at [[86th Street (BMT Sea Beach Line)|86th Street]] in [[Gravesend, Brooklyn]] and the last three trains of the night continued in service to [[Kings Highway (BMT Sea Beach Line)|Kings Highway]]. These trips ran local in Brooklyn via the [[Montague Street Tunnel]], [[BMT Fourth Avenue Line|BMT Fourth Avenue]] and [[BMT Sea Beach Line|BMT Sea Beach]] lines.<ref>A search using the MTA's [http://tripplanner.mta.info trip planner] {{Webarchive|url=https://web.archive.org/web/20071023175123/http://tripplanner.mta.info/ |date=October 23, 2007 }} using "Whitehall Street" and "Kings Highway" as stations and setting the time to the appropriate hour (6&nbsp;am into Manhattan; 9&nbsp;pm out of Manhattan) turned out results that showed the W as a possible travel option. Clicking the departure time also showed two additional times.</ref> On July 27, 2008, the W was extended to run until 11:00&nbsp;p.m. in response to growth in the subway system's ridership.<ref>{{Cite web|url=http://mta.info/nyct/service/pdf/twcur.pdf |title=W Train Timetable |date=November 25, 2009 |website=mta.info |publisher=New York City Transit |access-date=October 29, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20100602024233/http://mta.info/nyct/service/pdf/twcur.pdf |archive-date=June 2, 2010 }}</ref><ref>Compare:
+* {{Cite web|url=http://mta.info/nyct/maps/subwaymap.pdf |title=New York City Subway Map |date=April 2008 |website=mta.info |publisher=Metropolitan Transportation Authority |access-date=October 29, 2016 |url-status=dead |archive-url=https://web.archive.org/web/20080913093647/http://www.mta.info/nyct/maps/subwaymap.pdf |archive-date=September 13, 2008 }} (W service ends at 9 PM)
+*  (W service ends at 11 PM)</ref><ref>{{Cite web|url=http://www.mta.info/press-release/nyc-transit/service-adjustments-bmw-lines|title=MTA {{!}} Press Release {{!}} NYC Transit {{!}} Service Adjustments on BMW Lines|date=July 24, 2008|website=www.mta.info|publisher=Metropolitan Transportation Authority|access-date=October 30, 2016|archive-date=December 22, 2015|archive-url=https://web.archive.org/web/20151222200140/http://www.mta.info/press-release/nyc-transit/service-adjustments-bmw-lines|url-status=dead}}</ref>
+
+On March 24, 2010, the [[Metropolitan Transportation Authority|MTA]] announced the elimination of the W due to financial shortfalls. In its place, on weekdays, the {{NYCS|N}} train ran local north of [[Canal Street (New York City Subway)|Canal Street]] while the {{NYCS|Q}} train was extended from [[57th Street-Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]] to Astoria–Ditmars Boulevard, running local north of [[34th Street-Herald Square (BMT Broadway Line)|34th Street–Herald Square]]. The W ceased operation on Friday, June 25, 2010, with the last train bound for [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Boulevard]] leaving [[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street–South Ferry]] at 10:50&nbsp;p.m.<ref>{{cite web | last=Goodman | first=J. David | title=Subway Woes, Now and Then | website=City Room | date=September 13, 2017 | url=https://archive.nytimes.com/cityroom.blogs.nytimes.com/2010/06/25/subway-woes-now-and-then/ | access-date=October 18, 2022}}</ref><ref>{{Cite web|url=http://www.mta.info/press-release/nyc-transit/major-subway-changes-set-monday|title=MTA {{!}} Press Release {{!}} NYC Transit {{!}} Major Subway Changes Set for Monday|date=June 24, 2010|website=www.mta.info|publisher=Metropolitan Transportation Authority|access-date=October 20, 2016}}</ref>
+
+=== 2015–present ===
+In July 2015, the [[Metropolitan Transportation Authority|MTA]] announced it was considering restoring the W with its 2004–2010 service pattern following the [[Opening of the Second Avenue Subway|opening]] of the first phase of the [[Second Avenue Subway]], which would reroute the [[Q (New York City Subway service)|Q]] from the Astoria Line to [[96th Street (Second Avenue Subway)|96th Street]] on Manhattan's [[Upper East Side]]. The W would replace the Q on the Astoria Line to continue maintaining two services on the line on weekdays.<ref>{{cite web|url=http://www.amny.com/transit/w-train-mta-considers-bringing-it-back-between-astoria-lower-manhattan-1.10634651 |title=MTA Considers Bringing Back W Train from Astoria to Lower Manhattan |publisher=amNewYork |date=July 12, 2015 |access-date=July 15, 2015}}</ref>
+
+On May 23, 2016, the MTA announced it would restore the W.<ref>{{Cite web|url=https://www.dnainfo.com/new-york/20160525/upper-east-side/w-trains-return-is-now-official-with-approval-from-mta-board|title=W Train's Return Is Now Official With Approval From MTA Board|last=Venugopal|first=Nikhita|date=May 25, 2016|website=DNAinfo New York|access-date=May 26, 2016|url-status=dead|archive-url=https://web.archive.org/web/20160805201321/https://www.dnainfo.com/new-york/20160525/upper-east-side/w-trains-return-is-now-official-with-approval-from-mta-board|archive-date=August 5, 2016}}</ref> Service was restored on November 7, 2016,<ref name="Rivoli 2016">{{cite web | last=Rivoli | first=Dan | title=W train returns Monday after removed from subway tracks in 2010 | website=New York Daily News | date=November 7, 2016 | url=https://www.nydailynews.com/new-york/w-train-returns-subway-tracks-monday-article-1.2861303 | access-date=October 18, 2022}}</ref><ref>{{cite web | title=After 6 years, W trains running between Manhattan, Queens | website=ABC7 New York | date=November 7, 2016 | url=https://abc7ny.com/subway-w-train-mass-transit-serve/1593860/ | access-date=October 18, 2022}}</ref> running between 7:00{{nbsp}}a.m. and 11:00{{nbsp}}p.m.<ref name="NYCTA 2016" /> The Q was temporarily cut back to [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]], allowing for a seamless extension to the Second Avenue Line, which opened on January 1, 2017.<ref>{{Cite news|url=https://www.nytimes.com/2017/01/01/nyregion/second-avenue-subway-opening-upper-east-side-manhattan.html|title=Opening of Second Avenue Subway: Updates|last1=Slotnik|first1=Daniel E.|date=January 1, 2017|newspaper=The New York Times|access-date=January 1, 2017|last2=Wolfe|first2=Jonathan|issn=0362-4331|last3=Fitzsimmons|first3=Emma G.|last4=Palmer|first4=Emily|last5=Remnick|first5=Noah}}</ref><ref name="MTA SAS" /><ref name="Kabak 2016" /><ref name="Martinez 2016" /> Additionally, the [[N (New York City Subway service)|N]] train once again became express in [[Manhattan]] on weekdays between [[34th Street–Herald Square (BMT Broadway Line)|34th Street–Herald Square]] and [[Canal Street (BMT Broadway Line station)|Canal Street]]. The W's restoration meant there would be 20 fewer trips to and from Astoria per weekday as the W ran for a shorter time span each day than the Q did.<ref>{{cite web|last1=Evelly|first1=Jeanmarie|title=W Train Rollout Will Mean Fewer Trains Per Day in Astoria, MTA Says|url=https://www.dnainfo.com/new-york/20161031/ditmars/w-train-return-astoria-service-nov-7-mta|website=DNAInfo|access-date=November 5, 2016|url-status=dead|archive-url=https://web.archive.org/web/20161106061638/https://www.dnainfo.com/new-york/20161031/ditmars/w-train-return-astoria-service-nov-7-mta|archive-date=November 6, 2016}}</ref> In June 2018, the MTA added service between 6:00{{nbsp}}a.m. and 7:00{{nbsp}}a.m., and between 11:00{{nbsp}}p.m. and midnight in response to overcrowded N trains during those hours.<ref>{{cite web|last1=Murray |first1=Christian |url=https://sunnysidepost.com/mta-to-increase-weekend-service-on-7-train-starting-june-2018-to-meet-increased-demand|title=MTA to Increase Weekend Service on 7 Train Starting June 2018 to Meet Increased Demand|date=November 16, 2017 |publisher=Sunnyside Post|access-date=July 14, 2018}}</ref> As the N and W share the same fleet from the [[Coney Island Yard]], a small number of W trains originate or terminate at [[86th Street (BMT Sea Beach Line)|86th Street]] throughout the day.<ref>{{cite web|title=W Line Returns to Queens|url=http://www.mta.info/press-release/nyc-transit/w-line-returns-queens|website=mta.info|access-date=November 12, 2016|archive-date=November 13, 2016|archive-url=https://web.archive.org/web/20161113035802/http://www.mta.info/press-release/nyc-transit/w-line-returns-queens|url-status=dead}}</ref><ref name="Spivack 2017">{{cite web | last=Spivack | first=Caroline | title=W-w-what!? W trains mysteriously appearing in Brooklyn | website=Brooklyn Paper | date=January 10, 2017 | url=https://www.brooklynpaper.com/w-w-what-w-trains-mysteriously-appearing-in-brooklyn/ | access-date=June 1, 2023}}</ref> These trains operate via the  [[Montague Street Tunnel]] and local along the [[BMT Fourth Avenue Line]] and [[BMT Sea Beach Line]] as they did prior to 2010.<!--<ref>See:
+* Northbound: {{cite web|url=http://tripplanner.mta.info/MyTrip/ui_web/serviceinthearea/Timetable.aspx?operator=SUB&route=W&inputDate=11/07/16&direction=N&type=W |title=W Train (northbound) |publisher=Metropolitan Transportation Authority |date=July 11, 2016 |access-date=October 29, 2016}}
+* Southbound: {{cite web|url=http://tripplanner.mta.info/MyTrip/ui_web/serviceinthearea/Timetable.aspx?operator=SUB&route=W&inputDate=11/07/16&direction=S&type=W |title=W Train (southbound) |publisher=Metropolitan Transportation Authority |date=July 11, 2016 |access-date=October 29, 2016}}</ref><ref name="NYCTA 2016" />-->
+
+In July 2019, the MTA introduced a proposal to end late evening service.<ref name="MTA 2019">{{Cite web|url=http://web.mta.info/mta/news/books/pdf/190722_1000_Transit.pdf|title=July 2019 NYC Transit/MTA Bus Committee Meeting|date=July 22, 2019|website=mta.info|page=207|access-date=July 24, 2019|archive-date=July 19, 2019|archive-url=https://web.archive.org/web/20190719181430/http://web.mta.info/mta/news/books/pdf/190722_1000_Transit.pdf|url-status=dead}}</ref> Instead, W service would once again end at around 9:30 PM.<ref>{{Cite web|url=http://www.mta.info/press-release/nyc-transit/service-adjustments-bmw-lines|title=MTA {{!}} Press Release {{!}} NYC Transit {{!}} Service Adjustments on BMW Lines|date=July 24, 2008|website=www.mta.info|access-date=July 25, 2019|archive-date=December 22, 2015|archive-url=https://web.archive.org/web/20151222200140/http://www.mta.info/press-release/nyc-transit/service-adjustments-bmw-lines|url-status=dead}}</ref> In their proposal, the MTA noted that service often ended early on weeknights to accommodate planned work.<ref name="MTA 2019" />
+
+In March 2020, the W was temporarily suspended due to lack of ridership and train crew availability caused by the [[COVID-19 pandemic]],<ref>{{cite web | last=Guse | first=Clayton | title=Coronavirus forces MTA to implement big cuts to NYC's mass transit | website=New York Daily News | date=March 24, 2020 | url=https://www.nydailynews.com/coronavirus/ny-coronavirus-mta-cuts-subway-service-20200324-ogyy754bangpdgwrft6pjh3vsy-story.html | access-date=June 9, 2020}}</ref><ref>{{Cite news|last=Martinez|first=Jose|url=https://thecity.nyc/2020/04/nyc-subways-slowly-get-on-track-as-transit-workers-return.html|title=Subway Service Slowly Gets Back On Track As Transit Workers Return|date=April 28, 2020|work=The City|access-date=April 29, 2020|archive-date=April 29, 2020|archive-url=https://web.archive.org/web/20200429162415/https://thecity.nyc/2020/04/nyc-subways-slowly-get-on-track-as-transit-workers-return.html|url-status=dead}}</ref> though full service was restored in June.<ref>{{cite web|last=Bascome|first=Erik|date=June 2, 2020|title=Full Service on MTA Buses, Subways Set to Return by June 8|url=https://www.silive.com/coronavirus/2020/06/full-service-on-mta-buses-subways-set-to-return-by-june-8.html|access-date=June 8, 2020|website=silive}}</ref><ref>{{cite web|last=Siff|first=Andrew|date=June 5, 2020|title=MTA Resumes Regular Weekday Service; Overnight 4-Hour Closure Stays|url=https://www.nbcnewyork.com/news/local/mta-to-resume-regular-weekday-service-when-nyc-enters-phase-1-overnight-4-hour-closure-will-stay/2449009/|access-date=June 8, 2020|website=NBC New York}}</ref> On December 29, 2021, W service was again suspended due to a shortage of crew members exacerbated by the COVID-19 pandemic;<ref name="Pozarycki 2021">{{cite web | last=Pozarycki | first=Robert | title=W train suspended as MTA grapples with worker shortages related to COVID-19 spike | website=amNewYork | date=December 29, 2021 | url=https://www.amny.com/news/w-train-suspended-mta-covid-19-worker-shortages/ | access-date=December 30, 2021}}</ref> service was again restored on January 24, 2022.<ref>{{cite web | title=MTA Restoring W Train Service on Monday, Bringing All Lines Back From COVID Shutdowns | website=NBC New York | date=January 23, 2022 | url=https://www.nbcnewyork.com/news/local/mta-restoring-w-train-service-on-monday-bringing-all-lines-back-from-covid-shutdowns/3510029/ | access-date=January 24, 2022}}</ref><ref>{{cite web | last=Duggan | first=Kevin | title=W trains are back for the first time in 2022 starting Monday | website=amNewYork | date=January 23, 2022 | url=https://www.amny.com/transit/w-trains-are-back-starting-monday/ | access-date=January 24, 2022}}</ref>
+
+On July 7, 2025, two southbound AM rush hour W trips that previously terminated at [[86th Street (BMT Sea Beach Line)|86th Street]] were rerouted after [[36th Street (BMT Fourth Avenue Line)|36th Street]] to terminate at [[Bay Parkway (BMT West End Line)|Bay Parkway]] on the West End Line.<ref>{{Cite web| title=W Subway Timetable - New York City Transit |publisher=[[Metropolitan Transportation Authority]] | url=https://www.mta.info/document/9526 | archive-url=https://web.archive.org/web/20250706002135/https://www.mta.info/document/9526 |access-date=July 7, 2025 | archive-date=2025-07-06 |url-status=deviated<!--to suppress live link, since we specifically want the July 7, 2025, version of this ref-->}}</ref> This change was implemented to avoid delays in N service due to merging conflicts, and was briefly tested for evaluation in February 2025. These trips make express stops along the West End Line, stopping at Ninth Avenue and 62nd Street.<ref>{{cite journal |title=BMT Sea Beach Line Service Improvement Pilot |journal=ERA Bulletin |url=https://erausa.org/pdf/bulletin/2020s/2025/2025-03-bulletin.pdf |date=March 2025 |publisher=Electric Railroaders' Association |volume=68 |number=3 |pages=5 |access-date=March 30, 2025}}</ref>
+
+== Route ==
+===Signage history===
+<gallery>
+File:NYCS-bull-trans-Wd.svg|Proposed 1988 bullet for a Broadway Express train (After the Q was moved to Sixth Avenue)
+File:NYCS-bull-trans-W.svg|The current bullet used since 2016 (Also between 2001-2010)
+</gallery>
+
+=== Service pattern ===
+The following table shows the lines used by the W, with shaded boxes indicating the route at the specified times:<ref>{{NYCS const|serviceguide}}</ref>
+{| class="wikitable collapsible" style="width:auto; font-size:95%"
+|-
+! rowspan=2 | Line
+! rowspan=2 | From
+! rowspan=2 | To
+! rowspan=2 | Tracks
+! colspan=2 | Times
+|-
+! width=40 | Week&shy;days
+! width=40 | Rush hours
+|-
+| [[BMT Astoria Line]] (full line)
+| rowspan=1 | [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Blvd]]
+| rowspan=1 | [[Queensboro Plaza (BMT Astoria Line)|Queensboro Plaza]]
+| rowspan=1| local
+| rowspan=4 style="background:gray"| 
+| rowspan=4 style="background:gray"| 
+|-
+| colspan=3 align=center | [[60th Street Tunnel]]
+|all
+|-
+| rowspan=2 | [[BMT Broadway Line]] (full line)
+| [[Lexington Avenue/59th Street (BMT Broadway Line)|Lexington Avenue/59th Street]]
+| [[Canal Street (BMT Broadway Line)|Canal Street]]
+| local
+|-
+| [[City Hall (BMT Broadway Line)|City Hall]]
+| [[Whitehall Street–South Ferry (BMT Broadway Line)|Whitehall Street–South Ferry]]
+| all
+|-
+| colspan=3 align=center | [[Montague Street Tunnel]]
+| all
+| rowspan=5 | 
+| rowspan=4 style="background:yellow" | Limited service
+|-
+| rowspan=2 | [[BMT Fourth Avenue Line]]
+| [[Court Street (BMT Fourth Avenue Line)|Court Street]]
+| [[Jay Street–MetroTech (BMT Fourth Avenue Line)|Jay Street–MetroTech]]
+| all
+|-
+| [[DeKalb Avenue (BMT Fourth Avenue Line)|DeKalb Avenue]]
+| [[59th Street (BMT Fourth Avenue Line)|59th Street/Fourth Avenue]]
+| rowspan=2 | local
+|-
+| [[BMT Sea Beach Line]]
+| rowspan=1 | [[Eighth Avenue (BMT Sea Beach Line)|Eighth Avenue]]
+| rowspan=1 | [[86th Street (BMT Sea Beach Line)|86th Street]]
+|-
+| [[BMT West End Line]]
+| [[Ninth Avenue (BMT West End Line)|Ninth Avenue]]
+| [[Bay Parkway (BMT West End Line)|Bay Parkway]]
+| express
+| rowspan=1 style="background:yellow" | Limited southbound service
+|}
+
+=== Stations ===
+[[File:Linea W metropolitana di New York.png|thumb|right|To scale line map]]
+For a more detailed station listing, see the articles on the lines listed above.<ref name="timetable"/>
+{{NYCS service legend
+| alltimes = show
+| allexceptnights = show
+| nightsonly =
+| nightsweekends =
+| weekdaysonly = show
+| allexceptrush = 
+| allexceptweekdays =
+| dailyexceptrush =
+| rushonly =
+| rushpeak = show
+| closed = show
+| custom_icon_1 = rushonly
+| custom_text_1 = Stops rush hours only (limited service not noted on map)
+| custom_icon_2 =
+| custom_text_2 =
+}}
+{| class="wikitable collapsible" style="font-size:90%" summary="Service information for the W train and its stations, including service times, ADA-accessibility, subway transfers, and non-subway connections."
+! style="width:3%;" | [[File:NYCS-bull-trans-W-Std.svg|20px|W service]]<br/>{{abbr|BP|Bay Parkway service}}
+![[File:NYCS-bull-trans-W-Std.svg|20px|W service]]<br/>{{abbr|86th|86th Street–Gravesend service}}
+! style="width:28%;" | Stations
+! style="width:3%;" | {{Access icon}}
+! style="width:36%;" | Subway transfers
+! style="width:30%;" | Connections and notes
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[Queens]]
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[BMT Astoria Line|Astoria Line]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Astoria–Ditmars Boulevard}}
+|
+| {{NYCS Astoria|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Astoria Boulevard}}
+| align="center" | {{Access icon}}
+| {{NYCS Astoria|time=show|exclude=W}}
+| [[M60 SBS (New York City bus)|M60 Select Bus Service]] to [[LaGuardia Airport]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|30th Avenue}}
+|
+| {{NYCS Astoria local|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Broadway|Astoria}}
+|
+| {{NYCS Astoria local|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|36th Avenue}}
+|
+| {{NYCS Astoria local|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|39th Avenue}}
+|
+| {{NYCS Astoria local|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Queensboro Plaza}}
+| align=center | {{Access icon}}
+| {{NYCS Astoria|time=show|exclude=W}}<br />{{NYCS Flushing|time=show}} ([[IRT Flushing Line]])
+|
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[Manhattan]]
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[BMT Broadway Line|Broadway Line]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Lexington Avenue–59th Street}}
+|
+| {{NYCS Broadway 60th|time=show|exclude=W}}<br />{{NYCS Lexington|time=show}} ([[IRT Lexington Avenue Line]] at {{stl|NYCS|59th Street|Lexington}})<br />Out-of-system transfer with [[MetroCard]]/[[OMNY]]:<br />{{NYCS 63rd Lexington|time=show}} ([[63rd Street Lines]] at {{stl|NYCS|Lexington Avenue–63rd Street}})
+| [[Roosevelt Island Tramway]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Fifth Avenue–59th Street}}
+|
+| {{NYCS Broadway 60th|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|57th Street–Seventh Avenue}}
+| align=center | {{Access icon}}
+| {{NYCS Broadway north|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|49th Street}}
+| align="center" | {{Access icon}}&nbsp;↑
+| {{NYCS Broadway 60th|time=show|exclude=W}}
+| Station is [[Americans with Disabilities Act of 1990|accessible]] in the northbound direction only.
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Times Square–42nd Street|Broadway}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=W}}<br />{{NYCS Broadway-Seventh|time=show}} ([[IRT Broadway–Seventh Avenue Line]])<br />{{NYCS Flushing|time=show}} ([[IRT Flushing Line]])<br />{{NYCS Eighth south|time=show}} ([[IND Eighth Avenue Line]] at {{stl|NYCS|42nd Street–Port Authority Bus Terminal}})<br />{{NYCS 42nd|time=show}} ([[42nd Street Shuttle]])<br />{{NYCS Sixth|time=show}} ([[IND Sixth Avenue Line]] at {{stl|NYCS|42nd Street–Bryant Park}}, daytime only)
+| [[Port Authority Bus Terminal]]<br />[[M34 and M34A buses|M34A Select Bus Service]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|34th Street–Herald Square|Broadway}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=W}}<br />{{NYCS Sixth|time=show}} ([[IND Sixth Avenue Line]])
+| [[M34 and M34A buses|M34 / M34A Select Bus Service]]<br />[[Port Authority Trans-Hudson|PATH]] at {{stl|PATH|33rd Street}}<br />[[Amtrak]], [[Long Island Rail Road|LIRR]], [[New Jersey Transit|NJ Transit]] at [[Pennsylvania Station (New York City)|Pennsylvania Station]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|28th Street|Broadway}}
+|
+| {{NYCS Broadway center local weekday|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|23rd Street|Broadway}}
+|
+| {{NYCS Broadway center local weekday|time=show|exclude=W}}
+| [[M23 SBS (New York City bus)|M23 Select Bus Service]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|14th Street–Union Square|Broadway}}
+| align="center" | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=W}}<br />{{NYCS Canarsie|time=1}} ([[BMT Canarsie Line]])<br />{{NYCS Lexington|time=1}} ([[IRT Lexington Avenue Line]])
+| [[M14 (New York City bus)|M14A / M14D Select Bus Service]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Eighth Street–New York University}}
+|
+| {{NYCS Broadway center local weekday|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Prince Street}}
+|
+| {{NYCS Broadway center local weekday|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Canal Street|Broadway main}}
+| align=center | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+| {{NYCS Broadway|time=show|exclude=W}}<br />{{NYCS Lexington local|time=1|exclude=4}} ([[IRT Lexington Avenue Line]])<br />{{NYCS Nassau north|time=show}} ([[BMT Nassau Street Line]])
+| Some northbound rush hour trips begin at this station.
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|City Hall|Broadway}}
+|
+| {{NYCS Broadway south day|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Cortlandt Street}}
+| align=center | {{Access icon}}
+| {{NYCS Broadway south day|time=show|exclude=W}}<br />{{NYCS Broadway-Seventh Brooklyn|time=show}} ([[IRT Broadway–Seventh Avenue Line]] at {{stl|NYCS|Park Place|Broadway-Seventh}})<br />{{NYCS Eighth far south express|time=show}} ([[IND Eighth Avenue Line]] at {{stl|NYCS|Chambers Street|Eighth}})<br />{{NYCS Eighth far south local|time=show}} (IND Eighth Avenue Line at {{stl|NYCS|World Trade Center}})
+| [[Port Authority Trans-Hudson|PATH]] at {{stl|PATH|World Trade Center}}
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Rector Street|Broadway}}
+|
+| {{NYCS Broadway south day|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|weekdaysonly}}
+| {{stl|NYCS|Whitehall Street–South Ferry}}
+| align=center | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+| {{NYCS Fourth Montague day|time=show|exclude=W}}<br />{{NYCS Broadway-Seventh South Ferry weekday|time=show}} ([[IRT Broadway–Seventh Avenue Line]] at {{stl|NYCS|South Ferry|Broadway-Seventh}})
+| [[M15 SBS (New York City bus)|M15 Select Bus Service]]<br />[[Staten Island Ferry]] at [[Staten Island Ferry Whitehall Terminal|Whitehall Terminal]]
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[Brooklyn]]
+|-
+| colspan="6" align="center" | '''[[BMT Fourth Avenue Line|Montague Street branch]]''' (Limited rush hour service)
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Court Street|Fourth}}
+| align=center | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+| {{NYCS Fourth Montague day|time=show|exclude=W}}<br />{{NYCS Broadway-Seventh Brooklyn|time=show}} ([[IRT Broadway–Seventh Avenue Line]] at {{stl|NYCS|Borough Hall|Broadway-Seventh}})<br />{{NYCS Joralemon|time=show}} ([[IRT Eastern Parkway Line]] at {{stl|NYCS|Borough Hall|Eastern}})
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Jay Street–MetroTech|Fourth}}
+| align=center | {{Access icon}}
+| {{NYCS Fourth Montague day|time=show|exclude=W}}<br />{{NYCS Eighth Cranberry|time=show}} {{NYCS Sixth Rutgers|time=show}} (IND [[IND Fulton Street Line|Fulton Street]] and [[IND Culver Line|Culver]] Lines)
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|DeKalb Avenue|Fourth}}
+| align=center | {{Access icon}}
+| {{NYCS DeKalb day|time=show|exclude=W}}
+|
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[BMT Fourth Avenue Line|Fourth Avenue Line]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Atlantic Avenue–Barclays Center|Fourth}}
+| align=center | {{Access icon}}
+| {{NYCS Fourth center Pacific|time=show|exclude=W}}<br />{{NYCS Brighton|time=show}} ([[BMT Brighton Line]])<br />{{NYCS Eastern west|time=show}} ([[IRT Eastern Parkway Line]])
+| [[Long Island Rail Road|LIRR]] [[Atlantic Branch]] at [[Atlantic Terminal]]
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Union Street}}
+|
+| {{NYCS Fourth center local day|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Ninth Street}}
+|
+| {{NYCS Fourth center local day|time=show|exclude=W}}<br />{{NYCS Culver IND north local|time=show}} ([[IND Culver Line]] at {{stl|NYCS|Fourth Avenue}})
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Prospect Avenue|Fourth}}
+|
+| {{NYCS Fourth center local day|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|25th Street}}
+|
+| {{NYCS Fourth center local day|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" | {{NYCS SSI|limitedrushpeak}} ↓
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|36th Street|Fourth}}
+|
+| {{NYCS Fourth 36th|time=show|exclude=W}}
+|
+|-
+| colspan="6" align="center" |'''[[BMT West End Line|West End Line]]''' (two southbound morning trains)
+|-
+| align="center" style="text-align: center;" |{{NYCS SSI|limitedrushpeak}} ↓
+| rowspan=3 {{N/A}}
+| {{stl|NYCS|Ninth Avenue}}
+| 
+| {{NYCS West End|time=show|exclude=W}}
+|
+|-
+| align="center" style="text-align: center;" |{{NYCS SSI|limitedrushpeak}} ↓
+|{{stl|NYCS|62nd Street}}
+|align=center|{{Access icon}}
+|{{NYCS West End|time=show|exclude=W}}<br/>{{NYCS Sea Beach local|time=show}} ([[BMT Sea Beach Line]] at {{stl|NYCS|New Utrecht Avenue}})
+|
+|-
+| align="center" style="text-align: center;" |{{NYCS SSI|limitedrushpeak}} ↓
+|{{stl|NYCS|Bay Parkway|West End}}
+|align=center|{{Access icon}}
+|{{NYCS West End|time=show|exclude=W}}
+|[[B82 (New York City bus)|B82 Select Bus Service]]
+|-
+| colspan="6" align="center" |[[BMT Fourth Avenue Line|'''Fourth Avenue Line''']]
+|-
+| align="center" rowspan=3 {{N/A}}
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|45th Street}}
+|
+| {{NYCS Fourth south local day|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|53rd Street}}
+|
+| {{NYCS Fourth south local day|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|59th Street|Fourth}}
+| align="center" | {{Access icon}}
+| {{NYCS Fourth south|time=show|exclude=W}}
+|
+|-
+| colspan="6" style="font-weight:bold; text-align:center" | [[BMT Sea Beach Line|Sea Beach Line]]
+|-
+| align="center" rowspan=9 {{N/A}}
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Eighth Avenue|Sea Beach}}
+| align="center" | {{Access icon}}
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Fort Hamilton Parkway|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|New Utrecht Avenue}}
+| align="center" | {{Access icon}}
+| {{NYCS Sea Beach|time=show|exclude=W}}<br />{{NYCS West End north|time=show}} ([[BMT West End Line]] at {{stl|NYCS|62nd Street}})
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|18th Avenue|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|20th Avenue|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Bay Parkway|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Kings Highway|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+| [[B82 (New York City bus)|B82 Select Bus Service]]
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|Avenue U|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|-
+| align="center" |{{NYCS SSI|limitedrush}}
+| {{stl|NYCS|86th Street|Sea Beach}}
+|
+| {{NYCS Sea Beach|time=show|exclude=W}}
+|
+|}
+
+==Notes==
+{{notelist}}
+
+== References ==
+{{Reflist|30em}}
+
+== External links ==
+{{commons category|W (New York City Subway service)}}
+* {{cite web|title=MTA NYC Transit – W Broadway Local|url=http://web.mta.info/nyct/service/wline.htm}}
+* {{NYCS const|traintime|W}}
+* {{NYCS const|timetable|W}}
+
+{{NYCS navbox}}
+
+[[Category:New York City Subway services]]
+[[Category:Railway services introduced in 2001]]

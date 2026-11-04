@@ -1,0 +1,213 @@
+{
+ "attachments": [
+  {
+   "assetId": "360eaaac-45b1-4590-b233-09e634624cec",
+   "filename": "MTA_SubwayStationsAndComplexes_Overview.pdf",
+   "name": "MTA_SubwayStationsAndComplexes_Overview.pdf"
+  },
+  {
+   "assetId": "2c0d67fb-74f8-463c-88c1-160cd01b145d",
+   "filename": "MTA_SubwayStationsAndComplexes_DataDictionary.pdf",
+   "name": "MTA_SubwayStationsAndComplexes_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "The Complex ID, or its Complex Master Reference Number.",
+   "field": "complex_id",
+   "name": "Complex ID",
+   "type": "number"
+  },
+  {
+   "description": "TRUE if this is a station complex, and FALSE if not.",
+   "field": "is_complex",
+   "name": "Is Complex",
+   "type": "text"
+  },
+  {
+   "description": "The number of stations within a station complex or 1 if the station is not a station complex.",
+   "field": "number_of_stations_in_complex",
+   "name": "Number Of Stations In Complex",
+   "type": "text"
+  },
+  {
+   "description": "The name of the subway station.",
+   "field": "stop_name",
+   "name": "Stop Name",
+   "type": "text"
+  },
+  {
+   "description": "The name of the subway station, with the services that serve the station during weekday daytime hours in parenthesis.",
+   "field": "display_name",
+   "name": "Display Name",
+   "type": "text"
+  },
+  {
+   "description": "The name of the subway station or of multiple subway stations within one station complex, separated by a semi-colon. For stations that are not in complexes, this is identical to the stop name.",
+   "field": "constituent_station_names",
+   "name": "Constituent Station Names",
+   "type": "text"
+  },
+  {
+   "description": "The ID, or Master Reference Number, for the station. If it is a station complex, multiple IDs are shown, separated by a semi-colon.",
+   "field": "station_ids",
+   "name": "Station IDs",
+   "type": "text"
+  },
+  {
+   "description": "The GTFS Stop ID or IDs for the station. If it is a station complex, multiple IDs are shown, separated by a semi-colon. ",
+   "field": "gtfs_stop_ids",
+   "name": "GTFS Stop IDs",
+   "type": "text"
+  },
+  {
+   "description": "The borough the station is in. Bx for Bronx, B for Brooklyn, M for Manhattan, Q for Queens, SI for Staten Island. ",
+   "field": "borough",
+   "name": "Borough",
+   "type": "text"
+  },
+  {
+   "description": "This indicates whether or not a station is in Manhattan\u2019s Central Business District (CBD). This value is either TRUE or FALSE.",
+   "field": "cbd",
+   "name": "CBD",
+   "type": "text"
+  },
+  {
+   "description": "The subway routes that serve the station during weekdays.",
+   "field": "daytime_routes",
+   "name": "Daytime Routes",
+   "type": "text"
+  },
+  {
+   "description": "The type of structure the subway station is located on or in (At Grade, Elevated, Embankment, Open Cut, Subway, Viaduct, etc.). If it is a station complex, and the component stations have different structure types, both are noted, separated by a semi-colon.",
+   "field": "structure_type",
+   "name": "Structure Type",
+   "type": "text"
+  },
+  {
+   "description": "The latitude for the centroid of the station complex.",
+   "field": "latitude",
+   "name": "Latitude",
+   "type": "number"
+  },
+  {
+   "description": "The longitude for the centroid of the station complex.",
+   "field": "longitude",
+   "name": "Longitude",
+   "type": "number"
+  },
+  {
+   "description": "0 if the station is not ADA-accessible, 1 if the station is fully accessible, 2 if the station is partially accessible.",
+   "field": "ada",
+   "name": "ADA",
+   "type": "text"
+  },
+  {
+   "description": "Notes on the direction a station is accessible in if it is only accessible in one direction or for a particular platform.",
+   "field": "ada_notes",
+   "name": "ADA Notes",
+   "type": "text"
+  }
+ ],
+ "distinct": {},
+ "id": "5f5g-n3cz",
+ "rows": [
+  {
+   "n": "445"
+  }
+ ],
+ "rows_updated_at": 1793682846,
+ "sample": [
+  {
+   "ada": "0",
+   "ada_notes": "NaN",
+   "borough": "M",
+   "cbd": "false",
+   "complex_id": "398",
+   "constituent_station_names": "77 St",
+   "daytime_routes": "6",
+   "display_name": "77 St (6)",
+   "gtfs_stop_ids": "627",
+   "is_complex": "false",
+   "latitude": "40.77362",
+   "longitude": "-73.959874",
+   "number_of_stations_in_complex": "1",
+   "station_ids": "398",
+   "stop_name": "77 St",
+   "structure_type": "Subway"
+  },
+  {
+   "ada": "1",
+   "ada_notes": "NaN",
+   "borough": "M",
+   "cbd": "false",
+   "complex_id": "399",
+   "constituent_station_names": "68 St-Hunter College",
+   "daytime_routes": "6",
+   "display_name": "68 St-Hunter College (6)",
+   "gtfs_stop_ids": "628",
+   "is_complex": "false",
+   "latitude": "40.768141",
+   "longitude": "-73.96387",
+   "number_of_stations_in_complex": "1",
+   "station_ids": "399",
+   "stop_name": "68 St-Hunter College",
+   "structure_type": "Subway"
+  },
+  {
+   "ada": "0",
+   "ada_notes": "NaN",
+   "borough": "M",
+   "cbd": "true",
+   "complex_id": "403",
+   "constituent_station_names": "33 St",
+   "daytime_routes": "6",
+   "display_name": "33 St (6)",
+   "gtfs_stop_ids": "632",
+   "is_complex": "false",
+   "latitude": "40.746081",
+   "longitude": "-73.982076",
+   "number_of_stations_in_complex": "1",
+   "station_ids": "403",
+   "stop_name": "33 St",
+   "structure_type": "Subway"
+  },
+  {
+   "ada": "2",
+   "ada_notes": "Downtown only",
+   "borough": "M",
+   "cbd": "true",
+   "complex_id": "404",
+   "constituent_station_names": "28 St",
+   "daytime_routes": "6",
+   "display_name": "28 St (6)",
+   "gtfs_stop_ids": "633",
+   "is_complex": "false",
+   "latitude": "40.74307",
+   "longitude": "-73.984264",
+   "number_of_stations_in_complex": "1",
+   "station_ids": "404",
+   "stop_name": "28 St",
+   "structure_type": "Subway"
+  },
+  {
+   "ada": "1",
+   "ada_notes": "NaN",
+   "borough": "M",
+   "cbd": "true",
+   "complex_id": "405",
+   "constituent_station_names": "23 St-Baruch College",
+   "daytime_routes": "6",
+   "display_name": "23 St-Baruch College (6)",
+   "gtfs_stop_ids": "634",
+   "is_complex": "false",
+   "latitude": "40.739864",
+   "longitude": "-73.986599",
+   "number_of_stations_in_complex": "1",
+   "station_ids": "405",
+   "stop_name": "23 St-Baruch College",
+   "structure_type": "Subway"
+  }
+ ],
+ "title": "MTA Subway Stations and Complexes"
+}

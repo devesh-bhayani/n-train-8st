@@ -1,0 +1,87 @@
+{{Short description|New York City Subway station in Manhattan}}
+{{other uses|28th Street (disambiguation){{!}}28th Street}}
+{{Use American English|date=September 2025}}
+{{Use mdy dates|date=July 2021}}
+{{Infobox NYCS
+| name = 28 Street
+| image = BMT Broadway 28th Street.jpg
+| image_caption =Southbound platform
+| borough = [[Manhattan]]
+| address = West 28th Street &amp; Broadway<br/>New York, New York
+| locale = [[Midtown Manhattan]], [[NoMad, Manhattan|NoMad]]
+| coordinates = {{coord|40.745241|N|73.988757|W|display=inline,title}}
+| division = BMT
+| line = [[BMT Broadway Line]]
+| service = Broadway local
+| service_header = Broadway center local header
+| platforms = 2 [[side platform]]s
+| tracks = 4
+| structure = Underground
+| other = {{bus icon}} [[MTA Bus]]: {{NYC bus link|BxM3|BxM4|BxM11|BxM18}}
+| opened = {{start date and age|1918|01|5|p=y}}<ref name=42nd/>
+| services = {{Adjacent stations|system=New York City Subway
+|line=Broadway local|left=34th Street–Herald Square|right=23rd Street|note-left={{NYCS Broadway local|time=1}}|note-right={{NYCS Broadway local|time=1}}}}
+| footnotes = {{NYCS infobox legend|allexceptnights}}{{NYCS infobox legend|weekdaysonly}}{{NYCS infobox legend|nightsweekends}}{{NYCS infobox legend|nightsonly}}
+| route_map = {{NYCS 4-tracked local station|inline=y
+|1=34th Street–Herald Square
+|l1=34th St–Herald Square
+|2=23rd Street
+|code=BMT Broadway Line
+|deg=345
+}}
+}}
+
+The '''28th Street station''' is a local [[metro station|station]] on the [[BMT Broadway Line]] of the [[New York City Subway]], located at 28th Street and [[Broadway (Manhattan)|Broadway]] in [[Manhattan]]. It is served by the [[R (New York City Subway service)|R]] train at all times except late nights, the [[W (New York City Subway service)|W]] train on weekdays, the [[N (New York City Subway service)|N]] train during late nights and weekends and the [[Q (New York City Subway service)|Q]] train during late nights.
+
+== History ==
+===Construction and opening===
+{{stack|float=right|[[File:BMT Broadway 28th Street Mosaic Name Tablet.jpg|thumb|175px|Original mosaic name tablet]]
+[[File:28th Street Broadway Line name tablet 2018 01.jpg|thumb|175px|Later-installed name tablet]]}}
+The [[New York Public Service Commission]] adopted plans for what was known as the Broadway–Lexington Avenue route on December 31, 1907. This route began at [[Battery Park|the Battery]] and ran under [[Greenwich Street]], Vesey Street, Broadway to [[Ninth Street (Manhattan)|Ninth Street]], private property to [[Irving Place]], and Irving Place and [[Lexington Avenue]] to the [[Harlem River]]. After crossing under the Harlem River into [[the Bronx]], the route split at Park Avenue and 138th Street, with one branch continuing north to and along [[Jerome Avenue]] to [[Woodlawn Cemetery, Bronx|Woodlawn Cemetery]], and the other heading east and northeast along 138th Street, [[Southern Boulevard (Bronx)|Southern Boulevard]], and [[Westchester Avenue]] to [[Pelham Bay Park]]. In early 1908, the Tri-borough plan was formed, combining this route, the under-construction [[Centre Street Loop Subway]] in Manhattan and [[Fourth Avenue Subway]] in Brooklyn, a [[Canal Street subway]] from the Fourth Avenue Subway via the Manhattan Bridge to the [[Hudson River]], and several other lines in Brooklyn.<ref>James Blaine Walker, [https://books.google.com/books?id=lpEgAAAAMAAJ Fifty Years of Rapid Transit, 1864–1917], published 1918, pp. 207-223</ref><ref>[[Engineering News-Record|Engineering News]], [https://www.nycsubway.org/articles/triboro.html A New Subway Line for New York City], Volume 63, No. 10, March 10, 1910</ref>
+
+The Brooklyn Rapid Transit Company submitted a proposal to the commission, dated March 2, 1911, to operate the Tri-borough system (but under Church Street instead of Greenwich Street), as well as a branch along Broadway, Seventh Avenue, and 59th Street from Ninth Street north and east to the [[Queensboro Bridge]]; the Canal Street subway was to merge with the Broadway Line instead of continuing to the Hudson River. The city, the BRT, and the [[Interborough Rapid Transit Company]] (which operated the first [[early history of the IRT subway|subway]] and four [[Manhattan Railway Company|elevated]] lines in Manhattan) came to an agreement, and sent a report to the [[New York City Board of Estimate]] on June 5, 1911. The line along Broadway to 59th Street was assigned to the BRT, while the IRT obtained the [[IRT Lexington Avenue Line|Lexington Avenue line]], connecting with its existing route at [[Grand Central–42nd Street (New York City Subway)|Grand Central–42nd Street]]. Construction began on Lexington Avenue on July 31, and on Broadway the next year. The [[Dual Contracts]], two operating contracts between the city and the BMT and IRT, were adopted on March 4, 1913.<ref>James Blaine Walker, [https://books.google.com/books?id=lpEgAAAAMAAJ Fifty Years of Rapid Transit, 1864–1917], published 1918, pp. 224-241</ref>
+
+A short portion of the line, coming off the north side of the Manhattan Bridge through Canal Street to [[14th Street–Union Square (New York City Subway)|14th Street–Union Square]], opened on September 4, 1917, at 2 P.M., with an eight car train carrying members of the Public Service Commission, representatives of the city government and officials of the BRT, leaving Union Square toward Coney Island. Service opened to the general public at 8 P.M., with trains leaving Union Square and Coney Island simultaneously.<ref>{{cite news|url=https://www.newspapers.com/clip/2708189/the_brooklyn_daily_eagle/|title=Broadway Subway Opened To Coney By Special Train. Brooklynites Try New Manhattan Link From Canal St. to Union Square. Go Via Fourth Ave. Tube|newspaper=The Brooklyn Daily Eagle|date=September 4, 1917|access-date=May 31, 2019}}</ref> The line was served by two services. One route ran via the Fourth Avenue Line and the Sea Beach Line to Coney Island, while the other line, the short line, ran to Ninth Avenue, where passengers could transfer for West End and Culver Line service. The initial headway on the line was three minutes during rush hours, three minutes and forty-five seconds at other times, except during late nights when service ran every fifteen minutes.<ref name=":2">{{Cite news|url=https://www.nytimes.com/1917/09/05/archives/open-first-section-of-broadway-line-train-carrying-1000-passengers.html|title=Open First Section Of Broadway Line; Train Carrying 1,000 Passengers Runs from Fourteenth Street to Coney Island. Regular Service Begins. New Road Is Expected to Relieve Old System of 15,000 PersonsDaily in Rush Hours. Service Commissioners Jubliant. Schedule Not Fully Arranged.|date=September 5, 1917|newspaper=The New York Times|access-date=November 5, 2016|issn=0362-4331}}</ref>
+
+28th Street station opened on January 5, 1918, as the BMT Broadway Line was extended north from [[14th Street–Union Square (New York City Subway)|14th Street–Union Square]] to [[Times Square–42nd Street/Port Authority Bus Terminal (New York City Subway)|Times Square–42nd Street]] and south to [[Rector Street (BMT Broadway Line)|Rector Street]]. Service at this station was provided by local services running between Times Square and Rector Street.<ref name="42nd">{{Cite news|date=January 6, 1918|title=Open New Subway to Times Square|page=3|work=The New York Times|url=https://www.nytimes.com/1918/01/06/archives/open-new-subway-to-times-square-brooklyn-directly-connected-with.html|access-date=November 5, 2016}}</ref> Service was extended one station to [[Whitehall Street–South Ferry]] on September 20, 1918.<ref>{{Cite book|url=https://books.google.com/books?id=sXhCAQAAMAAJ|title=Report of the Public Service Commission for the First District of the State of New York For The Year Ending December 31, 1918 Vol. I|last=District|first=New York State Public Service Commission First|date= 1919|publisher=New York State Legislature|language=en}}</ref><ref name=":0">{{Cite book|url=https://books.google.com/books?id=AINOAQAAMAAJ&pg=PA130|title=Legislative Documents|date=1920|publisher=J.B. Lyon Company|language=en}}</ref> On August 1, 1920, the [[Montague Street Tunnel]] opened, extending local service from Lower Manhattan to [[DeKalb Avenue (BMT Fourth Avenue Line)|DeKalb Avenue]] in [[Downtown Brooklyn]] by traveling under the [[East River]].<ref>{{Cite news|date=August 2, 1920|title=New B.R.T. lines open|page=17|work=The New York Times|url=https://www.nytimes.com/1920/08/02/archives/new-brt-lines-open-broadwaybrighton-trains-on-holiday-schedule-have.html|access-date=November 5, 2016}}</ref><ref>{{Cite news|date=August 1, 1920|title=Broadway - Fifty-Ninth Street Extension of B.R.T. Subway, Opened to Queensboro Plaza, L.I. City|page=R-92|work=The New York Times|url=https://www.nytimes.com/1920/08/01/archives/broadwayfiftyninth-street-extension-of-brt-subway-opened-to.html|access-date=August 31, 2020}}</ref>
+
+===Later years===
+On August 6, 1927, bombs exploded at the 28th Street station and at the [[28th Street station (IRT Lexington Avenue Line)|28th Street]] station on the Lexington Avenue Line. Numerous passengers were injured, but there were no casualties,<ref>{{Cite web|title=Mayhem on the tracks|first=Cristian|last=Salazar|date=March 19, 2014|url=https://www.amny.com/news/nyc-subway-accidents-derailments-and-violence-1.7443264|access-date=April 23, 2021|website=Newsday|language=en|archive-date=October 6, 2019|archive-url=https://web.archive.org/web/20191006000058/https://www.amny.com/news/nyc-subway-accidents-derailments-and-violence-1.7443264|url-status=dead}}</ref> although investigators initially believed one person may have been killed.<ref>{{Cite news|date=August 6, 1927|title=Bombs in Mid-town Area; In B.M.T. at 28th Street and East Side I.R.T. at 28th|language=en-US|work=The New York Times|url=http://timesmachine.nytimes.com/timesmachine/1927/08/06/104286969.pdf|page=1|access-date=April 23, 2021|issn=0362-4331}}</ref> The perpetrator of the bombings is unknown; they were initially blamed on [[Galleanist]]s, as [[Sacco and Vanzetti]] had been denied appeal three days prior, though police later believed they were unrelated.<ref>{{cite book |title=[[The Legacy of Sacco and Vanzetti]] |first1=Louis |last1=Joughin |first2=Edmund M. |last2=Morgan |date=2015 |publisher=Princeton University Press |page=[https://books.google.com/books?id=-Gt9BgAAQBAJ&pg=PA273 273] |isbn=9781400868650 }}</ref><ref>{{cite journal |doi=10.5406/italamerrevi.10.1.0019 |title=The Forgotten Story of the Bombings of the Italian Church of Saints Peter and Paul in San Francisco|journal=Italian American Review |volume=10 |issue=1 |date=Winter 2020 |page=36 |first=Michael P. |last=Carroll|s2cid=216479654 }}</ref><ref>{{cite news |url=https://www.newspapers.com/clip/52272326/the-boston-globe/ |title=Probe of Bombings Turns to Boston |newspaper=Boston Globe |date=August 9, 1927 |page=8 |via=newspapers.com {{open access}}}}</ref>
+
+The city government took over the BMT's operations on June 1, 1940.<ref>{{Cite news|date=1940-06-02|title=B.M.T. Lines Pass to City Ownership; $175,000,000 Deal Completed at City Hall Ceremony-- Mayor 'Motorman No. 1'|language=en-US|work=The New York Times|url=https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|access-date=2022-05-14|issn=0362-4331|archive-url=https://web.archive.org/web/20210719094900/https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|archive-date=July 19, 2021|url-status=live}}</ref><ref name="p1243059209">{{cite news |date=June 2, 1940 |title=City Takes Over B. M. T. System; Mayor Skippers Midnight Train |page=1 |work=New York Herald Tribune |id={{ProQuest|1243059209}}}}</ref> The station was renovated in the 1970s to accommodate ten-car trains. As part of the renovation, the original wall tiles, old signs, and [[incandescent light]]ing were covered by modern-look wall tile band and tablet mosaics, and new signs and [[fluorescent lamp|fluorescent lights]] were installed. Staircases and platform edges were also renovated.
+
+This station was renovated in 2001 by [[New York City Transit Authority|New York City Transit]]. It sealed off and removed any evidence of a crossunder outside [[fare control]] while false curtain walls were installed at the north ends of each platform, shortening them by 10 to 15 feet (3 to 4.5 meters), though the Brooklyn-bound platform is longer than the Queens-bound one. Tiles from the previous renovation in the 1970s were removed, restoring the station's original trim line and name tablets.
+
+==Station layout==
+[[File:28 BMT sta jeh.jpg|thumb|Southbound street stair before the return of the W in 2016]]
+This underground station has four tracks and two [[side platform]]s. Both platforms are columnless and have their original [[Brooklyn Rapid Transit|BRT]]-style mosaics and station name tablets reading "28TH STREET" in serif font.
+
+The 2002 artwork at this station is ''City Dwellers (for Costas and Maro)'' by Mark Hadjipateras. It is composed of glass mosaics inspired by the Toy Center and the surrounding areas of the [[Garment District, Manhattan|Garment]] and Flower District.<ref>{{Cite web|title=28th Street - Mark Hadjipateras - City Dwellers (for Costas and Maro), 2002|url=http://web.mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=R&station=10&xdev=970|url-status=live|archive-url=https://web.archive.org/web/20200909105409/http://web.mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=R&station=10&xdev=970|archive-date=September 9, 2020|access-date=September 9, 2020|website=web.mta.info|publisher=Metropolitan Transportation Authority}}</ref>
+
+===Exits===
+Both platforms have one same-level [[fare control]] area at the center. Each one has a [[turnstile]] bank, token booth, and two street stairs. The ones on the northbound platform go up to either eastern corner of 28th Street and Broadway while the ones on the southbound platform go up to either western corner. There are no crossovers or crossunders to allow a free transfer between directions.<ref name=MTA-PennStation-2015>{{cite web|title=MTA Neighborhood Maps: Pennsylvania Station / Times Square|url=http://web.mta.info/maps/neighborhoods/mn/M08_PennStation_2015.pdf|website=[[Metropolitan Transportation Authority|mta.info]]|publisher=[[Metropolitan Transportation Authority]]|access-date=December 11, 2015|date=2015|archive-url=https://web.archive.org/web/20200914173833/http://web.mta.info/maps/neighborhoods/mn/M08_PennStation_2015.pdf|archive-date=September 14, 2020|url-status=dead}}</ref>
+
+There are closed exits from each platform to all corners of 29th Street and Broadway. The exits to the northern corners are currently used as emergency exits and are blocked by hatches on street level, while the exits to the southern corners were sealed on street level.
+
+== References ==
+{{Reflist}}
+
+== External links ==
+{{Commons category}}
+* {{NYCS ref|http://www.nycsubway.org/perl/stations?202:1767|BMT Broadway Subway|28th Street}}
+* Station Reporter — [https://web.archive.org/web/20120204051427/http://www.stationreporter.net/ntrain.htm N Train]
+* Station Reporter — [https://web.archive.org/web/20150113014240/http://www.stationreporter.net/rtrain.htm R Train]
+* MTA's Arts For Transit — [https://web.archive.org/web/20110606075631/http://mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=N&station=8&xdev=732 28th Street (BMT Broadway Line)]
+* [https://maps.google.com/?ie=UTF8&ll=40.745338,-73.988898&spn=0,0.013314&z=17&layer=c&cbll=40.745273,-73.988745&panoid=fL5acFjnV_4TM8aPYWrNUA&cbp=12,103.62,,0,6.67 28th Street entrance from Google Maps Street View]
+* [http://www.google.com/maps/@40.7457797,-73.9886586,3a,75y,203.58h,85.79t/data=!3m8!1e1!3m6!1s-WBySu8WcWgo%2FViLIQAAl9uI%2FAAAAAAAA61s%2Fpz5tc0RdS38!2e4!3e11!6s%2F%2Flh3.googleusercontent.com%2F-WBySu8WcWgo%2FViLIQAAl9uI%2FAAAAAAAA61s%2Fpz5tc0RdS38%2Fw203-h100-n-k-no%2F!7i8704!8i4352!6m1!1e1 Platforms from Google Maps Street View]
+
+{{NYCS stations navbox by service|ln=y|lr=y|lw=y}}
+{{NYCS stations navbox by line|broadway=yes}}
+{{Broadway (Manhattan)|state=collapsed}}
+
+{{DEFAULTSORT:28th Street (Bmt Broadway Line)}}
+[[Category:BMT Broadway Line stations]]
+[[Category:Broadway (Manhattan)]]
+[[Category:New York City Subway stations in Manhattan]]
+[[Category:Railway stations in the United States opened in 1918]]
+[[Category:1918 establishments in New York City]]

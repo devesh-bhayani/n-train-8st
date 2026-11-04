@@ -1,0 +1,98 @@
+{{Short description|New York City Subway station in Manhattan}}
+{{Use American English|date=September 2025}}
+{{Use mdy dates|date=June 2017}}
+{{Infobox NYCS
+| name = Prince Street
+| image = Prince Street Platform.JPG
+| image_caption = View of the Downtown platform
+| address = Prince Street &amp; Broadway<br />New York, New York
+| borough = [[Manhattan]]
+| locale = [[SoHo]]
+| coordinates = {{coord|40.724202|N|73.997812|W|display=inline,title}}
+| division = BMT
+| line = [[BMT Broadway Line]]
+| service = Broadway local
+| service_header = Broadway center local header
+| other = {{Bus icon}} [[NYCT Bus]]: {{NYC bus link|M1|M55|X27|X28|SIM1|SIM1C|SIM3C|SIM4C|SIM33C|SIM34}}
+| platforms = 2 [[side platform]]s
+| tracks = 4
+| structure = Underground
+| opened = {{start date and age|September 4, 1917}}<ref name=Canal>[[The New York Times]], ''[https://www.nytimes.com/1917/09/05/archives/open-first-section-of-broadway-line-train-carrying-1000-passengers.html Open First Section of Broadway Line]'', September 5, 1917</ref>
+| services = {{Adjacent stations|system=New York City Subway
+|line1=Broadway south|left1=Eighth Street–New York University|right1=Canal Street|note-left1={{NYCS Broadway local|time=1}}|note-right1={{NYCS Broadway south|time=1}}
+|line2=Broadway south via bridge|left2=Eighth Street–New York University|right2=Canal Street|note-left2={{NYCS Broadway local|time=1}}|note-right2={{NYCS Broadway Canal Bridge Line-Prince|time=1}}}}
+| footnotes = {{NYCS infobox legend|allexceptnights}}{{NYCS infobox legend|weekdaysonly}}{{NYCS infobox legend|weekendsonly}}{{NYCS infobox legend|nightsweekends}}{{NYCS infobox legend|nightsonly}}
+| route_map =
+{{Routemap|inline=y
+|legend=track
+|map=
+uvSTR!~MFADEg\uvSTR!~MFADEg ~~ ~~ ~~ to {{stl|NYCS|Eighth Street–New York University}}
+numN330\uvSTRf\uvSTRg\
+cPLT\ubvvvSTR\cPLT
+cPLT\ubvvvSTR\cPLT
+cPLT\ubvvvSTR\cPLT
+cPLT\ubvvvSTR\cPLT
+uvÜST\uvÜST
+uvSTRf\uvSTRg
+udSTR!~dMFADEf\uvSTR\udSTR!~dMFADEf ~~ ~~ ~~ to {{stl|NYCS|Canal Street|Broadway main}}
+uvSTR!~MFADEf ~~ ~~ ~~ to {{stl|NYCS|Canal Street|Broadway bridge}} and [[Manhattan Bridge]]
+}}
+}}
+
+The '''Prince Street station''' is a local station on the [[BMT Broadway Line]] of the [[New York City Subway]]. Located at [[Prince Street (Manhattan)|Prince Street]]  in [[SoHo, Manhattan]], it is served by the [[R (New York City Subway service)|R]] train at all times except late nights, the [[W (New York City Subway service)|W]] train on weekdays, the [[N (New York City Subway service)|N]] train during late nights and weekends, and the [[Q (New York City Subway service)|Q]] train during late nights.
+
+The station opened in 1917, had its platforms extended in the late 1960s, and was renovated in the late 1970s and in 2001.
+
+==History==
+Prince Street opened on September 4, 1917, as part of the first section of the [[BMT Broadway Line]] from [[Canal Street (BMT Broadway Line)|Canal Street]] to [[14th Street–Union Square (BMT Broadway Line)|14th Street–Union Square]].<ref name="Canal"/> The station's platforms originally could only fit six {{convert|67|ft|m|adj=mid|-long}} cars. In 1926, the [[New York City Board of Transportation]] received bids for the lengthening of platforms at nine stations on the Broadway Line, including the Prince Street station, to accommodate eight-car trains. Edwards & Flood submitted a low bid of $101,775 for the project.<ref name=nyt-1926-07-08>{{Cite news|date=1926-07-08|title=Bids for B.M.T. Stations; Platforms South of Fourteenth Street to Be Lengthened.|language=en-US|work=The New York Times|url=https://www.nytimes.com/1926/07/08/archives/bids-for-bmt-stations-platforms-south-of-fourteenth-street-to-be.html|access-date=2023-04-28|issn=0362-4331}}</ref> The platform-lengthening project was completed in 1927, bringing the length of the platforms to {{Convert|535|feet|meters|abbr=}}.<ref name="nyt-1927-08-02">{{Cite news |date=1927-08-02 |title=B.M.T. to Operate Eight-car Trains; Platforms in Forty Stations Are Lengthened, Increasing Capacity 33 1-3%. |language=en-US |work=The New York Times |url=https://www.nytimes.com/1927/08/02/archives/bmt-to-operate-eightcar-trains-platforms-in-forty-stations-are.html |access-date=2023-05-12 |issn=0362-4331}}</ref><ref name="p1113704092">{{cite news |date=2 Aug 1927 |title=B. M, T. Station Lengthening Is Nearly Finished: 76 Platforms Are Extended 3,186 Feet to Make Room for 126.000 Additional Passengers in Rush Hours City Carried Out Work I.R.T. Changes Planned, but That Company Refuses to Pay Its Share of Costs |page=32 |work=New-York Tribune |issn=1941-0646 |id={{ProQuest|1113704092}}}}</ref>
+
+The city government took over the BMT's operations on June 1, 1940.<ref>{{Cite news|date=1940-06-02|title=B.M.T. Lines Pass to City Ownership; $175,000,000 Deal Completed at City Hall Ceremony-- Mayor 'Motorman No. 1'|language=en-US|work=The New York Times|url=https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|access-date=2022-05-14|issn=0362-4331|archive-url=https://web.archive.org/web/20210719094900/https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|archive-date=July 19, 2021|url-status=live}}</ref><ref name="p1243059209">{{cite news |date=June 2, 1940 |title=City Takes Over B. M. T. System; Mayor Skippers Midnight Train |page=1 |work=New York Herald Tribune |id={{ProQuest|1243059209}}}}</ref> In the late 1960s, New York City Transit extended the platforms for 10 car trains, and fixed the station's structure and the overall appearance. The station was overhauled in the late 1970s.<ref name=erausa-2-1/> The original trim lines were replaced with white cinderblock tiles, except for small recesses in the walls, which contained yellow-painted cinderblock tiles. The staircases were repaired and new platform edges were installed. The yellow cinderblock field contained the station-name signs and black text pointing to the exits. The renovation also replaced [[incandescent lighting]] with [[fluorescent lighting]].
+
+In 2001, the station received a major overhaul. This project included restoration of the station's original tiling as well as upgrades such as platform widening.<ref name=erausa-2-1>{{cite magazine |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-02-bulletin.pdf |title=Tech Talk |first=Jeffrey |last=Erlitz |magazine=The Bulletin |date=February 2001 |publisher=New York Division, Electric Railroaders' Association |volume=44 |number=2 |p=5 |access-date=June 9, 2024}}</ref><ref name=erausa-7-1>{{cite magazine |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-07-bulletin.pdf |title=Tech Talk |first=Jeffrey |last=Erlitz |magazine=The Bulletin |date=July 2001 |publisher=New York Division, Electric Railroaders' Association |volume=44 |number=7 |p=5 |access-date=June 9, 2024}}</ref>
+
+==Station layout==
+{{multiple image
+| align = left
+| image1 = Prince Street BMT 002.JPG
+| width1 = 125
+| alt1 = 
+| caption1 = 
+| image2 = Prince Street BMT 001.JPG
+| width2 = 125
+| alt2 = 
+| caption2 = 
+| footer = Mosaic and frieze
+}}
+This underground station has two [[side platform]]s and four tracks, the inner two of which are express tracks that do not serve the station. South of Prince Street, there are [[diamond crossover]]s between both directional pairs of local and express tracks.<ref>{{NYCS const|trackref|nycsubway}}</ref> A [[punch box]] is located at the south end of the southbound platform to allow weekend N and late-night Q trains to cross the [[Manhattan Bridge]].<ref>{{cite news|last1=Shepard|first1=Richard F.|title=About New York; The 'N' Train's 22-Mile Journey|url=https://www.nytimes.com/1977/07/26/archives/about-new-york-the-n-trains-22mile-journey.html|access-date=April 4, 2017|work=[[The New York Times]]|date=July 26, 1977}}</ref>
+
+The 2004 artwork, ''Carrying On'', is by [https://web.archive.org/web/20060621034458/http://www.janetzweig.com/public/06.html Janet Zweig]. It uses water jet-cut steel, marble, and slate to create a mural along the entire length (totaling 1,200 feet) of both platforms. The 194 different frames in this [[frieze]] detail contain images of New Yorkers from all walks of life. As the title suggests, almost all of the images involve carrying something.
+
+===Exits===
+[[Fare control]] for each platform is at platform level. There is no free transfer between directions. Outside of fare control, the northbound platform has one street stair to either eastern corner of Broadway and Prince Street, while the southbound platform has one street stair to either western corner of that intersection.<ref name=maps>{{cite web|title=MTA Neighborhood Maps: East Village|url=http://web.mta.info/maps/neighborhoods/mn/M05_East%20Village_2015.pdf|publisher=[[Metropolitan Transportation Authority]]|access-date=August 6, 2015|date=2015}}</ref>
+{{Clear|left}}
+
+== References ==
+{{Reflist}}
+
+== External links ==
+{{commons category|Prince Street (BMT Broadway Line)}}
+* {{NYCS ref|http://www.nycsubway.org/perl/stations?202:2378|BMT Broadway Line|Prince Street}}
+* Station Reporter — [https://web.archive.org/web/20120204051427/http://www.stationreporter.net/ntrain.htm N Train]
+* Station Reporter — [https://web.archive.org/web/20150113014240/http://www.stationreporter.net/rtrain.htm R Train]
+* MTA's Arts For Transit — [http://mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=N&station=12&xdev=1197 Prince Street (BMT Broadway Line)]
+* [https://maps.google.com/?ll=40.723746,-73.997158&spn=0.005244,0.009645&layer=c&cbll=40.724312,-73.997959&panoid=VS4urkJ1oktqlF9DXxid5g&cbp=12,154.34,,0,8.08&t=m&z=17 Prince Street entrance from Google Maps Street View]
+* [http://www.google.com/maps/@40.7242309,-73.9973529,3a,75y,74.37h,82.54t/data=!3m8!1e1!3m6!1s-ww7U_PoaaVE%2FVez9ZF3ABpI%2FAAAAAAAAqmk%2FxjPhCrNgVX8!2e4!3e11!6s%2F%2Flh4.googleusercontent.com%2F-ww7U_PoaaVE%2FVez9ZF3ABpI%2FAAAAAAAAqmk%2FxjPhCrNgVX8%2Fw203-h101-n-k-no%2F!7i8704!8i4352?hl=en Lobby from Google Maps Street View]
+* [http://www.google.com/maps/@40.7239571,-73.9975815,3a,90y,142.43h,89.13t/data=!3m8!1e1!3m6!1s-Sup5e3-uw2I%2FV4nD-vRHgYI%2FAAAAAAAAKGQ%2F-aZ8KZEgUA4pwvPFFUk_dtcTeJFijFfoQCLIB!2e4!3e11!6s%2F%2Flh4.googleusercontent.com%2F-Sup5e3-uw2I%2FV4nD-vRHgYI%2FAAAAAAAAKGQ%2F-aZ8KZEgUA4pwvPFFUk_dtcTeJFijFfoQCLIB%2Fw203-h100-p-k-no%2F!7i9728!8i4864!4m3!8m2!3m1!1e1!6m1!1e1 Platforms from Google Maps Street View]
+
+{{SoHo, Manhattan|state=collapsed}}
+{{NYCS stations navbox by service|ln=y|lq=y|lr=y|lw=y}}
+{{NYCS stations navbox by line|broadway=yes}}
+{{Broadway (Manhattan)|state=collapsed}}
+{{Authority control}}
+
+[[Category:BMT Broadway Line stations]]
+[[Category:Broadway (Manhattan)]]
+[[Category:New York City Subway stations in Manhattan]]
+[[Category:Railway stations in the United States opened in 1917]]
+[[Category:1917 establishments in New York City]]
+[[Category:SoHo, Manhattan]]

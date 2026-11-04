@@ -1,0 +1,101 @@
+{{Short description|New York City Subway station in Manhattan}}
+{{more citations needed|date=September 2024}}
+{{Use American English|date=January 2025}}
+{{Use mdy dates|date=August 2024}}
+{{Infobox NYCS
+| name = 8 Street–New York University
+| former = 8th Street-NYU
+| image = 8th Street Platform.JPG
+| image_caption = Platform for downtown trains
+| address = East 8th Street &amp; Broadway<br>New York, New York
+| borough = [[Manhattan]]
+| locale = [[Greenwich Village]], [[NoHo, Manhattan|NoHo]]
+| coordinates = {{coord|40.730543|N|73.992448|W|display=inline,title}}
+| division = BMT
+| line = [[BMT Broadway Line]]
+| service = Broadway local
+| service_header = Broadway center local header
+| other = {{Bus icon}} [[NYCT Bus]]: {{NYC bus link|M1|M2|M3|M8|M55|X27|X28}}
+| platforms = 2 [[side platform]]s
+| tracks = 4
+| structure = Underground
+| opened = {{start date and age|1917|09|4}}<ref name=Canal>{{Cite web|work=[[The New York Times]]|url=https://www.nytimes.com/1917/09/05/archives/open-first-section-of-broadway-line-train-carrying-1000-passengers.html|title=Open First Section of Broadway Line|date=September 5, 1917}}</ref>
+| services = {{Adjacent stations|system=New York City Subway
+|line=Broadway local|left=14th Street–Union Square|right=Prince Street|note-left={{NYCS Broadway local|time=1}}|note-right={{NYCS Broadway local|time=1}}}}
+| footnotes = {{NYCS infobox legend|allexceptnights}}{{NYCS infobox legend|weekdaysonly}}{{NYCS infobox legend|nightsweekends}}{{NYCS infobox legend|nightsonly}}
+| route_map = {{NYCS 4-tracked local station|inline=y
+|1=14th Street–Union Square
+|l1=14th St–Union Square
+|2=Prince Street
+|code=BMT Broadway Line
+|code2=
+|deg=330
+}}
+}}
+
+The '''Eighth Street–New York University station''' (also known as '''8th Street–NYU''') is a local [[metro station|station]] on the [[New York City Subway]]'s [[BMT Broadway Line]]. Located at the intersection of [[8th Street (Manhattan)|Eighth Street]] and [[Broadway (Manhattan)|Broadway]] in [[Greenwich Village]], [[Manhattan]], it is served by the [[R (New York City Subway service)|R]] train at all times except late nights, the [[W (New York City Subway service)|W]] train on weekdays, the [[N (New York City Subway service)|N]] train during late nights and weekends, and the [[Q (New York City Subway service)|Q]] train during late nights. It serves the main campus of [[New York University]].
+[[File:New_York_University_Mosaic_Tile.jpg|right|209x209px|thumb|New York University Mosaic Tile]]
+
+==History==
+===Construction and opening===
+{{stack|float=right|[[File:8th Street BMT 003.JPG|thumb|150px|Name mosaic]]
+[[File:8th Street BMT 004.JPG|thumb|150px|Frieze and directional mosaic]]}}
+
+The [[New York Public Service Commission]] adopted plans for what was known as the Broadway–Lexington Avenue route on December 31, 1907. This route began at [[Battery Park|the Battery]] and ran under [[Greenwich Street]], Vesey Street, Broadway to [[Ninth Street (Manhattan)|Ninth Street]], private property to [[Irving Place]], and Irving Place and [[Lexington Avenue]] to the [[Harlem River]]. After crossing under the Harlem River into [[the Bronx]], the route split at Park Avenue and 138th Street, with one branch continuing north to and along [[Jerome Avenue]] to [[Woodlawn Cemetery, Bronx|Woodlawn Cemetery]], and the other heading east and northeast along 138th Street, [[Southern Boulevard (Bronx)|Southern Boulevard]], and [[Westchester Avenue]] to [[Pelham Bay Park]]. In early 1908, the Tri-borough plan was formed, combining this route, the under-construction [[Centre Street Loop Subway]] in Manhattan and [[Fourth Avenue Subway]] in Brooklyn, a [[Canal Street subway]] from the Fourth Avenue Subway via the Manhattan Bridge to the [[Hudson River]], and several other lines in Brooklyn.<ref>James Blaine Walker, [https://books.google.com/books?id=lpEgAAAAMAAJ Fifty Years of Rapid Transit, 1864–1917], published 1918, pp. 207-223</ref><ref>[[Engineering News-Record|Engineering News]], [http://www.nycsubway.org/articles/triboro.html A New Subway Line for New York City], Volume 63, No. 10, March 10, 1910</ref>
+
+The Brooklyn Rapid Transit Company submitted a proposal to the Commission, dated March 2, 1911, to operate the Tri-borough system (but under Church Street instead of Greenwich Street), as well as a branch along Broadway, Seventh Avenue, and 59th Street from Ninth Street north and east to the [[Queensboro Bridge]]; the Canal Street subway was to merge with the Broadway Line instead of continuing to the Hudson River. The city, the BRT, and the [[Interborough Rapid Transit Company]] (which operated the first [[early history of the IRT subway|subway]] and four [[Manhattan Railway Company|elevated]] lines in Manhattan) came to an agreement, and sent a report to the [[New York City Board of Estimate]] on June 5, 1911. The line along Broadway to 59th Street was assigned to the BRT, while the IRT obtained the [[IRT Lexington Avenue Line|Lexington Avenue line]], connecting with its existing route at [[Grand Central–42nd Street (New York City Subway)|Grand Central–42nd Street]]. Construction began on Lexington Avenue on July 31, and on Broadway the next year. The [[Dual Contracts]], two operating contracts between the city and the BMT and IRT, were adopted on March 4, 1913.<ref>James Blaine Walker, [https://books.google.com/books?id=lpEgAAAAMAAJ Fifty Years of Rapid Transit, 1864–1917], published 1918, pp. 224-241</ref>
+
+A short portion of the line, coming off the north side of the Manhattan Bridge through Canal Street to [[14th Street–Union Square (New York City Subway)|14th Street–Union Square]], opened on September 4, 1917, at 2 P.M., with an eight car train carrying members of the Public Service Commission, representatives of the city government and officials of the BRT, leaving Union Square toward Coney Island. Service opened to the general public at 8 P.M., with trains leaving Union Square and Coney Island simultaneously.<ref>{{cite news|url=https://www.newspapers.com/clip/2708189/the_brooklyn_daily_eagle/|title=Broadway Subway Opened To Coney By Special Train. Brooklynites Try New Manhattan Link From Canal St. to Union Square. Go Via Fourth Ave. Tube|newspaper=The Brooklyn Daily Eagle|date=September 4, 1917|access-date=May 31, 2019}}</ref> The line was served by two services. One route ran via the Fourth Avenue Line and the Sea Beach Line to Coney Island, while the other line, the short line, ran to Ninth Avenue, where passengers could transfer for West End and Culver Line service. The initial headway on the line was three minutes during rush hours, three minutes and forty-five seconds at other times, except during late nights when service ran every fifteen minutes.<ref name=":2">{{Cite news|url=https://www.nytimes.com/1917/09/05/archives/open-first-section-of-broadway-line-train-carrying-1000-passengers.html|title=Open First Section Of Broadway Line; Train Carrying 1,000 Passengers Runs from Fourteenth Street to Coney Island. Regular Service Begins. New Road Is Expected to Relieve Old System of 15,000 PersonsDaily in Rush Hours. Service Commissioners Jubliant. Schedule Not Fully Arranged.|date=September 5, 1917|newspaper=The New York Times|access-date=November 5, 2016|issn=0362-4331}}</ref>
+
+===Later years===
+The station's platforms originally could only fit six {{convert|67|ft|m|adj=mid|-long}} cars. In 1926, the [[New York City Board of Transportation]] received bids for the lengthening of platforms at nine stations on the Broadway Line, including the Eighth Street station, to accommodate eight-car trains. Edwards & Flood submitted a low bid of $101,775 for the project.<ref name=nyt-1926-07-08>{{Cite news|date=1926-07-08|title=Bids for B.M.T. Stations; Platforms South of Fourteenth Street to Be Lengthened.|language=en-US|work=The New York Times|url=https://www.nytimes.com/1926/07/08/archives/bids-for-bmt-stations-platforms-south-of-fourteenth-street-to-be.html|access-date=2023-04-28|issn=0362-4331}}</ref> The platform-lengthening project was completed in 1927, bringing the length of the platforms to {{Convert|535|feet|meters|abbr=}}.<ref name="nyt-1927-08-02">{{Cite news |date=1927-08-02 |title=B.M.T. to Operate Eight-car Trains; Platforms in Forty Stations Are Lengthened, Increasing Capacity 33 1-3%. |language=en-US |work=The New York Times |url=https://www.nytimes.com/1927/08/02/archives/bmt-to-operate-eightcar-trains-platforms-in-forty-stations-are.html |access-date=2023-05-12 |issn=0362-4331}}</ref><ref name="p1113704092">{{cite news |date=2 Aug 1927 |title=B. M, T. Station Lengthening Is Nearly Finished: 76 Platforms Are Extended 3,186 Feet to Make Room for 126.000 Additional Passengers in Rush Hours City Carried Out Work I.R.T. Changes Planned, but That Company Refuses to Pay Its Share of Costs |page=32 |work=New-York Tribune |issn=1941-0646 |id={{ProQuest|1113704092}}}}</ref>
+
+The city government took over the BMT's operations on June 1, 1940.<ref>{{Cite news|date=1940-06-02|title=B.M.T. Lines Pass to City Ownership; $175,000,000 Deal Completed at City Hall Ceremony-- Mayor 'Motorman No. 1'|language=en-US|work=The New York Times|url=https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|access-date=2022-05-14|issn=0362-4331|archive-url=https://web.archive.org/web/20210719094900/https://www.nytimes.com/1940/06/02/archives/bmt-lines-pass-to-city-ownership-175000000-deal-completed-at-city.html|archive-date=July 19, 2021|url-status=live}}</ref><ref name="p1243059209">{{cite news |date=June 2, 1940 |title=City Takes Over B. M. T. System; Mayor Skippers Midnight Train |page=1 |work=New York Herald Tribune |id={{ProQuest|1243059209}}}}</ref> The station's overhaul in the late 1960s included extending the station platforms required for 10 car trains, and fixing the station's structure and the overall appearance (including the staircases and platform edges), replacing the original wall tiles, old signs, and incandescent lighting to the 70's modern look wall tile band and tablet mosaics, signs and fluorescent lights.
+
+In 2001, the station received a state of repairs including upgrading the station for [[ADA compliance]] and restoring the original late 1910s tiling, repairing the staircases, re-tiling for the walls, new tiling on the floors, upgrading the station's lights and the public address system, installing [[Americans with Disabilities Act of 1990|ADA]] yellow safety threads along the platform edge, new signs, and new trackbeds in both directions.
+
+In 2005, the artwork Tim Snell's ''Broadway Diary'' mosaics installed on the station platform wall titles in both directions.
+
+==Station layout==
+[[File:BwyWalk0505 Station8thStBroadway.jpg|thumb|Station entrance]]
+This underground station has four tracks and two [[side platform]]s. The inner two tracks are express tracks that do not serve the station.
+
+===Exits===
+The staffed [[fare control]] for each platform is at platform level at the center of each platform. There is no free transfer between directions. Outside of fare control, the northbound platform has one street stair to each eastern corner of Broadway and Eighth Street, while the southbound platform has two street stairs to each western corner of that intersection.<ref name=maps>{{cite web|title=MTA Neighborhood Maps: East Village|url=http://web.mta.info/maps/neighborhoods/mn/M05_East%20Village_2015.pdf|publisher=[[Metropolitan Transportation Authority]]|access-date=August 6, 2015|date=2015}}</ref>
+
+Near the southern ends of each platform, one stair ascends from each platform to an intermediate landing on each side. Each landing has an exit-only turnstile and a [[HEET turnstile]]. The exits then ascend to their respective northern corners of Broadway and Waverly Place (the southbound platform's exit to the northwest corner, the northbound platform's exit to the northeast corner).<ref name=maps/>
+
+{{Clear|left}}
+
+== References ==
+{{Reflist}}
+
+== External links ==
+{{commons category|position=right}}
+* {{NYCS ref|http://www.nycsubway.org/perl/stations?202:1775|BMT Broadway Subway|8th Street}}
+* Station Reporter – [https://web.archive.org/web/20120204051427/http://www.stationreporter.net/ntrain.htm N Train]
+* Station Reporter – [https://web.archive.org/web/20150113014240/http://www.stationreporter.net/rtrain.htm R Train]
+* Flickr – [https://www.flickr.com/photos/klr/10404640/ Photo of Tim Snell's Cube mural]
+* Wired New York Forum – [http://www.wirednewyork.com/forum/showthread.php?t=4392 Subway mosaics and their artists]
+* MTA's Arts For Transit – [https://web.archive.org/web/20110606075926/http://mta.info/mta/aft/permanentart/permart.html?agency=nyct&line=N&station=11&xdev=1096 8th Street–NYU (BMT Broadway Line)]
+* [https://maps.google.com/?ie=UTF8&ll=40.730714,-73.992287&spn=0,0.013314&z=17&layer=c&cbll=40.730579,-73.992399&panoid=pBa8FudSFfUR3W_IBwwgSQ&cbp=12,344.67,,0,1.88 Eighth Street entrance from Google Maps Street View]
+* [https://maps.google.com/?ll=40.7293,-73.992416&spn=0.005244,0.009645&layer=c&cbll=40.729699,-73.993133&panoid=3k9RX8xv84wQKViuslZXMA&cbp=12,310.77,,0,2.7&t=m&z=17 Waverly Place entrance from Google Maps Street View]
+* [http://www.google.com/maps/@40.7310178,-73.9921786,3a,75y,200.05h,83.55t/data=!3m8!1e1!3m6!1s-rAuN5FaiDnA%2FVfTPZo0F4pI%2FAAAAAAAAv8g%2FvykuZu27VSc!2e4!3e11!6s%2F%2Flh4.googleusercontent.com%2F-rAuN5FaiDnA%2FVfTPZo0F4pI%2FAAAAAAAAv8g%2FvykuZu27VSc%2Fw203-h101-n-k-no%2F!7i8704!8i4352?hl=en Platforms from Google Maps Street View]
+
+{{NYCS stations navbox by service|ln=y|lr=y|lw=y}}
+{{NYCS stations navbox by line|broadway=yes}}
+{{Greenwich Village}}
+{{NoHo, Manhattan}}
+{{Broadway (Manhattan)|state=collapsed}}
+
+{{DEFAULTSORT:8th Street-NYU (BMT Broadway Line)}}
+[[Category:BMT Broadway Line stations]]
+[[Category:Broadway (Manhattan)]]
+[[Category:East Village, Manhattan]]
+[[Category:New York City Subway stations in Manhattan]]
+[[Category:Railway stations in the United States opened in 1917]]
+[[Category:1917 establishments in New York City]]
+[[Category:New York University buildings and structures]]
+[[Category:Greenwich Village]]
+[[Category:New York City Subway stations at university and college campuses]]
+[[Category:Astor Place]]

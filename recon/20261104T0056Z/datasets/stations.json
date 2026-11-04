@@ -1,0 +1,291 @@
+{
+ "attachments": [
+  {
+   "assetId": "3fe3ae2e-69c7-48ae-a744-61ef0eb56de6",
+   "filename": "MTA_SubwayStations_Overview.pdf",
+   "name": "MTA_SubwayStations_Overview.pdf"
+  },
+  {
+   "assetId": "e4eda342-c857-4052-9c86-85da012f6e6e",
+   "filename": "MTA_SubwayStations_DataDictionary.pdf",
+   "name": "MTA_SubwayStations_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "The ID used for the station in the General Transit Feed Specification (GTFS), an open standard used to display public transit schedule data.",
+   "field": "gtfs_stop_id",
+   "name": "GTFS Stop ID",
+   "type": "text"
+  },
+  {
+   "description": "The Station Master Reference Number.",
+   "field": "station_id",
+   "name": "Station ID",
+   "type": "number"
+  },
+  {
+   "description": "The Complex Master Reference Number.",
+   "field": "complex_id",
+   "name": "Complex ID",
+   "type": "number"
+  },
+  {
+   "description": "The division of the subway system (IRT, BMT, or IND) that the station is a part of.",
+   "field": "division",
+   "name": "Division",
+   "type": "text"
+  },
+  {
+   "description": "The operational line of the subway system the station is located on, such as Queens Blvd, Lexington Av, or Sea Beach.",
+   "field": "line",
+   "name": "Line",
+   "type": "text"
+  },
+  {
+   "description": "The name of the subway station.",
+   "field": "stop_name",
+   "name": "Stop Name",
+   "type": "text"
+  },
+  {
+   "description": "The borough the station is in. Bx for Bronx, B for Brooklyn, M for Manhattan, Q for Queens, SI for Staten Island. ",
+   "field": "borough",
+   "name": "Borough",
+   "type": "text"
+  },
+  {
+   "description": "This indicates whether or not a station is in Manhattan\u2019s Central Business District (CBD). This value is either TRUE or FALSE.",
+   "field": "cbd",
+   "name": "CBD",
+   "type": "text"
+  },
+  {
+   "description": "The subway routes that serve the station during weekdays.",
+   "field": "daytime_routes",
+   "name": "Daytime Routes",
+   "type": "text"
+  },
+  {
+   "description": " The type of structure the subway station is located on or in (At Grade, Elevated, Embankment, Open Cut, Subway, Viaduct, etc.). For stations part of a complex, this indicates the construction type for that part of the complex only. Some complexes have more than one construction type across their co",
+   "field": "structure",
+   "name": "Structure",
+   "type": "text"
+  },
+  {
+   "description": "The latitude for the centroid of the station",
+   "field": "gtfs_latitude",
+   "name": "GTFS Latitude",
+   "type": "number"
+  },
+  {
+   "description": "The longitude for the centroid of the station",
+   "field": "gtfs_longitude",
+   "name": "GTFS Longitude",
+   "type": "number"
+  },
+  {
+   "description": "The northbound direction for lines stopping at the station, such as Astoria - Ditmars Blvd, Uptown & The Bronx, and Manhattan. This is blank if the station is the northern terminal of a line.",
+   "field": "north_direction_label",
+   "name": "North Direction Label",
+   "type": "text"
+  },
+  {
+   "description": "The southbound direction for lines stopping at the station, such as Downtown & Brooklyn, Canarsie - Rockaway Parkway, and Brighton Beach & Coney Island. This is blank if the station is the southern terminal of a line.",
+   "field": "south_direction_label",
+   "name": "South Direction Label",
+   "type": "text"
+  },
+  {
+   "description": "0 if the station is not ADA-accessible, 1 if the station is fully accessible, 2 if the station is partially accessible.",
+   "field": "ada",
+   "name": "ADA",
+   "type": "text"
+  },
+  {
+   "description": "0 if the station is not ADA-accessible in the northbound direction, 1 if the station is fully accessible in the northbound direction",
+   "field": "ada_northbound",
+   "name": "ADA Northbound",
+   "type": "text"
+  },
+  {
+   "description": "0 if the station is not ADA-accessible in the southbound direction, 1 if the station is fully accessible in the southbound direction",
+   "field": "ada_southbound",
+   "name": "ADA Southbound",
+   "type": "text"
+  },
+  {
+   "description": "Notes on the direction a station is accessible in if it is only accessible in one direction, such as Manhattan-bound only, Downtown only, and Uptown & The Bronx local only.",
+   "field": "ada_notes",
+   "name": "ADA Notes",
+   "type": "text"
+  },
+  {
+   "description": "Open Data platform-generated geocoding information from supplied address components. Point-type location is the centroid of the address components provided and does not reflect a specific address if the street address component is not provided. Point-type location is supplied in \"POINT (<geocoded lo",
+   "field": "georeference",
+   "name": "Georeference",
+   "type": "point"
+  }
+ ],
+ "distinct": {},
+ "id": "39hk-dx4f",
+ "rows": [
+  {
+   "n": "496"
+  }
+ ],
+ "rows_updated_at": 1793682471,
+ "sample": [
+  {
+   ":@computed_region_kjdx_g34t": "2137",
+   ":@computed_region_wbg7_3whc": "877",
+   ":@computed_region_yamh_8v7k": "196",
+   "ada": "0",
+   "ada_northbound": "0",
+   "ada_notes": "NaN",
+   "ada_southbound": "0",
+   "borough": "Q",
+   "cbd": "false",
+   "complex_id": "1",
+   "daytime_routes": "N W",
+   "division": "BMT",
+   "georeference": {
+    "coordinates": [
+     -73.912034,
+     40.775036
+    ],
+    "type": "Point"
+   },
+   "gtfs_latitude": "40.775036",
+   "gtfs_longitude": "-73.912034",
+   "gtfs_stop_id": "R01",
+   "line": "Astoria",
+   "north_direction_label": "Last Stop",
+   "south_direction_label": "Manhattan",
+   "station_id": "1",
+   "stop_name": "Astoria-Ditmars Blvd",
+   "structure": "Elevated"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2137",
+   ":@computed_region_wbg7_3whc": "874",
+   ":@computed_region_yamh_8v7k": "196",
+   "ada": "1",
+   "ada_northbound": "1",
+   "ada_notes": "NaN",
+   "ada_southbound": "1",
+   "borough": "Q",
+   "cbd": "false",
+   "complex_id": "2",
+   "daytime_routes": "N W",
+   "division": "BMT",
+   "georeference": {
+    "coordinates": [
+     -73.917843,
+     40.770258
+    ],
+    "type": "Point"
+   },
+   "gtfs_latitude": "40.770258",
+   "gtfs_longitude": "-73.917843",
+   "gtfs_stop_id": "R03",
+   "line": "Astoria",
+   "north_direction_label": "Astoria",
+   "south_direction_label": "Manhattan",
+   "station_id": "2",
+   "stop_name": "Astoria Blvd",
+   "structure": "Elevated"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2137",
+   ":@computed_region_wbg7_3whc": "874",
+   ":@computed_region_yamh_8v7k": "196",
+   "ada": "0",
+   "ada_northbound": "0",
+   "ada_notes": "NaN",
+   "ada_southbound": "0",
+   "borough": "Q",
+   "cbd": "false",
+   "complex_id": "3",
+   "daytime_routes": "N W",
+   "division": "BMT",
+   "georeference": {
+    "coordinates": [
+     -73.921479,
+     40.766779
+    ],
+    "type": "Point"
+   },
+   "gtfs_latitude": "40.766779",
+   "gtfs_longitude": "-73.921479",
+   "gtfs_stop_id": "R04",
+   "line": "Astoria",
+   "north_direction_label": "Astoria",
+   "south_direction_label": "Manhattan",
+   "station_id": "3",
+   "stop_name": "30 Av",
+   "structure": "Elevated"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2137",
+   ":@computed_region_wbg7_3whc": "878",
+   ":@computed_region_yamh_8v7k": "196",
+   "ada": "0",
+   "ada_northbound": "0",
+   "ada_notes": "NaN",
+   "ada_southbound": "0",
+   "borough": "Q",
+   "cbd": "false",
+   "complex_id": "4",
+   "daytime_routes": "N W",
+   "division": "BMT",
+   "georeference": {
+    "coordinates": [
+     -73.925508,
+     40.76182
+    ],
+    "type": "Point"
+   },
+   "gtfs_latitude": "40.76182",
+   "gtfs_longitude": "-73.925508",
+   "gtfs_stop_id": "R05",
+   "line": "Astoria",
+   "north_direction_label": "Astoria",
+   "south_direction_label": "Manhattan",
+   "station_id": "4",
+   "stop_name": "Broadway",
+   "structure": "Elevated"
+  },
+  {
+   ":@computed_region_kjdx_g34t": "2137",
+   ":@computed_region_wbg7_3whc": "878",
+   ":@computed_region_yamh_8v7k": "196",
+   "ada": "0",
+   "ada_northbound": "0",
+   "ada_notes": "NaN",
+   "ada_southbound": "0",
+   "borough": "Q",
+   "cbd": "false",
+   "complex_id": "5",
+   "daytime_routes": "N W",
+   "division": "BMT",
+   "georeference": {
+    "coordinates": [
+     -73.929575,
+     40.756804
+    ],
+    "type": "Point"
+   },
+   "gtfs_latitude": "40.756804",
+   "gtfs_longitude": "-73.929575",
+   "gtfs_stop_id": "R06",
+   "line": "Astoria",
+   "north_direction_label": "Astoria",
+   "south_direction_label": "Manhattan",
+   "station_id": "5",
+   "stop_name": "36 Av",
+   "structure": "Elevated"
+  }
+ ],
+ "title": "MTA Subway Stations"
+}

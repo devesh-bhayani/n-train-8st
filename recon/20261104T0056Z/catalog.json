@@ -1,0 +1,1606 @@
+{
+ "23fs-vfbd": {
+  "columns": [
+   "vandalism_incidents",
+   "incident_type",
+   "month"
+  ],
+  "description": "This dataset reflects the monthly number of units vandalized for select elements of the subway and bus system.",
+  "name": "MTA Subway and Bus Vandalism: Beginning 2021",
+  "updated": "2026-10-23T15:05:44.000Z"
+ },
+ "28vm-gjqr": {
+  "columns": [
+   "destination_station_complex_id",
+   "hour_of_day",
+   "day_of_week",
+   "year",
+   "month",
+   "origin_longitude",
+   "origin_station_complex_name",
+   "origin_station_complex_id",
+   "origin_latitude",
+   "destination_latitude",
+   "destination_station_complex_name",
+   "timestamp",
+   "destination_longitude",
+   "destination_point",
+   "origin_point",
+   "estimated_average_ridership"
+  ],
+  "description": "This dataset provides an estimate of subway travel patterns based on scaled-up OMNY and MetroCard return swipe data. It provides estimated passenger volumes for all populated origin-destination (O-D) pairs aggregated by month, day of the week, and hour of day. It also provides the name, ID, and approximate latitude and longitude of the origin and destination subway complexes.",
+  "name": "MTA Subway Origin-Destination Ridership Estimate: Beginning 2026",
+  "updated": "2026-10-20T07:00:39.000Z"
+ },
+ "2xh4-m2qk": {
+  "columns": [
+   "agency",
+   "month",
+   "total",
+   "measure"
+  ],
+  "description": "This dataset reflects the monthly number of employee-reported incidents of workplace violence, as defined by New York State Labor Law Section 27-B, against on-duty MTA employees. This dataset divides workplace violence incidents into groupings according to New York State Penal Law Related Offenses. The same data is available in the MTA Workplace Violence Labor Law Incidents dataset, which divides ",
+  "name": "MTA Workplace Violence Penal Law Incidents: Beginning 2019",
+  "updated": "2026-10-23T15:14:02.000Z"
+ },
+ "2zyn-jc9t": {
+  "columns": [],
+  "description": "The MTA contracts with Transit Wireless WIFI (http://www.transitwirelesswifi.com) to provide WIFI access in its subway locations. Transit Wireless maintains location data where WIFI access is available.",
+  "name": "MTA Wi-Fi Locations Map",
+  "updated": "2021-12-06T22:20:24.000Z"
+ },
+ "32ch-sei3": {
+  "columns": [
+   "line",
+   "num_sched_trains",
+   "service_delivered",
+   "month",
+   "num_actual_trains",
+   "day_type",
+   "division"
+  ],
+  "description": "Service Delivered measures the percentage of scheduled trains that are actually provided during peak hours on weekdays (7 AM to 10 AM and 4 PM to 7 PM) and weekends (10 AM to 6 PM) for a given month.",
+  "name": "MTA Subway Service Delivered: Beginning 2015",
+  "updated": "2026-10-23T15:28:15.000Z"
+ },
+ "39hk-dx4f": {
+  "columns": [
+   "division",
+   "south_direction_label",
+   "structure",
+   "daytime_routes",
+   "line",
+   "north_direction_label",
+   "stop_name",
+   "gtfs_longitude",
+   "gtfs_latitude",
+   "station_id",
+   "gtfs_stop_id",
+   "georeference",
+   "ada_southbound",
+   "cbd",
+   "borough",
+   "complex_id",
+   ":@computed_region_yamh_8v7k",
+   ":@computed_region_wbg7_3whc",
+   ":@computed_region_kjdx_g34t",
+   "ada_notes",
+   "ada_northbound",
+   "ada"
+  ],
+  "description": "A dataset listing all subway and Staten Island Railway stations, with information on their locations, Station Master Reference Number (MRN), Complex MRN, GTFS Stop ID, the services that stop there, the type of structure the station is on or in, whether the station is in Manhattan\u2019s Central Business District (CBD), and their ADA-accessibility status.",
+  "name": "MTA Subway Stations",
+  "updated": "2026-11-03T05:07:51.000Z"
+ },
+ "3h5b-5ktz": {
+  "columns": [
+   "date",
+   "status_label",
+   "affected",
+   "header",
+   "description",
+   "status_id",
+   "agency"
+  ],
+  "description": "Historic service alerts archived from the GMS system. This dataset captures all revisions of alerts for incidents affecting the transit network prior to 2020. Unlike the current MTA Service Alerts dataset (https://data.ny.gov/d/7kct-peq7), it does not include an event_id or update_number to group updates for a single incident.",
+  "name": "MTA Service Alerts: 2012 - 2020",
+  "updated": "2025-02-04T21:00:01.000Z"
+ },
+ "3uhz-sej2": {
+  "columns": [
+   "operator",
+   "cmyk",
+   "hex_color",
+   "service"
+  ],
+  "description": "This dataset includes the RGB Hex code and CMYK values for the colors used by the MTA for its various services, including the New York City Subway, the Staten Island Railway, the Long Island Rail Road, Metro-North Railroad, and Bridges & Tunnels, and for the MTA logo itself.",
+  "name": "MTA Colors",
+  "updated": "2026-10-23T15:13:44.000Z"
+ },
+ "4ta5-wz5s": {
+  "columns": [
+   "complex_name",
+   "complex_id",
+   "ada_notes",
+   "ada"
+  ],
+  "description": "A dataset listing all station complexes in the subway system. Station complexes are collections of stations which are interconnected by passageways within fare control or are stations on different levels that are not parallel to each other and that are connected by stairways, escalators, or elevators.",
+  "name": "MTA Subway Station Complexes",
+  "updated": "2026-11-03T05:10:50.000Z"
+ },
+ "4y8j-9pkd": {
+  "columns": [
+   "art_description",
+   "art_title",
+   "art_date",
+   "artist",
+   "art_material",
+   "art_image_link",
+   "line",
+   "station_name",
+   "agency"
+  ],
+  "description": "Through the Permanent Art Program, MTA Arts & Design (formerly Arts for Transit) commissions public art that is seen by millions of city-dwellers as well as national and international visitors who use the MTA\u2019s subways and trains. Arts & Design works closely with the architects and engineers at MTA NYC Transit, Long Island Rail Road and Metro-North Railroad to determine the parameters and sites fo",
+  "name": "MTA Permanent Art Catalog: Beginning 1980",
+  "updated": "2026-09-28T18:39:36.000Z"
+ },
+ "5f5g-n3cz": {
+  "columns": [
+   "ada",
+   "longitude",
+   "complex_id",
+   "station_ids",
+   "stop_name",
+   "display_name",
+   "daytime_routes",
+   "ada_notes",
+   "gtfs_stop_ids",
+   "structure_type",
+   "cbd",
+   "borough",
+   "number_of_stations_in_complex",
+   "is_complex",
+   "latitude",
+   "constituent_station_names"
+  ],
+  "description": "A dataset listing all subway and Staten Island Railway stations, with data aggregated by station complex. This dataset includes information on station names, their locations, Station IDs, Complex IDs, GTFS Stop IDs, the services that stop there, the type of structure the station is on or in, whether they are in Manhattan\u2019s Central Business District (CBD), and their ADA-accessibility status.",
+  "name": "MTA Subway Stations and Complexes",
+  "updated": "2026-11-03T05:14:06.000Z"
+ },
+ "5wq4-mkjj": {
+  "columns": [
+   "transfers",
+   "longitude",
+   "transit_timestamp",
+   "georeference",
+   "ridership",
+   "station_complex",
+   "fare_class_category",
+   "station_complex_id",
+   "transit_mode",
+   "latitude",
+   "payment_method",
+   "borough"
+  ],
+  "description": "This dataset provides subway ridership estimates on an hourly basis by subway station complex and class of fare payment.",
+  "name": "MTA Subway Hourly Ridership: Beginning 2025",
+  "updated": "2026-10-28T15:23:28.000Z"
+ },
+ "68hr-j2j7": {
+  "columns": [],
+  "description": "This is a dataset containing the entrances and exits at New York City Subway and Staten Island Railway stations. Information is provided on the entrance or exit, including their coordinates, the borough they are in, whether it allows entries and exits, and the type of entrance (more information below). The dataset also includes the name of the station complex, the complex ID number, the name of th",
+  "name": "MTA Subway Entrances and Exits: 2024 Map",
+  "updated": "2025-12-05T18:36:18.000Z"
+ },
+ "6j5q-wbbe": {
+  "columns": [
+   "division",
+   "description",
+   "time",
+   "station",
+   "exits",
+   "entries",
+   "c_a",
+   "line_name",
+   "unit",
+   "scp",
+   "date"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Interborough Rapid Transit (IRT) Division: 2015",
+  "updated": "2016-01-05T12:08:56.000Z"
+ },
+ "6kj3-ijvb": {
+  "columns": [
+   "time_period",
+   "margin_of_error",
+   "fare_evasion"
+  ],
+  "description": "Quarterly estimated Fare Evasion rate for Subways with margin of error. Rate estimated using surveys conducted by traffic checkers and applying stratified sampling.",
+  "name": "MTA NYCT Subway Fare Evasion: Beginning 2018",
+  "updated": "2026-10-23T15:06:24.000Z"
+ },
+ "6sye-xc48": {
+  "columns": [
+   "linename",
+   "time",
+   "date",
+   "unit",
+   "division",
+   "exits",
+   "entries",
+   "desc",
+   "scp",
+   "c_a",
+   "station"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Independent Subway (IND) Division: 2014",
+  "updated": "2015-03-01T03:50:10.000Z"
+ },
+ "6yjv-fk7g": {
+  "columns": [
+   "division",
+   "georeference",
+   "borough",
+   "original_install_date",
+   ":@computed_region_yamh_8v7k",
+   "station_mrn",
+   "station_name",
+   "amenity_type",
+   "amenity_id",
+   ":@computed_region_kjdx_g34t",
+   "latitude",
+   ":@computed_region_wbg7_3whc",
+   "longitude",
+   "lines",
+   "month"
+  ],
+  "description": "The MTA Subway Station Amenities data provides information about amenities available at subway stations across the New York City transit system.",
+  "name": "MTA Subway Station Amenities: Beginning May 2026",
+  "updated": "2026-11-01T04:19:26.000Z"
+ },
+ "7kct-peq7": {
+  "columns": [
+   "agency",
+   "date",
+   "update_number",
+   "event_id",
+   "alert_id",
+   "header",
+   "description",
+   "affected",
+   "status_label"
+  ],
+  "description": "Service alerts in the MTA system are generated to inform passengers of both scheduled and unscheduled events that affect the transit network. These events can range from planned maintenance and construction activities to unexpected incidents such as accidents, track maintenance or planned work and more. The process of creating alerts involves the continuous monitoring of the transit system, includ",
+  "name": "MTA Service Alerts: Beginning April 2020",
+  "updated": "2026-10-23T15:10:00.000Z"
+ },
+ "7tfn-twae": {
+  "columns": [
+   "metric",
+   "police_force",
+   "agency",
+   "total",
+   "month"
+  ],
+  "description": "The number of summonses and arrests made by NYPD or MTAPD for fare evasion and other violations of the rules of conduct of the transit system.",
+  "name": "MTA Summonses and Arrests: Beginning 2019",
+  "updated": "2026-10-23T15:12:03.000Z"
+ },
+ "85qu-kngg": {
+  "columns": [],
+  "description": "The MTA contracts with Transit Wireless WIFI (http://www.transitwirelesswifi.com) to provide WIFI access in its subway locations. Transit Wireless maintains location data where WIFI access is available.",
+  "name": "MTA Station Entrances and Wi-Fi Availability Map",
+  "updated": "2021-12-06T22:20:24.000Z"
+ },
+ "8mkn-d32t": {
+  "columns": [
+   "customer_journey_time",
+   "month",
+   "additional_travel_time",
+   "additional_bus_stop_time",
+   "number_of_customers",
+   "route_id",
+   "borough",
+   "trip_type",
+   "period"
+  ],
+  "description": "Additional Bus Stop Time is the average time that customers spend waiting at a stop beyond their scheduled wait time.\n\nAdditional Travel Time is the average time customers spend onboard a bus beyond their scheduled travel time.\n\nCustomer Journey Time Performance is the percentage of customers whose journeys are completed within 5 minutes of their scheduled time.",
+  "name": "MTA Bus Customer Journey-Focused Metrics: Beginning 2017",
+  "updated": "2026-10-23T15:25:48.000Z"
+ },
+ "8mxi-eyyq": {
+  "columns": [
+   "c_a",
+   "description",
+   "date",
+   "line_name",
+   "scp",
+   "unit",
+   "time",
+   "division",
+   "exits",
+   "entries",
+   "station"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Independent Subway (IND) Division: 2015",
+  "updated": "2016-01-05T12:08:56.000Z"
+ },
+ "8vjt-4zv4": {
+  "columns": [
+   "employees",
+   "department",
+   "lost_time_accidents",
+   "month",
+   "lost_time_accident_rate"
+  ],
+  "description": "The number of reportable job-related incidents that result in the inability of an employee to perform full job duties for at least one working day beyond the day of the incident, as well as a breakdown of the number of Employees and Lost Time Accident Rates.",
+  "name": "MTA Subway and Bus Lost Time Accidents: Beginning 2021",
+  "updated": "2026-10-23T15:17:56.000Z"
+ },
+ "94fv-bak7": {
+  "columns": [
+   "redundant_elevator_mezzanine",
+   "station_complex_description",
+   "original_installation_date",
+   "elevator_loading_class",
+   "equipment_code",
+   "station_mrn",
+   "latest_installation_date",
+   "redundant_elevator_street",
+   "station_name",
+   "subway_line",
+   "x_coordinate",
+   "station_description",
+   "station_complex_mrn",
+   "maintained_by",
+   "redundant_elevator_platform",
+   "installer",
+   "escalator_number_of_steps",
+   "escalator_step_width",
+   "alternative_route",
+   "elevator_order",
+   "escalator_rise",
+   "elevator_rise",
+   "elevator_capacity",
+   "notes",
+   "y_coordinate",
+   ":@computed_region_yamh_8v7k",
+   ":@computed_region_wbg7_3whc",
+   ":@computed_region_kjdx_g34t",
+   "elevator_direction_serviced",
+   "nyct_owned",
+   "revenue_machine",
+   "elevator_mezzanine_2_access",
+   "service_status_code",
+   "ada_compliant",
+   "elevator_number_of_landings",
+   "elevator_mezzanine_1_access",
+   "redundant_elevator_access",
+   "elevator_platform_access",
+   "redundant_elevator",
+   "georeference",
+   "borough",
+   "elevator_or_escalator",
+   "asset_class",
+   "service_life",
+   "street_access",
+   "exposed_to_weather",
+   "service_status"
+  ],
+  "description": "Subway Elevator and Escalator Asset Inventory represents active subway elevator and escalator assets in MTA\u2019s subway stations (excluding withdrawn and pending machines).",
+  "name": "MTA Subway Elevator and Escalator Asset Inventory",
+  "updated": "2026-11-03T11:13:20.000Z"
+ },
+ "9fh6-zjuj": {
+  "columns": [
+   "line_name",
+   "description",
+   "exits",
+   "date",
+   "station",
+   "scp",
+   "time",
+   "entries",
+   "unit",
+   "c_a",
+   "division"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Independent Subway (IND) Division: 2017",
+  "updated": "2017-12-25T11:44:14.000Z"
+ },
+ "9zbp-wz3y": {
+  "columns": [
+   "day_type",
+   "delays",
+   "month",
+   "line",
+   "reporting_category",
+   "division"
+  ],
+  "description": "This dataset shows the number of subway trains delayed per day type (weekdays and weekends) in a month, broken down into specific delay categories.",
+  "name": "MTA Subway Trains Delayed: Beginning 2020",
+  "updated": "2026-10-23T15:29:48.000Z"
+ },
+ "ak4z-sape": {
+  "columns": [
+   "georeference",
+   "ridership",
+   "station_complex_id",
+   "month",
+   ":@computed_region_kjdx_g34t",
+   "latitude",
+   "station_complex",
+   "transfers",
+   "longitude",
+   "borough",
+   ":@computed_region_yamh_8v7k",
+   ":@computed_region_wbg7_3whc"
+  ],
+  "description": "This dataset provides subway ridership estimates on a monthly basis by subway station complex.",
+  "name": "MTA Subway Station Monthly Ridership: Beginning February 2017",
+  "updated": "2026-10-23T15:06:00.000Z"
+ },
+ "bjcb-yee3": {
+  "columns": [
+   "exits",
+   "c_a",
+   "date",
+   "line_name",
+   "scp",
+   "unit",
+   "station",
+   "division",
+   "time",
+   "description",
+   "entries"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2018",
+  "updated": "2019-01-01T19:41:10.000Z"
+ },
+ "c6y7-ek5e": {
+  "columns": [
+   "agency",
+   "month",
+   "recovery",
+   "projection"
+  ],
+  "description": "Ridership projections for the Metropolitan Transportation Authority, developed by McKinsey & Company, to help management assess the financial impact of the COVID-19 pandemic on MTA operations.",
+  "name": "MTA McKinsey Ridership Projections: October 2020 - December 2026",
+  "updated": "2024-02-05T17:18:00.000Z"
+ },
+ "cy9b-i9w9": {
+  "columns": [
+   "ytd_actual",
+   "period_month",
+   "indicator_unit",
+   "parent_sequence",
+   "frequency",
+   "category",
+   "description",
+   "agency_name",
+   "indicator_sequence",
+   "period",
+   "monthly_actual",
+   "monthly_target",
+   "ytd_target",
+   "period_year",
+   "decimal_places",
+   "desired_change",
+   "indicator_name"
+  ],
+  "description": "This dataset combines Key Performance Indicator data that was reported starting with the creation of the MTA Stat performance metric dashboard in 2008 through 2021. Most of the metrics in the dataset available elsewhere on the open data portal.",
+  "name": "MTA Key Performance Indicators: 2008-2021",
+  "updated": "2023-06-23T20:43:23.000Z"
+ },
+ "dqvw-iu8s": {
+  "columns": [
+   "pickup_location",
+   "standard",
+   "date",
+   "provider_type",
+   "total_pickups",
+   "on_time_performance",
+   "pickups_within_standards",
+   "hour_of_promise_time"
+  ],
+  "description": "Pickup On-Time Performance (OTP) measures the quality of provider service, comparing actual to promised pickup time. Trips are considered on-time if they arrive no more than 20 minutes after the promised time. This dataset also includes trips that arrive within 15 and 30 minutes of the promised time.",
+  "name": "MTA NYCT Paratransit Pickup On-Time Performance: Beginning 2024",
+  "updated": "2026-10-23T15:18:14.000Z"
+ },
+ "e2qc-xgxs": {
+  "columns": [
+   "mdbf",
+   "_12_month_average_mdbf",
+   "division",
+   "car_class",
+   "total_miles",
+   "number_of_failures",
+   "month",
+   "number_of_cars"
+  ],
+  "description": "Mean Distance Between Failures reports how frequently train mechanical problems cause delays by month and subway car class. It is the main indicator for subway car reliability used at NYCT and is used to compare performance over time and across different subway car types. Only a small proportion of subway delays are due to malfunctioning trains.",
+  "name": "MTA Subway Mean Distance Between Failures: Beginning 2015",
+  "updated": "2026-10-23T15:05:40.000Z"
+ },
+ "e32g-kbe9": {
+  "columns": [
+   "period",
+   "delay_category",
+   "branch",
+   "minutes_late",
+   "service_date",
+   "arrive_station",
+   "depart_station",
+   "depart_time",
+   "status",
+   "train",
+   "arrive_time"
+  ],
+  "description": "This dataset lists all LIRR trains that are delayed, with information on whether a train is cancelled, partially cancelled, or late (in a rounded number of minutes), the specific delay cause category, the train number, and the branch the train operates on. For data released daily, though without the cause of delays, use dataset https://data.ny.gov/Transportation/MTA-LIRR-Delay-Verification-Beginni",
+  "name": "MTA LIRR Delays: Beginning 2010",
+  "updated": "2026-10-23T15:07:56.000Z"
+ },
+ "ekwu-khcy": {
+  "columns": [
+   "division",
+   "time",
+   "entries",
+   "description",
+   "exits",
+   "station",
+   "unit",
+   "c_a",
+   "scp",
+   "line_name",
+   "date"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2016",
+  "updated": "2017-01-02T13:08:14.000Z"
+ },
+ "ereg-mcvp": {
+  "columns": [
+   "day_type",
+   "division",
+   "category",
+   "line",
+   "count",
+   "month"
+  ],
+  "description": "Major Incidents are incidents that delay 50 or more trains, which cause the most disruption to customers.",
+  "name": "MTA Subway Major Incidents: Beginning 2015",
+  "updated": "2026-10-23T15:25:40.000Z"
+ },
+ "ev32-4fwz": {
+  "columns": [
+   "time",
+   "unit",
+   "division",
+   "exits",
+   "scp",
+   "c_a",
+   "description",
+   "date",
+   "line_name",
+   "station",
+   "entries"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Brooklyn-Manhattan Transit (BMT) Division: 2016",
+  "updated": "2017-01-02T13:08:14.000Z"
+ },
+ "f6rf-2a3t": {
+  "columns": [
+   "month",
+   "line",
+   "num_sched_trips",
+   "day_type",
+   "division",
+   "num_on_time_trips",
+   "terminal_on_time_performance"
+  ],
+  "description": "The MTA Subway Terminal On-Time Performance dataset measures the percentage of trains arriving at their destination terminals on time for each line, aggregated by month.",
+  "name": "MTA Subway Terminal On-Time Performance: Beginning 2015",
+  "updated": "2026-10-23T15:28:43.000Z"
+ },
+ "f84c-ude3": {
+  "columns": [
+   "date",
+   "trips_within_arrival_time",
+   "total_appointment_trips",
+   "arrival_time",
+   "provider_type",
+   "_30minearlyto1late",
+   "hour_of_promise_time",
+   "pickup_location"
+  ],
+  "description": "Drop-off On-Time Performance (OTP) measures the quality of provider service, comparing actual to customer-requested drop-off time for trips scheduled with an appointment time. Trips are considered on-time if they are no more than 30 minutes early, and no later than the appointment time.",
+  "name": "MTA NYCT Paratransit Drop-off On-Time Performance: Beginning 2024",
+  "updated": "2026-10-23T15:27:40.000Z"
+ },
+ "fccm-griq": {
+  "columns": [
+   "delayed_trains",
+   "day_time",
+   "trip_complete_percentage",
+   "incomplete_trips",
+   "on_time_performance_with",
+   "month",
+   "on_time_trips",
+   "on_time_trips_with_boat",
+   "scheduled_trips",
+   "delayed_trains_with_boat",
+   "on_time_performance"
+  ],
+  "description": "On-Time Performance (OTP) measures the percentage of trains arriving at their destination terminals as scheduled. While the main measure for OTP excludes delays caused by trains held for connections with the Staten Island Ferry, OTP including boat delays is also included. The dataset also includes the number of on-time trips and delayed trips per month (both including and excluding boat delays), t",
+  "name": "MTA Staten Island Railway On-Time Performance: Beginning 2006",
+  "updated": "2026-10-23T18:34:24.000Z"
+ },
+ "fgm6-ccue": {
+  "columns": [],
+  "description": "This data contains schedules and associated data for NYCT Subway, NYCT Bus,\r\nMTA Bus, LIRR, and Metro-North in GTFS Static format:\r\n--Station / bus stop locations\r\n--Train lines / bus routes\r\n--Schedule information, including holiday services\r\n--Schedules for upcoming planned work (LIRR and MNR only)",
+  "name": "MTA General Transit Feed Specification (GTFS) Static Data",
+  "updated": "2022-08-04T21:36:01.000Z"
+ },
+ "g8es-h7gb": {
+  "columns": [
+   "departure_time",
+   "line",
+   "stop_order",
+   "service_code",
+   "gtfs_stop_id",
+   "revenue_service",
+   "origin_gtfs_stop_id",
+   "next_trip_time",
+   "arrival_time",
+   "schedule_file_number",
+   "supplement_schedule_number",
+   "timepoint",
+   "track",
+   "train_id",
+   "destination_gtfs_stop_id",
+   "date_difference",
+   "direction",
+   "next_trip_type",
+   "trip_type",
+   "division",
+   "path_id",
+   "service_date",
+   "trip_line"
+  ],
+  "description": "This dataset includes data for subway schedules, both the base schedule and the supplement schedule in effect. It includes rows for each scheduled stop on a trip.",
+  "name": "MTA Subway Schedules: 2026",
+  "updated": "2026-11-03T20:11:51.000Z"
+ },
+ "g937-7k7c": {
+  "columns": [
+   "reporting_category",
+   "month",
+   "incidents",
+   "day_type",
+   "division",
+   "line"
+  ],
+  "description": "This dataset presents the number of subway incidents that caused train delays, broken down by line, day type (weekday/weekend), and specific delay category and subcategory.",
+  "name": "MTA Subway Delay-Causing Incidents: Beginning 2020",
+  "updated": "2026-10-23T15:25:02.000Z"
+ },
+ "gxb3-akrn": {
+  "columns": [
+   "transfers",
+   "ridership",
+   "fare_class_category",
+   "bus_route",
+   "transit_timestamp",
+   "payment_method"
+  ],
+  "description": "This dataset provides bus ridership estimates on an hourly basis by bus route and class of fare payment.",
+  "name": "MTA Bus Hourly Ridership: Beginning 2025",
+  "updated": "2026-11-02T17:44:17.000Z"
+ },
+ "hexe-btds": {
+  "columns": [],
+  "description": "These surveys were conducted to collect data on travel origins and\r\ndestinations, trip purposes, and travel characteristics of New York City\r\nTransit, Metro-North Railroad, and Long Island Rail Road customers with\r\nthe aim of upgrading the MTA's travel forecasting tools and gaining a\r\nbetter understanding of how people travel.\r\n--LIRR origin-destination survey (2012-14)\r\n--Metro-North origin-desti",
+  "name": "MTA Origin-Destination and Travel Surveys",
+  "updated": "2022-08-05T04:01:26.000Z"
+ },
+ "hjck-ty8r": {
+  "columns": [
+   "useful_life",
+   "asset",
+   "acceptance_date_of_first_cars_accepted",
+   "total",
+   "acceptance_date_of_last_cars_accepted",
+   "agency",
+   "type"
+  ],
+  "description": "The 2025-2044 20-Year Needs Assessment outlines capital work the MTA needs to do over the next two decades to keep the region moving. The MTA developed a three-part plan to secure the foundation of the system and ensure another 100 years of service by reconstructing, renewing, and modernizing the system. This dataset includes data on all revenue fleets, except for cars and locomotives used for Met",
+  "name": "MTA 2025-2044 20-Year Needs Assessment Railcar Fleet Inventory",
+  "updated": "2023-10-20T16:05:29.000Z"
+ },
+ "hqn2-78yk": {
+  "columns": [
+   "c_a",
+   "station",
+   "linename",
+   "desc",
+   "division",
+   "time",
+   "entries",
+   "unit",
+   "scp",
+   "exits",
+   "date"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Interborough Rapid Transit (IRT) Division: 2014",
+  "updated": "2015-03-01T03:50:10.000Z"
+ },
+ "hrau-ksig": {
+  "columns": [
+   "total_commendations",
+   "ridership",
+   "commendations_rate",
+   "complaints_rate",
+   "subject",
+   "total_complaints",
+   "month"
+  ],
+  "description": "This dataset includes monthly customer feedback performance metric data for NYCT. For Subways, Buses, Access-A-Ride, MetroCard, and Other NYCT, there is data on the total number of complaints and commendations, and the number of complaints and commendations per 100,000 riders, along with monthly ridership.",
+  "name": "MTA NYCT Customer Feedback Performance Metrics: 2017-2022",
+  "updated": "2022-07-27T16:21:01.000Z"
+ },
+ "i55r-43gk": {
+  "columns": [
+   "scp",
+   "desc",
+   "division",
+   "c_a",
+   "unit",
+   "station",
+   "linename",
+   "date",
+   "time",
+   "entries",
+   "exits"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2014",
+  "updated": "2015-03-01T03:50:10.000Z"
+ },
+ "i9wp-a4ja": {
+  "columns": [
+   "entrance_latitude",
+   "entrance_longitude",
+   "entrance_georeference",
+   "exit_allowed",
+   "entry_allowed",
+   "complex_id",
+   "constituent_station_name",
+   "station_id",
+   "entrance_type",
+   "daytime_routes",
+   "stop_name",
+   "borough",
+   "line",
+   "division",
+   "gtfs_stop_id"
+  ],
+  "description": "This is a dataset containing the entrances and exits at New York City Subway and Staten Island Railway stations. Information is provided on the entrance or exit, including their coordinates, the borough they are in, whether it allows entries and exits, and the type of entrance (more information below). The dataset also includes the name of the station complex, the complex ID number, the name of th",
+  "name": "MTA Subway Entrances and Exits: 2024",
+  "updated": "2025-12-05T18:36:18.000Z"
+ },
+ "ijxr-nffj": {
+  "columns": [
+   "mask_worn_correctly",
+   "survey_period_start_date",
+   "mask_worn_incorrectly",
+   "no_mask",
+   "total_wearing_a_mask",
+   "mode",
+   "survey_period_end_date",
+   "no_of_observations"
+  ],
+  "description": "This dataset provides subway and bus mask compliance statistics from MTA surveys that took place between June 2020 and April 2022. It provides the number of observations in each survey, and the percentages for the number of people with no mask, wearing a mask, wearing a mask incorrectly, and wearing a mask correctly.",
+  "name": "MTA Subway and Bus Mask Compliance Statistics: 2020 - 2022",
+  "updated": "2024-08-27T15:25:40.000Z"
+ },
+ "jsu2-fbtj": {
+  "columns": [
+   "destination_latitude",
+   "origin_longitude",
+   "year",
+   "origin_latitude",
+   "origin_station_complex_name",
+   "origin_station_complex_id",
+   "month",
+   "destination_station_complex_id",
+   "destination_station_complex_name",
+   "destination_longitude",
+   "estimated_average_ridership",
+   "origin_point",
+   "destination_point",
+   "hour_of_day",
+   "day_of_week",
+   "timestamp"
+  ],
+  "description": "This dataset provides an estimate of subway travel patterns based on scaled-up OMNY and MetroCard return swipe data. It provides estimated passenger volumes for all populated origin-destination (O-D) pairs aggregated by month, day of the week, and hour of day. It also provides the name, ID, and approximate latitude and longitude of the origin and destination subway complexes.",
+  "name": "MTA Subway Origin-Destination Ridership Estimate: 2024",
+  "updated": "2025-03-01T01:29:03.000Z"
+ },
+ "k7j9-jnct": {
+  "columns": [
+   "division",
+   "time",
+   "scp",
+   "unit",
+   "exits",
+   "c_a",
+   "entries",
+   "line_name",
+   "date",
+   "description"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2022",
+  "updated": "2023-05-08T20:07:05.000Z"
+ },
+ "kv7t-n8in": {
+  "columns": [
+   "fare_class_category",
+   "transit_timestamp",
+   "payment_method",
+   "transfers",
+   "bus_route",
+   "ridership"
+  ],
+  "description": "This dataset provides bus ridership estimates on an hourly basis by bus route and class of fare payment.",
+  "name": "MTA Bus Hourly Ridership: 2020-2024",
+  "updated": "2025-10-15T03:50:58.000Z"
+ },
+ "n2pf-h43s": {
+  "columns": [
+   "total_miles",
+   "month",
+   "_12_month_average_mdbf",
+   "number_of_failures",
+   "mdbf"
+  ],
+  "description": "Mean Distance Between Failures reports how frequently train mechanical problems cause delays.",
+  "name": "MTA Staten Island Railway Mean Distance Between Failures: Beginning 2006",
+  "updated": "2026-10-23T18:35:16.000Z"
+ },
+ "nqnz-e9z9": {
+  "columns": [
+   "year",
+   "day_of_week",
+   "hour_of_day",
+   "timestamp",
+   "origin_station_complex_id",
+   "origin_station_complex_name",
+   "origin_point",
+   "destination_latitude",
+   "estimated_average_ridership",
+   "destination_longitude",
+   "destination_point",
+   "destination_station_complex_name",
+   "destination_station_complex_id",
+   "origin_longitude",
+   "origin_latitude",
+   "month"
+  ],
+  "description": "This dataset provides an estimate of subway travel patterns based on scaled-up OMNY and MetroCard return swipe data. It provides estimated passenger volumes for all populated origin-destination (O-D) pairs aggregated by month, day of the week, and hour of day. It also provides the name, ID, and approximate latitude and longitude of the origin and destination subway complexes.",
+  "name": "MTA Subway Origin-Destination Ridership Estimate: 2022",
+  "updated": "2024-08-16T19:34:50.000Z"
+ },
+ "nwmt-ejjv": {
+  "columns": [
+   "unit",
+   "description",
+   "division",
+   "date",
+   "scp",
+   "station",
+   "line_name",
+   "entries",
+   "c_a",
+   "exits",
+   "time"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Independent Subway (IND) Division: 2016",
+  "updated": "2017-01-02T13:08:14.000Z"
+ },
+ "nxai-wcbd": {
+  "columns": [
+   "date",
+   "_30minearlyto1late",
+   "pickup_location",
+   "total_appointment_trips",
+   "hour_of_promise_time",
+   "trips_within_arrival_time",
+   "arrival_time",
+   "provider_type"
+  ],
+  "description": "Drop-off On-Time Performance (OTP) measures the quality of provider service, comparing actual to customer-requested drop-off time for trips scheduled with an appointment time. Trips are considered on-time if they are no more than 30 minutes early, and no later than the appointment time.",
+  "name": "MTA NYCT Paratransit Drop-off On-Time Performance: 2018-2023",
+  "updated": "2026-05-27T19:40:47.000Z"
+ },
+ "p6ps-59h2": {
+  "columns": [],
+  "description": "A dataset listing all subway and Staten Island Railway stations, with information on their locations, Station Master Reference Number (MRN), Complex MRN, GTFS Stop ID, the services that stop there, the type of structure the station is on or in, whether the station is in Manhattan\u2019s Central Business District (CBD), and their ADA-accessibility status.",
+  "name": "MTA Subway Stations Map",
+  "updated": "2026-11-03T05:07:51.000Z"
+ },
+ "pwa9-tmie": {
+  "columns": [
+   "verizon",
+   "georeference",
+   "latitude",
+   "historical",
+   "county",
+   "borough",
+   "at_t",
+   ":@computed_region_yamh_8v7k",
+   ":@computed_region_wbg7_3whc",
+   ":@computed_region_kjdx_g34t",
+   "location_zip",
+   "location_state",
+   "location_city",
+   "location_address",
+   "location",
+   "wifi_available",
+   "station_name",
+   "longitude",
+   "t_mobile",
+   "station_complex",
+   "sprint",
+   "lines"
+  ],
+  "description": "The MTA contracted with Transit Wireless to provide WIFI access and cell service to all underground subway stations. These services began being provided in 2011 and were available at all of those stations in January 2017. This dataset is a snapshot of the stations where Wi-Fi was available in part of 2015 and 2016.",
+  "name": "MTA Wi-Fi Locations",
+  "updated": "2021-12-06T22:20:24.000Z"
+ },
+ "py8k-a8wg": {
+  "columns": [
+   "description",
+   "exits",
+   "station",
+   "scp",
+   "entries",
+   "c_a",
+   "time",
+   "date",
+   "division",
+   "unit",
+   "line_name"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2020",
+  "updated": "2021-03-08T19:53:19.000Z"
+ },
+ "q43a-ygsk": {
+  "columns": [
+   "project",
+   "value",
+   "category"
+  ],
+  "description": "The 2025-2044 20-Year Needs Assessment Comparative Evaluation is a framework which assesses the costs and benefits of potential expansions and enhancements. All potential projects are evaluated using a consistent set of models, tools, and criteria including ridership, time savings, network resilience and sustainability, capacity, equity, network leverage, geographic distribution, and cost. The mos",
+  "name": "MTA 2025-2044 20-Year Needs Assessment Comparative Evaluation",
+  "updated": "2023-10-24T18:54:27.000Z"
+ },
+ "q9nv-uegs": {
+  "columns": [
+   "line",
+   "stop_order",
+   "gtfs_stop_id",
+   "division",
+   "revenue_service",
+   "track",
+   "trip_line",
+   "trip_type",
+   "schedule_file_number",
+   "origin_gtfs_stop_id",
+   "service_date",
+   "arrival_time",
+   "timepoint",
+   "next_trip_time",
+   "next_trip_type",
+   "supplement_schedule_number",
+   "destination_gtfs_stop_id",
+   "direction",
+   "date_difference",
+   "service_code",
+   "train_id",
+   "departure_time",
+   "path_id"
+  ],
+  "description": "This dataset includes data for subway schedules, both the base schedule and the supplement schedule in effect. It includes rows for each scheduled stop on a trip.",
+  "name": "MTA Subway Schedules: 2025",
+  "updated": "2026-02-27T23:24:30.000Z"
+ },
+ "qve8-dj3u": {
+  "columns": [
+   "appearance_score",
+   "month",
+   "equipment_score",
+   "borough",
+   "information_score"
+  ],
+  "description": "Passenger Environment Survey indicators combine the results of surveys of a number of different aspects of station conditions to measure passenger comfort and convenience.",
+  "name": "MTA Subway Station Passenger Environment Survey: 2015 to 2018",
+  "updated": "2024-09-03T13:23:22.000Z"
+ },
+ "r7qk-6tcy": {
+  "columns": [
+   "division",
+   "num_passengers",
+   "line",
+   "month",
+   "customer_journey_time",
+   "additional_platform_time",
+   "total_apt",
+   "over_five_mins",
+   "total_att",
+   "over_five_mins_perc",
+   "period",
+   "additional_train_time"
+  ],
+  "description": "Additional Platform Time (APT) is the estimated average extra time that customers spend waiting on the platform for a train, compared with their scheduled wait time.\n\nAdditional Train Time (ATT) is the estimated average extra time that customers spend onboard a train, compared to the time they would have spent onboard a train if trains were running according to schedule.\n\nAdditional Journey Time (",
+  "name": "MTA Subway Customer Journey-Focused Metrics: Beginning 2015",
+  "updated": "2026-10-23T15:28:07.000Z"
+ },
+ "rapa-97zv": {
+  "columns": [
+   "origin_station_complex_name",
+   "destination_point",
+   "origin_point",
+   "estimated_average_ridership",
+   "destination_longitude",
+   "destination_latitude",
+   "destination_station_complex_name",
+   "destination_station_complex_id",
+   "origin_longitude",
+   "origin_latitude",
+   "origin_station_complex_id",
+   "timestamp",
+   "day_of_week",
+   "year",
+   "hour_of_day",
+   "month"
+  ],
+  "description": "This dataset provides an estimate of subway travel patterns based on scaled-up OMNY and MetroCard return swipe data. It provides estimated passenger volumes for all populated origin-destination (O-D) pairs aggregated by month, day of the week, and hour of day. It also provides the name, ID, and approximate latitude and longitude of the origin and destination subway complexes.",
+  "name": "MTA Subway Origin-Destination Ridership Estimate: 2021",
+  "updated": "2024-08-16T19:31:26.000Z"
+ },
+ "rc78-7x78": {
+  "columns": [
+   "scheduled_outages",
+   "borough",
+   "entrapments",
+   "equipment_type",
+   "pm_peak_availability",
+   "_24_hour_availability",
+   "equipment_code",
+   "total_outages",
+   "time_since_major_improvement",
+   "am_peak_availability",
+   "am_peak_hours_available",
+   "pm_peak_hours_available",
+   "pm_peak_total_hours",
+   "_24_hour_hours_available",
+   "_24_hour_total_hours",
+   "station_name",
+   "station_mrn",
+   "station_complex_name",
+   "station_complex_mrn",
+   "month",
+   "unscheduled_outages",
+   "am_peak_total_hours"
+  ],
+  "description": "The percent of the time that elevators and escalators are operational systemwide.",
+  "name": "MTA NYCT Subway Elevator and Escalator Availability: Beginning 2015",
+  "updated": "2026-10-23T15:08:37.000Z"
+ },
+ "rfmi-int5": {
+  "columns": [
+   "entries",
+   "line_name",
+   "exits",
+   "description",
+   "time",
+   "division",
+   "unit",
+   "scp",
+   "station",
+   "date",
+   "c_a"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Interborough Rapid Transit (IRT) Division: 2017",
+  "updated": "2017-12-25T11:44:14.000Z"
+ },
+ "rmfq-74ji": {
+  "columns": [
+   "dropoffs_within_standard",
+   "date",
+   "total_appointment_trips",
+   "percentage_of_trips_within",
+   "pick_up_location",
+   "hour_of_promise_time",
+   "provider_type"
+  ],
+  "description": "Drop-off On-Time Performance (OTP) measures the quality of provider service, comparing actual to customer-requested drop-off time for trips scheduled with an appointment time. This dataset uses the old methodology in which trips were considered on-time if they arrived at the drop-off location no more than five minutes after the requested time. The Drop-off On-Time Performance dataset with the new ",
+  "name": "MTA NYCT Paratransit Drop-off On-Time Performance: 2016 - 2019 (Archived Methodology)",
+  "updated": "2023-08-29T16:47:22.000Z"
+ },
+ "rube-svnv": {
+  "columns": [
+   "on_time_performance",
+   "date",
+   "hour_of_promise_time",
+   "provider_type",
+   "standard",
+   "pickup_location",
+   "total_pickups",
+   "pickups_within_standards"
+  ],
+  "description": "Pickup On-Time Performance (OTP) measures the quality of provider service, comparing actual to promised pickup time. Trips are considered on-time if they arrive no more than 20 minutes after the promised time. This dataset also includes trips that arrive within 15 and 30 minutes of the promised time.",
+  "name": "MTA NYCT Paratransit Pickup On-Time Performance: 2016-2023",
+  "updated": "2026-05-27T19:39:53.000Z"
+ },
+ "s666-h6b7": {
+  "columns": [
+   "period",
+   "wait_assessment",
+   "line",
+   "num_timepoints_passing_wait_assessment",
+   "month",
+   "num_sched_timepoints",
+   "day_type",
+   "division"
+  ],
+  "description": "Wait Assessment measures how regularly trains are spaced during peak hours at selected timepoints on each line.",
+  "name": "MTA Subway Wait Assessment: Beginning 2015",
+  "updated": "2026-10-23T15:26:20.000Z"
+ },
+ "sayj-mze2": {
+  "columns": [
+   "date",
+   "mode",
+   "count"
+  ],
+  "description": "The daily ridership dataset provides systemwide ridership and traffic estimates for subways (including the Staten Island Railway), buses, Long Island Rail Road, Metro-North Railroad, Access-A-Ride, Bridges and Tunnels, and the Central Business District and Congestion Relief Zone since the start of Congestion Pricing",
+  "name": "MTA Daily Ridership and Traffic: Beginning 2020",
+  "updated": "2026-11-03T23:08:36.000Z"
+ },
+ "sp9g-mzjh": {
+  "columns": [
+   "average_scheduled_runtime",
+   "scheduled_trains",
+   "origin_station_id",
+   "destination_station_id",
+   "destination_station_name",
+   "number_of_stops",
+   "month",
+   "stop_path_id",
+   "_75th_percentile_runtime",
+   "origin_station_name",
+   "direction",
+   "actual_trains",
+   "time_period",
+   "_50th_percentile_runtime",
+   "schedule_day_type",
+   "line",
+   "average_actual_runtime",
+   "_25th_percentile_runtime",
+   "distance",
+   "average_speed"
+  ],
+  "description": "This dataset provides information on the actual end-to-end running times for subway trips between their origin and destination stations, including the average, and 25th, 50th (median), and 75th percentile running times in minutes, along with the scheduled end-to-end running time in minutes for these trips. \n\nData is available for a combination of each month, day type (Weekday, Saturday, Sunday), t",
+  "name": "MTA Subway End-to-End Running Times: Beginning 2019",
+  "updated": "2026-10-23T15:13:37.000Z"
+ },
+ "t69i-h2me": {
+  "columns": [
+   "payment_method",
+   "transit_mode",
+   "station_complex_id",
+   "station_complex",
+   "borough",
+   "latitude",
+   "transit_timestamp",
+   "fare_class_category",
+   "georeference",
+   "longitude",
+   "transfers",
+   "ridership"
+  ],
+  "description": "This dataset provides subway ridership estimates on an hourly basis by subway station complex and class of fare payment.",
+  "name": "MTA Subway Hourly Ridership: 2017-2019",
+  "updated": "2025-11-06T23:49:34.000Z"
+ },
+ "tdmq-asac": {
+  "columns": [
+   "line",
+   "stop_order",
+   "stop_path_id",
+   "number_of_stops",
+   "distance",
+   "origin_station_id",
+   "destination_station_id",
+   "station_id",
+   "destination_station_name",
+   "origin_station_name",
+   "direction",
+   "station_name"
+  ],
+  "description": "This dataset is a table of each distinct set of stations, or path, made by all normal and extra subway trips that run in service, excepting those that skipped one or more planned stops due to service disruptions.\n\nThere is a row for each subway stop made by a stop path. These rows also contain the unique id for each path, the number of stops made by the path, the distance in miles along the path, ",
+  "name": "MTA Subway Paths: Beginning 2019",
+  "updated": "2026-10-23T15:08:36.000Z"
+ },
+ "tppa-s6t6": {
+  "columns": [
+   "subject_matter",
+   "subject_detail",
+   "issue_detail",
+   "year",
+   "quarter",
+   "branch_line_route",
+   "commendation_or_complaint",
+   "agency"
+  ],
+  "description": "This deprecated dataset contains information on customer feedback submitted by riders of the transit system on the MTA\u2019s website. Data users are encouraged to instead use MTA Customer Feedback: Beginning 2018, linked under Additional Resources.",
+  "name": "MTA Customer Feedback Data: 2014-2019",
+  "updated": "2024-07-29T20:38:30.000Z"
+ },
+ "ufwm-iiwa": {
+  "columns": [
+   "unit",
+   "time",
+   "c_a",
+   "linename",
+   "exits",
+   "desc",
+   "entries",
+   "division",
+   "date",
+   "scp",
+   "station"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Brooklyn-Manhattan Transit (BMT) Division: 2014",
+  "updated": "2015-03-01T03:50:10.000Z"
+ },
+ "ug6q-shqc": {
+  "columns": [
+   "scp",
+   "c_a",
+   "line_name",
+   "station",
+   "unit",
+   "division",
+   "date",
+   "time",
+   "description",
+   "entries",
+   "exits"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2015",
+  "updated": "2016-01-05T12:08:56.000Z"
+ },
+ "uhf3-t34z": {
+  "columns": [
+   "year",
+   "destination_longitude",
+   "month",
+   "origin_point",
+   "hour_of_day",
+   "timestamp",
+   "destination_point",
+   "origin_station_complex_id",
+   "origin_latitude",
+   "day_of_week",
+   "origin_station_complex_name",
+   "destination_latitude",
+   "origin_longitude",
+   "destination_station_complex_id",
+   "destination_station_complex_name",
+   "estimated_average_ridership"
+  ],
+  "description": "This dataset provides an estimate of subway travel patterns based on scaled-up OMNY and MetroCard return swipe data. It provides estimated passenger volumes for all populated origin-destination (O-D) pairs aggregated by month, day of the week, and hour of day. It also provides the name, ID, and approximate latitude and longitude of the origin and destination subway complexes.",
+  "name": "MTA Subway Origin-Destination Ridership Estimate: 2023",
+  "updated": "2024-07-23T00:01:17.000Z"
+ },
+ "uu7b-3kff": {
+  "columns": [
+   "date",
+   "scp",
+   "entries",
+   "unit",
+   "c_a",
+   "station",
+   "line_name",
+   "description",
+   "division",
+   "exits",
+   "time"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2021",
+  "updated": "2023-05-08T13:59:39.000Z"
+ },
+ "v4z4-2h6n": {
+  "columns": [
+   "period",
+   "trip_type",
+   "number_of_scheduled_trips",
+   "day_type",
+   "borough",
+   "wait_assessment",
+   "month",
+   "number_of_trips_passing_wait",
+   "route_id"
+  ],
+  "description": "Wait Assessment measures how evenly buses are spaced.",
+  "name": "MTA Bus Wait Assessment: Beginning 2015",
+  "updated": "2026-10-23T15:25:12.000Z"
+ },
+ "v5y5-mwpb": {
+  "columns": [
+   "c_a",
+   "station",
+   "date",
+   "time",
+   "entries",
+   "division",
+   "description",
+   "exits",
+   "line_name",
+   "unit",
+   "scp"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2017",
+  "updated": "2017-12-25T11:44:14.000Z"
+ },
+ "v7qc-gwpn": {
+  "columns": [
+   "_7_day_ada_farecard_access_system_unlimited",
+   "station",
+   "remote_station_id",
+   "student",
+   "to_date",
+   "nice_2_trip",
+   "airtrain_monthly",
+   "senior_citizen_disabled",
+   "mail_and_ride_easypay_express",
+   "cuny_60_day",
+   "fair_fares_pay_per_ride",
+   "long_island_bus_special_senior",
+   "_7_day_unlimited",
+   "_30_day_ada_farecard_access_reduced_fare_media_unlimited",
+   "_14_day_unlimited",
+   "_1_day_unlimited",
+   "from_date",
+   "transitcheck",
+   "fair_fares_30_day_unlimited",
+   "fair_fares_7_day_unlimited",
+   "cuny_120_day",
+   "airtrain_10_trip",
+   "airtrain_30_day_unlimited",
+   "airtrain_full_fare",
+   "path_2_trip",
+   "mail_and_ride_easypay_unlimited",
+   "transitcheck_annual",
+   "rail_road_unlimited_no_trade",
+   "reduced_fare_2_trip",
+   "_7_day_express_bus_pass",
+   "_14_day_reduced_fare_media_unlimited",
+   "_30_day_unlimited",
+   "joint_rail_road_ticket",
+   "full_fare"
+  ],
+  "description": "This archival dataset shows the number of MetroCard swipes made each week by customers entering each station of the New York City Subway, Staten Island Railway, PATH, AirTrain JFK and the Roosevelt Island Tram, broken out to show the relative popularity of the various types of MetroCards. Please use the subway hourly ridership dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership",
+  "name": "MTA NYCT MetroCard History: 2010 - 2021",
+  "updated": "2024-01-23T13:53:45.000Z"
+ },
+ "v8fq-z483": {
+  "columns": [
+   "month",
+   "transport",
+   "journeys",
+   "borough",
+   "category"
+  ],
+  "description": "This indicator shows the number of subway and bus journeys made each month by passengers using Reduced-Fare MetroCards between 2018 and 2023. This dataset is now retired, with data on reduced-fare usage of the transit system available in the hourly bus (https://data.ny.gov/Transportation/MTA-Bus-Hourly-Ridership-Beginning-February-2022/kv7t-n8in/) and subway (https://data.ny.gov/Transportation/MTA",
+  "name": "MTA NYCT Reduced-Fare MetroCard History: 2018 - 2023",
+  "updated": "2024-08-27T15:33:07.000Z"
+ },
+ "vxuj-8kew": {
+  "columns": [
+   "bridges_and_tunnels_of_comparable_pre_pandemic_day",
+   "staten_island_railway_of_comparable_pre_pandemic_day",
+   "lirr_of_comparable_pre_pandemic_day",
+   "buses_total_estimated_ridersip",
+   "metro_north_total_estimated_ridership",
+   "date",
+   "access_a_ride_of_comparable_pre_pandemic_day",
+   "lirr_total_estimated_ridership",
+   "staten_island_railway_total_estimated_ridership",
+   "bridges_and_tunnels_total_traffic",
+   "access_a_ride_total_scheduled_trips",
+   "metro_north_of_comparable_pre_pandemic_day",
+   "buses_of_comparable_pre_pandemic_day",
+   "subways_of_comparable_pre_pandemic_day",
+   "subways_total_estimated_ridership"
+  ],
+  "description": "This deprecated dataset provides systemwide ridership and traffic estimates for subways (including the Staten Island Railway), buses, Long Island Rail Road, Metro-North Railroad, Access-A-Ride, and Bridges and Tunnels, beginning 3/1/2020, and provides a percentage comparison against a comparable pre-pandemic date.\n\nNext-day estimates for daily ridership, without the pre-pandemic comparison, are no",
+  "name": "MTA Daily Ridership Data: 2020 - 2025",
+  "updated": "2025-01-10T23:03:44.000Z"
+ },
+ "wkbk-y3dt": {
+  "columns": [
+   "depart_station",
+   "branch",
+   "minutes_late",
+   "arrive_time",
+   "arrive_station",
+   "service_date",
+   "train",
+   "depart_time",
+   "status",
+   "period"
+  ],
+  "description": "This dataset lists all LIRR trains that are delayed, with information on whether a train is cancelled, partially cancelled, or late (in a rounded number of minutes), the train number, and the branch the train operates on. For the cause of delays, use dataset https://data.ny.gov/Transportation/MTA-LIRR-Delays-Beginning-2010/e32g-kbe9, which is updated monthly.",
+  "name": "MTA LIRR Delay Verification: Beginning 2010",
+  "updated": "2026-11-03T12:04:44.000Z"
+ },
+ "wkep-d66m": {
+  "columns": [
+   "description",
+   "exits",
+   "entries",
+   "scp",
+   "line_name",
+   "station",
+   "division",
+   "c_a",
+   "unit",
+   "time",
+   "date"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Brooklyn-Manhattan Transit (BMT) Division: 2015",
+  "updated": "2016-01-05T12:08:56.000Z"
+ },
+ "wujg-7c2s": {
+  "columns": [
+   "station_complex",
+   "longitude",
+   "latitude",
+   "transit_timestamp",
+   "georeference",
+   ":@computed_region_kjdx_g34t",
+   ":@computed_region_yamh_8v7k",
+   "transfers",
+   "ridership",
+   "fare_class_category",
+   ":@computed_region_wbg7_3whc",
+   "payment_method",
+   "borough",
+   "transit_mode",
+   "station_complex_id"
+  ],
+  "description": "This dataset provides subway ridership estimates on an hourly basis by subway station complex and class of fare payment.",
+  "name": "MTA Subway Hourly Ridership: 2020-2024",
+  "updated": "2025-10-15T13:19:23.000Z"
+ },
+ "x7nj-r656": {
+  "columns": [
+   "day_type",
+   "line",
+   "number_late",
+   "month",
+   "percent_late",
+   "scheduled_trips",
+   "division"
+  ],
+  "description": "This dataset shows the number and percentage of trains arriving at their scheduled terminals between four and five minutes after their scheduled arrival times.",
+  "name": "MTA Subway 4 to 5 Minute Late Arriving Trains: Beginning 2019",
+  "updated": "2026-10-26T17:42:53.000Z"
+ },
+ "xfn5-qji9": {
+  "columns": [
+   "unit",
+   "line_name",
+   "c_a",
+   "entries",
+   "time",
+   "description",
+   "division",
+   "scp",
+   "date",
+   "exits",
+   "station"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through the Subway hourly dataset (https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s).",
+  "name": "MTA Subway Turnstile Usage Data: 2019",
+  "updated": "2019-12-30T11:30:06.000Z"
+ },
+ "xfre-bxip": {
+  "columns": [
+   "agency",
+   "ridership",
+   "month"
+  ],
+  "description": "This dataset provides systemwide ridership and traffic estimates for subways (including the Staten Island Railway), NYCT bus, MTA Bus, Long Island Rail Road, Metro-North Railroad, Access-A-Ride, Bridges and Tunnels and Staten Island Railway on a monthly basis.",
+  "name": "MTA Monthly Ridership / Traffic Data: Beginning January 2008",
+  "updated": "2026-10-26T21:12:47.000Z"
+ },
+ "xiz5-cpyd": {
+  "columns": [
+   "time",
+   "entries",
+   "date",
+   "c_a",
+   "description",
+   "station",
+   "line_name",
+   "exits",
+   "division",
+   "unit",
+   "scp"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Brooklyn-Manhattan Transit (BMT) Division: 2017",
+  "updated": "2017-12-25T11:44:14.000Z"
+ },
+ "y2qv-fytt": {
+  "columns": [
+   "month",
+   "destination_point",
+   "day_of_week",
+   "origin_station_complex_id",
+   "origin_latitude",
+   "destination_station_complex_id",
+   "destination_station_complex_name",
+   "destination_longitude",
+   "estimated_average_ridership",
+   "origin_point",
+   "destination_latitude",
+   "hour_of_day",
+   "timestamp",
+   "origin_longitude",
+   "origin_station_complex_name",
+   "year"
+  ],
+  "description": "This dataset provides an estimate of subway travel patterns based on scaled-up OMNY and MetroCard return swipe data. It provides estimated passenger volumes for all populated origin-destination (O-D) pairs aggregated by month, day of the week, and hour of day. It also provides the name, ID, and approximate latitude and longitude of the origin and destination subway complexes.",
+  "name": "MTA Subway Origin-Destination Ridership Estimate: 2025",
+  "updated": "2026-01-20T06:45:08.000Z"
+ },
+ "yjw3-r8pi": {
+  "columns": [
+   "scp",
+   "date",
+   "division",
+   "station",
+   "line_name",
+   "time",
+   "description",
+   "c_a",
+   "entries",
+   "exits",
+   "unit"
+  ],
+  "description": "This retired dataset contains information on entry/exit values for individual control areas and is posted purely for archival purposes. More detailed subway ridership data is now supported through https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s.",
+  "name": "Turnstile Usage Data for Interborough Rapid Transit (IRT) Division: 2016",
+  "updated": "2017-01-02T13:08:14.000Z"
+ }
+}

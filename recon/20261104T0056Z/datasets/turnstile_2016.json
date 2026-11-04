@@ -1,0 +1,158 @@
+{
+ "attachments": [
+  {
+   "assetId": "1a5dc544-ff4c-46d1-b32c-2fce32e2ccfb",
+   "filename": "MTA_SubwayTurnstileUsageData2016_Overview.pdf",
+   "name": "MTA_SubwayTurnstileUsageData2016_Overview.pdf"
+  },
+  {
+   "assetId": "e6e9a693-97f0-4da5-a14b-931940d93c34",
+   "filename": "MTA_SubwayTurnstileUsageData2016_DataDictionary.pdf",
+   "name": "MTA_SubwayTurnstileUsageData2016_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "This is the Control Area name/Booth name and is the internal identification of a booth at a given station. For example: A002.",
+   "field": "c_a",
+   "name": "C/A",
+   "type": "text"
+  },
+  {
+   "description": "The remote unit ID of the station, which consists of a three-digit numeric designation preceded by \u2018R\u2019, such as R001.",
+   "field": "unit",
+   "name": "Unit",
+   "type": "text"
+  },
+  {
+   "description": "This is the subunit/channel/position, or specific address, for a specific turnstile. For example, 01-00-01.",
+   "field": "scp",
+   "name": "SCP",
+   "type": "text"
+  },
+  {
+   "description": "The name of the subway station.",
+   "field": "station",
+   "name": "Station",
+   "type": "text"
+  },
+  {
+   "description": "The train lines that stop at the station, such as 456. Train lines stopping at this location.",
+   "field": "line_name",
+   "name": "Line Name",
+   "type": "text"
+  },
+  {
+   "description": "The division of the subway system for the station (BRT, IRT, IND) or the system, if not part of the subway (PTH, JFK, SRT, RIT). Independent Subway System (IND).",
+   "field": "division",
+   "name": "Division",
+   "type": "text"
+  },
+  {
+   "description": "The date of the audit data (MM/DD/YYYY).",
+   "field": "date",
+   "name": "Date",
+   "type": "calendar_date"
+  },
+  {
+   "description": "The time of the reported data (HH:MM:SS).",
+   "field": "time",
+   "name": "Time",
+   "type": "text"
+  },
+  {
+   "description": "This is a description of the type of audit, which typically occurs every four hours (though they may occur more frequently due to planning or troubleshooting activities). The values are either REGULAR for a scheduled audit event, or RECOVR AUD, which refers to a missed audit that was recovered.",
+   "field": "description",
+   "name": "Description",
+   "type": "text"
+  },
+  {
+   "description": "The cumulative ENTRY register value for a turnstile. This is a 10-digit number that represents the number of entries on the turnstile since it was last initialized. ",
+   "field": "entries",
+   "name": "Entries",
+   "type": "number"
+  },
+  {
+   "description": "The cumulative EXIT register value for a turnstile. This is a 10-digit number that represents the number of exits on the turnstile since it was last initialized.",
+   "field": "exits",
+   "name": "Exits                                                     ",
+   "type": "number"
+  }
+ ],
+ "distinct": {},
+ "id": "ekwu-khcy",
+ "rows": [
+  {
+   "n": "9492670"
+  }
+ ],
+ "rows_updated_at": 1483362494,
+ "sample": [
+  {
+   "c_a": "A002",
+   "date": "2016-12-30T00:00:00.000",
+   "description": "REGULAR",
+   "division": "BMT",
+   "entries": "5991455",
+   "exits": "2028368",
+   "line_name": "NQR456W",
+   "scp": "02-00-00",
+   "station": "59 ST",
+   "time": "23:00:00",
+   "unit": "R051"
+  },
+  {
+   "c_a": "A002",
+   "date": "2016-12-30T00:00:00.000",
+   "description": "REGULAR",
+   "division": "BMT",
+   "entries": "5991003",
+   "exits": "2028335",
+   "line_name": "NQR456W",
+   "scp": "02-00-00",
+   "station": "59 ST",
+   "time": "19:00:00",
+   "unit": "R051"
+  },
+  {
+   "c_a": "A002",
+   "date": "2016-12-30T00:00:00.000",
+   "description": "REGULAR",
+   "division": "BMT",
+   "entries": "5989931",
+   "exits": "2028277",
+   "line_name": "NQR456W",
+   "scp": "02-00-00",
+   "station": "59 ST",
+   "time": "15:00:00",
+   "unit": "R051"
+  },
+  {
+   "c_a": "A002",
+   "date": "2016-12-30T00:00:00.000",
+   "description": "REGULAR",
+   "division": "BMT",
+   "entries": "5989153",
+   "exits": "2028014",
+   "line_name": "NQR456W",
+   "scp": "02-00-00",
+   "station": "59 ST",
+   "time": "07:00:00",
+   "unit": "R051"
+  },
+  {
+   "c_a": "A002",
+   "date": "2016-12-30T00:00:00.000",
+   "description": "REGULAR",
+   "division": "BMT",
+   "entries": "5989126",
+   "exits": "2027972",
+   "line_name": "NQR456W",
+   "scp": "02-00-00",
+   "station": "59 ST",
+   "time": "03:00:00",
+   "unit": "R051"
+  }
+ ],
+ "title": "MTA Subway Turnstile Usage Data: 2016"
+}

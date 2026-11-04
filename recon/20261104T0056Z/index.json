@@ -1,0 +1,368 @@
+{
+ "catalog": {
+  "ok": true,
+  "result": {
+   "datasets_found": 93
+  }
+ },
+ "dataset_meta": {
+  "ok": true,
+  "result": {
+   "cjm_2015_2019": {
+    "columns": [
+     "month",
+     "division",
+     "line",
+     "period",
+     "num_passengers",
+     "additional_platform_time",
+     "additional_train_time",
+     "total_apt",
+     "total_att",
+     "over_five_mins",
+     "over_five_mins_perc",
+     "customer_journey_time"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "5912"
+     }
+    ]
+   },
+   "cjm_2020_2024": {
+    "error": "HTTPError('403 Client Error: Forbidden for url: https://data.ny.gov/api/views/4apg-4kt9.json')",
+    "ok": false
+   },
+   "cjm_2025": {
+    "error": "HTTPError('403 Client Error: Forbidden for url: https://data.ny.gov/api/views/s4u6-t435.json')",
+    "ok": false
+   },
+   "complexes": {
+    "columns": [
+     "complex_id",
+     "is_complex",
+     "number_of_stations_in_complex",
+     "stop_name",
+     "display_name",
+     "constituent_station_names",
+     "station_ids",
+     "gtfs_stop_ids",
+     "borough",
+     "cbd",
+     "daytime_routes",
+     "structure_type",
+     "latitude",
+     "longitude",
+     "ada",
+     "ada_notes"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "445"
+     }
+    ]
+   },
+   "entrances": {
+    "columns": [
+     "division",
+     "line",
+     "borough",
+     "stop_name",
+     "complex_id",
+     "constituent_station_name",
+     "station_id",
+     "gtfs_stop_id",
+     "daytime_routes",
+     "entrance_type",
+     "entry_allowed",
+     "exit_allowed",
+     "entrance_latitude",
+     "entrance_longitude",
+     "entrance_georeference"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "2120"
+     }
+    ]
+   },
+   "hourly_ridership_2020_2024": {
+    "columns": [
+     "transit_timestamp",
+     "transit_mode",
+     "station_complex_id",
+     "station_complex",
+     "borough",
+     "payment_method",
+     "fare_class_category",
+     "ridership",
+     "transfers",
+     "latitude",
+     "longitude",
+     "georeference"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "120855567"
+     }
+    ]
+   },
+   "hourly_ridership_2025": {
+    "columns": [
+     "transit_timestamp",
+     "transit_mode",
+     "station_complex_id",
+     "station_complex",
+     "borough",
+     "payment_method",
+     "fare_class_category",
+     "ridership",
+     "transfers",
+     "latitude",
+     "longitude",
+     "georeference"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "47059357"
+     }
+    ]
+   },
+   "od_2023": {
+    "columns": [
+     "year",
+     "month",
+     "day_of_week",
+     "hour_of_day",
+     "timestamp",
+     "origin_station_complex_id",
+     "origin_station_complex_name",
+     "origin_latitude",
+     "origin_longitude",
+     "destination_station_complex_id",
+     "destination_station_complex_name",
+     "destination_latitude",
+     "destination_longitude",
+     "estimated_average_ridership",
+     "origin_point",
+     "destination_point"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "115731896"
+     }
+    ]
+   },
+   "od_2024": {
+    "columns": [
+     "year",
+     "month",
+     "day_of_week",
+     "hour_of_day",
+     "timestamp",
+     "origin_station_complex_id",
+     "origin_station_complex_name",
+     "origin_latitude",
+     "origin_longitude",
+     "destination_station_complex_id",
+     "destination_station_complex_name",
+     "destination_latitude",
+     "destination_longitude",
+     "estimated_average_ridership",
+     "origin_point",
+     "destination_point"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "116279069"
+     }
+    ]
+   },
+   "od_2025": {
+    "columns": [
+     "year",
+     "month",
+     "day_of_week",
+     "hour_of_day",
+     "timestamp",
+     "origin_station_complex_id",
+     "origin_station_complex_name",
+     "origin_latitude",
+     "origin_longitude",
+     "destination_station_complex_id",
+     "destination_station_complex_name",
+     "destination_latitude",
+     "destination_longitude",
+     "estimated_average_ridership",
+     "origin_point",
+     "destination_point"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "121209974"
+     }
+    ]
+   },
+   "od_2026": {
+    "columns": [
+     "year",
+     "month",
+     "day_of_week",
+     "hour_of_day",
+     "timestamp",
+     "origin_station_complex_id",
+     "origin_station_complex_name",
+     "origin_latitude",
+     "origin_longitude",
+     "destination_station_complex_id",
+     "destination_station_complex_name",
+     "destination_latitude",
+     "destination_longitude",
+     "estimated_average_ridership",
+     "origin_point",
+     "destination_point"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "93282195"
+     }
+    ]
+   },
+   "stations": {
+    "columns": [
+     "gtfs_stop_id",
+     "station_id",
+     "complex_id",
+     "division",
+     "line",
+     "stop_name",
+     "borough",
+     "cbd",
+     "daytime_routes",
+     "structure",
+     "gtfs_latitude",
+     "gtfs_longitude",
+     "north_direction_label",
+     "south_direction_label",
+     "ada",
+     "ada_northbound",
+     "ada_southbound",
+     "ada_notes",
+     "georeference"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "496"
+     }
+    ]
+   },
+   "turnstile_2016": {
+    "columns": [
+     "c_a",
+     "unit",
+     "scp",
+     "station",
+     "line_name",
+     "division",
+     "date",
+     "time",
+     "description",
+     "entries",
+     "exits"
+    ],
+    "ok": true,
+    "rows": [
+     {
+      "n": "9492670"
+     }
+    ]
+   },
+   "wait_assessment_2025": {
+    "error": "HTTPError('403 Client Error: Forbidden for url: https://data.ny.gov/api/views/62c4-mvcx.json')",
+    "ok": false
+   }
+  }
+ },
+ "gtfs_rt": {
+  "ok": true,
+  "result": {
+   "bdfm": {
+    "bytes": 161342,
+    "entities": 320,
+    "header_timestamp": 1793754141,
+    "status": 200,
+    "trip_updates": 160,
+    "vehicles": 160
+   },
+   "nqrw": {
+    "bytes": 120155,
+    "entities": 226,
+    "header_timestamp": 1793754140,
+    "status": 200,
+    "trip_updates": 113,
+    "vehicles": 113
+   }
+  }
+ },
+ "pages": {
+  "ok": true,
+  "result": {
+   "pages": 6
+  }
+ },
+ "subwaydata": {
+  "ok": true,
+  "result": {
+   "days": 2042,
+   "example": {
+    "Created": "2022-02-22T15:46:19.602939312-05:00",
+    "Csv": {
+     "Checksum": "ceb8a7efb237",
+     "Path": "2021-04/subwaydatanyc_2021-04-01_csv_ceb8a7efb237.tar.xz",
+     "Size": 1215740
+    },
+    "Day": "2021-04-01",
+    "Feeds": [
+     "nycsubway_1234567",
+     "nycsubway_ACE",
+     "nycsubway_BDFM",
+     "nycsubway_G",
+     "nycsubway_JZ",
+     "nycsubway_NQRW",
+     "nycsubway_SIR"
+    ],
+    "Gtfsrt": {
+     "Checksum": "82a59d7ac469",
+     "Path": "2021-04/subwaydatanyc_2021-04-01_gtfsrt_82a59d7ac469.tar.xz",
+     "Size": 50234700
+    },
+    "SoftwareVersion": 4
+   },
+   "first": "2026-11-02",
+   "last": "2021-04-01"
+  }
+ },
+ "weather": {
+  "ok": true,
+  "result": {
+   "weather_daily.csv": 4323,
+   "weather_hourly.csv": 42384
+  }
+ },
+ "wiki": {
+  "ok": true,
+  "result": {
+   "pages": 13
+  }
+ }
+}

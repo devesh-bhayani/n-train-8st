@@ -1,0 +1,26 @@
+{
+ "api_mta_info.html": {
+  "chars": 1160,
+  "status": 200
+ },
+ "mta_developers.html": {
+  "chars": 56981,
+  "status": 200
+ },
+ "nyu_calendar.html": {
+  "chars": 2139,
+  "status": 405
+ },
+ "nyu_route_e.html": {
+  "chars": 2139,
+  "status": 405
+ },
+ "nyu_shuttle_routes.html": {
+  "chars": 2139,
+  "status": 405
+ },
+ "subwaydata_home.html": {
+  "chars": 2843,
+  "status": 200
+ }
+}

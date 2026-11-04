@@ -1,0 +1,460 @@
+{
+ "attachments": [
+  {
+   "assetId": "5be7cd3f-8f71-41a1-9923-a43f6dcb6276",
+   "blobId": "",
+   "filename": "MTA_SubwayOriginDestinationRidershipEstimate2023_Overview.pdf",
+   "name": "MTA_SubwayOriginDestinationRidershipEstimate2023_Overview.pdf"
+  },
+  {
+   "assetId": "846e53a2-6555-4655-80b6-07fb55f234f1",
+   "blobId": "",
+   "filename": "MTA_SubwayOriginDestinationRidershipEstimate_DataDictionary.pdf",
+   "name": "MTA_SubwayOriginDestinationRidershipEstimate_DataDictionary.pdf"
+  }
+ ],
+ "columns": [
+  {
+   "description": "The year in which the subway trips occurred.",
+   "field": "year",
+   "name": "Year",
+   "type": "number"
+  },
+  {
+   "description": "The month in which the subway trips occurred.",
+   "field": "month",
+   "name": "Month",
+   "type": "number"
+  },
+  {
+   "description": "The day of the week on which the subway trips occurred (Monday, Tuesday, etc.).",
+   "field": "day_of_week",
+   "name": "Day of Week",
+   "type": "text"
+  },
+  {
+   "description": "The hour of the day in which the subway trips occurred. All trip times are rounded down to the nearest hour.",
+   "field": "hour_of_day",
+   "name": "Hour of Day",
+   "type": "number"
+  },
+  {
+   "description": " Representative datetime for the year, month, day of week, and hour of day in which the subway trips occurred. This date will be from the first full week of the month.",
+   "field": "timestamp",
+   "name": "Timestamp",
+   "type": "calendar_date"
+  },
+  {
+   "description": "The unique identifier for the subway station complex where the trips originated.",
+   "field": "origin_station_complex_id",
+   "name": "Origin Station Complex ID",
+   "type": "number"
+  },
+  {
+   "description": "The name of the subway station complex where the trips originated.",
+   "field": "origin_station_complex_name",
+   "name": "Origin Station Complex Name",
+   "type": "text"
+  },
+  {
+   "description": "The latitude of the subway station complex where the trips originated.",
+   "field": "origin_latitude",
+   "name": "Origin Latitude",
+   "type": "number"
+  },
+  {
+   "description": "The longitude of the subway station complex where the trips originated.",
+   "field": "origin_longitude",
+   "name": "Origin Longitude",
+   "type": "number"
+  },
+  {
+   "description": "The unique identifier for the subway station complex where the trips are inferred to have ended.",
+   "field": "destination_station_complex_id",
+   "name": "Destination Station Complex ID",
+   "type": "number"
+  },
+  {
+   "description": "The name of the subway station complex where the trips are inferred to have ended.",
+   "field": "destination_station_complex_name",
+   "name": "Destination Station Complex Name",
+   "type": "text"
+  },
+  {
+   "description": "The latitude of the subway station complex where the trips are inferred to have ended.",
+   "field": "destination_latitude",
+   "name": "Destination Latitude",
+   "type": "number"
+  },
+  {
+   "description": "The longitude of the subway station complex where the trips are inferred to have ended.",
+   "field": "destination_longitude",
+   "name": "Destination Longitude",
+   "type": "number"
+  },
+  {
+   "description": "The estimated ridership for an origin-destination pair and hour of day, averaged by day of week over the calendar month.",
+   "field": "estimated_average_ridership",
+   "name": "Estimated Average Ridership",
+   "type": "number"
+  },
+  {
+   "description": "Open Data platform-generated geocoding information from supplied address components. Point-type location is the centroid of the address components provided and does not reflect a specific address if the street address component is not provided. Point-type location is supplied in \"POINT (<geocoded lo",
+   "field": "origin_point",
+   "name": "Origin Point",
+   "type": "point"
+  },
+  {
+   "description": "Open Data platform-generated geocoding information from supplied address components. Point-type location is the centroid of the address components provided and does not reflect a specific address if the street address component is not provided. Point-type location is supplied in \"POINT (<geocoded lo",
+   "field": "destination_point",
+   "name": "Destination Point",
+   "type": "point"
+  }
+ ],
+ "distinct": {
+  "day_of_week": [
+   {
+    "day_of_week": "Friday",
+    "n": "17913550"
+   },
+   {
+    "day_of_week": "Monday",
+    "n": "16829593"
+   },
+   {
+    "day_of_week": "Saturday",
+    "n": "14872412"
+   },
+   {
+    "day_of_week": "Sunday",
+    "n": "13593140"
+   },
+   {
+    "day_of_week": "Thursday",
+    "n": "17705685"
+   },
+   {
+    "day_of_week": "Tuesday",
+    "n": "17284086"
+   },
+   {
+    "day_of_week": "Wednesday",
+    "n": "17533430"
+   }
+  ],
+  "hour_of_day": [
+   {
+    "hour_of_day": "0",
+    "n": "2295300"
+   },
+   {
+    "hour_of_day": "1",
+    "n": "1414454"
+   },
+   {
+    "hour_of_day": "2",
+    "n": "1022172"
+   },
+   {
+    "hour_of_day": "3",
+    "n": "993667"
+   },
+   {
+    "hour_of_day": "4",
+    "n": "1691412"
+   },
+   {
+    "hour_of_day": "5",
+    "n": "3349480"
+   },
+   {
+    "hour_of_day": "6",
+    "n": "5044323"
+   },
+   {
+    "hour_of_day": "7",
+    "n": "6146979"
+   },
+   {
+    "hour_of_day": "8",
+    "n": "6245375"
+   },
+   {
+    "hour_of_day": "9",
+    "n": "5707749"
+   },
+   {
+    "hour_of_day": "10",
+    "n": "5547941"
+   },
+   {
+    "hour_of_day": "11",
+    "n": "5660997"
+   },
+   {
+    "hour_of_day": "12",
+    "n": "5982386"
+   },
+   {
+    "hour_of_day": "13",
+    "n": "6309798"
+   },
+   {
+    "hour_of_day": "14",
+    "n": "6693265"
+   },
+   {
+    "hour_of_day": "15",
+    "n": "7187704"
+   },
+   {
+    "hour_of_day": "16",
+    "n": "7415576"
+   },
+   {
+    "hour_of_day": "17",
+    "n": "7342345"
+   },
+   {
+    "hour_of_day": "18",
+    "n": "6622602"
+   },
+   {
+    "hour_of_day": "19",
+    "n": "5772576"
+   },
+   {
+    "hour_of_day": "20",
+    "n": "5196489"
+   },
+   {
+    "hour_of_day": "21",
+    "n": "4652067"
+   },
+   {
+    "hour_of_day": "22",
+    "n": "4142094"
+   },
+   {
+    "hour_of_day": "23",
+    "n": "3295145"
+   }
+  ],
+  "month": [
+   {
+    "month": "1",
+    "n": "9375790"
+   },
+   {
+    "month": "2",
+    "n": "9212543"
+   },
+   {
+    "month": "3",
+    "n": "9727533"
+   },
+   {
+    "month": "4",
+    "n": "9682802"
+   },
+   {
+    "month": "5",
+    "n": "10000943"
+   },
+   {
+    "month": "6",
+    "n": "9941687"
+   },
+   {
+    "month": "7",
+    "n": "9577156"
+   },
+   {
+    "month": "8",
+    "n": "9599503"
+   },
+   {
+    "month": "9",
+    "n": "9686365"
+   },
+   {
+    "month": "10",
+    "n": "9755714"
+   },
+   {
+    "month": "11",
+    "n": "9527124"
+   },
+   {
+    "month": "12",
+    "n": "9644736"
+   }
+  ],
+  "year": [
+   {
+    "n": "115731896",
+    "year": "2023"
+   }
+  ]
+ },
+ "id": "uhf3-t34z",
+ "rows": [
+  {
+   "n": "115731896"
+  }
+ ],
+ "rows_updated_at": 1721692877,
+ "sample": [
+  {
+   "day_of_week": "Monday",
+   "destination_latitude": "40.707739",
+   "destination_longitude": "-73.93985",
+   "destination_point": {
+    "coordinates": [
+     -73.93985,
+     40.707739
+    ],
+    "type": "Point"
+   },
+   "destination_station_complex_id": "124",
+   "destination_station_complex_name": "Montrose Av (L)",
+   "estimated_average_ridership": "1.6775",
+   "hour_of_day": "21",
+   "month": "2",
+   "origin_latitude": "40.74307",
+   "origin_longitude": "-73.984264",
+   "origin_point": {
+    "coordinates": [
+     -73.984264,
+     40.74307
+    ],
+    "type": "Point"
+   },
+   "origin_station_complex_id": "404",
+   "origin_station_complex_name": "28 St (6)",
+   "timestamp": "2023-02-06T21:00:00.000",
+   "year": "2023"
+  },
+  {
+   "day_of_week": "Monday",
+   "destination_latitude": "40.655144",
+   "destination_longitude": "-74.003549",
+   "destination_point": {
+    "coordinates": [
+     -74.003549,
+     40.655144
+    ],
+    "type": "Point"
+   },
+   "destination_station_complex_id": "32",
+   "destination_station_complex_name": "36 St (D,N,R)",
+   "estimated_average_ridership": "2.5508",
+   "hour_of_day": "21",
+   "month": "2",
+   "origin_latitude": "40.764664",
+   "origin_longitude": "-73.980658",
+   "origin_point": {
+    "coordinates": [
+     -73.980658,
+     40.764664
+    ],
+    "type": "Point"
+   },
+   "origin_station_complex_id": "9",
+   "origin_station_complex_name": "57 St-7 Av (N,Q,R,W)",
+   "timestamp": "2023-02-06T21:00:00.000",
+   "year": "2023"
+  },
+  {
+   "day_of_week": "Monday",
+   "destination_latitude": "40.706186",
+   "destination_longitude": "-73.895877",
+   "destination_point": {
+    "coordinates": [
+     -73.895877,
+     40.706186
+    ],
+    "type": "Point"
+   },
+   "destination_station_complex_id": "109",
+   "destination_station_complex_name": "Fresh Pond Rd (M)",
+   "estimated_average_ridership": "0.6687",
+   "hour_of_day": "21",
+   "month": "2",
+   "origin_latitude": "40.669367",
+   "origin_longitude": "-73.901975",
+   "origin_point": {
+    "coordinates": [
+     -73.901975,
+     40.669367
+    ],
+    "type": "Point"
+   },
+   "origin_station_complex_id": "134",
+   "origin_station_complex_name": "Sutter Av (L)",
+   "timestamp": "2023-02-06T21:00:00.000",
+   "year": "2023"
+  },
+  {
+   "day_of_week": "Monday",
+   "destination_latitude": "40.744065",
+   "destination_longitude": "-73.949724",
+   "destination_point": {
+    "coordinates": [
+     -73.949724,
+     40.744065
+    ],
+    "type": "Point"
+   },
+   "destination_station_complex_id": "282",
+   "destination_station_complex_name": "21 St (G)",
+   "estimated_average_ridership": "1.6625",
+   "hour_of_day": "21",
+   "month": "2",
+   "origin_latitude": "40.706092",
+   "origin_longitude": "-73.950308",
+   "origin_point": {
+    "coordinates": [
+     -73.950308,
+     40.706092
+    ],
+    "type": "Point"
+   },
+   "origin_station_complex_id": "286",
+   "origin_station_complex_name": "Broadway (G)",
+   "timestamp": "2023-02-06T21:00:00.000",
+   "year": "2023"
+  },
+  {
+   "day_of_week": "Monday",
+   "destination_latitude": "40.762593",
+   "destination_longitude": "-73.967613",
+   "destination_point": {
+    "coordinates": [
+     -73.967613,
+     40.762593
+    ],
+    "type": "Point"
+   },
+   "destination_station_complex_id": "613",
+   "destination_station_complex_name": "Lexington Av (N,R,W)/59 St (4,5,6)",
+   "estimated_average_ridership": "1.2498",
+   "hour_of_day": "21",
+   "month": "2",
+   "origin_latitude": "40.635082",
+   "origin_longitude": "-73.962793",
+   "origin_point": {
+    "coordinates": [
+     -73.962793,
+     40.635082
+    ],
+    "type": "Point"
+   },
+   "origin_station_complex_id": "47",
+   "origin_station_complex_name": "Newkirk Plaza (B,Q)",
+   "timestamp": "2023-02-06T21:00:00.000",
+   "year": "2023"
+  }
+ ],
+ "title": "MTA Subway Origin-Destination Ridership Estimate: 2023"
+}

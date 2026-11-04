@@ -1,0 +1,447 @@
+{{Short description|Rapid transit service}}
+{{Redirect|Q Train|the rolling stock in use by MTR in Hong Kong|MTR CRRC Qingdao Sifang EMU}}
+{{Use mdy dates|date=August 2023}}
+{{Infobox NYCS service
+| service = Q
+| name =Broadway Express
+| image1 = R46 Q at West 8th.jpg
+| caption1 = A Manhattan-bound Q train of [[R46 (New York City Subway car)|R46]] cars at [[West Eighth Street–New York Aquarium station]].
+| north term = [[96th Street (Second Avenue Subway)|96th Street]]
+| south term = [[Coney Island–Stillwell Avenue (BMT Brighton Line)|Coney Island–Stillwell Avenue]]
+| stations = 29<br />34 (late night service)
+| depot = [[Coney Island Yard]]
+| started = {{start date and age|1878}} (predecessor, along with current Franklin Avenue Shuttle)<br>{{start date and age|1920|08|01}} (current Q service)
+| map = {{Q (New York City Subway service)}}
+| map_state = collapsed
+}}
+
+The '''Q Broadway Express'''<ref name="timetable">{{NYCS const|timetable|Q}}</ref>{{Efn|The [[Metropolitan Transportation Authority]]'s official text map gives the route's name as the "Q 2nd Avenue/Broadway Express".<ref>{{cite web | title=Q Train (2 Avenue/Broadway Express) Line Map | website=MTA | date=December 7, 2025 | url=https://www.mta.info/maps/subway-line-maps/q-line | access-date=January 17, 2026}}</ref>}} is a [[rapid transit]] service in the [[B Division (New York City Subway)|B Division]] of the [[New York City Subway]]. Its route emblem, or "bullet", is colored {{NYCS const|color|yellow}} since it is a part of the [[BMT Broadway Line]] in [[Manhattan]].
+
+The Q operates 24 hours daily between [[96th Street (Second Avenue Subway)|96th Street]] on the [[Upper East Side]] of Manhattan and [[Coney Island–Stillwell Avenue (BMT Brighton Line)|Stillwell Avenue]] in [[Coney Island]], [[Brooklyn]]. Daytime service makes express stops in Manhattan (between [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]] and [[Canal Street (BMT Broadway Line)|Canal Street]]) and all stops in Brooklyn; overnight service makes all stops along the full route.<ref name="timetable" />
+
+The Q was originally the [[Brooklyn–Manhattan Transit Corporation]]'s (BMT) '''1''' service; beginning in 1920, it ran along the Brighton Line in Brooklyn and Broadway Line in Manhattan. In the past, the Q has run many different service patterns in Brooklyn, Manhattan and [[Queens]], both local and express, including '''QB''' service on the [[Manhattan Bridge]] and '''QT''' service via the [[Montague Street Tunnel]]. From 1988 to 2001, Q service ran along the [[IND Sixth Avenue Line]] in Manhattan, with a bullet colored orange. The Q also ran in Queens at various points, including along the [[BMT Astoria Line]] to [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Boulevard]] on weekdays from 2010 to 2016, along the [[IND Queens Boulevard Line]] to [[Forest Hills–71st Avenue (IND Queens Boulevard Line)|Forest Hills–71st Avenue]] during temporary post-9/11 service reroutes, and along the [[63rd Street Lines|IND 63rd Street Line]] to [[21st Street–Queensbridge (IND 63rd Street Line)|21st Street–Queensbridge]] until 2001. There was also a '''&lt;Q&gt;''' variant from 2001 to 2004, which ran express on the Brighton Line, used a diamond bullet, and terminated at [[Brighton Beach (BMT Brighton Line)|Brighton Beach]] due to construction on the north side of the Manhattan Bridge. On January 1, 2017, the Q was rerouted along the [[Second Avenue Subway]].
+
+==History==
+===1878–1920: Original railroad===
+The predecessor to the subway service known as the Q today was the Brooklyn, Flatbush and Coney Island Railway. On July 2, 1878, this [[steam railroad]] began operations on what would become the [[BMT Brighton Line]], from [[Prospect Park (BMT Brighton Line)|Prospect Park]] to the Brighton Beach Hotel in [[Brighton Beach]], which opened at the same time. The Brighton Beach Hotel was located on [[Coney Island]] by the [[Atlantic Ocean]] at the foot of modern-day Coney Island Avenue. Passengers could make connections with the [[horsecar]]s of the [[Brooklyn City Railroad]] at the Prospect Park terminal.<ref>{{cite book |url=https://books.google.com/books?id=zuFSUZqQaiIC&q=brooklyn+flatbush+and+coney+island+railway&pg=PA384 |title=Of Cabbages and Kings County: Agriculture and the Formation of Modern Brooklyn |last1=Linder |first1=Marc |last2=Zacharias |first2=Lawrence S. |date=December 1, 1999 |publisher=University of Iowa Press |isbn=9780877457145 |pages=144 |language=en}}</ref><ref name="Cudahy 1999">{{cite book |url=https://books.google.com/books?id=v5eYL7PTP3cC&q=july+2%2C+1878++brooklyn+flatbush+and+coney+island+railway&pg=PA9|title=The Malbone Street Wreck |last=Cudahy |first=Brian J. |date=January 1, 1999 |publisher=[[Fordham University Press]] |isbn=9780823219322|language=en}}</ref>{{Rp|9}}
+
+On August 19, 1878, service was extended north from Prospect Park along what is today the [[BMT Franklin Avenue Line]] used by the [[Franklin Avenue Shuttle]], to Atlantic Avenue west of Franklin Avenue, a location known as <!--Bedford Terminal of the BB&CI and--> Bedford station on what is today the [[Atlantic Branch]] of the [[Long Island Rail Road]] (LIRR).<ref name="Cudahy 1999" />{{Rp|11}} A physical connection existed between the Brighton, Flatbush and Coney Island Railway and the LIRR. By mutual agreement trains of the Brooklyn, Flatbush and Coney Island Railway ran on LIRR trackage west to its terminal at [[Atlantic Terminal|Flatbush Avenue]] and Atlantic Avenue, providing a connection to [[Downtown Brooklyn]] and ferries to Manhattan. LIRR trains also operated to Brighton Beach from Flatbush Avenue and from its own terminal in [[Long Island City]], with ferry access to [[Midtown Manhattan]]. Initially, service operated during the summer season only. At the end of the 1882 summer season, the LIRR abrogated its agreement allowing Brighton Line trains to access its Flatbush Avenue terminal and beginning with the 1883 summer season, only Brooklyn, Flatbush and Coney Island trains operated between Bedford Terminal and Brighton Beach.
+
+In 1896, a short elevated extension of the Brighton Beach Line (since reorganized as the Brooklyn & Brighton Beach Railroad) opened to the corner of [[Franklin Avenue–Fulton Street (New York City Subway)|Franklin Avenue and Fulton Street]] in the north. This extension connected to the [[BMT Fulton Street Line|Fulton Street Line]] of the [[Kings County Elevated Railroad]], allowing [[rapid transit]] trains on Fulton Street to operate along the Brighton Line. These trains ran from Brighton Beach, up the Franklin Avenue and Fulton Street lines to the Brooklyn side of the [[Brooklyn Bridge]], where walking or transferring to a [[cable car (railway)|cable car]] service connection over the bridge allowed access to [[New York City Hall]] at Park Row in Manhattan. In 1900, elevated trains were through-routed to [[Park Row (BMT station)|Park Row]] without need to change trains.<ref name="Derrick 2002">{{Cite book|url=https://books.google.com/books?id=D4cUCgAAQBAJ&q=brighton+line+brooklyn&pg=PA279|title=Tunneling to the Future: The Story of the Great Subway Expansion That Saved New York|last=Derrick|first=Peter|date=April 1, 2002|publisher=NYU Press|isbn=9780814719541|language=en}}</ref>{{Rp|279}} By 1903, a surface extension of the Brighton Beach Line on what is now Brighton Beach Avenue permitted through service from Park Row, Manhattan west to [[Culver Depot]] at Surf Avenue near West 8th Street, much nearer to the growing amusement center known then as West Brighton and now as Coney Island.<ref name="Cudahy 1999" />{{Rp|21}}
+
+In 1908, a massive grade crossing elimination project was completed with a 4-track line from south of Church Avenue station to Neptune Avenue near the [[Coney Island Creek]], permitting true local and express service, as pioneered on the New York City Subway that opened in 1904.<ref name="Cudahy 1999" />{{Rp|22}} The Brighton Beach line was also converted to electrified third rail. Brighton Beach local and express service was extended to a new West End terminal at Stillwell and Surf Avenues, the location of the [[Coney Island–Stillwell Avenue (BMT Brighton Line)|Coney Island terminal]] for the BMT Southern Division, in May 1919.<ref>{{cite book |url=https://archive.org/details/undersidewalksof00cuda |url-access=registration |quote=brighton line brooklyn. |title=Under the Sidewalks of New York: The Story of the Greatest Subway System in the World |last=Cudahy |first=Brian J. |date=January 1, 1995 |publisher=Fordham University Press |isbn=9780823216185 |pages=[https://archive.org/details/undersidewalksof00cuda/page/73 73] |language=en}}</ref>
+
+===1920–1950: Subway service begins===
+On August 1, 1920, subway service on the [[BMT Brighton Line]], then owned by the [[Brooklyn-Manhattan Transit Corporation]] (BMT), officially began with the openings of a two-track underground subway between Prospect Park and [[DeKalb Avenue (BMT Fourth Avenue Line)|DeKalb Avenue]] and the [[Montague Street Tunnel]] between Brooklyn and Manhattan.<ref name="Derrick 2002" />{{Rp|285}}
+
+In 1921, PM rush hour express service was extended from Kings Highway to Brighton Beach. In 1923, Brighton express service operated via the Montague Tunnel and ran local on the Broadway Line. The BMT held a vote to see which route riders preferred on August 30, 1923. Passengers voted to have Brighton expresses run from Brighton Beach to Times Square via the Manhattan Bridge and the express tracks on the Broadway Line. This change took effect on about October 1, 1923. This subway service was labeled 1 by the BMT starting in 1924, with the remnant service to Franklin Avenue becoming the 7. 1 Brighton Express service operated during rush hours and Saturday afternoons. During the evening rush hour and on Saturday afternoons, trains skipped Canal Street.<ref name="Linder 2003">{{Cite journal |last=Linder |first=Bernard |date=May 2003 |title=Brighton Line Schedule Changes |url=https://erausa.org/pdf/bulletin/2000s/2003/2003-05-bulletin.pdf |journal=The New York Division Bulletin |publisher=Electric Railroaders' Association |volume=46 |issue=5 |pages=2–4}}</ref>
+
+The span of express service was extended by 90 minutes until 8:27&nbsp;p.m. leaving Times Square in 1929. Express service began operating between the AM rush hour and noon on Saturday mornings in April 1930. Express service began operating middays on May 30, 1931, replacing short-line local service. In September 1937, Brighton express service ran between Brighton Beach and Times Square rush hours, middays, and early evenings weekdays and Saturdays.
+
+During the 1930s, limited morning rush hour service ran via the south side tracks of the Manhattan Bridge and the [[Nassau Street Loop]] to [[Chambers Street (BMT Nassau Street Line)|Chambers Street]] on the [[BMT Nassau Street Line]]. On June 29, 1950, trains began running there during the evening rush as well.
+
+On October 17, 1949, the [[BMT Astoria Line|IRT Astoria Line]] in Queens, up to this point operated by the [[Interborough Rapid Transit]] (IRT), was converted to BMT operation. 1 Local trains were extended via the [[60th Street Tunnel]] and the BMT Astoria Line to [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Boulevard]] during weekday rush hours, and on Saturday mornings and early afternoons. Number 2 [[R (New York City Subway service)|Fourth Avenue Local]] trains also ran here at all times.<ref name="Linder 2005">{{Cite journal |last=Linder |first=Bernard |date=June 2005 |title=Astoria Line |url=https://erausa.org/pdf/bulletin/2000s/2005/2005-06-bulletin.pdf |journal=New York Division Bulletin |publisher=Electric Railroaders' Association |volume=48 |issue=6 |pages=2–4}}</ref>
+
+===1950s===
+On April 27, 1950, 1 Local trains were extended to Astoria–Ditmars Boulevard during middays.<ref name="Linder 2005" /> On June 26, 1952, 1 Express trains were extended from Times Square to 57th Street–Seventh Avenue on weekdays after the morning rush hour, running local north of 34th Street. On June 28, 1952, special service from Brighton Beach to the Nassau Street Line was discontinued on Saturdays, and Saturday express service was extended to 57th Street.<ref>{{Cite web|date=1952|title=Notice To Passengers|url=https://www.flickr.com/photos/127872292@N06/50065955493/in/dateposted/|access-date=July 6, 2020|website=Flickr|publisher=New York City Board of Transportation}}</ref><ref name="Linder 2003" />
+
+The [[60th Street Tunnel Connection]] opened on December 1, 1955, connecting the Broadway Line to the [[IND Queens Boulevard Line]]. 1 Local trains were rerouted to this new connector to [[Forest Hills–71st Avenue (IND Queens Boulevard Line)|Forest Hills–71st Avenue]] in [[Forest Hills, Queens]] between 6:30&nbsp;a.m. and 8:20&nbsp;p.m. They were replaced on the [[BMT Astoria Line]] by 1 Express trains on weekdays.<ref>{{Cite web|date=1955|title=New December 1 Schedules|url=https://www.flickr.com/photos/127872292@N06/50089691363/in/dateposted/|access-date=July 8, 2020|website=Flickr|publisher=New York City Transit Authority}}</ref> On May 4, 1957, 1 Express trains running started running to Ditmars Boulevard on Saturdays as well,<ref name="Linder 2005" /> but made local stops in Manhattan<ref name="Linder 2003" /> as the local trains in Brooklyn now ran to Chambers Street via the BMT Nassau Street Line. The final portion of the Broadway Line's express tracks, between Times Square–42nd Street and 57th Street–Seventh Avenue, was placed in service on May 2, 1957<!--, and were used at all times by West End and Sea Beach Expresses-->. <!--An interesting aspect of this service was that--> 1 Brighton Express trains ran local in Manhattan on Saturdays while Brighton Locals ran express here during evenings and on Sundays. This lasted only until the next service change. On October 24, 1957, Brighton Local trains ran via the Manhattan Bridge and local in Manhattan, all day on Sundays as well as evenings and midnight hours. Brighton Express 1 service on weekdays began using the express tracks between Times Square–42nd Street and 57th Street–Seventh Avenue.
+
+A December 1957 strike shut down much of the BMT Division. Brighton Local 1 trains ran in two sections, from Coney Island via tunnel to 57th Street-Seventh Avenue and from [[Whitehall Street (BMT Broadway Line)|Whitehall Street]] to [[Jamaica–179th Street (IND Queens Boulevard Line)|Jamaica–179th Street]] on the IND Queens Boulevard Line. Due to the differing unions predominating on the various divisions, the IND was completely knocked out of service, while the IRT ran virtually normal service. The BMT was about half affected, with makeshift service patterns being set up for the duration of the strike.
+
+On May 28, 1959, 1 Brighton Express trains midday on weekdays were cut back to 57th Street–Seventh Avenue and made local stops in Brooklyn midday. Multiple trains entered service at Queensboro Plaza in the evening rush hour.<ref name="Linder 2003" /> Nassau Specials returned, running via the Montague Street tunnel during the morning rush and via the Manhattan Bridge during the evening rush. As part of the same service change, Brighton Local trains, beginning on June 6, ran to Franklin Avenue via the route of the [[Franklin Avenue Shuttle|7 Shuttle]] on Saturdays. This was not seasonal and ran the entire day, being quite distinct from the Sunday service which still operated.
+
+===1960–1987: Lettered variants and Chrystie Street Connection===
+On November 15, 1960, with the arrival of the [[R27 (New York City Subway car)|R27 subway cars]], 1 service on the Brighton Line was relabeled. Brighton Express service was designated as Q, Brighton Local via the Montague St Tunnel as QT, and Brighton Local via the Manhattan Bridge as QB. Single letters were used to refer to express lines and double letters for local lines, a practice that began thirty years earlier with the [[Independent Subway System]] (IND), however, no QQ designation was ever used. <!--However, these designations were not as yet in common usage, and the R27 signs continued to display the old route names. For the above reasons and for the sake of continuity and consistency, these services were referred to by the old route names until the time of the opening of the [[Chrystie Street Connection]]. Moreover, it was deemed more important and informative to indicate how the trains actually operated rather than how the letters were manipulated.--> Despite these new designations, subway communications continued to refer to the services as "Brighton Local" and "Brighton Express".
+
+Effective January 1, 1961, Q Brighton Express service was cut back from Ditmars Boulevard to 57th Street–Seventh Avenue on weekdays, with trains skipping 49th Street.<ref name="Linder 2003" /> Saturday daytime service continued to run to Ditmars Boulevard.<ref name="Flickr.com 1961">{{Cite web|url=https://www.flickr.com/photos/127872292@N06/25029684135/|title=BMT Riders: Changes In Routes! January 1|date=January 1961|website=Flickr.com|publisher=New York City Transit Authority|access-date=May 17, 2016}}</ref> QT service ran to Ditmars Boulevard on weekdays; on Saturdays, it ran via the Franklin Avenue Line to Franklin Avenue in Brooklyn instead. The QB provided off-peak service between Coney Island and Astoria, via Brighton Local and the Manhattan Bridge. Sunday service between Franklin Avenue and Brighton Beach was discontinued on this date, with Sunday service now provided solely by the [[Franklin Avenue Shuttle|Franklin Avenue Shuttle (SS, formerly 7)]] between Prospect Park and Fulton Street.
+
+Service between Brighton Beach and Franklin Avenue was merged into the Franklin Avenue Shuttle service on October 14, 1961, and all non-shuttle service between was discontinued in February 1963. The [[R (New York City Subway service)|Fourth Avenue Local (RR)]] now provided Broadway Line service along the Queens Boulevard line on weekdays, and the [[T (New York City Subway service)|West End Express (T)]] was extended from 57th Street to Ditmars Boulevard during rush hours. This service change essentially swapped the northern terminals of the Brighton Local and RR, and between the Brighton Express and T. Prior to this both Brighton Line–Broadway services had operated via the 60th Street Tunnel to Queens. By having the Brighton Express Q terminate at 57th Street, this change served to keep one Brighton Line service unaffected in the event of a massive delay in the 60th Street Tunnel.<ref name="Flickr.com 1961" />
+
+On April 21, 1962, Saturday express Q service was discontinued, and replaced by QB service.<ref>{{Cite journal |date=May 1962 |title=New York City Transit Authority Service Notes |url=https://erausa.org/pdf/bulletin/1960s/1962/1962-05-bulletin.pdf |journal=New York Division Bulletin |publisher=Electric Railroaders' Association |volume=5 |issue=2 |pages=2}}</ref> All Saturday trains on the Brighton Line began running local, doubling the frequency of service and providing a one-seat ride to Manhattan for riders at local stations. With the arrival of new subway cars to the line, which provided improved running times, trains making local stops between Brighton Beach and Prospect Park did so in only 1.5 minutes longer than existing express service.<ref>{{Cite web|url=http://www.laguardiawagnerarchive.lagcc.cuny.edu/pages/FileBrowser.aspx?LinkToFile=FILES_DOC/WAGNER_FILES/06.023.0000.141.1633.PDF#undefined|title=For Immediate Release Sunday, April 19, 1962 #258|date=April 19, 1962|publisher=New York City Transit Authority|access-date=August 28, 2019}}</ref>
+
+<!-- On April 2, 1962, Brighton Locals once again ran as locals on the Brighton Line, as at all other times.  -->From February 10 to November 2, 1964, the Brighton Express tracks were closed to permit platform extension work at Newkirk Avenue. [[Skip-stop]] service was instituted along the Brighton Line. Brighton Express service, which made A stops, ran express from Brighton Beach to Kings Highway, and then stopped at Avenue J, Newkirk Avenue, Cortelyou Road, Beverley  Road, Church Avenue, Parkside Avenue, and Prospect Park.<ref name="Linder 2003" />
+
+On November 26, 1967, the [[Chrystie Street Connection]] opened, connecting the Brighton Line in Brooklyn to the [[IND Sixth Avenue Line]] in Manhattan via the [[Manhattan Bridge]]. The bridge's south side tracks, which formerly connected to the [[BMT Nassau Street Line]], were now connected to the Broadway Line express tracks instead. The bridge's north side tracks, which formerly connected to the Broadway Line, now connected to the Sixth Avenue Line express tracks. Originally, the {{NYCS|D}} running via [[IND Sixth Avenue Line|Sixth Avenue Express]], and the {{NYCS|QJ}} running via [[BMT Nassau Street Line|Nassau Street]] and the [[Montague Street Tunnel]], were to replace all three Q services on the Brighton Line. The Q and QT went out of existence completely, but due to riders' opposition to the expected loss of all Broadway Line service, some QB trains were retained, now running rush hours only in the peak direction between Coney Island and 57th Street via Brighton Local, the Manhattan Bridge, and Broadway Express in Manhattan. The color scheme introduced for subway lines that day included a red QB bullet. A short-lived [[N (New York City Subway service)|NX]] service also provided rush-hour service between Brighton Beach and Coney Island and the Broadway Line, running via the [[BMT Sea Beach Line]] to Manhattan. This service was discontinued on April 15, 1968, after less than five months.<ref>{{Cite web|url=http://www.thejoekorner.com/scripted-ticket-display.shtm?http://www.thejoekorner.com/subway-sun/P008486.gif|title=The NX Joins the N...|date=April 1968|website=thejoekorner.com|publisher=New York City Transit Authority|access-date=May 6, 2018}}</ref> The RR replaced Q, QB and QT service to Astoria–Ditmars Boulevard.<ref name="Linder 2005" />
+
+On August 19, 1968, one AM rush hour QB train began running to Ditmars Boulevard. From January 2, 1973, no QB trains ran in service to Ditmars Boulevard, though two trains ran light to Ditmars Boulevard from 57th Street in the AM rush, and one train ran light to 57th Street in the PM rush. On January 19, 1976, morning rush hour QB trains began running in service to Ditmars Boulevard, and most evening rush hour trains entered service at Queensboro Plaza, with only one evening rush hour train running from Coney Island to 57th Street. All but the first QB morning QB trip, which entered RR service, were cut back from Ditmars Boulevard to 57th Street on August 30, 1976. Evening rush hour trains only ran in service between Coney Island and 57th Street. The last PM rush hour QB train started at Ditmars Boulevard, having previously made a trip in RR service. The first two morning rush hour QB trains ran to Ditmars Boulevard as of May 7, 1978, returning in service as RR trains to 36th Street. The last two evening rush hour QB trains entered service at Ditmars Boulevard, with the final trip having previously made an RR trip from 36th Street.<ref>{{Cite journal |last=Linder |first=Bernard |date=April 2003 |title=Brighton Line Schedule Changes |url=https://erausa.org/pdf/bulletin/2000s/2003/2003-04-bulletin.pdf |journal=New York Division Bulletin |publisher=Electric Railroaders' Association |volume=46 |issue=4 |pages=2–3}}</ref><ref name="Linder 2005" />
+In 1979, the MTA released a revised coloring scheme for subway routes based on trunk line; the QB service was assigned the color sunflower yellow, with black text, because it used the [[BMT Broadway Line]] in Manhattan. It now used a diamond-shaped bullet because it ran rush hours only.<ref name="Hertz-Gothamist">{{cite web | first=Dave | last=Hogarty | url=http://gothamist.com/2007/08/03/michael_hertz_d.php | title=Michael Hertz, Designer of the NYC Subway Map | work=[[Gothamist]] | date=August 3, 2007 | access-date=July 4, 2009 | url-status=dead | archive-url=https://web.archive.org/web/20090818012400/http://gothamist.com/2007/08/03/michael_hertz_d.php | archive-date=August 18, 2009 }}</ref><ref name="color">{{Cite news|url=http://cityroom.blogs.nytimes.com/2010/05/10/take-the-tomato-to-the-sunflower/|title=Take the Tomato 2 Stops to the Sunflower|last=Grynbaum|first=Michael M.|date=May 10, 2010|newspaper=The New York Times|access-date=October 30, 2016}}</ref> On May 5, 1985, the double-letter naming scheme for local services was dropped; the QB was renamed the Q the next day.<ref>{{Cite web|url=https://www.flickr.com/photos/127872292@N06/27733842265/|title=Hey, What's a "K" Train?|date=1985|website=Flickr.com|publisher=New York City Transit Authority|access-date=June 17, 2016}}</ref>
+
+=== Manhattan Bridge reconstruction and Brighton Line rehabilitation work (1986–2004) ===
+
+==== 1986–1987: Broadway service ====
+Starting on April 26, 1986, the Brighton Line's local tracks underwent reconstruction between Prospect Park and [[Newkirk Plaza (BMT Brighton Line)|Newkirk Avenue]], requiring the suspension of express service; at the same time, reconstruction of the [[Manhattan Bridge]] started, which would disrupt subway service until 2004. QB service was discontinued.<ref name="Linder 2005" /> From April 28, 1986 to May 23, 1987, one AM rush hour train from Brighton Beach was extended beyond its normal terminal at 57th Street/Seventh Avenue and terminated at [[Forest Hills – 71st Avenue (IND Queens Boulevard Line)|Forest Hills – 71st Avenue]].<ref>{{cite journal |title=Sea Beach Line Schedule Changes | author=Bernard Linder |journal=The Bulletin |publisher=Electric Railroaders' Association, Incorporated |volume=44 |issue=4 |page=2 |date=April 2001 |url=https://www.erausa.org/pdf/bulletin/2000s/2001/2001-04-bulletin.pdf |access-date=2024-10-03}}</ref>
+
+The bridge's north side tracks (leading to the Sixth Avenue Line) closed. The Q now ran rush hours between 57th Street–Seventh Avenue and Brighton Beach, using a yellow diamond bullet. Because the Manhattan Bridge's north side tracks closed, the D and Q ran on the bridge's south side tracks, both running via Broadway Express to 57th Street–Seventh Avenue. To substitute for the suspended Brighton Line express service, the Q ran [[skip-stop]] service with the D between Newkirk Avenue and [[Sheepshead Bay (BMT Brighton Line)|Sheepshead Bay]]. D trains served [[Neck Road (BMT Brighton Line)|Neck Road]], [[Avenue M (BMT Brighton Line)|Avenue M]] and [[Avenue H (BMT Brighton Line)|Avenue H]]; the Q skipped those stops, serving [[Avenue U (BMT Brighton Line)|Avenue U]] and [[Avenue J (BMT Brighton Line)|Avenue J]], while both lines served [[Kings Highway (BMT Brighton Line)|Kings Highway]].<ref>{{cite web|url=http://www.thejoekorner.com/brochures/index-bmt-ind-1986-details.html|title=Brighton Line Riders: Your Guide To Service Changes On The D Q M During Rehabilitation Work April 26 Through October 26, 1986|date=1986|website=thejoekorner.com|publisher=New York City Transit Authority|access-date=February 8, 2018}}</ref> By 1987, as reconstruction on the Brighton Line progressed, the weekday skip-stop pattern expanded to Prospect Park, with D trains serving [[Beverley Road (BMT Brighton Line)|Beverley Road]] while Q trains served [[Cortelyou Road (BMT Brighton Line)|Cortelyou Road]] and [[Parkside Avenue (BMT Brighton Line)|Parkside Avenue]], with [[Church Avenue (BMT Brighton Line)|Church Avenue]] as a mutual station.<ref>{{Cite web|url=http://stewartmader.com/wp-content/uploads/2015/06/1987mta-e1433450745867.jpg|title=May 24, 1987 New York City Subway Map|date=May 24, 1987|website=stewartmader.com|publisher=New York City Transit Authority|access-date=May 6, 2018}}</ref>
+
+==== 1988–2001: Sixth Avenue service ====
+On December 11, 1988, the Bridge's north side tracks reopened and the south side tracks closed, and the reconstruction project on the Brighton Line ended. The Q became the weekday Brighton Express to Brighton Beach and was rerouted via the north side of the bridge and the [[IND Sixth Avenue Line]] to [[57th Street (IND Sixth Avenue Line)|57th Street–Sixth Avenue]], [[Midtown Manhattan]]. Because it ran on the Sixth Avenue Line in Manhattan, the route now used an orange bullet on maps. One AM rush hour train from Brighton Beach terminated at [[168th Street (IND Eighth Avenue Line)|168th Street]] in Manhattan instead of 21st Street; this trip last ran on September 28, 1990.<ref name="Linder 2003" />
+
+On October 29, 1989, the [[63rd Street Lines|IND 63rd Street Line]] opened and the B, Q, and [[JFK Express]] were extended to [[21st Street–Queensbridge (IND 63rd Street Line)|21st Street–Queensbridge]] in [[Long Island City, Queens|Long Island City]]. Weekday evening service terminated at [[Broadway–Lafayette Street (IND Sixth Avenue Line)|Broadway–Lafayette Street]] in Manhattan instead of Brooklyn; these trains relayed at [[Second Avenue (IND Sixth Avenue Line)|Second Avenue]] in order to change direction. A special combined {{NYCS|F}}–Q service ran during late nights; in the northbound direction, F trains would operate along its normal route from Coney Island to [[47th–50th Streets–Rockefeller Center (IND Sixth Avenue Line)|47th–50th Streets–Rockefeller Center]], then turn into a Q and operate to [[21st Street–Queensbridge (IND 63rd Street Line)|21st Street–Queensbridge]]; in the southbound direction, Q trains would operate from 21st Street to 47th–50th Streets, then turn into an F train and operate along its normal route to Coney Island.<ref>{{Cite news|url=https://www.flickr.com/photos/127872292@N06/16569240412/in/album-72157652636594213/|title=October 1989 Map|date=October 1989|work=Flickr|access-date=October 7, 2018|publisher=New York City Transit Authority|language=en-us}}</ref> The weekday evening shuttle was replaced by the B on September 30, 1990.  The {{NYCS|F}} replaced the late night shuttle in April 1993.<ref>{{Cite web|url=http://www.subwaynut.com/brochures/1990servicechanges.pdf|title=Service Changes September 30, 1990|date=September 30, 1990|website=subwaynut.com|publisher=New York City Transit Authority|access-date=May 1, 2016|archive-date=October 26, 2014|archive-url=https://web.archive.org/web/20141026015324/http://www.subwaynut.com/brochures/1990servicechanges.pdf|url-status=dead}}</ref>
+
+In January 1991, a reduction of service along the Central Park West corridor to remove excess capacity was proposed. Initially, Q service would operate between [[Inwood–207th Street (IND Eighth Avenue Line)|207th Street]] and [[Brighton Beach (BMT Brighton Line)|Brighton Beach]] during weekday rush hours and middays, making express stops along its entire route. The service plan was later amended to eliminate the Q designation and replace it with an orange [[A (New York City Subway service)|A]], assuming the same service pattern that was proposed for the Q. This service change would have been implemented in October 1991, pending approval from the MTA board.<ref>{{cite web |title=1991 Service Capacity Plan |url=http://www.laguardiawagnerarchive.lagcc.cuny.edu/pages/FileBrowser.aspx?LinkToFile=FILES_DOC/QUEENS_FILES/03.012.0231.030147.2.PDF#undefined |publisher=New York City Transit Authority |access-date=September 18, 2024 |pages=197–198 |date=January 4, 1991}}</ref>
+
+On February 6, 1995, Q trains began running local south of Kings Highway due to rehabilitation work on the Brighton Line.<ref name="Linder 2003" /> On April 30, 1995, the north side of the [[Manhattan Bridge]] closed during middays and weekends, in addition to the already-closed south side. During these hours, D service was cut below 34th Street–Herald Square. In its place, the Q ran between Coney Island and 21st Street–Queensbridge, via Brighton Local, the [[Montague Street Tunnel]], Broadway Express (switching between the local and express tracks at [[Canal Street (BMT Broadway Line)|Canal Street]]) and the [[63rd Street Lines|BMT 63rd Street Line]]. Rush hour and evening service was unchanged. On May 1, Q expresses only operated during rush hours and early evening. Normal service resumed on November 12, 1995,<ref>{{cite news|url=https://www.nytimes.com/1995/03/26/nyregion/bridge-repairs-to-disrupt-off-peak-subway-service.html |title=Bridge Repairs to Disrupt Off-Peak Subway Service |date=March 26, 1995 |newspaper=The New York Times |access-date=July 2, 2016 |author=Ronald Sullivan}}</ref> including the restoration of Q express service between Kings Highway and Brighton Beach.<ref>{{Cite news |date=November 13, 1995 |title=It's Not the Dodgers, But on November 13, Express Service Returns to Brooklyn's Brighton Line. |work=New York Daily News |url=https://www.newspapers.com/clip/24541822/daily_news/ |access-date=November 5, 2018}}</ref><ref name="Linder 2003" />
+
+On February 22, 1998, construction on the [[63rd Street Lines|IND 63rd Street Line]] cut {{NYCS|B}} and Q service back to 57th Street–Sixth Avenue. Service on the 63rd Street Line was replaced by a [[63rd Street Shuttle|shuttle]] to the BMT Broadway Line at 57th Street–Seventh Avenue. Normal service resumed on May 22, 1999.<ref>{{cite web|url=http://www.thejoekorner.com/brochures/index-63shutt.html|title=63rd Street Shuttle Timetable|date=February 1998|website=thejoekorner.com|publisher=New York City Transit Authority|access-date=October 23, 2016}}</ref>
+
+==== 2001–2004: Brighton Express/Local Q service ====
+[[File:R68A Q train 5182 departing Cortelyou Road.png|left|thumb|A [[Manhattan]] bound Q ''local'' train of [[R68A (New York City Subway car)|R68As]] entering [[Beverley Road station|Beverley Road]]]]
+On July 22, 2001, the [[Manhattan Bridge]]'s north side tracks closed and the south side tracks reopened. There were now two Q services, colored yellow as they now ran via Broadway. In Brooklyn, the circle Q (Q local) replaced the {{NYCS|D}} as the full-time Brighton Local to Stillwell Avenue while the &lt;Q&gt; (Q express or Q diamond) replaced the Sixth Avenue Q as the weekday-only Brighton Express to Brighton Beach. Both Qs used the south side of the Manhattan Bridge to travel into Manhattan and then ran to 57th Street–Seventh Avenue via Broadway Express.<ref>{{Cite web|url=http://www.mta.info/nyct/service/pdf/tqcur.pdf|title=Q Train Timetable|date=Fall 2003|website=mta.info|archive-url=https://web.archive.org/web/20031203132516/http://www.mta.info/nyct/service/pdf/tqcur.pdf|archive-date=December 3, 2003|access-date=May 6, 2018}}</ref> Service on the IND 63rd Street Line was replaced by a [[63rd Street Shuttle|shuttle]], which would be permanently replaced by the {{NYCS|F}} in December 2001 once the 63rd Street's connection to the [[IND Queens Boulevard Line]] opened.
+[[File:R68A Q train 5076 at Sheepshead Bay.png|left|thumb|A [[Coney Island–Stillwell Avenue station|Coney Island]] bound Q ''express'' train of [[R68A (New York City Subway car)|R68As]] entering [[Sheepshead Bay station|Sheepshead Bay]]]]
+After the [[September 11 attacks|September 11, 2001]] attacks, Q service was initially extended beyond 57th Street–Seventh Avenue and originated and terminated at [[21st Street–Queensbridge (IND 63rd Street Line)|21st Street–Queensbridge]] via [[63rd Street Lines|63rd Street]], but was cut back to its original terminal by the evening of September 12. On September 17, Q service was once again extended beyond 57th Street, this time originating and terminating at [[Forest Hills–71st Avenue (IND Queens Boulevard Line)|Forest Hills–71st Avenue]] via [[60th Street Tunnel|60th Street]] to replace the R, and made all stops in Queens, Manhattan and Brooklyn; overnight service [[short turn]]ed at 57th Street and did not operate to or from 71st Avenue. &lt;Q&gt; Brighton Express service continued to operate its normal service pattern.<ref>{{cite journal |title=World Trade Center Destroyed |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-10-bulletin.pdf |date=October 2001 |publisher=Electric Railroaders' Association |volume=44 |number=10 |pages=2–3 |access-date=March 19, 2025}}</ref><ref>{{cite journal |title=New IRT and BMT Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-12-bulletin.pdf |date=December 2001 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=15 |access-date=March 19, 2025}}</ref> Normal Q service was restored on October 28.<ref>{{cite journal |title=New IRT and BMT Schedules |journal=The Bulletin |url=https://erausa.org/pdf/bulletin/2000s/2001/2001-12-bulletin.pdf |date=December 2001 |publisher=Electric Railroaders' Association |volume=44 |number=12 |pages=16 |access-date=March 19, 2025}}</ref> On September 8, 2002, Coney Island–Stillwell Avenue (the Q{{'s}} southern terminal) was closed for reconstruction and the Q local terminated at Brighton Beach. During this time, service at stations between Brighton Beach and Stillwell Avenue was replaced by an extension of the [[List of bus routes in Brooklyn#B68|B68]] bus. Q service to Stillwell Avenue resumed on May 23, 2004.<ref>{{Cite news|url=https://www.nytimes.com/2005/05/28/nyregion/and-now-for-the-good-news-from-the-subway-system.html|title=And Now for the Good News From the Subway System|last=Chan|first=Sewell|date=May 28, 2005|newspaper=The New York Times|issn=0362-4331|access-date=August 15, 2016}}</ref><ref name="mta.info facts">{{cite web|url=http://web.mta.info/nyct/facts/ffhist.htm|title=New York City Transit&nbsp;— History and Chronology|website=mta.info|quote=The newly renovated Stillwell Avenue Terminal reopens and train service returns to Coney Island after a 21-month hiatus during construction|access-date=August 15, 2016}}</ref>
+
+From April 27<ref>{{Cite journal |date=July 2003 |title=New BMT-IND Schedules |url=https://erausa.org/pdf/bulletin/2000s/2003/2003-07-bulletin.pdf |journal=The New York Division Bulletin |publisher=Electric Railroaders' Association |volume=46 |issue=7 |pages=20}}</ref> to November 2, 2003, the south side of the Manhattan Bridge was closed on weekends and Q service was rerouted via the Montague Street Tunnel.
+
+On February 22, 2004, reconstruction of the [[Manhattan Bridge]] was completed and the north side tracks reopened. The &lt;Q&gt; express was discontinued and replaced with the {{NYCS|B}} in Brooklyn and {{NYCS|N}} in Manhattan to combine two weekday-only routes. The Q local remained unchanged.<ref>{{Cite web|url=http://www.mta.info/nyct/man_bridge/manhbr_map.pdf|title=B D M N Q R W Weekday Service Manhattan Bridge Map|date=February 2004|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=September 18, 2016|url-status=bot: unknown|archive-url=https://web.archive.org/web/20040205124437/http://www.mta.info/nyct/man_bridge/manhbr_map.pdf|archive-date=February 5, 2004}}</ref><ref>{{Cite web|url=http://www.mta.info/nyct/man_bridge/bridge_lines.htm|title=MTA NYC Transit Manhattan Bridge Information|date=February 5, 2004|access-date=September 18, 2016|url-status=bot: unknown|archive-url=https://web.archive.org/web/20040205055553/http://www.mta.info/nyct/man_bridge/bridge_lines.htm|archive-date=February 5, 2004}}</ref><ref>{{Cite web|url=http://www.nydailynews.com/archives/boroughs/abc-subway-swap-manhattan-bridge-fix-7-lines-article-1.599336|title=ABC's of Subway Swap Manhattan Bridge Fix Changes 7 Lines|last=Son|first=Hugh|date=February 15, 2004|work=New York Daily News|access-date=February 25, 2018|url-status=dead|archive-url=https://web.archive.org/web/20180226092000/http://www.nydailynews.com/archives/boroughs/abc-subway-swap-manhattan-bridge-fix-7-lines-article-1.599336|archive-date=February 26, 2018}}</ref>
+
+===2004–present: Extensions to Astoria and Second Avenue===
+
+[[File:Second Avenue Subway Map vc.jpg|thumb|right|Map of the full Second Avenue Subway (SAS), showing the planned uptown portion of the Q, which currently terminates at 96th Street. Note that the section between Harlem–125th Street and Broadway is not included.]]
+On June 28, 2010, the Q was extended from [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]] to [[Astoria–Ditmars Boulevard (BMT Astoria Line)|Astoria–Ditmars Boulevard]] via the [[60th Street Tunnel]] and [[BMT Astoria Line]] on weekdays, stopping at [[49th Street (BMT Broadway Line)|49th Street]].<ref>{{Cite web|url=http://www.mta.info/press-release/nyc-transit/major-subway-changes-set-monday|title=Major Subway Changes Set for Monday|date=June 24, 2010|website=mta.info|access-date=October 20, 2016}}</ref> The extended Q replaced the {{NYCS|W}}, which was discontinued due to budget shortfalls.<ref name="Grynbaum 2017 r644">{{cite web | last=Grynbaum | first=Michael M. | title=Next Stop on the W Train: History | website=City Room | date=September 13, 2017 | url=https://archive.nytimes.com/cityroom.blogs.nytimes.com/2010/06/26/next-stop-on-the-w-train-history/ | access-date=June 29, 2023}}</ref><ref>{{Cite web|url=http://web.mta.info/mta/news/books/docs/NYCT_2010_Service_Reduction_Evaluation.pdf|title=Evaluation of 2010 Service Reductions|date=September 23, 2011|website=mta.info|publisher=New York City Transit|access-date=October 20, 2016}}</ref>
+
+On December 7, 2014, late night Q service began operating local in Manhattan between 57th Street and [[Canal Street (BMT Broadway Line)|Canal Street]] in order to decrease waiting time at the local stations.<ref>{{cite web|url=http://www.mta.info/news-new-york-city-transit-subway-sign-shop/2014/10/17/look-inside-mta-new-york-city-transit%E2%80%99s-sign|title=A Look Inside MTA New York City Transit's Sign Shop|date=October 17, 2014|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=October 19, 2014|archive-date=August 30, 2016|archive-url=https://web.archive.org/web/20160830124314/http://www.mta.info/news-new-york-city-transit-subway-sign-shop/2014/10/17/look-inside-mta-new-york-city-transit%E2%80%99s-sign|url-status=dead}}</ref><ref>{{cite news|url=http://www.nydailynews.com/new-york/q-train-local-stops-decemeber-article-1.1767121|title=Q Train Will Make More Local Stops Come December|last=Donohue|first=Pete|date=April 24, 2014|work=New York Daily News|access-date=October 23, 2016}}</ref>
+
+On November 7, 2016, weekday Q service was cut back from Astoria to 57th Street–Seventh Avenue, skipping 49th Street, to provide a seamless transition for the opening of the Second Avenue Subway.<ref name="Rivoli 2016 g433">{{cite web | last=Rivoli | first=Dan | title=W train returns Monday after removed from subway tracks in 2010 | website=New York Daily News | date=November 7, 2016 | url=https://www.nydailynews.com/new-york/w-train-returns-subway-tracks-monday-article-1.2861303 | access-date=June 29, 2023}}</ref><ref>{{cite web|url=http://web.mta.info/nyct/service/nqrw/#service|title=Revised Broadway Service|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=November 3, 2016}}</ref> Service to Astoria and the 49th Street station was replaced by the restored W service.<ref>{{Cite web|url=http://www.ny1.com/nyc/all-boroughs/news/2016/02/19/w-train-is-coming-back-.html|title=MTA Confirms W Train Is Coming Back|last=Martinez|first=Jose|date=February 20, 2016|website=TWC News|access-date=February 20, 2016}}</ref><ref>{{Cite web|url=http://www.mta.info/press-release/nyc-transit/mta-advances-work-second-avenue-subway-service|title=MTA Advances Work On Second Avenue Subway Service|date=February 19, 2016|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=February 19, 2016|archive-date=February 22, 2016|archive-url=https://web.archive.org/web/20160222005540/http://www.mta.info/press-release/nyc-transit/mta-advances-work-second-avenue-subway-service|url-status=dead}}</ref>
+
+On January 1, 2017, the first phase of the [[Second Avenue Subway]] opened; the Q was extended from 57th Street–Seventh Avenue to [[96th Street (Second Avenue Subway)|96th Street]] via the [[63rd Street Lines|BMT 63rd Street Line]] and the IND Second Avenue Line. This extension serves [[Lexington Avenue–63rd Street (63rd Street Lines)|Lexington Avenue–63rd Street]] station with a [[cross-platform interchange|cross-platform transfer]] to the [[63rd Street Lines|IND 63rd Street Line]] (served by the {{NYCS trains|63rd IND}}) before serving new stations under Second Avenue at [[72nd Street (Second Avenue Subway)|72nd Street]], [[86th Street (Second Avenue Subway)|86th Street]], and 96th Street, where it originates/terminates.<ref>{{Cite news|url=https://www.nytimes.com/2017/01/01/nyregion/second-avenue-subway-opening-upper-east-side-manhattan.html|title=Opening of Second Avenue Subway: Updates|last1=Slotnik|first1=Daniel E.|date=January 1, 2017|newspaper=The New York Times|access-date=January 1, 2017|last2=Wolfe|first2=Jonathan|issn=0362-4331|last3=Fitzsimmons|first3=Emma G.|last4=Palmer|first4=Emily|last5=Remnick|first5=Noah}}</ref> The inaugural train on the Second Avenue Line ran on December 31, 2016, with passenger service beginning the next day. From January 1 to 9, 2017, service between 57th Street and 96th Street ran only from 6&nbsp;a.m. to 10&nbsp;p.m., with late-night service terminating at 57th Street; late night service to 96th Street began on January 9.<ref name="SAS opening">{{Cite web|url=http://www.mta.info/news/2016/12/19/governor-cuomo-announces-time-opening-second-avenue-subway|title=Second Avenue Subway to Open On-Time|date=December 19, 2016|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=December 19, 2016|archive-date=December 21, 2016|archive-url=https://web.archive.org/web/20161221162118/http://www.mta.info/news/2016/12/19/governor-cuomo-announces-time-opening-second-avenue-subway|url-status=dead}}</ref><ref>{{Cite web|url=http://tripplanner.mta.info/OTG/plannedWork/routeStatusAPI_1.aspx?type=R&tag=Q&Date=1/9/2017|title=Q Service Operates Between Stillwell Av and 57 St-7 Av Late Nights, 10 PM to 6 AM, Until Monday, Jan 9|date=January 2017|website=mta.info|publisher=Metropolitan Transportation Authority|archive-url=https://web.archive.org/web/20170109212959/http://tripplanner.mta.info/OTG/plannedWork/routeStatusAPI_1.aspx?type=R&tag=Q&Date=1%2F9%2F2017|archive-date=January 9, 2017|url-status=live|access-date=January 9, 2017}}</ref>
+
+Effective June 30, 2024, one evening PM train started terminating at Brighton Beach.<ref>{{Cite web |date=December 17, 2023 |title=MTA Q subway timetable Effective December 17, 2023 |url=https://new.mta.info/document/9516 |url-status=live |archive-url=https://web.archive.org/web/20240318224135/https://new.mta.info/document/9516 |archive-date=March 18, 2024 |access-date=December 16, 2024 |website=mta.info |publisher=Metropolitan Transportation Authority}}</ref><ref>{{Cite web |date=December 15, 2024 |title=MTA Q subway timetable Effective June 30, 2024 |url=https://new.mta.info/document/9516 |url-status=live |archive-url=https://web.archive.org/web/20240702151133/https://new.mta.info/document/9516 |archive-date=July 2, 2024 |access-date=December 16, 2024 |website=mta.info |publisher=Metropolitan Transportation Authority}}</ref>
+
+===Future===
+The second phase of the Second Avenue Line will [[Construction of the Second Avenue Subway#Phase 2|extend]] the Q to a new northern terminal at [[Harlem–125th Street (IND Second Avenue Line)|Harlem–125th Street]], with planned stops at [[116th Street (Second Avenue Subway)|116th Street]] and [[106th Street (Second Avenue Subway)|106th Street]]. At the Harlem–125th Street terminus, there will be a transfer to the existing [[125th Street (IRT Lexington Avenue Line)|125th Street]] station on the [[IRT Lexington Avenue Line]] and a connection to [[Harlem–125th Street station (Metro-North)|Harlem–125th Street station]] on [[Metro-North Railroad]]. This will provide residents of [[East Harlem, Manhattan|East Harlem]] with direct subway service to the [[Upper East Side]], western [[Midtown Manhattan|Midtown]], [[Lower Manhattan]] and [[Brooklyn]], and offer connections to {{NYCS trains|Lexington}} and Metro-North from [[the Bronx]], the northern suburbs of New York City, and southern [[Connecticut]].<ref>{{Cite web|url=http://web.mta.info/nyct/procure/contracts/127485INFOsol.pdf|title=CM-1190 Consultant Design Services for Phase 2 of the Second Avenue Subway Project|date=March 4, 2016|website=mta.info|publisher=Metropolitan Transportation Authority|access-date=August 27, 2017|archive-date=January 6, 2017|archive-url=https://web.archive.org/web/20170106193624/http://web.mta.info/nyct/procure/contracts/127485INFOsol.pdf|url-status=dead}}</ref> An extension of the Second Avenue Line further west under 125th Street has been proposed, with transfers to other routes, although this extension has not been funded or approved.<ref name="Campbell Nessen 2024 l686">{{cite web | last=Campbell | first=Jon | last2=Nessen | first2=Stephen | title=Gov. Hochul wants to extend 2nd Ave. subway to West Harlem | website=Gothamist | date=January 9, 2024 | url=https://gothamist.com/news/gov-hochul-wants-to-extend-2nd-ave-subway-to-west-harlem | access-date=February 1, 2024}}</ref><ref>{{Cite web |last=Rahmanan |first=Anna |date=2024-01-11 |title=The Second Avenue Subway Might Extend Even Further into Harlem |url=https://www.timeout.com/newyork/news/the-second-avenue-subway-might-extend-even-further-into-harlem-011124 |access-date=2024-02-01 |website=Time Out New York |language=en-US}}</ref>
+
+== Route ==
+
+===Pre-1967===
+<gallery>
+File: Bmt triplex no 1.png|The BMT 1 bullet used on the [[D-type Triplex (New York City Subway car)|D Triplex]]
+R1 BMT 1.gif|Pre-1967 BMT 1 bullet used on the [[R1 (New York City Subway car)|R1s]] to  [[R9 (New York City Subway car)|R9s]] 
+R27endq.gif|The BMT Q bullet used on the [[R27 (New York City Subway car)|R27]]s and [[R32 (New York City Subway car)|R32s]]  
+R27endqb.gif|The BMT QB bullet used on the [[R27 (New York City Subway car)|R27]]s and [[R32 (New York City Subway car)|R32s]]  
+R27endqt.gif|The BMT QT bullet used on the [[R27 (New York City Subway car)|R27]]s and [[R32 (New York City Subway car)|R32s]]
+</gallery>
+
+===1967-1985===
+<gallery>
+File:QB Train (1967-1979).svg|1967-1979 QB bullet
+File:QJ Train (1967-1976).svg|1967-1973 QJ bullet
+File:QB Train (1979-1985).svg|1979-1985 QB bullet
+</gallery>
+
+===1985-present===
+<gallery>
+File:NYCS-bull-trans-Qd.svg|1985-1988 & 2001-2004 Rush hour bullet
+File:NYCS-bull-trans-Q-Std-orange.svg|1988-2001 bullet for the [[IND Sixth Avenue Line]]
+File:NYCS-bull-trans-Q.svg|The current bullet used since 1985
+</gallery>
+=== Service pattern ===
+The following table shows the lines used by the Q, with shaded boxes indicating the route at the specified times:<ref>{{NYCS const|serviceguide}}</ref><ref name="96N">{{cite web |date=July 19, 2021 |title=86 St – OpenMobilityData |url=https://transitfeeds.com/p/mta/79/latest/stop/N10N/20210726 |archive-url=https://web.archive.org/web/20210719222837/https://transitfeeds.com/p/mta/79/latest/stop/N10N/20210726 |archive-date=July 19, 2021 |access-date=July 19, 2021 |website=transitfeeds.com}}</ref><ref name="96S">{{cite web |date=July 19, 2021 |title=86 St – OpenMobilityData |url=https://transitfeeds.com/p/mta/79/latest/stop/N10S/20210726 |archive-url=https://web.archive.org/web/20210719222837/https://transitfeeds.com/p/mta/79/latest/stop/N10S/20210726 |archive-date=July 19, 2021 |access-date=July 19, 2021 |website=transitfeeds.com}}</ref><ref name="96R">{{cite web |date=July 19, 2021 |title=7:36 AM – 8:40 AM 96 St – OpenMobilityData |url=https://transitfeeds.com/p/mta/79/latest/trip/BSP21GEN-N093-Weekday-00_045650_N..N63R |archive-url=https://web.archive.org/web/20210719222837/https://transitfeeds.com/p/mta/79/latest/trip/BSP21GEN-N093-Weekday-00_045650_N..N63R |archive-date=July 19, 2021 |access-date=July 19, 2021 |website=transitfeeds.com}}</ref>
+{| class="wikitable collapsible" style="width:auto; font-size:95%"
+! rowspan=2 | Line
+! rowspan=2 | From
+! rowspan=2 | To
+! rowspan=2 | Tracks
+! colspan="2" |Times
+|-
+! width=40 | all<br />ex.<br />nights
+! width=40 | late<br />nights
+|-
+| [[IND Second Avenue Line]]
+| [[96th Street (Second Avenue Subway)|96th Street]]
+| [[72nd Street (Second Avenue Subway)|72nd Street]]
+| all
+| rowspan=3 style="background:gray" | &nbsp;
+| rowspan=2 style="background:gray" | &nbsp;
+|-
+| [[63rd Street Lines|BMT 63rd Street Line]] (full line)
+| colspan=2 align=center | [[Lexington Avenue–63rd Street (63rd Street Lines)|Lexington Avenue–63rd Street]]
+| all
+|-
+| rowspan=2 | [[BMT Broadway Line]]
+| rowspan=2 | [[57th Street–Seventh Avenue (BMT Broadway Line)|57th Street–Seventh Avenue]]
+| rowspan=2 | [[Canal Street (BMT Manhattan Bridge Line)|Canal Street]]
+| express
+|-
+| local
+| rowspan=1 | &nbsp;
+| rowspan=5 style="background:gray" | &nbsp;
+|-
+| colspan=3 align=center | [[Manhattan Bridge]]
+|south
+| rowspan=4 style="background:gray" |
+|-
+| rowspan=3 | [[BMT Brighton Line]] (full line)
+| [[DeKalb Avenue (BMT Brighton Line)|DeKalb Avenue]]
+| [[Prospect Park (BMT Brighton Line)|Prospect Park]]
+| all
+|-
+| [[Parkside Avenue (BMT Brighton Line)|Parkside Avenue]]
+| [[Ocean Parkway (BMT Brighton Line)|Ocean Parkway]]
+| local
+|-
+| [[West Eighth Street–New York Aquarium (New York City Subway)|West Eighth Street–New York Aquarium]]
+| [[Coney Island–Stillwell Avenue (BMT Brighton Line)|Coney Island–Stillwell Avenue]]
+| all
+|}
+
+===Stations===
+[[File:Linea Q metropolitana di New York.png|thumb|right|To scale line map]]
+For a more detailed station listing, see the articles on the lines listed above.<ref name="timetable"/>
+{{NYCS service legend
+| alltimes = show
+| allexceptnights = show
+| nightsonly = show
+| nightsweekends =
+| weekdaysonly = show
+| allexceptrush =
+| rushonly =
+| rushpeak = show
+| closed =
+| custom_icon_1 = rushonly
+| custom_text_1 = Stops rush hours only (limited service)
+}}
+{| class="wikitable collapsible" style="font-size:90%" summary="Service information for the Q train and its stations, including service times, ADA-accessibility, subway transfers, and non-subway connections."
+! width=3% | [[File:NYCS-bull-trans-Q-Std.svg|20px|Q service to 96 St]]<br>
+! style="width:28%;"| Stations
+! style="width:3%;"| {{Access icon}}
+! style="width:36%;"| Subway transfers
+! style="width:30%;"| Connections and notes
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[Manhattan]]
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[IND Second Avenue Line|Second Avenue Line]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|96th Street|Second}}
+| align=center | {{Access icon}}
+| {{NYCS Second southbound weekday|time=show|exclude=Q}}
+| [[M15 (New York City bus)|M15 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|86th Street|Second}}
+| align=center | {{Access icon}}
+| {{NYCS Second|time=show|exclude=Q}}
+| [[M15 (New York City bus)|M15 Select Bus Service]]<br>[[M86 (New York City bus)|M86 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|72nd Street|Second}}
+| align=center | {{Access icon}}
+| {{NYCS Second|time=show|exclude=Q}}
+| [[M15 (New York City bus)|M15 Select Bus Service]]
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[63rd Street Lines|63rd Street Line]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Lexington Avenue–63rd Street}}
+| align=center | {{Access icon}}
+| {{NYCS 63rd Lexington|time=show|exclude=Q}}<br>Out-of-system transfers with [[MetroCard]]/[[OMNY]]:<br>{{NYCS Lexington|time=show}} ([[IRT Lexington Avenue Line]] at {{stl|NYCS|59th Street|Lexington}})<br>{{NYCS Broadway 60th|time=show}} ([[BMT Broadway Line]] at {{stl|NYCS|Lexington Avenue–59th Street}})
+|
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[BMT Broadway Line|Broadway Line]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|57th Street–Seventh Avenue}}
+| align=center | {{Access icon}}
+| {{NYCS Broadway north|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|nightsonly}}
+| {{stl|NYCS|49th Street}}
+| align=center | {{Access icon}}&nbsp;↑
+| {{NYCS Broadway night|time=show|exclude=Q}}
+| Station is [[Americans with Disabilities Act of 1990|ADA-accessible]] in the northbound direction only
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Times Square–42nd Street|Broadway}}
+| align=center | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=Q}}<br>{{NYCS Broadway-Seventh|time=show}} ([[IRT Broadway–Seventh Avenue Line]])<br>{{NYCS Flushing south|time=show}} ([[IRT Flushing Line]])<br>{{NYCS Eighth south|time=show}} ([[IND Eighth Avenue Line]] at {{stl|NYCS|42nd Street–Port Authority Bus Terminal}})<br>{{NYCS 42nd|time=show}} ([[42nd Street Shuttle]])<br />{{NYCS Sixth|time=show}} ([[IND Sixth Avenue Line]] at {{stl|NYCS|42nd Street–Bryant Park}}, daytime only)
+| [[Port Authority Bus Terminal]]<br>[[M34A (New York City bus)|M34A Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|34th Street–Herald Square|Broadway}}
+| align=center | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=Q}}<br>{{NYCS Sixth|time=show}} ([[IND Sixth Avenue Line]])
+| [[M34 (New York City bus)|M34 / M34A Select Bus Service]]<br>[[Port Authority Trans-Hudson|PATH]] at {{stl|PATH|33rd Street}}<br>[[Amtrak]], [[Long Island Rail Road|LIRR]], [[New Jersey Transit|NJ Transit]] at [[Pennsylvania Station (New York City)|Pennsylvania Station]]
+|-
+| align=center | {{NYCS SSI|nightsonly}}
+| {{stl|NYCS|28th Street|Broadway}}
+|
+| {{NYCS Broadway local night|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|nightsonly}}
+| {{stl|NYCS|23rd Street|Broadway}}
+|
+| {{NYCS Broadway local night|time=show|exclude=Q}}
+| [[M23 SBS (New York City bus)|M23 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|14th Street–Union Square|Broadway}}
+| align=center | {{Access icon}}
+| {{NYCS Broadway|time=show|exclude=Q}}<br>{{NYCS Canarsie|time=show}} ([[BMT Canarsie Line]])<br>{{NYCS Lexington|time=show}} ([[IRT Lexington Avenue Line]])
+| [[M14 (New York City bus)|M14A / M14D Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|nightsonly}}
+| {{stl|NYCS|Eighth Street–New York University}}
+|
+| {{NYCS Broadway local night|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|nightsonly}}
+| {{stl|NYCS|Prince Street}}
+|
+| {{NYCS Broadway local night|time=show|exclude=Q}}
+|
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[BMT Broadway Line|Manhattan Bridge branch]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Canal Street|Broadway bridge}}
+| align=center | [[File:Aiga elevator.svg|20px|alt=Elevator access to mezzanine only]]
+| {{NYCS Broadway|time=show|exclude=Q}}<br>{{NYCS Lexington local|time=show}} ([[IRT Lexington Avenue Line]])<br>{{NYCS Nassau north|time=show}} ([[BMT Nassau Street Line]])
+| Stops on the lower level
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[Brooklyn]]
+|-
+| colspan="5" style="font-weight:bold; text-align:center" | [[BMT Brighton Line|Brighton Line]]
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|DeKalb Avenue|Brighton}}
+| align="center" | {{Access icon}}
+| {{NYCS DeKalb|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Atlantic Avenue–Barclays Center|Brighton}}
+| align=center | {{Access icon}}
+| {{NYCS Brighton|time=show|exclude=Q}}<br>{{NYCS Fourth center Pacific|time=show}} ([[BMT Fourth Avenue Line]])<br>{{NYCS Eastern west|time=show}} ([[IRT Eastern Parkway Line]])
+| [[Long Island Rail Road|LIRR]] [[Atlantic Branch]] at [[Atlantic Terminal]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Seventh Avenue|Brighton}}
+|
+| {{NYCS Brighton north|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Prospect Park}}
+| align=center | {{Access icon}}
+| {{NYCS Brighton north|time=show|exclude=Q}}<br>{{NYCS Franklin|time=show}} ([[BMT Franklin Avenue Line]])
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Parkside Avenue}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Church Avenue|Brighton}}
+| align=center | {{Access icon}}
+| {{NYCS Brighton|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Beverley Road}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Cortelyou Road}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Newkirk Plaza}}
+|
+| {{NYCS Brighton|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Avenue H}}
+| align=center | {{Access icon}}
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Avenue J}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Avenue M}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Kings Highway|Brighton}}
+| align=center | {{Access icon}}
+| {{NYCS Brighton|time=show|exclude=Q}}
+| [[B82 (New York City bus)|B82 Select Bus Service]]
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Avenue U|Brighton}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Neck Road}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Sheepshead Bay}}
+| align=center | {{Access icon}} 
+| {{NYCS Brighton|time=show|exclude=Q}}
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Brighton Beach}}
+|
+| {{NYCS Brighton|time=show|exclude=Q}}
+| Southern terminal for one weekday evening train{{efn|One southbound Q train terminates at this station during weekday evenings only}}
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Ocean Parkway}}
+|
+|
+|
+|-
+| align=center | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|West Eighth Street–New York Aquarium}}
+|
+| {{NYCS Culver IND south|time=show}} ([[IND Culver Line]])
+|
+|-
+| align="center" | {{NYCS SSI|alltimes}}
+| {{stl|NYCS|Coney Island–Stillwell Avenue}}
+| align="center" | {{Access icon}}
+| {{NYCS Sea Beach south|time=show}}<br>{{NYCS West End far south|time=show}} ([[BMT West End Line]])<br>{{NYCS Culver IND south|time=show}} ([[IND Culver Line]])
+|
+|}
+
+== Notes ==
+{{notelist}}
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+{{Commons category|Q (New York City Subway service)}}
+* [http://web.mta.info/nyct/service/qline.htm MTA NYC Transit – Q Broadway Express]
+* {{NYCS const|traintime|Q}}
+* {{NYCS const|timetable|Q}}
+
+{{NYCS navbox}}
+
+{{DEFAULTSORT:Q (New York City Subway Service)}}
+[[Category:Brooklyn–Manhattan Transit Corporation|#]]
+[[Category:New York City Subway services]]
+[[Category:Railway services introduced in 1920]]
