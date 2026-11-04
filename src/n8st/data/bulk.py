@@ -83,7 +83,7 @@ def manifest(out: Path, name: str, info: dict) -> None:
 
 
 def rows_of(path: Path) -> int:
-    return duckdb.sql(f"SELECT count(*) FROM '{path}'").fetchone()[0]
+    return duckdb.sql(f"SELECT count(*) FROM '{path}'").fetchall()[0][0]
 
 
 # ---------------------------------------------------------------------------- tasks
@@ -122,7 +122,7 @@ def task_od_matrix(out: Path, args) -> None:
         ) TO '{tmp}' (FORMAT parquet, COMPRESSION zstd)
     """)
     tmp.replace(path)
-    total = duckdb.sql(f"SELECT sum(riders) FROM '{path}'").fetchone()[0]
+    total = duckdb.sql(f"SELECT sum(riders) FROM '{path}'").fetchall()[0][0]
     manifest(out, path.stem, {"dataset": ds, "year": year, "month": month, "daytype": daytype,
                               "rows": rows_of(path), "riders_per_day": total,
                               "min_sum_filter": args.min_sum})
