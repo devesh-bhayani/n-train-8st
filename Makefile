@@ -100,5 +100,8 @@ experiment2016:   ## natural experiment on Nov 7, 2016 -> docs/findings/natural_
 dashboard-data:   ## export the small tables the dashboard reads (app/data/)
 	uv run python -m n8st.dashboard_data
 
+figures:          ## the post's static charts (docs/posts/img/), after dashboard-data
+	uv run python -m n8st.figures
+
 app:              ## run the Streamlit dashboard locally
 	uv run --extra app streamlit run app/streamlit_app.py

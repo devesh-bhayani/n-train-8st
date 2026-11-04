@@ -53,6 +53,26 @@ or not. Everything else (downloads, analysis, models) runs locally.
 | `make data` | MTA stations, hourly ridership and origin-destination pulls, filtered to this project's stations | minutes to an hour |
 | `make test` / `make lint` | Run the test suite and linter before you commit | seconds |
 
+The analyses, roughly in the order they were built. Each writes a report to
+`docs/findings/`. `make mta-pull` first: it copies the MTA downloads (OD matrices,
+ridership, turnstiles, observed trains) from the `mta-data` branch.
+
+| Command | What it does | Time |
+|---|---|---|
+| `make observed` | Observed headways, waits and running times from subwaydata.nyc | ~1 min |
+| `make commute` | Your commute replayed on 43 real weekdays, plus the recommender | ~2 min |
+| `make experiment2016` / `make weekend` | The 2016 natural experiment; weekend-vs-weekday switching to 8 St | ~1 min each |
+| `make calibrate`, `make sim`, `make sensitivity` | Fit, run and stress-test the Broadway simulation | 10 min to 1 h |
+| `make forecast` | Week-ahead ridership forecasts | ~5 min |
+| `make validate-flex OD=...` | Calibrate station switching against the weekend N | ~5 min |
+| `make phase-check` | Placebo: pure shifts of the N should average to ~0 | ~10 min |
+| `make ledger-phase OD=...` | The headline ledger for one OD month (default September 2026) | ~40 min |
+| `make screen OD=...` | Every express stretch in the system made local | ~1 h |
+| `make dashboard-data`, `make figures`, `make app` | Refresh the dashboard's tables and the post's charts; open the dashboard | seconds |
+
+`OD=data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet` picks a month. The long
+runs use every core; on a laptop, start one and leave it.
+
 ## Saving your work
 
 ```bash
@@ -68,7 +88,9 @@ git push
 ## Every so often
 
 - Check the repo's **Actions** tab. GitHub emails you if a logger run fails.
-- **March 14, 2027 (daylight saving):** move the logger's hours one earlier in
-  `.github/workflows/shuttle-logger.yml`, as its header comment explains.
-- **Fall term ends December 22.** Shuttles stop until spring; the logger keeps running
-  harmlessly and just records empty polls.
+- **The logger runs around the clock** (overnight polls just record no buses). Each
+  run queues the next one; to stop it, cancel the running job or disable the workflow
+  in the Actions tab.
+- **Fall term ends December 22.** The self-queueing stops after `STOP_AFTER`
+  (2026-12-23) in `.github/workflows/shuttle-logger.yml`; the hourly schedule may still
+  start the odd run. For the spring term, move `STOP_AFTER` to the term's end.

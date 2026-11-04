@@ -68,12 +68,13 @@ Assumptions and decision rules are fixed in advance in
 |---|---|---|---|
 | 0 | Reproduce Wolk's numbers; check facts; start the shuttle logger | GTFS, routing | done |
 | 1 | Data pipeline through GitHub Actions; observed waits and commute replay | DuckDB, Actions, Monte Carlo | done |
-| 2 | Scenario ledger: own RAPTOR router, edited timetables, destination flexibility | Counterfactual routing | running on real OD |
-| 3 | SimPy model of the Broadway line, calibrated to observed trains | Discrete-event simulation | done (v1) |
-| 4 | ML: week-ahead ridership forecasting, commute recommender | LightGBM, SHAP, conformal | recommender done; forecasting needs hourly data |
-| 5 | 2016 natural experiment | Triple difference, event study | done |
-| 6 | Dashboard and public post | Streamlit, writing | draft |
-| next | Surrogate model + global sensitivity of the simulator; dwell model from observed data; shuttle headways; system-wide screen | Sobol indices, MILP | open |
+| 2 | Scenario ledger: own RAPTOR router, edited timetables, phase averaging, station switching calibrated to the weekend N | Counterfactual routing, placebo tests | done |
+| 3 | SimPy model of the Broadway line, calibrated to observed trains; Sobol sensitivity on a GP surrogate | Discrete-event simulation, UQ | done |
+| 4 | ML: week-ahead ridership forecasting, commute recommender | LightGBM, SHAP, conformal | done |
+| 5 | 2016 natural experiment; weekend-vs-weekday switching | Triple difference, event study, DiD | done |
+| 6 | System-wide screen of every express stretch | Batch counterfactuals | done (screen, not verdict) |
+| 7 | Dashboard and public post | Streamlit, writing | draft ready |
+| next | Shuttle headways once weekday daytime data accumulates (S1, H3); track-map feasibility for the screen's top stretches; does the 14–8 St crossover exist (V2)?; nested-logit switching; deploy the dashboard | | open |
 
 The research behind this plan is in
 [docs/research/2026-11-03-research-report.md](docs/research/2026-11-03-research-report.md).

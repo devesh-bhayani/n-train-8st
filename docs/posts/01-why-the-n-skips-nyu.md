@@ -50,6 +50,22 @@ It reproduces the real trains' running times within about 2%. With the N running
 ⟨Ledger headline: net rider-hours per weekday, fixed-station and with riders free to
 switch to 8 St, and in how many of the 13 weighting assumptions the answer holds.⟩
 
+## Keeping the comparison fair
+
+The routing was the easy part. The hard part was making sure today's timetable and the
+new one differ only by the stop. A local N reaches Brooklyn three minutes later, so it
+no longer meshes with the W, the Q and the R the way today's carefully planned timetable
+does. Shift every N train three minutes later, change nothing else, and the ledger
+swings by about 4,400 rider-hours. A real timetable would be re-planned around a new
+stop, so that swing isn't a cost of stopping at 8 St.
+
+To take it out, every number here is averaged over ten alignments of the N, from nine
+minutes earlier to nine minutes later, applied identically to today's timetable and the
+new one. The test is a placebo: shift the N with no other change, and the averaged
+"effect" should be zero. It comes out at +24 ± 337 rider-hours for a one-minute shift
+and +88 ± 830 for three minutes. Getting there took three fixes I didn't expect to need,
+written up in the [method notes](../how-it-works.md#three-traps-this-ledger-fell-into-and-how-they-were-found).
+
 ## My commute, on real trains
 
 I live between the N at 18 Av and the D at 71 St. Replaying every 2-minute departure from my
