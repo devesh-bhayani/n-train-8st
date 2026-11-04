@@ -125,10 +125,13 @@ def ledger() -> None:
         if not (f / "totals.csv").exists():
             continue
         m = json.loads((f / "meta.json").read_text())
-        rows.append(pl.read_csv(f / "totals.csv").join(
-            phase_se(pl.read_csv(f / "per_offset.csv")), on=["scenario", "weights"],
-            how="left").with_columns(month=pl.lit(label), month_tag=pl.lit(tag),
-                                     se=pl.col("se_net_hours")))
+        # extra variants run separately for the same month (e.g. V6, `--tag <month>_v6`)
+        for g in [f, *sorted(PROCESSED_DIR.glob(f"ledger_phase_{tag}_*"))]:
+            if (g / "totals.csv").exists():
+                rows.append(pl.read_csv(g / "totals.csv").join(
+                    phase_se(pl.read_csv(g / "per_offset.csv")), on=["scenario", "weights"],
+                    how="left").with_columns(month=pl.lit(label), month_tag=pl.lit(tag),
+                                             se=pl.col("se_net_hours")))
         od = Path(m["od"])
         m["od_riders_per_day"] = (float(load_od(od)["riders"].sum()) if od.exists()
                                   else None)

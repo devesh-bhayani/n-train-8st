@@ -1,5 +1,7 @@
 # Should the N stop at 8 St–NYU?
 
+[![ci](https://github.com/devesh-bhayani/n-train-8st/actions/workflows/ci.yml/badge.svg)](https://github.com/devesh-bhayani/n-train-8st/actions/workflows/ci.yml)
+
 On weekdays the N runs express past 8 St–NYU, the station closest to NYU's Washington
 Square campus. On weekends it already stops there. This project uses MTA open data,
 simulation and machine learning to test whether a weekday stop, or a cheaper

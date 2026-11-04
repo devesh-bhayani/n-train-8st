@@ -34,6 +34,7 @@ SCENARIOS = {
     "V1_obs": "V1 local, observed local timing",
     "V2_sched": "V2 express to 14 St, then local",
     "V2_obs": "V2, observed timing",
+    "V6_W": "V6 no stop change, 8 more W trips",
 }
 ESTIMATES = [  # (column, label, color) in fixed order
     ("net_hours", "Riders keep today's stations", S1),

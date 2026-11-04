@@ -81,6 +81,7 @@ LABELS = {
     "V1_obs": "V1 · local, observed local timing",
     "V2_sched": "V2 · express to 14 St, then 8 St + Prince (schedule timing)",
     "V2_obs": "V2 · express to 14 St, then local (observed timing)",
+    "V6_W": "V6 · no stop change: 8 more Sea Beach W trips",
 }
 ESTIMATES = {
     "net_hours": "Riders keep today's stations",

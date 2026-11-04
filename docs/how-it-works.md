@@ -74,7 +74,8 @@ by cloning the existing 07:12 trip and shifting it. Run the ledger. Is it cheape
 ## 4. The ledger: weighted passenger-hours
 
 `n8st.ledger` is Stop the Stop run in reverse. For each origin complex it routes riders who
-arrive at random times (every 2 minutes) under the baseline and under each scenario, takes
+arrive at random times (one inside every 3-minute window, 5 am to midnight) under the
+baseline and under each scenario, takes
 the generalized cost to every destination, averages over the hour, and multiplies the
 change by that hour's origin-destination flow:
 

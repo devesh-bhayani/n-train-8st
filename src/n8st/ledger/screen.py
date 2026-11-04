@@ -46,56 +46,68 @@ SCREEN_OFFSETS = [-540, -180, 180, 540]
 BASE_COL = f"net_hours_{engine.BASE.label}"
 
 
-def build_scenarios(feed: dict, limit: int = 0) -> tuple[dict, dict]:
-    """{name: scenario feed (unshifted)}, {name: description}."""
+def find_scenarios(feed: dict, limit: int = 0) -> tuple[list, dict]:
+    """Every express run, plus what apply_run needs. Timetables are built later, one
+    route at a time: holding all ~80 edited timetables at once takes ~7 GB."""
     raw = pl.read_parquet(STATIONS)
-    complex_of = dict(raw.select("gtfs_stop_id", pl.col("complex_id").cast(pl.Float64)
-                                 .cast(pl.Int64)).iter_rows())
+    ctx = {
+        "complex_of": dict(raw.select("gtfs_stop_id", pl.col("complex_id").cast(pl.Float64)
+                                      .cast(pl.Int64)).iter_rows()),
+        "names": dict(raw.select("gtfs_stop_id", "stop_name").iter_rows()),
+        "patterns": es.typical_patterns(feed),
+        "medians": ml.segment_medians(feed),
+    }
     coords = {g: (float(a), float(b)) for g, a, b in raw.select(
         "gtfs_stop_id", "gtfs_latitude", "gtfs_longitude").iter_rows()}
-    names = dict(raw.select("gtfs_stop_id", "stop_name").iter_rows())
-    patterns = es.typical_patterns(feed)
-    runs = es.find_runs(patterns, complex_of, coords)
-    if limit:
-        runs = runs[:limit]
-    medians = ml.segment_medians(feed)
-    feeds, info = {}, {}
-    for run in runs:
-        f2, summ = ml.apply_run(feed, run, patterns, complex_of, medians)
-        if summ.is_empty():
-            continue
-        feeds[run.name] = f2
-        info[run.name] = {"route": run.route, "direction": run.direction,
-                          "from": names.get(run.stops[0], run.stops[0]),
-                          "to": names.get(run.stops[-1], run.stops[-1]),
-                          "stops_added": len(run.inserted),
-                          "added_stations": ", ".join(names.get(s, s) for s in run.inserted),
-                          "trips": summ.height, "median_added_s": summ["added_s"].median()}
-    return feeds, info
+    runs = es.find_runs(ctx["patterns"], ctx["complex_of"], coords)
+    return (runs[:limit] if limit else runs), ctx
+
+
+def build_scenario(feed: dict, run, ctx: dict) -> tuple[dict | None, dict]:
+    """(scenario feed or None if the local can't time it, description)."""
+    f2, summ = ml.apply_run(feed, run, ctx["patterns"], ctx["complex_of"], ctx["medians"])
+    names = ctx["names"]
+    if summ.is_empty():
+        return None, {}
+    return f2, {"route": run.route, "direction": run.direction,
+                "from": names.get(run.stops[0], run.stops[0]),
+                "to": names.get(run.stops[-1], run.stops[-1]),
+                "stops_added": len(run.inserted),
+                "added_stations": ", ".join(names.get(s, s) for s in run.inserted),
+                "trips": summ.height, "median_added_s": summ["added_s"].median()}
 
 
 def run(od_path: Path, offsets: list[int], step_s: int, limit: int = 0,
         hours: range = range(6, 23)) -> tuple[pl.DataFrame, pl.DataFrame]:
     feed = gtfs.load(gtfs.GTFS_DIR / "subway_latest.zip")
-    feeds, info = build_scenarios(feed, limit)
-    print(f"{len(feeds)} scenarios built", flush=True)
+    runs, ctx = find_scenarios(feed, limit)
+    print(f"{len(runs)} express runs", flush=True)
     cidx = engine.complex_index(network.from_feed(feed, "Weekday"), complexes_from_stations())
     od = load_od(od_path)
-    groups: dict[str, list[str]] = defaultdict(list)
-    for name, meta in info.items():
-        groups[meta["route"]].append(name)
-    per_offset = []
+    groups: dict[str, list] = defaultdict(list)
+    for r in runs:
+        groups[r.route].append(r)
+    per_offset, info = [], {}
     for route, members in sorted(groups.items()):
+        feeds = {}
+        for r in members:
+            f2, meta = build_scenario(feed, r, ctx)
+            if f2 is not None:
+                feeds[r.name], info[r.name] = f2, meta
+        if not feeds:
+            continue
         for d in offsets:
             t = time.monotonic()
             base = network.from_feed(shift_route(feed, route, d), "Weekday")
-            nets = {n: network.from_feed(shift_route(feeds[n], route, d), "Weekday")
-                    for n in members}
+            nets = {n: network.from_feed(shift_route(f, route, d), "Weekday")
+                    for n, f in feeds.items()}
             out = engine.run(base, nets, cidx, od, weights=SCREEN_WEIGHTS, hours=hours,
                              step_s=step_s, progress=False)
             per_offset.append(out["totals"].with_columns(offset_s=pl.lit(d)))
-            print(f"  {route} offset {d:>4} s: {len(members)} scenarios in "
+            print(f"  {route} offset {d:>4} s: {len(feeds)} scenarios in "
                   f"{time.monotonic() - t:.0f} s", flush=True)
+            del base, nets, out
+        del feeds
     allt = pl.concat(per_offset)
     meta = pl.DataFrame([{"scenario": k, **v} for k, v in info.items()])
     return allt, meta
