@@ -90,9 +90,18 @@ W 4 St today stays a W 4 St rider in the scenario, even if they would switch to 
 So the ledger *understates* the benefit of an 8 St stop. That's conservative for the
 argument, but it should be said every time the number is quoted.
 
-*Exercises.* Add a "destination flexibility" layer: for OD flows ending at W 4 St, Astor Pl
-or Union Square, let a share of riders take whichever of those or 8 St is cheapest. What
-share would have to switch for V1 to break even?
+**Destination flexibility** (`n8st.ledger.flex`) relaxes the caveat around campus. The 13
+stations within 1.1 km of Washington Square get a 60 m grid of possible destinations.
+A flow from origin *o* to station *s* is spread over the grid points for which *s* is
+the cheapest station today (transit cost + 2 × walk), which is consistent with the
+station people actually use. In a scenario, every point re-picks its cheapest station.
+The same works in reverse for trips that start near campus. If the model can't explain
+today's choice (no point prefers *s*), the flow keeps its fixed-station change, so the
+adjustment never overstates the benefit.
+
+*Exercises.* Weight the grid points by NYU building floor area or LODES jobs instead of
+uniformly. Add the home end: the user lives between the N and the D, so origin-side
+flexibility matters for people like them.
 
 ---
 
@@ -114,9 +123,19 @@ share would have to switch for V1 to break even?
 **Calibration** (`n8st.sim.calibrate`) grid-searches the free parameters against observed
 corridor times and headway variability: median error ~2%, 90th percentile ~5%.
 
+**Sensitivity** (`n8st.sim.sensitivity`) asks which of those free parameters decide the
+answer. It runs the simulator on 160 Latin-hypercube parameter sets, fits a
+Gaussian-process *surrogate* to each output (cheap to evaluate, cross-validated R²
+reported), and computes Sobol indices on the surrogate. Sobol total-order indices say what
+share of an output's variance each parameter explains, including interactions. Finally it
+keeps only the parameter sets whose baseline still matches observed trains within 5%
+(*history matching*) and reports the V1 effects among those. That's the honest
+uncertainty range.
+
 *Exercises.* Replace the fixed passenger rates with hourly rates from the hourly ridership
 dataset. Add a third direction of conflict: the northbound N crossing the southbound
-track. Is that real at Prince St? Check a track map.
+track. Is that real at Prince St? Check a track map. Swap the GP for LightGBM as the
+surrogate and compare the Sobol rankings.
 
 ---
 
@@ -154,3 +173,30 @@ result in itself: not every problem needs a model.
 
 *Exercises.* Add the evening trip home. Add a feature for "D delayed upstream" using the
 D's position two stations before 71 St.
+
+---
+
+## 8. Forecasting ridership a week ahead
+
+`n8st.ml.forecast` compares four ways to forecast each station's daily entries seven days
+ahead, using only information available a week earlier:
+
+- **Seasonal naive**: same day last week. Always start with the dumbest baseline.
+- **MSTL and AutoETS** (statsforecast): classical models fitted per station, evaluated with
+  rolling 7-day origins so they get the same information as the others.
+- **LightGBM**: one global model across 47 stations, with lagged ridership, calendar,
+  holidays, weather and an approximate NYU-semester flag.
+
+On September–October 2026 the error (WAPE) is 9.2% for the naive baseline, 7.8–8.2% for
+the classical models and 7.0% for LightGBM. SHAP shows most of LightGBM's skill comes from
+the average of the last four same weekdays. The semester flag matters little once lags are
+in the model, because the lags already carry the semester.
+
+**Conformal intervals** turn point forecasts into 90% ranges using the model's errors on a
+calibration window. They covered only 82% of test days, because the calibration window was
+summer and the test was the start of the semester: the errors changed. That's the main
+weakness of split conformal (it assumes calibration and test look alike).
+
+*Exercises.* Calibrate on September–October 2025 instead of summer 2026 (re-train the
+model to end before it), or implement adaptive conformal inference, which updates the
+interval width online. Try Chronos or TimesFM zero-shot on the same split.
