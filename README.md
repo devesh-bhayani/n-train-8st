@@ -16,7 +16,7 @@ This project asks the opposite question: what would *adding* a stop gain?
 **Draft post:** [docs/posts/01-why-the-n-skips-nyu.md](docs/posts/01-why-the-n-skips-nyu.md).
 **Methods, in plain language:** [docs/how-it-works.md](docs/how-it-works.md).
 
-## Findings so far
+## Findings
 
 - **When the N left in 2016, people stopped getting off there.** After November 7, 2016,
   exits at 28 St, 23 St, 8 St–NYU and Prince St fell **9.7%** (95% CI 6.8–12.5%)
@@ -36,8 +36,29 @@ This project asks the opposite question: what would *adding* a stop gain?
   weekday daytime N and Q trains never stop at 8 St–NYU; two weekday W trips run from 18
   Av to 8 St via the Montague tunnel (07:12 and 16:41, 45.5 min); running the N local
   from 34 St to Canal adds 150–180 s in today's schedule (about 210 s observed).
-- **The scenario ledger** (net rider-hours per weekday, with and without letting riders
-  switch to 8 St) is running on September 2026 origin–destination data.
+- **A weekday N stop at 8 St–NYU would cost riders time overall.** Running the weekday
+  N local from 34 St to Canal, timed by the calibrated simulation, costs **928 ± 466
+  rider-hours per weekday** (April 2026 OD, ± 2 standard errors, averaged over ten
+  timetable alignments). About 800,000 trips change, by 4 seconds each on average: N
+  riders passing through, and R/W riders delayed by the extra trains, lose 5,204 hours;
+  riders at the four new stops, and Q riders whose trains no longer merge with the N,
+  gain 4,276. It saves time in 1 of 13
+  weighting assumptions (only with a 30-minute transfer penalty), so it fails the
+  pre-registered rule. Letting riders switch stations doesn't rescue it: +880 calibrated
+  to the weekend N, +366 even if everyone switched. At the MTA's own weekend-schedule
+  timing (about 150 s) it would break even (−136 ± 472), so the answer turns on how long
+  the local run really takes on weekdays.
+  ([ledger](docs/findings/ledger_phase_weekday_2026_04.md))
+- **The shorter V2 (8 St and Prince only) breaks even at best**: −7 ± 264 rider-hours
+  on schedule timing, +1,089 ± 404 on observed timing. It also needs a crossover between
+  14 St and 8 St that no source confirms.
+- **More Sea Beach W trips (V6) help, but not NYU riders.** Eight more weekday W trips
+  from the Sea Beach line save 522 ± 18 rider-hours a weekday (all 13 weight settings),
+  about 65 per trip, and slow nobody. But only 2 of those hours go to Sea Beach riders
+  bound for campus or coming from it: the W's one-seat ride takes 45.5 minutes from
+  18 Av, slower than the N plus a backtrack. The rest is the ordinary benefit of more
+  trains on the Broadway local and 4th Av, which any extra trips would bring.
+  ([V6](docs/findings/ledger_phase_weekday_2026_04_v6.md))
 - **Stop the Stop reproduces exactly.** An independent re-implementation matches all 356
   published stops ([details](docs/findings/phase0_wolk_replication.md)). Closing 8 St–NYU
   to the R/W costs riders time in all 80 cells of the stop-cost × walk-weight grid when

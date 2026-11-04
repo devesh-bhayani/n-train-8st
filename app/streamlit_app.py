@@ -153,7 +153,8 @@ if totals is not None:
         })
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
     st.caption("Negative = riders save time. A net within ± 2 se of zero is not "
-               "distinguishable from no effect at this resolution.")
+               "distinguishable from no effect at this resolution. Rule 3 was simulated for "
+               "V1 only. V6 adds eight train trips, an operating cost the ledger can't see.")
 
     months = totals[(totals["weights"] == BASE_W)
                     & (totals["scenario"].isin(["V1_sim", "V2_sched"]))]

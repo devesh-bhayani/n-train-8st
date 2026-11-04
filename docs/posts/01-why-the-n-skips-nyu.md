@@ -1,6 +1,6 @@
 # Why doesn't the N stop at NYU?
 
-*Draft. Numbers marked ⟨…⟩ are filled in from the scenario ledger before publishing.*
+*Draft, November 2026.*
 
 Every weekday, N trains roll through 8 St–NYU without stopping. It's the closest subway
 station to NYU's Washington Square campus, and the N stops there every weekend. So why not
@@ -47,8 +47,42 @@ It reproduces the real trains' running times within about 2%. With the N running
 
 ## The balance
 
-⟨Ledger headline: net rider-hours per weekday, fixed-station and with riders free to
-switch to 8 St, and in how many of the 13 weighting assumptions the answer holds.⟩
+To weigh those costs against the benefits, I built a ledger: Stop the Stop in reverse.
+It takes the MTA's estimates of where every weekday subway trip starts and ends (4.2
+million trips a day in April 2026), routes each one through today's timetable and
+through one where the N runs local, and adds up the difference. Waiting and walking
+count double, as they do in most transit appraisals, and each transfer costs an extra
+5 minutes.
+
+The result: **a weekday local N would cost riders about 930 rider-hours a day**, give
+or take 470. About 800,000 trips change. N riders passing through, and R and W riders
+held up a few seconds by the extra trains, lose 5,200 hours between them; riders at
+28 St, 23 St, 8 St and Prince St, plus Q riders whose trains no longer merge with the N,
+gain 4,300. Spread over everyone affected, that's 4 seconds a trip, in the wrong
+direction. Most of the cost lands in the evening rush (3 to 6 pm), when crowds head
+downtown, the direction in which a local N loses the most time.
+
+![Net rider-hours per weekday for each version of the stop, with and without riders switching stations](img/verdict.png)
+
+It doesn't hinge on the assumptions. Of 13 combinations of weights (waiting and walking
+counted 1.5 to 2.5 times, transfer penalties from 0 to 30 minutes), the stop saves time
+in one: when every transfer counts as 30 minutes. The ledger keeps people at today's
+stations, which understates the benefit, since some W 4 St and Union Square riders would
+switch to 8 St. Letting them switch, as much as riders actually do on weekends when the
+N stops there, barely moves it (+880). Even if everyone near campus switched to their
+best station, it still costs 370 hours.
+
+What would flip it is speed. If the weekday N could run local as fast as its weekend
+schedule (about 2.5 minutes for the four stops), the stop would roughly break even. The
+simulation, which puts the N among rush-hour R and W trains, says 3 minutes downtown
+and 2 uptown, plus a few seconds for every R and W.
+
+The cheaper versions don't win either. Stopping only at 8 St and Prince St breaks even
+at best, and needs a crossover between 14 St and 8 St that may not exist. Adding eight
+more of the Sea Beach W trips that already run to 8 St saves 520 hours a day and slows
+nobody, but only 2 of those hours go to Sea Beach riders travelling to or from campus.
+That W takes 45 minutes from 18 Av, slower than the N and a backtrack; the rest is what
+any eight extra trains would buy.
 
 ## Keeping the comparison fair
 
@@ -85,10 +119,15 @@ of the stop is spread across thousands of riders, and it's small for each.
 
 ## What would change my mind
 
-- If the crossover between 14 St and 8 St exists, a cheaper variant (express to 14 St,
-  then local) costs N riders about half as much.
-- If weekday local service is slower than the simulation says, the cost rises.
-- If many more riders would switch to 8 St than today's stations suggest, the benefit
-  rises.
+- **A faster local.** If the weekday N could run 34 St–Canal local in the 2.5 minutes
+  its weekend schedule allows, the stop breaks even; any faster, and it pays. That's a
+  question of signals and dwell times at rush hour, which the MTA could test.
+- **The crossover.** If there's a crossover between 14 St and 8 St, the shorter
+  version (8 St and Prince only) is close to even on schedule timing.
+- **A bigger pull to 8 St than weekends show.** Even if every rider near campus
+  switched to their best station, the full local still costs time, so this alone
+  wouldn't do it.
 
-All of these are testable, and the code is open.
+So the honest answer to my own question is no: on today's best numbers, the weekday N
+shouldn't stop at 8 St–NYU, even though I'd be one of the people it helps. All of this
+is testable, and the code is open.

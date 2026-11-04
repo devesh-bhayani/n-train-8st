@@ -1,0 +1,30 @@
+{
+ "months": {
+  "April 2026": {
+   "od": "data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet",
+   "offsets_s": [
+    -540,
+    -420,
+    -300,
+    -180,
+    -60,
+    60,
+    180,
+    300,
+    420,
+    540
+   ],
+   "step_s": 180,
+   "variants": [
+    "V2_obs",
+    "V1_sim",
+    "V1_sched",
+    "V2_sched",
+    "V1_obs"
+   ],
+   "runtime_s": 3431,
+   "od_riders_per_day": 4214111.764524963
+  }
+ },
+ "headline_month": "April 2026"
+}
