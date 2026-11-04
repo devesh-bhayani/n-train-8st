@@ -43,9 +43,40 @@ def test_complex_index_maps_platforms():
 
 
 def test_departure_times_cover_each_hour_evenly():
-    times, idx = engine.departure_times(range(7, 9), step_s=600)
+    times, idx = engine.departure_times(range(7, 9), step_s=600, jitter_seed=None)
     assert list(times) == [25200 + 600 * i for i in range(12)]
     assert list(idx) == [0] * 6 + [1] * 6
+
+
+def test_jittered_times_stay_inside_their_windows_and_are_reproducible():
+    a, idx = engine.departure_times(range(7, 9), step_s=600, jitter_seed=3)
+    b, _ = engine.departure_times(range(7, 9), step_s=600, jitter_seed=3)
+    assert list(a) == list(b)
+    for k, t in enumerate(a):
+        assert 25200 + 600 * k <= t < 25200 + 600 * (k + 1)
+
+
+def test_uniform_shift_of_a_line_costs_nothing_on_average():
+    """The bug this guards against: grid-aligned sampling made pure phase shifts look
+    costly. With jittered arrivals and many samples, shifting every train by 20 s should
+    change the average wait by ~0."""
+    base, shifted = line(), line(delay_at_c=0)
+    # shift the whole line by 20 s: rebuild with offset trips
+    rows = []
+    for i, t in enumerate(range(20, 7820, 300)):
+        rows += [(f"t{i}", "AN", 1, t, t), (f"t{i}", "BN", 2, t + 120, t + 120),
+                 (f"t{i}", "CN", 3, t + 240, t + 240)]
+    st = pl.DataFrame(rows, schema=["trip_id", "stop_id", "stop_sequence", "arr_s", "dep_s"],
+                      orient="row")
+    trips = st.select("trip_id").unique().with_columns(route_id=pl.lit("X"),
+                                                       service_id=pl.lit("Weekday"))
+    shifted = network.build(st, trips, None, "Weekday")
+    cidx = engine.complex_index(base, COMPLEXES)
+    od = pl.DataFrame({"origin": [1], "destination": [3], "hour": [0], "riders": [100.0]})
+    out = engine.run(base, {"shift": shifted}, cidx, od, hours=range(0, 1), step_s=10,
+                     progress=False)
+    net = out["totals"].filter(pl.col("weights") == engine.BASE.label)["net_hours"].item()
+    assert abs(net) < 0.2  # vs 100 riders x 20 s x 2 = 1.1 h with grid-aligned sampling
 
 
 def test_flex_station_changes_lets_riders_switch():

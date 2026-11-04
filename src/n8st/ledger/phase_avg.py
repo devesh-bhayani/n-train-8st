@@ -1,0 +1,146 @@
+"""Phase-averaged ledger: separate the cost of a stop pattern from timetable luck.
+
+The MTA timetables the N so it interleaves with the W (Astoria), the Q (Broadway, the
+Manhattan Bridge, Brighton) and the R/D (4th Av). A scenario that delays N trains after
+the new stops also moves them relative to those routes, and that misalignment costs
+riders waiting time even though a real timetable would be re-planned to avoid it.
+(docs/findings/phase_sensitivity.md: shifting every N trip by 20-240 s, with nothing
+else changed, "costs" 1,000-5,500 rider-hours.)
+
+So: for each offset delta in a cycle covering the N's headway, shift *all* N trips by
+delta in both the baseline and the scenario, run the ledger, and average. Whatever
+coordination quality the N has is then the same, on average, with and without the
+change, and the difference is the effect of the stopping pattern itself.
+
+    python -m n8st.ledger.phase_avg --od data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet
+    python -m n8st.ledger.phase_avg --check   # pure shifts should average to ~0
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import time
+from pathlib import Path
+
+import polars as pl
+
+from n8st.config import FINDINGS_DIR, PROCESSED_DIR
+from n8st.data import gtfs
+from n8st.ledger import engine, flex
+from n8st.ledger.phase_check import shift_route
+from n8st.ledger.run import STATIONS, VARIANTS, complexes_from_stations, load_od
+from n8st.routing import network
+from n8st.scenarios import timetable as tt
+
+DEFAULT_OFFSETS = [0, 120, 240, 360, 480]  # the N runs every ~8-10 min at midday
+DEFAULT_VARIANTS = ["V1_sim", "V1_sched", "V2_sched", "V2_obs", "V1_obs"]
+
+
+def run(od_path: Path, variants: list[str], offsets: list[int], step_s: int,
+        hours: range, check: bool = False) -> dict:
+    feed = gtfs.load(gtfs.GTFS_DIR / "subway_latest.zip")
+    template = tt.segment_template(feed)
+    cidx = engine.complex_index(network.from_feed(feed, "Weekday"), complexes_from_stations())
+    area = flex.area_complexes(pl.read_parquet(STATIONS)).filter(
+        pl.col("complex_id").is_in([int(c) for c in cidx.ids]))
+    area_ids = area["complex_id"].to_list()
+    od = load_od(od_path)
+    weights = engine.GRID
+    if check:
+        scen_feeds = {f"pure_shift_{s}s": shift_route(feed, "N", s) for s in (60, 180)}
+    else:
+        scen_feeds = {v: tt.apply(feed, VARIANTS[v], template)[0] for v in variants}
+    per_offset = []
+    for d in offsets:
+        t = time.monotonic()
+        base = network.from_feed(shift_route(feed, "N", d), "Weekday")
+        nets = {name: network.from_feed(shift_route(f, "N", d), "Weekday")
+                for name, f in scen_feeds.items()}
+        out = engine.run(base, nets, cidx, od, weights=weights, hours=hours, step_s=step_s,
+                         progress=False, flex_destinations=None if check else area_ids,
+                         flex_origins=None if check else area_ids)
+        tot = out["totals"].with_columns(offset_s=pl.lit(d))
+        if not check:
+            adj = flex.adjustments(od, out["flex"], out["flex_out"], area,
+                                   [w.walk for w in weights], list(nets))
+            labels = pl.DataFrame({"weight_index": list(range(len(weights))),
+                                   "weights": [w.label for w in weights]})
+            adj = adj.join(labels, on="weight_index").select("scenario", "weights",
+                                                            "adjustment_hours")
+            tot = tot.join(adj, on=["scenario", "weights"], how="left").with_columns(
+                net_hours_flexible=pl.col("net_hours") + pl.col("adjustment_hours"))
+        per_offset.append(tot)
+        print(f"  offset {d:>3} s done in {time.monotonic() - t:.0f} s", flush=True)
+    allt = pl.concat(per_offset, how="diagonal_relaxed")
+    value_cols = [c for c in ("net_hours", "hours_saved", "hours_lost", "net_hours_flexible")
+                  if c in allt.columns]
+    avg = allt.group_by("scenario", "weights", "wait_w", "walk_w", "transfer_min").agg(
+        *[pl.col(c).mean() for c in value_cols],
+        *[pl.col(c).std().alias(f"{c}_sd_across_offsets") for c in value_cols[:1]],
+    ).sort("scenario", "weights")
+    return {"per_offset": allt, "average": avg}
+
+
+def md(df: pl.DataFrame, digits: int = 0) -> str:
+    df = df.with_columns(pl.col(pl.Float64).round(digits))
+    lines = ["| " + " | ".join(df.columns) + " |", "|" + "---|" * len(df.columns)]
+    lines += ["| " + " | ".join(f"{v:,}" if isinstance(v, (int, float)) and not
+                               isinstance(v, bool) else str(v) for v in r) + " |"
+              for r in df.iter_rows()]
+    return "\n".join(lines)
+
+
+def main() -> None:
+    p = argparse.ArgumentParser(description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--od", type=Path, default=Path(
+        "data/raw/mta_data/bulk/od/od_weekday_2026_04.parquet"))
+    p.add_argument("--variants", nargs="*", default=DEFAULT_VARIANTS)
+    p.add_argument("--offsets", type=int, nargs="*", default=DEFAULT_OFFSETS)
+    p.add_argument("--step", type=int, default=180)
+    p.add_argument("--check", action="store_true")
+    args = p.parse_args()
+    t0 = time.monotonic()
+    res = run(args.od, args.variants, args.offsets, args.step, range(5, 24), args.check)
+    avg = res["average"]
+    tag = "check" if args.check else args.od.stem.replace("od_", "")
+    folder = PROCESSED_DIR / f"ledger_phase_{tag}"
+    folder.mkdir(parents=True, exist_ok=True)
+    res["per_offset"].write_csv(folder / "per_offset.csv")
+    avg.write_csv(folder / "totals.csv")
+    (folder / "meta.json").write_text(json.dumps({
+        "od": str(args.od), "offsets_s": args.offsets, "step_s": args.step,
+        "variants": list(avg["scenario"].unique()), "runtime_s": round(time.monotonic() - t0)},
+        indent=1))
+    base = avg.filter(pl.col("weights") == engine.BASE.label).drop("weights")
+    cols = [c for c in ("scenario", "net_hours", "net_hours_sd_across_offsets", "hours_saved",
+                        "hours_lost", "net_hours_flexible") if c in base.columns]
+    grid = avg.group_by("scenario").agg(
+        cells=pl.len(), cells_saving=(pl.col("net_hours") < 0).sum(),
+        **({"cells_saving_flexible": (pl.col("net_hours_flexible") < 0).sum()}
+           if "net_hours_flexible" in avg.columns else {}),
+        best=pl.col("net_hours").min(), worst=pl.col("net_hours").max()).sort("scenario")
+    text = "\n".join([
+        "# Phase-averaged ledger" + (" (check: pure shifts)" if args.check else ""),
+        "",
+        f"OD `{args.od.name}`; N trips shifted by {args.offsets} s in both baseline and "
+        f"scenario, results averaged; riders sampled every {args.step} s with jitter, "
+        "5 am–midnight.",
+        "",
+        "## Base weights",
+        "",
+        md(base.select(cols)),
+        "",
+        "## Across the 13-cell weight grid",
+        "",
+        md(grid),
+        "",
+    ])
+    out = FINDINGS_DIR / f"ledger_phase_{tag}.md"
+    out.write_text(text)
+    print(text)
+
+
+if __name__ == "__main__":
+    main()

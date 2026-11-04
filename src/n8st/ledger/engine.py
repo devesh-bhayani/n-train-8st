@@ -137,12 +137,22 @@ def _hourly_costs(arr, wait, ivt, walk, times, hour_of_time, n_hours,
                     out[h, d, c] = acc[h, c] / cnt[h]
 
 
-def departure_times(hours: range = range(0, 24),
-                    step_s: int = 120) -> tuple[np.ndarray, np.ndarray]:
+def departure_times(hours: range = range(0, 24), step_s: int = 120,
+                    jitter_seed: int | None = 0) -> tuple[np.ndarray, np.ndarray]:
+    """Rider arrival times: one per `step_s` window, at a random point inside it.
+
+    Why jitter: MTA departures sit on a 30-second grid. Sampling riders exactly on round
+    minutes makes many of them arrive the second their train leaves (zero wait), and any
+    scenario that shifts trains by a non-multiple of 30 s loses those coincidences, which
+    shows up as large fake costs. Random arrival points within each window (the same
+    draws for every network compared) give unbiased expected waits.
+    Pass jitter_seed=None for the old grid (used by tests that need exact times).
+    """
+    rng = np.random.default_rng(jitter_seed) if jitter_seed is not None else None
     times, hour_idx = [], []
     for i, h in enumerate(hours):
         for t in range(h * 3600, (h + 1) * 3600, step_s):
-            times.append(t)
+            times.append(t + (int(rng.integers(0, step_s)) if rng is not None else 0))
             hour_idx.append(i)
     return np.asarray(times, np.int64), np.asarray(hour_idx, np.int64)
 
