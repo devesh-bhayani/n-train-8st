@@ -22,6 +22,7 @@ import io
 import json
 import lzma
 import tarfile
+import tempfile
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -59,7 +60,8 @@ SUBWAYDATA_ROUTES = {"N", "Q", "R", "W", "B", "D", "F", "M"}
 # ---------------------------------------------------------------------------- helpers
 
 def stations_table(out: Path) -> Path:
-    path = out / "stations" / "stations.parquet"
+    """Stations lookup for filters. Kept outside `out` so parallel jobs don't commit copies."""
+    path = Path(tempfile.gettempdir()) / "n8st_stations.parquet"
     if not path.exists():
         socrata.download(DATASETS["stations"], path)
     return path
