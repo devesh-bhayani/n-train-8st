@@ -69,3 +69,28 @@ def test_express_runs_do_not_depend_on_pattern_order():
     assert len(seen) == 1
     (only,) = seen
     assert ("N_S_A-D", "R", ("B", "C")) in only
+
+
+def test_made_local_stretch_never_gets_faster():
+    """The local's schedule says A -> B -> C -> D takes 90 s, but the express is scheduled
+    120 s for A -> D (more padding). Without a floor the 'local' express would arrive
+    30 s early with two more stops; with it, each added stop costs at least 45 s."""
+    from n8st.scenarios.express_segments import ExpressRun
+    from n8st.scenarios.make_local import MIN_STOP_PENALTY_S, apply_run
+
+    st = pl.DataFrame({
+        "trip_id": ["e1", "e1", "e1"], "stop_id": ["AS", "DS", "ES"],
+        "stop_sequence": [1, 2, 3], "arr_s": [0, 120, 200], "dep_s": [0, 120, 200],
+        "parent_stop": ["A", "D", "E"], "direction": ["S", "S", "S"]},
+        schema_overrides={"arr_s": pl.Int32, "dep_s": pl.Int32, "stop_sequence": pl.Int32})
+    feed = {"stop_times": st, "trips": pl.DataFrame(
+        {"trip_id": ["e1"], "route_id": ["E"], "service_id": ["Weekday"]})}
+    run = ExpressRun("E", "S", ("A", "D"), ("B", "C"), "L")
+    patterns = {("E", "S"): ["A", "D", "E"], ("L", "S"): ["A", "B", "C", "D"]}
+    medians = {("L", "S", "A", "B"): 30.0, ("L", "S", "B", "C"): 30.0,
+               ("L", "S", "C", "D"): 30.0}
+    f2, summary = apply_run(feed, run, patterns, {s: s for s in "ABCDE"}, medians)
+    assert summary["added_s"].item() == pytest.approx(2 * MIN_STOP_PENALTY_S)
+    rows = f2["stop_times"].sort("stop_sequence")
+    assert rows["parent_stop"].to_list() == ["A", "B", "C", "D", "E"]
+    assert rows["arr_s"].to_list() == [0, 70, 140, 210, 290]  # local times stretched 210/90
