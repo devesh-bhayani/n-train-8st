@@ -246,10 +246,13 @@ def task_subwaydata(out: Path, args) -> None:
         r = s.get(f"{SUBWAYDATA_BASE}/{entry['Csv']['Path']}", timeout=300)
         r.raise_for_status()
         with tarfile.open(fileobj=io.BytesIO(lzma.decompress(r.content))) as tf:
-            files = {m.name.split("/")[-1]: tf.extractfile(m).read()
-                     for m in tf.getmembers() if m.isfile()}
-        trips = pl.read_csv(files["trips.csv"], infer_schema_length=0)
-        stops = pl.read_csv(files["stop_times.csv"], infer_schema_length=0)
+            files = {m.name: tf.extractfile(m).read() for m in tf.getmembers() if m.isfile()}
+        if not done:
+            print("  archive members:", list(files), flush=True)
+        trips_name = next(n for n in files if n.endswith("trips.csv"))
+        stops_name = next(n for n in files if n.endswith("stop_times.csv"))
+        trips = pl.read_csv(files[trips_name], infer_schema_length=0)
+        stops = pl.read_csv(files[stops_name], infer_schema_length=0)
         route_col = next(c for c in trips.columns if c.startswith("route"))
         key_col = next(c for c in trips.columns if c in stops.columns)
         trips = trips.filter(pl.col(route_col).is_in(list(SUBWAYDATA_ROUTES)))
