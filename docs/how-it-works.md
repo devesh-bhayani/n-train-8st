@@ -129,7 +129,7 @@ uniformly. Add the home end: the user lives between the N and the D, so origin-s
 flexibility matters for people like them. Fit a nested logit (station within line) and
 check whether its logsum stays below the upper bound.
 
-### Two traps this ledger fell into (and how they were found)
+### Three traps this ledger fell into (and how they were found)
 
 1. **Sampling on the timetable's grid.** Riders were first sampled every 2 minutes on
    the dot. MTA departures sit on a 30-second grid, so many simulated riders arrived

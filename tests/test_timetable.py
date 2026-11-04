@@ -48,3 +48,24 @@ def test_other_routes_untouched_without_knock_on(feed):
     a = feed["stop_times"].filter(pl.col("trip_id").is_in(r_trips)).sort("trip_id", "stop_sequence")
     b = f2["stop_times"].filter(pl.col("trip_id").is_in(r_trips)).sort("trip_id", "stop_sequence")
     assert a["arr_s"].to_list() == b["arr_s"].to_list()
+
+
+def test_express_runs_do_not_depend_on_pattern_order():
+    """Two locals (R, W) skip-serve the same stretch; the result must not depend on the
+    order patterns arrive in (it did, via polars group order, before sorting)."""
+    import random
+
+    from n8st.scenarios.express_segments import find_runs
+
+    pats = {("N", "S"): ["A", "D", "E"], ("R", "S"): ["A", "B", "C", "D", "F"],
+            ("W", "S"): ["A", "B", "C", "D", "E"], ("Q", "S"): ["A", "D"]}
+    complex_of = {s: s for s in "ABCDEF"}
+    seen = set()
+    for seed in range(6):
+        items = list(pats.items())
+        random.Random(seed).shuffle(items)
+        runs = find_runs(dict(items), complex_of)
+        seen.add(tuple((r.name, r.local_route, r.inserted) for r in runs))
+    assert len(seen) == 1
+    (only,) = seen
+    assert ("N_S_A-D", "R", ("B", "C")) in only

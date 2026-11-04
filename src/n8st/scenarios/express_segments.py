@@ -47,9 +47,11 @@ def typical_patterns(feed: dict[str, pl.DataFrame], service_id: str = "Weekday"
     seqs = seqs.filter(pl.col("dep").is_between(6 * 3600, 21 * 3600))
     out: dict[tuple[str, str], list[str]] = {}
     for (route, direction), grp in seqs.group_by("route_id", "direction"):
-        common = Counter(tuple(p) for p in grp["parent_stop"].to_list()).most_common(1)[0][0]
+        counts = Counter(tuple(p) for p in grp["parent_stop"].to_list())
+        # ties broken by the pattern itself, so the result never depends on row order
+        common = max(counts.items(), key=lambda kv: (kv[1], kv[0]))[0]
         out[(route, direction)] = list(common)
-    return out
+    return dict(sorted(out.items()))
 
 
 MAX_DETOUR = 1.25  # the local's path may be at most 25% longer than the express hop
@@ -84,12 +86,15 @@ def find_runs(patterns: dict[tuple[str, str], list[str]], complex_of: dict[str, 
                                                                 strict=True))
         return direct > 0 and along <= MAX_DETOUR * direct + 0.3
 
+    # Sorted iteration: with dict order, ties between equally long locals (the R and the W
+    # under the N) went to whichever polars grouped first, and the screen changed between
+    # runs (74-78 stretches). Now the longest local wins, ties to the first route name.
     runs: list[ExpressRun] = []
-    for (route, direction), stops in patterns.items():
+    for (route, direction), stops in sorted(patterns.items()):
         i = 0
         while i < len(stops) - 1:
             best = None
-            for (lroute, ldir), lstops in patterns.items():
+            for (lroute, ldir), lstops in sorted(patterns.items()):
                 if ldir != direction or lroute == route:
                     continue
                 lcx = [cx(s) for s in lstops]

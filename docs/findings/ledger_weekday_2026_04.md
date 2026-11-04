@@ -1,5 +1,7 @@
 # Scenario ledger: does an N stop at 8 St–NYU save riders time?
 
+> **Superseded.** This first run used one timetable alignment and grid-aligned rider sampling, both of which bias the result (see `docs/how-it-works.md`, "Three traps"). The current numbers are in [`ledger_phase_weekday_2026_04.md`](ledger_phase_weekday_2026_04.md). Kept for the record.
+
 OD: `od_weekday_2026_04.parquet` (4,214,112 weekday trips between 5:00 and 24:00). Departures sampled every 120 s. `net_hours` keeps every rider's stations (fixed OD); `net_hours_flexible` lets riders to and from the 13 stations around campus switch to whichever station is cheapest for where they're going (`n8st.ledger.flex`).
 
 Costs are generalized: in-train minutes + 2 × waiting + 2 × walking + 5 min per transfer (base weights). Negative net = riders save time overall.
