@@ -42,12 +42,17 @@ FOCUS_GTFS = sorted(set(BROADWAY_GTFS + SEA_BEACH_STOPS + WEST_END_GTFS + NEARBY
 
 DAYTYPES = {"weekday": WEEKDAYS, "saturday": ("Saturday",), "sunday": ("Sunday",)}
 
-TURNSTILE_TREATED = ["8 ST-NYU", "PRINCE ST", "23 ST", "28 ST", "14 ST-UNION SQ", "CANAL ST",
-                     "34 ST-HERALD SQ", "49 ST", "57 ST-7 AV", "5 AV/59 ST", "CITY HALL",
-                     "CORTLANDT ST", "RECTOR ST", "WHITEHALL S-FRY", "TIMES SQ-42 ST"]
-TURNSTILE_CONTROLS = ["ASTOR PL", "BLEECKER ST", "W 4 ST-WASH SQ", "CHRISTOPHER ST",
-                      "SPRING ST", "HOUSTON ST", "BROADWAY/LAFAY", "2 AV", "1 AV", "3 AV",
-                      "14 ST", "6 AV", "8 AV", "18 AV", "71 ST"]
+# Turnstile remote-unit IDs (stable across years; station *names* changed in late 2015).
+# Broadway local stations, nearby controls, possible spillover, and other context stations.
+TURNSTILE_UNITS = [
+    "R082", "R083", "R085", "R086",  # 28 St, 23 St, 8 St-NYU, Prince St (Broadway)
+    "R248", "R105", "R163", "R175", "R300", "R330", "R390", "R160", "R194", "R189", "R548",
+    "R290", "R282", "R322",  # controls: 1 Av, 14 St (x3), 2 Av, 3 Av, 8 Av, Astor Pl,
+    # Bleecker, Christopher (x2), Houston, Spring (x2)
+    "R170", "R138",  # 14 St-Union Sq, W 4 St
+    "R022", "R023", "R081", "R079", "R080", "R118", "R462", "R463", "R087", "R088", "R227",
+    "R001", "R032", "R033", "R242", "R372", "R392", "R370",  # other Broadway + home stations
+]
 TURNSTILE_WINDOWS = {"turnstile_2015": ("2015-09-01", "2015-12-31"),
                      "turnstile_2016": ("2016-01-01", "2016-12-31"),
                      "turnstile_2017": ("2017-01-01", "2017-05-31")}
@@ -200,8 +205,7 @@ def task_monthly(out: Path, args) -> None:
 
 
 def task_turnstile(out: Path, args) -> None:
-    names = socrata.sql_in("station", TURNSTILE_TREATED)
-    controls = socrata.sql_in("station", TURNSTILE_CONTROLS)
+    units = socrata.sql_in("unit", TURNSTILE_UNITS)
     for name, (lo, hi) in TURNSTILE_WINDOWS.items():
         ds = DATASETS[name]
         # Station names and line codes as they appear, to check the filters.
@@ -211,8 +215,7 @@ def task_turnstile(out: Path, args) -> None:
         path = out / "turnstile" / f"{name}.parquet"
         socrata.download(
             ds, path,
-            where=(f"date >= '{lo}T00:00:00' AND date <= '{hi}T00:00:00' AND "
-                   f"(({names} AND line_name LIKE '%R%') OR {controls})"),
+            where=f"date >= '{lo}T00:00:00' AND date <= '{hi}T00:00:00' AND {units}",
             page_size=args.page_size,
         )
         manifest(out, name, {"dataset": ds, "window": [lo, hi], "rows": rows_of(path)})
