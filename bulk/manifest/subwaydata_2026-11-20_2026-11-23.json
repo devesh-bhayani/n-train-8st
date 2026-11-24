@@ -1,0 +1,88 @@
+{
+ "days": [
+  {
+   "day": "2026-11-20",
+   "trips": 2298,
+   "stop_times": 78550,
+   "trip_columns": [
+    "trip_uid",
+    "trip_id",
+    "route_id",
+    "direction_id",
+    "start_time",
+    "vehicle_id",
+    "last_observed",
+    "marked_past",
+    "num_updates",
+    "num_schedule_changes",
+    "num_schedule_rewrites"
+   ],
+   "stop_columns": [
+    "trip_uid",
+    "stop_id",
+    "track",
+    "arrival_time",
+    "departure_time",
+    "last_observed",
+    "marked_past"
+   ]
+  },
+  {
+   "day": "2026-11-21",
+   "trips": 1473,
+   "stop_times": 44349,
+   "trip_columns": [
+    "trip_uid",
+    "trip_id",
+    "route_id",
+    "direction_id",
+    "start_time",
+    "vehicle_id",
+    "last_observed",
+    "marked_past",
+    "num_updates",
+    "num_schedule_changes",
+    "num_schedule_rewrites"
+   ],
+   "stop_columns": [
+    "trip_uid",
+    "stop_id",
+    "track",
+    "arrival_time",
+    "departure_time",
+    "last_observed",
+    "marked_past"
+   ]
+  },
+  {
+   "day": "2026-11-22",
+   "trips": 1468,
+   "stop_times": 43363,
+   "trip_columns": [
+    "trip_uid",
+    "trip_id",
+    "route_id",
+    "direction_id",
+    "start_time",
+    "vehicle_id",
+    "last_observed",
+    "marked_past",
+    "num_updates",
+    "num_schedule_changes",
+    "num_schedule_rewrites"
+   ],
+   "stop_columns": [
+    "trip_uid",
+    "stop_id",
+    "track",
+    "arrival_time",
+    "departure_time",
+    "last_observed",
+    "marked_past"
+   ]
+  }
+ ],
+ "missing": [
+  "2026-11-23"
+ ]
+}
